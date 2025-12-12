@@ -1,0 +1,52 @@
+#nullable enable
+using Avalonia.Data;
+using Avalonia.Data.Converters;
+using System;
+using System.Linq.Expressions;
+using System.Numerics;
+using System.Reactive.Subjects;
+using System.Runtime.CompilerServices;
+
+namespace PZ.RxAvalonia;
+[global::System.CodeDom.Compiler.GeneratedCode("PZ.AvaloniaExtensionGenerator", "1.0.0.0")]
+[global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
+public static partial class Carousel_MarkupExtensions
+{
+//================= Properties ======================//
+ // PageTransition
+
+/*ValueSetterGenerator*/
+public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
+{
+    control.PageTransition = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func) where T : Avalonia.Controls.Carousel 
+   => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs) where T : Avalonia.Controls.Carousel 
+   => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.Carousel 
+   => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, subject);
+
+
+
+//================= Styles ======================//
+ // PageTransition
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
+=> style._addSetter(Avalonia.Controls.Carousel.PageTransitionProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> PageTransition<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Carousel 
+=> style._addSetter(Avalonia.Controls.Carousel.PageTransitionProperty, binding);
+
+
+
+}

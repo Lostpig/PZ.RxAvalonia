@@ -1,0 +1,16 @@
+{
+  "profiles": {
+    "PZ.ExtensionGenerator": {
+      "commandName": "Project",
+      "commandLineArgs": "--framework"
+    },
+    "ExternalLibraryBuilder": {
+      "commandName": "Project",
+      "commandLineArgs": "--projectPath=../../PZ.RxAvalonia.Demo/PZ.RxAvalonia.Demo.csproj"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "distributionName": ""
+    }
+  }
+}
