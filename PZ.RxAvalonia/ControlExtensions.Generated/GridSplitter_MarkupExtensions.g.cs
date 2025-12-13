@@ -34,6 +34,10 @@ public static T ResizeDirection<T>(this T control, IObservable<Avalonia.Controls
 public static T ResizeDirection<T>(this T control, ISubject<Avalonia.Controls.GridResizeDirection> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.ResizeDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ResizeDirection<T>(this T control, IObservable<Avalonia.Controls.GridResizeDirection> obs, IObserver<Avalonia.Controls.GridResizeDirection> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.ResizeDirectionProperty!, obs, changed);
+
 
  // ResizeBehavior
 
@@ -55,6 +59,10 @@ public static T ResizeBehavior<T>(this T control, IObservable<Avalonia.Controls.
 /*SetterFromSubjectGenerator*/
 public static T ResizeBehavior<T>(this T control, ISubject<Avalonia.Controls.GridResizeBehavior> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.ResizeBehaviorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ResizeBehavior<T>(this T control, IObservable<Avalonia.Controls.GridResizeBehavior> obs, IObserver<Avalonia.Controls.GridResizeBehavior> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.ResizeBehaviorProperty!, obs, changed);
 
 
  // ShowsPreview
@@ -78,6 +86,10 @@ public static T ShowsPreview<T>(this T control, IObservable<System.Boolean> obs)
 public static T ShowsPreview<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.ShowsPreviewProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowsPreview<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.ShowsPreviewProperty!, obs, changed);
+
 
  // KeyboardIncrement
 
@@ -99,6 +111,10 @@ public static T KeyboardIncrement<T>(this T control, IObservable<System.Double> 
 /*SetterFromSubjectGenerator*/
 public static T KeyboardIncrement<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.KeyboardIncrementProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T KeyboardIncrement<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.KeyboardIncrementProperty!, obs, changed);
 
 
  // DragIncrement
@@ -122,6 +138,10 @@ public static T DragIncrement<T>(this T control, IObservable<System.Double> obs)
 public static T DragIncrement<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.DragIncrementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DragIncrement<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.DragIncrementProperty!, obs, changed);
+
 
  // PreviewContent
 
@@ -143,6 +163,10 @@ public static T PreviewContent<T>(this T control, IObservable<Avalonia.Controls.
 /*SetterFromSubjectGenerator*/
 public static T PreviewContent<T>(this T control, ISubject<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> subject) where T : Avalonia.Controls.GridSplitter 
    => control._set(Avalonia.Controls.GridSplitter.PreviewContentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PreviewContent<T>(this T control, IObservable<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> obs, IObserver<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> changed) where T : Avalonia.Controls.GridSplitter 
+   => control._setEx(Avalonia.Controls.GridSplitter.PreviewContentProperty!, obs, changed);
 
 
 

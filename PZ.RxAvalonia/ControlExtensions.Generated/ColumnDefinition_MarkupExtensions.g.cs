@@ -34,6 +34,10 @@ public static T MaxWidth<T>(this T control, IObservable<System.Double> obs) wher
 public static T MaxWidth<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.MaxWidthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxWidth<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.ColumnDefinition 
+   => control._setEx(Avalonia.Controls.ColumnDefinition.MaxWidthProperty!, obs, changed);
+
 
  // MinWidth
 
@@ -55,6 +59,10 @@ public static T MinWidth<T>(this T control, IObservable<System.Double> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T MinWidth<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.MinWidthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MinWidth<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.ColumnDefinition 
+   => control._setEx(Avalonia.Controls.ColumnDefinition.MinWidthProperty!, obs, changed);
 
 
  // Width
@@ -90,6 +98,10 @@ public static T Width<T>(this T control, IObservable<Avalonia.Controls.GridLengt
 /*SetterFromSubjectGenerator*/
 public static T Width<T>(this T control, ISubject<Avalonia.Controls.GridLength> subject) where T : Avalonia.Controls.ColumnDefinition 
    => control._set(Avalonia.Controls.ColumnDefinition.WidthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Width<T>(this T control, IObservable<Avalonia.Controls.GridLength> obs, IObserver<Avalonia.Controls.GridLength> changed) where T : Avalonia.Controls.ColumnDefinition 
+   => control._setEx(Avalonia.Controls.ColumnDefinition.WidthProperty!, obs, changed);
 
 
 

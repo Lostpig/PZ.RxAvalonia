@@ -34,6 +34,10 @@ public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> ob
 public static T IsDropDownOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.IsDropDownOpenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.IsDropDownOpenProperty!, obs, changed);
+
 
  // IsEditable
 
@@ -55,6 +59,10 @@ public static T IsEditable<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T IsEditable<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.IsEditableProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsEditable<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.IsEditableProperty!, obs, changed);
 
 
  // MaxDropDownHeight
@@ -78,6 +86,10 @@ public static T MaxDropDownHeight<T>(this T control, IObservable<System.Double> 
 public static T MaxDropDownHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.MaxDropDownHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxDropDownHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.MaxDropDownHeightProperty!, obs, changed);
+
 
  // PlaceholderText
 
@@ -99,6 +111,10 @@ public static T PlaceholderText<T>(this T control, IObservable<System.String> ob
 /*SetterFromSubjectGenerator*/
 public static T PlaceholderText<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlaceholderText<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, obs, changed);
 
 
  // PlaceholderForeground
@@ -122,6 +138,10 @@ public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Me
 public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, obs, changed);
+
 
  // HorizontalContentAlignment
 
@@ -143,6 +163,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 /*SetterFromSubjectGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.HorizontalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.HorizontalContentAlignmentProperty!, obs, changed);
 
 
  // VerticalContentAlignment
@@ -166,6 +190,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.VerticalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.VerticalContentAlignmentProperty!, obs, changed);
+
 
  // Text
 
@@ -188,6 +216,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.TextProperty!, obs, changed);
+
 
  // SelectionBoxItemTemplate
 
@@ -209,6 +241,10 @@ public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T SelectionBoxItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ComboBox 
+   => control._setEx(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, obs, changed);
 
 
 

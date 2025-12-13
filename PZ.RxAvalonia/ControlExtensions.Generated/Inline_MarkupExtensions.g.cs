@@ -34,6 +34,10 @@ public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.Te
 public static T TextDecorations<T>(this T control, ISubject<Avalonia.Media.TextDecorationCollection> subject) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection> obs, IObserver<Avalonia.Media.TextDecorationCollection> changed) where T : Avalonia.Controls.Documents.Inline 
+   => control._setEx(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, obs, changed);
+
 
  // BaselineAlignment
 
@@ -55,6 +59,10 @@ public static T BaselineAlignment<T>(this T control, IObservable<Avalonia.Media.
 /*SetterFromSubjectGenerator*/
 public static T BaselineAlignment<T>(this T control, ISubject<Avalonia.Media.BaselineAlignment> subject) where T : Avalonia.Controls.Documents.Inline 
    => control._set(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BaselineAlignment<T>(this T control, IObservable<Avalonia.Media.BaselineAlignment> obs, IObserver<Avalonia.Media.BaselineAlignment> changed) where T : Avalonia.Controls.Documents.Inline 
+   => control._setEx(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, obs, changed);
 
 
 

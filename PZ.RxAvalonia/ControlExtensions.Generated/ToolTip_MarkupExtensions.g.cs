@@ -34,6 +34,10 @@ public static T ToolTip_Tip<T>(this T control, System.Object value) where T : Av
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_Tip<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.TipProperty!, obs, changed);
+
 
  // IsOpen
 
@@ -55,6 +59,10 @@ public static T ToolTip_IsOpen<T>(this T control, System.Boolean value) where T 
     control.SetValue(Avalonia.Controls.ToolTip.IsOpenProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_IsOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.IsOpenProperty!, obs, changed);
 
 
  // Placement
@@ -78,6 +86,10 @@ public static T ToolTip_Placement<T>(this T control, Avalonia.Controls.Placement
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_Placement<T>(this T control, IObservable<Avalonia.Controls.PlacementMode> obs, IObserver<Avalonia.Controls.PlacementMode> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.PlacementProperty!, obs, changed);
+
 
  // HorizontalOffset
 
@@ -99,6 +111,10 @@ public static T ToolTip_HorizontalOffset<T>(this T control, System.Double value)
     control.SetValue(Avalonia.Controls.ToolTip.HorizontalOffsetProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_HorizontalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.HorizontalOffsetProperty!, obs, changed);
 
 
  // VerticalOffset
@@ -122,6 +138,10 @@ public static T ToolTip_VerticalOffset<T>(this T control, System.Double value) w
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_VerticalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.VerticalOffsetProperty!, obs, changed);
+
 
  // CustomPopupPlacementCallback
 
@@ -143,6 +163,10 @@ public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Avalonia
     control.SetValue(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 
  // ShowDelay
@@ -166,6 +190,10 @@ public static T ToolTip_ShowDelay<T>(this T control, System.Int32 value) where T
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_ShowDelay<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.ShowDelayProperty!, obs, changed);
+
 
  // BetweenShowDelay
 
@@ -187,6 +215,10 @@ public static T ToolTip_BetweenShowDelay<T>(this T control, System.Int32 value) 
     control.SetValue(Avalonia.Controls.ToolTip.BetweenShowDelayProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_BetweenShowDelay<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.BetweenShowDelayProperty!, obs, changed);
 
 
  // ShowOnDisabled
@@ -210,6 +242,10 @@ public static T ToolTip_ShowOnDisabled<T>(this T control, System.Boolean value) 
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_ShowOnDisabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.ShowOnDisabledProperty!, obs, changed);
+
 
  // ServiceEnabled
 
@@ -231,6 +267,10 @@ public static T ToolTip_ServiceEnabled<T>(this T control, System.Boolean value) 
     control.SetValue(Avalonia.Controls.ToolTip.ServiceEnabledProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ToolTip_ServiceEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ToolTip.ServiceEnabledProperty!, obs, changed);
 
 
 

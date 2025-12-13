@@ -34,6 +34,10 @@ public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransf
 public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.SkewTransform.AngleXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.SkewTransform AngleX(this Avalonia.Media.SkewTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.SkewTransform.AngleXProperty!, obs, changed);
+
 
  // AngleY
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransf
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.SkewTransform.AngleYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.SkewTransform AngleY(this Avalonia.Media.SkewTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.SkewTransform.AngleYProperty!, obs, changed);
 
 
 

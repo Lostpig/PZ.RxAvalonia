@@ -34,6 +34,10 @@ public static T FocusAdorner<T>(this T control, IObservable<Avalonia.Controls.IT
 public static T FocusAdorner<T>(this T control, ISubject<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.FocusAdornerProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FocusAdorner<T>(this T control, IObservable<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> obs, IObserver<Avalonia.Controls.ITemplate<Avalonia.Controls.Control>> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Control.FocusAdornerProperty!, obs, changed);
+
 
  // Tag
 
@@ -55,6 +59,10 @@ public static T Tag<T>(this T control, IObservable<System.Object> obs) where T :
 /*SetterFromSubjectGenerator*/
 public static T Tag<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Tag<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Control.TagProperty!, obs, changed);
 
 
  // ContextMenu
@@ -78,6 +86,10 @@ public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.Con
 public static T ContextMenu<T>(this T control, ISubject<Avalonia.Controls.ContextMenu> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.ContextMenu> obs, IObserver<Avalonia.Controls.ContextMenu> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Control.ContextMenuProperty!, obs, changed);
+
 
  // ContextFlyout
 
@@ -99,6 +111,10 @@ public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.P
 /*SetterFromSubjectGenerator*/
 public static T ContextFlyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Control.ContextFlyoutProperty!, obs, changed);
 
 
 

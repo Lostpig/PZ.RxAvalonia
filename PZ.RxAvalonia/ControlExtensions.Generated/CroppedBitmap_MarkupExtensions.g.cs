@@ -34,6 +34,10 @@ public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs
 public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage> subject) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed) where T : Avalonia.Media.Imaging.CroppedBitmap 
+   => control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, obs, changed);
+
 
  // SourceRect
 
@@ -78,6 +82,10 @@ public static T SourceRect<T>(this T control, IObservable<Avalonia.PixelRect> ob
 /*SetterFromSubjectGenerator*/
 public static T SourceRect<T>(this T control, ISubject<Avalonia.PixelRect> subject) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SourceRect<T>(this T control, IObservable<Avalonia.PixelRect> obs, IObserver<Avalonia.PixelRect> changed) where T : Avalonia.Media.Imaging.CroppedBitmap 
+   => control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceRectProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T DisplayDate<T>(this T control, IObservable<System.DateTime> obs)
 public static T DisplayDate<T>(this T control, ISubject<System.DateTime> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDate<T>(this T control, IObservable<System.DateTime> obs, IObserver<System.DateTime> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty!, obs, changed);
+
 
  // DisplayDateStart
 
@@ -55,6 +59,10 @@ public static T DisplayDateStart<T>(this T control, IObservable<System.Nullable<
 /*SetterFromSubjectGenerator*/
 public static T DisplayDateStart<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDateStart<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty!, obs, changed);
 
 
  // DisplayDateEnd
@@ -78,6 +86,10 @@ public static T DisplayDateEnd<T>(this T control, IObservable<System.Nullable<Sy
 public static T DisplayDateEnd<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDateEnd<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty!, obs, changed);
+
 
  // FirstDayOfWeek
 
@@ -99,6 +111,10 @@ public static T FirstDayOfWeek<T>(this T control, IObservable<System.DayOfWeek> 
 /*SetterFromSubjectGenerator*/
 public static T FirstDayOfWeek<T>(this T control, ISubject<System.DayOfWeek> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FirstDayOfWeek<T>(this T control, IObservable<System.DayOfWeek> obs, IObserver<System.DayOfWeek> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty!, obs, changed);
 
 
  // IsDropDownOpen
@@ -122,6 +138,10 @@ public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> ob
 public static T IsDropDownOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty!, obs, changed);
+
 
  // IsTodayHighlighted
 
@@ -143,6 +163,10 @@ public static T IsTodayHighlighted<T>(this T control, IObservable<System.Boolean
 /*SetterFromSubjectGenerator*/
 public static T IsTodayHighlighted<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsTodayHighlighted<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty!, obs, changed);
 
 
  // SelectedDate
@@ -166,6 +190,10 @@ public static T SelectedDate<T>(this T control, IObservable<System.Nullable<Syst
 public static T SelectedDate<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedDate<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty!, obs, changed);
+
 
  // SelectedDateFormat
 
@@ -187,6 +215,10 @@ public static T SelectedDateFormat<T>(this T control, IObservable<Avalonia.Contr
 /*SetterFromSubjectGenerator*/
 public static T SelectedDateFormat<T>(this T control, ISubject<Avalonia.Controls.CalendarDatePickerFormat> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectedDateFormat<T>(this T control, IObservable<Avalonia.Controls.CalendarDatePickerFormat> obs, IObserver<Avalonia.Controls.CalendarDatePickerFormat> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty!, obs, changed);
 
 
  // CustomDateFormatString
@@ -210,6 +242,10 @@ public static T CustomDateFormatString<T>(this T control, IObservable<System.Str
 public static T CustomDateFormatString<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CustomDateFormatString<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty!, obs, changed);
+
 
  // Text
 
@@ -231,6 +267,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.TextProperty!, obs, changed);
 
 
  // Watermark
@@ -254,6 +294,10 @@ public static T Watermark<T>(this T control, IObservable<System.String> obs) whe
 public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, obs, changed);
+
 
  // UseFloatingWatermark
 
@@ -275,6 +319,10 @@ public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boole
 /*SetterFromSubjectGenerator*/
 public static T UseFloatingWatermark<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -298,6 +346,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty!, obs, changed);
+
 
  // VerticalContentAlignment
 
@@ -319,6 +371,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty!, obs, changed);
 
 
 

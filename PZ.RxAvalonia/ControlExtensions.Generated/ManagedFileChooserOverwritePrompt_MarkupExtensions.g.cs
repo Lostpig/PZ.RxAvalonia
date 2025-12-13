@@ -34,6 +34,10 @@ public static T FileName<T>(this T control, IObservable<System.String> obs) wher
 public static T FileName<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Dialogs.ManagedFileChooserOverwritePrompt 
    => control._set(Avalonia.Dialogs.ManagedFileChooserOverwritePrompt.FileNameProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FileName<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Dialogs.ManagedFileChooserOverwritePrompt 
+   => control._setEx(Avalonia.Dialogs.ManagedFileChooserOverwritePrompt.FileNameProperty!, obs, changed);
+
 
 
 }

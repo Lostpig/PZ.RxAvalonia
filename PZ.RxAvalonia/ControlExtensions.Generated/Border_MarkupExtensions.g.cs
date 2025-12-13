@@ -34,6 +34,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.BackgroundProperty!, obs, changed);
+
 
  // BackgroundSizing
 
@@ -56,6 +60,10 @@ public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.B
 public static T BackgroundSizing<T>(this T control, ISubject<Avalonia.Media.BackgroundSizing> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BackgroundSizingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.BackgroundSizing> obs, IObserver<Avalonia.Media.BackgroundSizing> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.BackgroundSizingProperty!, obs, changed);
+
 
  // BorderBrush
 
@@ -77,6 +85,10 @@ public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush
 /*SetterFromSubjectGenerator*/
 public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BorderBrushProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.BorderBrushProperty!, obs, changed);
 
 
  // BorderThickness
@@ -118,6 +130,10 @@ public static T BorderThickness<T>(this T control, IObservable<Avalonia.Thicknes
 public static T BorderThickness<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BorderThicknessProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BorderThickness<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.BorderThicknessProperty!, obs, changed);
+
 
  // CornerRadius
 
@@ -158,6 +174,10 @@ public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadiu
 public static T CornerRadius<T>(this T control, ISubject<Avalonia.CornerRadius> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.CornerRadiusProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadius> obs, IObserver<Avalonia.CornerRadius> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.CornerRadiusProperty!, obs, changed);
+
 
  // BoxShadow
 
@@ -192,6 +212,10 @@ public static T BoxShadow<T>(this T control, IObservable<Avalonia.Media.BoxShado
 /*SetterFromSubjectGenerator*/
 public static T BoxShadow<T>(this T control, ISubject<Avalonia.Media.BoxShadows> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BoxShadowProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BoxShadow<T>(this T control, IObservable<Avalonia.Media.BoxShadows> obs, IObserver<Avalonia.Media.BoxShadows> changed) where T : Avalonia.Controls.Border 
+   => control._setEx(Avalonia.Controls.Border.BoxShadowProperty!, obs, changed);
 
 
 

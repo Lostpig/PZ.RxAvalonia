@@ -34,6 +34,10 @@ public static T Rows<T>(this T control, IObservable<System.Int32> obs) where T :
 public static T Rows<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Rows<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Primitives.UniformGrid 
+   => control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowsProperty!, obs, changed);
+
 
  // Columns
 
@@ -55,6 +59,10 @@ public static T Columns<T>(this T control, IObservable<System.Int32> obs) where 
 /*SetterFromSubjectGenerator*/
 public static T Columns<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Columns<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Primitives.UniformGrid 
+   => control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty!, obs, changed);
 
 
  // FirstColumn
@@ -78,6 +86,10 @@ public static T FirstColumn<T>(this T control, IObservable<System.Int32> obs) wh
 public static T FirstColumn<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FirstColumn<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Primitives.UniformGrid 
+   => control._setEx(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty!, obs, changed);
+
 
  // RowSpacing
 
@@ -100,6 +112,10 @@ public static T RowSpacing<T>(this T control, IObservable<System.Double> obs) wh
 public static T RowSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RowSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.UniformGrid 
+   => control._setEx(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty!, obs, changed);
+
 
  // ColumnSpacing
 
@@ -121,6 +137,10 @@ public static T ColumnSpacing<T>(this T control, IObservable<System.Double> obs)
 /*SetterFromSubjectGenerator*/
 public static T ColumnSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.UniformGrid 
    => control._set(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ColumnSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.UniformGrid 
+   => control._setEx(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty!, obs, changed);
 
 
 

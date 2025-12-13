@@ -34,6 +34,10 @@ public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transfor
 public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform> subject) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+   => control._setEx(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

@@ -34,6 +34,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.BackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.BackgroundProperty!, obs, changed);
+
 
  // BackgroundSizing
 
@@ -56,6 +60,10 @@ public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.B
 public static T BackgroundSizing<T>(this T control, ISubject<Avalonia.Media.BackgroundSizing> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.BackgroundSizing> obs, IObserver<Avalonia.Media.BackgroundSizing> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizingProperty!, obs, changed);
+
 
  // BorderBrush
 
@@ -77,6 +85,10 @@ public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush
 /*SetterFromSubjectGenerator*/
 public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.BorderBrushProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.BorderBrushProperty!, obs, changed);
 
 
  // BorderThickness
@@ -118,6 +130,10 @@ public static T BorderThickness<T>(this T control, IObservable<Avalonia.Thicknes
 public static T BorderThickness<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.BorderThicknessProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BorderThickness<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.BorderThicknessProperty!, obs, changed);
+
 
  // CornerRadius
 
@@ -158,6 +174,10 @@ public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadiu
 public static T CornerRadius<T>(this T control, ISubject<Avalonia.CornerRadius> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.CornerRadiusProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadius> obs, IObserver<Avalonia.CornerRadius> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.CornerRadiusProperty!, obs, changed);
+
 
  // BoxShadow
 
@@ -193,6 +213,10 @@ public static T BoxShadow<T>(this T control, IObservable<Avalonia.Media.BoxShado
 public static T BoxShadow<T>(this T control, ISubject<Avalonia.Media.BoxShadows> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.BoxShadowProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BoxShadow<T>(this T control, IObservable<Avalonia.Media.BoxShadows> obs, IObserver<Avalonia.Media.BoxShadows> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.BoxShadowProperty!, obs, changed);
+
 
  // Foreground
 
@@ -214,6 +238,10 @@ public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush>
 /*SetterFromSubjectGenerator*/
 public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.ForegroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.ForegroundProperty!, obs, changed);
 
 
  // FontFamily
@@ -237,6 +265,10 @@ public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFam
 public static T FontFamily<T>(this T control, ISubject<Avalonia.Media.FontFamily> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.FontFamilyProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFamily> obs, IObserver<Avalonia.Media.FontFamily> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.FontFamilyProperty!, obs, changed);
+
 
  // FontSize
 
@@ -258,6 +290,10 @@ public static T FontSize<T>(this T control, IObservable<System.Double> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T FontSize<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.FontSizeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.FontSizeProperty!, obs, changed);
 
 
  // FontStyle
@@ -281,6 +317,10 @@ public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyl
 public static T FontStyle<T>(this T control, ISubject<Avalonia.Media.FontStyle> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.FontStyleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyle> obs, IObserver<Avalonia.Media.FontStyle> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.FontStyleProperty!, obs, changed);
+
 
  // FontWeight
 
@@ -302,6 +342,10 @@ public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWei
 /*SetterFromSubjectGenerator*/
 public static T FontWeight<T>(this T control, ISubject<Avalonia.Media.FontWeight> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.FontWeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWeight> obs, IObserver<Avalonia.Media.FontWeight> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.FontWeightProperty!, obs, changed);
 
 
  // FontStretch
@@ -325,6 +369,10 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
 public static T FontStretch<T>(this T control, ISubject<Avalonia.Media.FontStretch> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.FontStretchProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontStretch> obs, IObserver<Avalonia.Media.FontStretch> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.FontStretchProperty!, obs, changed);
+
 
  // TextAlignment
 
@@ -346,6 +394,10 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
 /*SetterFromSubjectGenerator*/
 public static T TextAlignment<T>(this T control, ISubject<Avalonia.Media.TextAlignment> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.TextAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.TextAlignmentProperty!, obs, changed);
 
 
  // TextWrapping
@@ -369,6 +421,10 @@ public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextW
 public static T TextWrapping<T>(this T control, ISubject<Avalonia.Media.TextWrapping> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.TextWrappingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextWrapping> obs, IObserver<Avalonia.Media.TextWrapping> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.TextWrappingProperty!, obs, changed);
+
 
  // TextTrimming
 
@@ -390,6 +446,10 @@ public static T TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextT
 /*SetterFromSubjectGenerator*/
 public static T TextTrimming<T>(this T control, ISubject<Avalonia.Media.TextTrimming> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.TextTrimmingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextTrimming> obs, IObserver<Avalonia.Media.TextTrimming> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.TextTrimmingProperty!, obs, changed);
 
 
  // LineHeight
@@ -413,6 +473,10 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs) wh
 public static T LineHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.LineHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.LineHeightProperty!, obs, changed);
+
 
  // MaxLines
 
@@ -434,6 +498,10 @@ public static T MaxLines<T>(this T control, IObservable<System.Int32> obs) where
 /*SetterFromSubjectGenerator*/
 public static T MaxLines<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.MaxLinesProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxLines<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.MaxLinesProperty!, obs, changed);
 
 
  // Content
@@ -457,6 +525,10 @@ public static T Content<T>(this T control, IObservable<System.Object> obs) where
 public static T Content<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.ContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Content<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.ContentProperty!, obs, changed);
+
 
  // ContentTemplate
 
@@ -478,6 +550,10 @@ public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls
 /*SetterFromSubjectGenerator*/
 public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.ContentTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.ContentTemplateProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -501,6 +577,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.HorizontalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.HorizontalContentAlignmentProperty!, obs, changed);
+
 
  // VerticalContentAlignment
 
@@ -522,6 +602,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.VerticalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.VerticalContentAlignmentProperty!, obs, changed);
 
 
  // Padding
@@ -563,6 +647,10 @@ public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs) 
 public static T Padding<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.PaddingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.PaddingProperty!, obs, changed);
+
 
  // RecognizesAccessKey
 
@@ -584,6 +672,10 @@ public static T RecognizesAccessKey<T>(this T control, IObservable<System.Boolea
 /*SetterFromSubjectGenerator*/
 public static T RecognizesAccessKey<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ContentPresenter.RecognizesAccessKeyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RecognizesAccessKey<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.RecognizesAccessKeyProperty!, obs, changed);
 
 
 

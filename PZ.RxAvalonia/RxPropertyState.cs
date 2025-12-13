@@ -1,61 +1,8 @@
 ﻿using Avalonia;
+using System.Reactive.Linq;
 using System.Reactive.Subjects;
 
 namespace PZ.RxAvalonia;
-
-internal class RxPropertyStateBackup<TControl, TValue>: RxPropertyState where TControl : AvaloniaObject
-{
-    protected readonly IRxProperty<TValue> _rxp;
-    protected readonly TControl _control;
-    protected readonly AvaloniaProperty<TValue>? _avap;
-    protected readonly Action<TControl, TValue>? _setter;
-    protected readonly IObserver<TValue>? _changed;
-    protected override IDisposable _subscription { get; init; }
-
-    private TValue? _cacheValue;
-
-    public RxPropertyStateBackup(TControl control, TwoWayRxProperty<TValue> rxp, Action<TControl, TValue> setter)
-        : this(control, rxp, setter, null) { _changed = rxp.Changed; }
-    public RxPropertyStateBackup(TControl control, TwoWayRxProperty<TValue> rxp, AvaloniaProperty<TValue> avap)
-        : this(control, rxp, null, avap) { _changed = rxp.Changed; }
-    public RxPropertyStateBackup(TControl control, RxProperty<TValue> rxp, Action<TControl, TValue> setter)
-        : this(control, rxp, setter, null) { }
-    public RxPropertyStateBackup(TControl control, RxProperty<TValue> rxp, AvaloniaProperty<TValue> avap)
-        : this(control, rxp, null, avap) { }
-
-    private RxPropertyStateBackup(
-        TControl control, 
-        IRxProperty<TValue> rxp, 
-        Action<TControl, TValue>? setter,
-        AvaloniaProperty<TValue>? avap)
-    {
-        _control = control;
-        _rxp = rxp;
-        _setter = setter;
-        _avap = avap;
-
-        SetValue(rxp.Value);
-        _subscription = rxp.Observable.Subscribe(SetValue);
-    }
-
-    protected void SetValue(TValue newValue)
-    {
-        if (_avap != null)
-        {
-            if (!Equals(_control.GetValue(_avap), newValue))
-            {
-                _control.SetValue(_avap, newValue);
-                _changed?.OnNext(newValue);
-            }
-        }
-        else if (_setter != null && !Equals(_cacheValue, newValue))
-        {
-            _cacheValue = newValue;
-            _setter.Invoke(_control, newValue);
-            _changed?.OnNext(newValue);
-        }
-    }
-}
 
 internal class RxPropertyState<TControl, TValue> : RxPropertyState where TControl : AvaloniaObject
 {
@@ -64,7 +11,7 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     protected readonly TControl _control;
     protected readonly AvaloniaProperty<TValue>? _avap;
     protected readonly Action<TControl, TValue>? _setter;
-    protected override IDisposable _subscription { get; init; }
+    protected override List<IDisposable> _subscriptions { get; init; } = [];
     private TValue? _cacheValue;
 
     public RxPropertyState(TControl control, Action<TControl, TValue> setter, ISubject<TValue> subject)
@@ -76,7 +23,7 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     public RxPropertyState(TControl control, AvaloniaProperty<TValue> avap, IObservable<TValue> obs)
         : this(control, obs, null, null, avap) { }
 
-    private RxPropertyState(
+    public RxPropertyState(
         TControl control,
         IObservable<TValue> obs,
         IObserver<TValue>? changed,
@@ -93,33 +40,38 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
         {
             SetValue(bs.Value);
         }
-        _subscription = obs.Subscribe(SetValue);
+        _subscriptions.Add(obs.Subscribe(SetValue));
+
+        if (_avap != null && _changed != null)
+        {
+            var avapObs = _control.GetObservable(_avap);
+            _subscriptions.Add(avapObs.Subscribe(_changed));
+        }
     }
 
     protected void SetValue(TValue newValue)
     {
         if (_avap != null)
         {
-            if (!Equals(_control.GetValue(_avap), newValue))
+            var oldValue = _control.GetValue(_avap);
+            if (!Equals(oldValue, newValue))
             {
                 _control.SetValue(_avap, newValue);
-                _changed?.OnNext(newValue);
             }
         }
         else if (_setter != null && !Equals(_cacheValue, newValue))
         {
             _cacheValue = newValue;
             _setter.Invoke(_control, newValue);
-            _changed?.OnNext(newValue);
         }
     }
 }
 
 internal abstract class RxPropertyState : IDisposable
 {
-    protected abstract IDisposable _subscription { get; init; }
+    protected abstract List<IDisposable> _subscriptions { get; init; }
     public virtual void Dispose()
     {
-        _subscription.Dispose();
+        foreach (var subscription in _subscriptions) subscription.Dispose();
     }
 }

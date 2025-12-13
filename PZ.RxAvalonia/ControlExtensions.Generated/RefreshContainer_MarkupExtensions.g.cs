@@ -34,6 +34,10 @@ public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.Refr
 public static T Visualizer<T>(this T control, ISubject<Avalonia.Controls.RefreshVisualizer> subject) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizer> obs, IObserver<Avalonia.Controls.RefreshVisualizer> changed) where T : Avalonia.Controls.RefreshContainer 
+   => control._setEx(Avalonia.Controls.RefreshContainer.VisualizerProperty!, obs, changed);
+
 
  // PullDirection
 
@@ -55,6 +59,10 @@ public static T PullDirection<T>(this T control, IObservable<Avalonia.Input.Pull
 /*SetterFromSubjectGenerator*/
 public static T PullDirection<T>(this T control, ISubject<Avalonia.Input.PullDirection> subject) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PullDirection<T>(this T control, IObservable<Avalonia.Input.PullDirection> obs, IObserver<Avalonia.Input.PullDirection> changed) where T : Avalonia.Controls.RefreshContainer 
+   => control._setEx(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Command<T>(this T control, IObservable<System.Windows.Input.ICom
 public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.CommandProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.CommandProperty!, obs, changed);
+
 
  // CommandParameter
 
@@ -55,6 +59,10 @@ public static T CommandParameter<T>(this T control, IObservable<System.Object> o
 /*SetterFromSubjectGenerator*/
 public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.CommandParameterProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.CommandParameterProperty!, obs, changed);
 
 
  // Menu
@@ -78,6 +86,10 @@ public static T Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu
 public static T Menu<T>(this T control, ISubject<Avalonia.Controls.NativeMenu> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.MenuProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu> obs, IObserver<Avalonia.Controls.NativeMenu> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.MenuProperty!, obs, changed);
+
 
  // Icon
 
@@ -99,6 +111,10 @@ public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon
 /*SetterFromSubjectGenerator*/
 public static T Icon<T>(this T control, ISubject<Avalonia.Controls.WindowIcon> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.IconProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon> obs, IObserver<Avalonia.Controls.WindowIcon> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.IconProperty!, obs, changed);
 
 
  // ToolTipText
@@ -122,6 +138,10 @@ public static T ToolTipText<T>(this T control, IObservable<System.String> obs) w
 public static T ToolTipText<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.ToolTipTextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ToolTipText<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.ToolTipTextProperty!, obs, changed);
+
 
  // IsVisible
 
@@ -143,6 +163,10 @@ public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T IsVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TrayIcon 
    => control._set(Avalonia.Controls.TrayIcon.IsVisibleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TrayIcon 
+   => control._setEx(Avalonia.Controls.TrayIcon.IsVisibleProperty!, obs, changed);
 
 
 
@@ -167,6 +191,10 @@ public static T TrayIcon_Icons<T>(this T control, Avalonia.Controls.TrayIcons va
     control.SetValue(Avalonia.Controls.TrayIcon.IconsProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TrayIcon_Icons<T>(this T control, IObservable<Avalonia.Controls.TrayIcons> obs, IObserver<Avalonia.Controls.TrayIcons> changed) where T : Avalonia.Application 
+   => control._setEx(Avalonia.Controls.TrayIcon.IconsProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu
 public static T Menu<T>(this T control, ISubject<Avalonia.Controls.NativeMenu> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.MenuProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu> obs, IObserver<Avalonia.Controls.NativeMenu> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.MenuProperty!, obs, changed);
+
 
  // Icon
 
@@ -55,6 +59,10 @@ public static T Icon<T>(this T control, IObservable<Avalonia.Media.Imaging.Bitma
 /*SetterFromSubjectGenerator*/
 public static T Icon<T>(this T control, ISubject<Avalonia.Media.Imaging.Bitmap> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.IconProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Icon<T>(this T control, IObservable<Avalonia.Media.Imaging.Bitmap> obs, IObserver<Avalonia.Media.Imaging.Bitmap> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.IconProperty!, obs, changed);
 
 
  // Header
@@ -78,6 +86,10 @@ public static T Header<T>(this T control, IObservable<System.String> obs) where 
 public static T Header<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.HeaderProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Header<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.HeaderProperty!, obs, changed);
+
 
  // ToolTip
 
@@ -99,6 +111,10 @@ public static T ToolTip<T>(this T control, IObservable<System.String> obs) where
 /*SetterFromSubjectGenerator*/
 public static T ToolTip<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.ToolTipProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ToolTip<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.ToolTipProperty!, obs, changed);
 
 
  // Gesture
@@ -122,6 +138,10 @@ public static T Gesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture
 public static T Gesture<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.GestureProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Gesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.GestureProperty!, obs, changed);
+
 
  // IsChecked
 
@@ -143,6 +163,10 @@ public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T IsChecked<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.IsCheckedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.IsCheckedProperty!, obs, changed);
 
 
  // ToggleType
@@ -166,6 +190,10 @@ public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.Nati
 public static T ToggleType<T>(this T control, ISubject<Avalonia.Controls.NativeMenuItemToggleType> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.NativeMenuItemToggleType> obs, IObserver<Avalonia.Controls.NativeMenuItemToggleType> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, obs, changed);
+
 
  // Command
 
@@ -187,6 +215,10 @@ public static T Command<T>(this T control, IObservable<System.Windows.Input.ICom
 /*SetterFromSubjectGenerator*/
 public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.CommandProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.CommandProperty!, obs, changed);
 
 
  // CommandParameter
@@ -210,6 +242,10 @@ public static T CommandParameter<T>(this T control, IObservable<System.Object> o
 public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.CommandParameterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.CommandParameterProperty!, obs, changed);
+
 
  // IsEnabled
 
@@ -232,6 +268,10 @@ public static T IsEnabled<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.IsEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.IsEnabledProperty!, obs, changed);
+
 
  // IsVisible
 
@@ -253,6 +293,10 @@ public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T IsVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.IsVisibleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NativeMenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuItem.IsVisibleProperty!, obs, changed);
 
 
 

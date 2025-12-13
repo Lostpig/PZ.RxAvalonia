@@ -34,6 +34,10 @@ public static T IsVisited<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsVisited<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.IsVisitedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsVisited<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.HyperlinkButton 
+   => control._setEx(Avalonia.Controls.HyperlinkButton.IsVisitedProperty!, obs, changed);
+
 
  // NavigateUri
 
@@ -55,6 +59,10 @@ public static T NavigateUri<T>(this T control, IObservable<System.Uri> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T NavigateUri<T>(this T control, ISubject<System.Uri> subject) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T NavigateUri<T>(this T control, IObservable<System.Uri> obs, IObserver<System.Uri> changed) where T : Avalonia.Controls.HyperlinkButton 
+   => control._setEx(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, obs, changed);
 
 
 

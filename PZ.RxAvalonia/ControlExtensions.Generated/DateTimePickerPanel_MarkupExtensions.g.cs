@@ -34,6 +34,10 @@ public static T ItemHeight<T>(this T control, IObservable<System.Double> obs) wh
 public static T ItemHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._setEx(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty!, obs, changed);
+
 
  // PanelType
 
@@ -55,6 +59,10 @@ public static T PanelType<T>(this T control, IObservable<Avalonia.Controls.Primi
 /*SetterFromSubjectGenerator*/
 public static T PanelType<T>(this T control, ISubject<Avalonia.Controls.Primitives.DateTimePickerPanelType> subject) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PanelType<T>(this T control, IObservable<Avalonia.Controls.Primitives.DateTimePickerPanelType> obs, IObserver<Avalonia.Controls.Primitives.DateTimePickerPanelType> changed) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._setEx(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty!, obs, changed);
 
 
  // ItemFormat
@@ -78,6 +86,10 @@ public static T ItemFormat<T>(this T control, IObservable<System.String> obs) wh
 public static T ItemFormat<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemFormat<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._setEx(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty!, obs, changed);
+
 
  // ShouldLoop
 
@@ -99,6 +111,10 @@ public static T ShouldLoop<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T ShouldLoop<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
    => control._set(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ShouldLoop<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+   => control._setEx(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty!, obs, changed);
 
 
 

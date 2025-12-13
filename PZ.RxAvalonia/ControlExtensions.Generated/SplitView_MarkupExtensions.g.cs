@@ -34,6 +34,10 @@ public static T CompactPaneLength<T>(this T control, IObservable<System.Double> 
 public static T CompactPaneLength<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.CompactPaneLengthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CompactPaneLength<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.CompactPaneLengthProperty!, obs, changed);
+
 
  // DisplayMode
 
@@ -55,6 +59,10 @@ public static T DisplayMode<T>(this T control, IObservable<Avalonia.Controls.Spl
 /*SetterFromSubjectGenerator*/
 public static T DisplayMode<T>(this T control, ISubject<Avalonia.Controls.SplitViewDisplayMode> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.DisplayModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayMode<T>(this T control, IObservable<Avalonia.Controls.SplitViewDisplayMode> obs, IObserver<Avalonia.Controls.SplitViewDisplayMode> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.DisplayModeProperty!, obs, changed);
 
 
  // IsPaneOpen
@@ -78,6 +86,10 @@ public static T IsPaneOpen<T>(this T control, IObservable<System.Boolean> obs) w
 public static T IsPaneOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.IsPaneOpenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsPaneOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.IsPaneOpenProperty!, obs, changed);
+
 
  // OpenPaneLength
 
@@ -99,6 +111,10 @@ public static T OpenPaneLength<T>(this T control, IObservable<System.Double> obs
 /*SetterFromSubjectGenerator*/
 public static T OpenPaneLength<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.OpenPaneLengthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T OpenPaneLength<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.OpenPaneLengthProperty!, obs, changed);
 
 
  // PaneBackground
@@ -122,6 +138,10 @@ public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBr
 public static T PaneBackground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneBackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty!, obs, changed);
+
 
  // PanePlacement
 
@@ -143,6 +163,10 @@ public static T PanePlacement<T>(this T control, IObservable<Avalonia.Controls.S
 /*SetterFromSubjectGenerator*/
 public static T PanePlacement<T>(this T control, ISubject<Avalonia.Controls.SplitViewPanePlacement> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PanePlacementProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PanePlacement<T>(this T control, IObservable<Avalonia.Controls.SplitViewPanePlacement> obs, IObserver<Avalonia.Controls.SplitViewPanePlacement> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.PanePlacementProperty!, obs, changed);
 
 
  // Pane
@@ -166,6 +190,10 @@ public static T Pane<T>(this T control, IObservable<System.Object> obs) where T 
 public static T Pane<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Pane<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.PaneProperty!, obs, changed);
+
 
  // PaneTemplate
 
@@ -188,6 +216,10 @@ public static T PaneTemplate<T>(this T control, IObservable<Avalonia.Controls.Te
 public static T PaneTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PaneTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.PaneTemplateProperty!, obs, changed);
+
 
  // UseLightDismissOverlayMode
 
@@ -209,6 +241,10 @@ public static T UseLightDismissOverlayMode<T>(this T control, IObservable<System
 /*SetterFromSubjectGenerator*/
 public static T UseLightDismissOverlayMode<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T UseLightDismissOverlayMode<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.SplitView 
+   => control._setEx(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty!, obs, changed);
 
 
 

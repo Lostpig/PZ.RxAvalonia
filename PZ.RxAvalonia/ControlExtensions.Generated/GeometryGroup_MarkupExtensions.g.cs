@@ -34,6 +34,10 @@ public static T Children<T>(this T control, IObservable<Avalonia.Media.GeometryC
 public static T Children<T>(this T control, ISubject<Avalonia.Media.GeometryCollection> subject) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.ChildrenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Children<T>(this T control, IObservable<Avalonia.Media.GeometryCollection> obs, IObserver<Avalonia.Media.GeometryCollection> changed) where T : Avalonia.Media.GeometryGroup 
+   => control._setEx(Avalonia.Media.GeometryGroup.ChildrenProperty!, obs, changed);
+
 
  // FillRule
 
@@ -55,6 +59,10 @@ public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule>
 /*SetterFromSubjectGenerator*/
 public static T FillRule<T>(this T control, ISubject<Avalonia.Media.FillRule> subject) where T : Avalonia.Media.GeometryGroup 
    => control._set(Avalonia.Media.GeometryGroup.FillRuleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule> obs, IObserver<Avalonia.Media.FillRule> changed) where T : Avalonia.Media.GeometryGroup 
+   => control._setEx(Avalonia.Media.GeometryGroup.FillRuleProperty!, obs, changed);
 
 
 

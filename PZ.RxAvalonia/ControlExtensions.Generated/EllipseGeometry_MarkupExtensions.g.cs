@@ -57,6 +57,10 @@ public static T Rect<T>(this T control, IObservable<Avalonia.Rect> obs) where T 
 public static T Rect<T>(this T control, ISubject<Avalonia.Rect> subject) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RectProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Rect<T>(this T control, IObservable<Avalonia.Rect> obs, IObserver<Avalonia.Rect> changed) where T : Avalonia.Media.EllipseGeometry 
+   => control._setEx(Avalonia.Media.EllipseGeometry.RectProperty!, obs, changed);
+
 
  // RadiusX
 
@@ -78,6 +82,10 @@ public static T RadiusX<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T RadiusX<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RadiusXProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RadiusX<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.EllipseGeometry 
+   => control._setEx(Avalonia.Media.EllipseGeometry.RadiusXProperty!, obs, changed);
 
 
  // RadiusY
@@ -101,6 +109,10 @@ public static T RadiusY<T>(this T control, IObservable<System.Double> obs) where
 public static T RadiusY<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.RadiusYProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RadiusY<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.EllipseGeometry 
+   => control._setEx(Avalonia.Media.EllipseGeometry.RadiusYProperty!, obs, changed);
+
 
  // Center
 
@@ -122,6 +134,10 @@ public static T Center<T>(this T control, IObservable<Avalonia.Point> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Center<T>(this T control, ISubject<Avalonia.Point> subject) where T : Avalonia.Media.EllipseGeometry 
    => control._set(Avalonia.Media.EllipseGeometry.CenterProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Center<T>(this T control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed) where T : Avalonia.Media.EllipseGeometry 
+   => control._setEx(Avalonia.Media.EllipseGeometry.CenterProperty!, obs, changed);
 
 
 

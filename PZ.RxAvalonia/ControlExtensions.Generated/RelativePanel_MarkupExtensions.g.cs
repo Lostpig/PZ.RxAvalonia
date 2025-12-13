@@ -34,6 +34,10 @@ public static T RelativePanel_Above<T>(this T control, System.Object value) wher
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_Above<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AboveProperty!, obs, changed);
+
 
  // AlignBottomWithPanel
 
@@ -55,6 +59,10 @@ public static T RelativePanel_AlignBottomWithPanel<T>(this T control, System.Boo
     control.SetValue(Avalonia.Controls.RelativePanel.AlignBottomWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignBottomWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignBottomWithPanelProperty!, obs, changed);
 
 
  // AlignBottomWith
@@ -78,6 +86,10 @@ public static T RelativePanel_AlignBottomWith<T>(this T control, System.Object v
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignBottomWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignBottomWithProperty!, obs, changed);
+
 
  // AlignHorizontalCenterWithPanel
 
@@ -99,6 +111,10 @@ public static T RelativePanel_AlignHorizontalCenterWithPanel<T>(this T control, 
     control.SetValue(Avalonia.Controls.RelativePanel.AlignHorizontalCenterWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignHorizontalCenterWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignHorizontalCenterWithPanelProperty!, obs, changed);
 
 
  // AlignHorizontalCenterWith
@@ -122,6 +138,10 @@ public static T RelativePanel_AlignHorizontalCenterWith<T>(this T control, Syste
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignHorizontalCenterWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignHorizontalCenterWithProperty!, obs, changed);
+
 
  // AlignLeftWithPanel
 
@@ -143,6 +163,10 @@ public static T RelativePanel_AlignLeftWithPanel<T>(this T control, System.Boole
     control.SetValue(Avalonia.Controls.RelativePanel.AlignLeftWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignLeftWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignLeftWithPanelProperty!, obs, changed);
 
 
  // AlignLeftWith
@@ -166,6 +190,10 @@ public static T RelativePanel_AlignLeftWith<T>(this T control, System.Object val
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignLeftWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignLeftWithProperty!, obs, changed);
+
 
  // AlignRightWithPanel
 
@@ -187,6 +215,10 @@ public static T RelativePanel_AlignRightWithPanel<T>(this T control, System.Bool
     control.SetValue(Avalonia.Controls.RelativePanel.AlignRightWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignRightWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignRightWithPanelProperty!, obs, changed);
 
 
  // AlignRightWith
@@ -210,6 +242,10 @@ public static T RelativePanel_AlignRightWith<T>(this T control, System.Object va
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignRightWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignRightWithProperty!, obs, changed);
+
 
  // AlignTopWithPanel
 
@@ -231,6 +267,10 @@ public static T RelativePanel_AlignTopWithPanel<T>(this T control, System.Boolea
     control.SetValue(Avalonia.Controls.RelativePanel.AlignTopWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignTopWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignTopWithPanelProperty!, obs, changed);
 
 
  // AlignTopWith
@@ -254,6 +294,10 @@ public static T RelativePanel_AlignTopWith<T>(this T control, System.Object valu
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignTopWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignTopWithProperty!, obs, changed);
+
 
  // AlignVerticalCenterWithPanel
 
@@ -275,6 +319,10 @@ public static T RelativePanel_AlignVerticalCenterWithPanel<T>(this T control, Sy
     control.SetValue(Avalonia.Controls.RelativePanel.AlignVerticalCenterWithPanelProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignVerticalCenterWithPanel<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignVerticalCenterWithPanelProperty!, obs, changed);
 
 
  // AlignVerticalCenterWith
@@ -298,6 +346,10 @@ public static T RelativePanel_AlignVerticalCenterWith<T>(this T control, System.
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_AlignVerticalCenterWith<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.AlignVerticalCenterWithProperty!, obs, changed);
+
 
  // Below
 
@@ -319,6 +371,10 @@ public static T RelativePanel_Below<T>(this T control, System.Object value) wher
     control.SetValue(Avalonia.Controls.RelativePanel.BelowProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_Below<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.BelowProperty!, obs, changed);
 
 
  // LeftOf
@@ -342,6 +398,10 @@ public static T RelativePanel_LeftOf<T>(this T control, System.Object value) whe
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_LeftOf<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.LeftOfProperty!, obs, changed);
+
 
  // RightOf
 
@@ -363,6 +423,10 @@ public static T RelativePanel_RightOf<T>(this T control, System.Object value) wh
     control.SetValue(Avalonia.Controls.RelativePanel.RightOfProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T RelativePanel_RightOf<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.RelativePanel.RightOfProperty!, obs, changed);
 
 
 

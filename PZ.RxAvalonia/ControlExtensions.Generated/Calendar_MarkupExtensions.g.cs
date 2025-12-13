@@ -34,6 +34,10 @@ public static T FirstDayOfWeek<T>(this T control, IObservable<System.DayOfWeek> 
 public static T FirstDayOfWeek<T>(this T control, ISubject<System.DayOfWeek> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.FirstDayOfWeekProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FirstDayOfWeek<T>(this T control, IObservable<System.DayOfWeek> obs, IObserver<System.DayOfWeek> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.FirstDayOfWeekProperty!, obs, changed);
+
 
  // IsTodayHighlighted
 
@@ -55,6 +59,10 @@ public static T IsTodayHighlighted<T>(this T control, IObservable<System.Boolean
 /*SetterFromSubjectGenerator*/
 public static T IsTodayHighlighted<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.IsTodayHighlightedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsTodayHighlighted<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.IsTodayHighlightedProperty!, obs, changed);
 
 
  // HeaderBackground
@@ -78,6 +86,10 @@ public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.I
 public static T HeaderBackground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, obs, changed);
+
 
  // DisplayMode
 
@@ -99,6 +111,10 @@ public static T DisplayMode<T>(this T control, IObservable<Avalonia.Controls.Cal
 /*SetterFromSubjectGenerator*/
 public static T DisplayMode<T>(this T control, ISubject<Avalonia.Controls.CalendarMode> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.DisplayModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayMode<T>(this T control, IObservable<Avalonia.Controls.CalendarMode> obs, IObserver<Avalonia.Controls.CalendarMode> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.DisplayModeProperty!, obs, changed);
 
 
  // SelectionMode
@@ -122,6 +138,10 @@ public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.C
 public static T SelectionMode<T>(this T control, ISubject<Avalonia.Controls.CalendarSelectionMode> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.SelectionModeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.CalendarSelectionMode> obs, IObserver<Avalonia.Controls.CalendarSelectionMode> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.SelectionModeProperty!, obs, changed);
+
 
  // AllowTapRangeSelection
 
@@ -143,6 +163,10 @@ public static T AllowTapRangeSelection<T>(this T control, IObservable<System.Boo
 /*SetterFromSubjectGenerator*/
 public static T AllowTapRangeSelection<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AllowTapRangeSelection<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty!, obs, changed);
 
 
  // SelectedDate
@@ -166,6 +190,10 @@ public static T SelectedDate<T>(this T control, IObservable<System.Nullable<Syst
 public static T SelectedDate<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.SelectedDateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedDate<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.SelectedDateProperty!, obs, changed);
+
 
  // DisplayDate
 
@@ -187,6 +215,10 @@ public static T DisplayDate<T>(this T control, IObservable<System.DateTime> obs)
 /*SetterFromSubjectGenerator*/
 public static T DisplayDate<T>(this T control, ISubject<System.DateTime> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.DisplayDateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDate<T>(this T control, IObservable<System.DateTime> obs, IObserver<System.DateTime> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.DisplayDateProperty!, obs, changed);
 
 
  // DisplayDateStart
@@ -210,6 +242,10 @@ public static T DisplayDateStart<T>(this T control, IObservable<System.Nullable<
 public static T DisplayDateStart<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.DisplayDateStartProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDateStart<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.DisplayDateStartProperty!, obs, changed);
+
 
  // DisplayDateEnd
 
@@ -231,6 +267,10 @@ public static T DisplayDateEnd<T>(this T control, IObservable<System.Nullable<Sy
 /*SetterFromSubjectGenerator*/
 public static T DisplayDateEnd<T>(this T control, ISubject<System.Nullable<System.DateTime>> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.DisplayDateEndProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayDateEnd<T>(this T control, IObservable<System.Nullable<System.DateTime>> obs, IObserver<System.Nullable<System.DateTime>> changed) where T : Avalonia.Controls.Calendar 
+   => control._setEx(Avalonia.Controls.Calendar.DisplayDateEndProperty!, obs, changed);
 
 
 

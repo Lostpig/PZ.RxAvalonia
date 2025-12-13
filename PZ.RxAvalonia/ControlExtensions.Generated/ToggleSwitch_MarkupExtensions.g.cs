@@ -34,6 +34,10 @@ public static T OffContent<T>(this T control, IObservable<System.Object> obs) wh
 public static T OffContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T OffContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ToggleSwitch 
+   => control._setEx(Avalonia.Controls.ToggleSwitch.OffContentProperty!, obs, changed);
+
 
  // OffContentTemplate
 
@@ -55,6 +59,10 @@ public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Contr
 /*SetterFromSubjectGenerator*/
 public static T OffContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ToggleSwitch 
+   => control._setEx(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, obs, changed);
 
 
  // OnContent
@@ -78,6 +86,10 @@ public static T OnContent<T>(this T control, IObservable<System.Object> obs) whe
 public static T OnContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T OnContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ToggleSwitch 
+   => control._setEx(Avalonia.Controls.ToggleSwitch.OnContentProperty!, obs, changed);
+
 
  // OnContentTemplate
 
@@ -100,6 +112,10 @@ public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Contro
 public static T OnContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ToggleSwitch 
+   => control._setEx(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, obs, changed);
+
 
  // KnobTransitions
 
@@ -121,6 +137,10 @@ public static T KnobTransitions<T>(this T control, IObservable<Avalonia.Animatio
 /*SetterFromSubjectGenerator*/
 public static T KnobTransitions<T>(this T control, ISubject<Avalonia.Animation.Transitions> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T KnobTransitions<T>(this T control, IObservable<Avalonia.Animation.Transitions> obs, IObserver<Avalonia.Animation.Transitions> changed) where T : Avalonia.Controls.ToggleSwitch 
+   => control._setEx(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty!, obs, changed);
 
 
 

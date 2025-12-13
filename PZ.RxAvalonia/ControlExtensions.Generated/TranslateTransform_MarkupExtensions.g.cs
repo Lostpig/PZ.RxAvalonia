@@ -34,6 +34,10 @@ public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateT
 public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.TranslateTransform.XProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.TranslateTransform X(this Avalonia.Media.TranslateTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.TranslateTransform.XProperty!, obs, changed);
+
 
  // Y
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateT
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.TranslateTransform.YProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.TranslateTransform Y(this Avalonia.Media.TranslateTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.TranslateTransform.YProperty!, obs, changed);
 
 
 

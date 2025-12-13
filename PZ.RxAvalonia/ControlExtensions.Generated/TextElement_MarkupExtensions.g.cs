@@ -34,6 +34,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, obs, changed);
+
 
  // FontFamily
 
@@ -55,6 +59,10 @@ public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFam
 /*SetterFromSubjectGenerator*/
 public static T FontFamily<T>(this T control, ISubject<Avalonia.Media.FontFamily> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFamilyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFamily> obs, IObserver<Avalonia.Media.FontFamily> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontFamilyProperty!, obs, changed);
 
 
  // FontFeatures
@@ -78,6 +86,10 @@ public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontF
 public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs, changed);
+
 
  // FontSize
 
@@ -99,6 +111,10 @@ public static T FontSize<T>(this T control, IObservable<System.Double> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T FontSize<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontSizeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontSizeProperty!, obs, changed);
 
 
  // FontStyle
@@ -122,6 +138,10 @@ public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyl
 public static T FontStyle<T>(this T control, ISubject<Avalonia.Media.FontStyle> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontStyleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyle> obs, IObserver<Avalonia.Media.FontStyle> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontStyleProperty!, obs, changed);
+
 
  // FontWeight
 
@@ -143,6 +163,10 @@ public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWei
 /*SetterFromSubjectGenerator*/
 public static T FontWeight<T>(this T control, ISubject<Avalonia.Media.FontWeight> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontWeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWeight> obs, IObserver<Avalonia.Media.FontWeight> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontWeightProperty!, obs, changed);
 
 
  // FontStretch
@@ -166,6 +190,10 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
 public static T FontStretch<T>(this T control, ISubject<Avalonia.Media.FontStretch> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontStretchProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontStretch> obs, IObserver<Avalonia.Media.FontStretch> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontStretchProperty!, obs, changed);
+
 
  // Foreground
 
@@ -187,6 +215,10 @@ public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush>
 /*SetterFromSubjectGenerator*/
 public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
 
@@ -212,6 +244,10 @@ public static T TextElement_FontFamily<T>(this T control, Avalonia.Media.FontFam
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFamily> obs, IObserver<Avalonia.Media.FontFamily> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontFamilyProperty!, obs, changed);
+
 
  // FontFeatures
 
@@ -233,6 +269,10 @@ public static T TextElement_FontFeatures<T>(this T control, Avalonia.Media.FontF
     control.SetValue(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs, changed);
 
 
  // FontSize
@@ -256,6 +296,10 @@ public static T TextElement_FontSize<T>(this T control, System.Double value) whe
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontSizeProperty!, obs, changed);
+
 
  // FontStyle
 
@@ -277,6 +321,10 @@ public static T TextElement_FontStyle<T>(this T control, Avalonia.Media.FontStyl
     control.SetValue(Avalonia.Controls.Documents.TextElement.FontStyleProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyle> obs, IObserver<Avalonia.Media.FontStyle> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontStyleProperty!, obs, changed);
 
 
  // FontWeight
@@ -300,6 +348,10 @@ public static T TextElement_FontWeight<T>(this T control, Avalonia.Media.FontWei
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWeight> obs, IObserver<Avalonia.Media.FontWeight> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontWeightProperty!, obs, changed);
+
 
  // FontStretch
 
@@ -322,6 +374,10 @@ public static T TextElement_FontStretch<T>(this T control, Avalonia.Media.FontSt
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_FontStretch<T>(this T control, IObservable<Avalonia.Media.FontStretch> obs, IObserver<Avalonia.Media.FontStretch> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.FontStretchProperty!, obs, changed);
+
 
  // Foreground
 
@@ -343,6 +399,10 @@ public static T TextElement_Foreground<T>(this T control, Avalonia.Media.IBrush 
     control.SetValue(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
 

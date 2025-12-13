@@ -34,6 +34,10 @@ public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBe
 public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control, ISubject<Avalonia.Points> subject)  
    => control._set(Avalonia.Media.PolyBezierSegment.PointsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PolyBezierSegment Points(this Avalonia.Media.PolyBezierSegment control, IObservable<Avalonia.Points> obs, IObserver<Avalonia.Points> changed)  
+   => control._setEx(Avalonia.Media.PolyBezierSegment.PointsProperty!, obs, changed);
+
 
 
 }

@@ -34,6 +34,10 @@ public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) 
 public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.FillProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.FillProperty!, obs, changed);
+
 
  // Minimum
 
@@ -55,6 +59,10 @@ public static T Minimum<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Minimum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.MinimumProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Minimum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.MinimumProperty!, obs, changed);
 
 
  // Maximum
@@ -78,6 +86,10 @@ public static T Maximum<T>(this T control, IObservable<System.Double> obs) where
 public static T Maximum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.MaximumProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Maximum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.MaximumProperty!, obs, changed);
+
 
  // TickFrequency
 
@@ -99,6 +111,10 @@ public static T TickFrequency<T>(this T control, IObservable<System.Double> obs)
 /*SetterFromSubjectGenerator*/
 public static T TickFrequency<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.TickFrequencyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TickFrequency<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.TickFrequencyProperty!, obs, changed);
 
 
  // Orientation
@@ -122,6 +138,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.OrientationProperty!, obs, changed);
+
 
  // Ticks
 
@@ -143,6 +163,10 @@ public static T Ticks<T>(this T control, IObservable<Avalonia.Collections.Avalon
 /*SetterFromSubjectGenerator*/
 public static T Ticks<T>(this T control, ISubject<Avalonia.Collections.AvaloniaList<System.Double>> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.TicksProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Ticks<T>(this T control, IObservable<Avalonia.Collections.AvaloniaList<System.Double>> obs, IObserver<Avalonia.Collections.AvaloniaList<System.Double>> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.TicksProperty!, obs, changed);
 
 
  // IsDirectionReversed
@@ -166,6 +190,10 @@ public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolea
 public static T IsDirectionReversed<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.IsDirectionReversedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.IsDirectionReversedProperty!, obs, changed);
+
 
  // Placement
 
@@ -187,6 +215,10 @@ public static T Placement<T>(this T control, IObservable<Avalonia.Controls.TickB
 /*SetterFromSubjectGenerator*/
 public static T Placement<T>(this T control, ISubject<Avalonia.Controls.TickBarPlacement> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.PlacementProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Placement<T>(this T control, IObservable<Avalonia.Controls.TickBarPlacement> obs, IObserver<Avalonia.Controls.TickBarPlacement> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.PlacementProperty!, obs, changed);
 
 
  // ReservedSpace
@@ -232,6 +264,10 @@ public static T ReservedSpace<T>(this T control, IObservable<Avalonia.Rect> obs)
 /*SetterFromSubjectGenerator*/
 public static T ReservedSpace<T>(this T control, ISubject<Avalonia.Rect> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.ReservedSpaceProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ReservedSpace<T>(this T control, IObservable<Avalonia.Rect> obs, IObserver<Avalonia.Rect> changed) where T : Avalonia.Controls.TickBar 
+   => control._setEx(Avalonia.Controls.TickBar.ReservedSpaceProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T RadiusX<T>(this T control, IObservable<System.Double> obs) where
 public static T RadiusX<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Rectangle 
    => control._set(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RadiusX<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Rectangle 
+   => control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty!, obs, changed);
+
 
  // RadiusY
 
@@ -55,6 +59,10 @@ public static T RadiusY<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T RadiusY<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Rectangle 
    => control._set(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RadiusY<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Rectangle 
+   => control._setEx(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty!, obs, changed);
 
 
 

@@ -47,6 +47,10 @@ public static Avalonia.Media.LinearGradientBrush StartPoint(this Avalonia.Media.
 public static Avalonia.Media.LinearGradientBrush StartPoint(this Avalonia.Media.LinearGradientBrush control, ISubject<Avalonia.RelativePoint> subject)  
    => control._set(Avalonia.Media.LinearGradientBrush.StartPointProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.LinearGradientBrush StartPoint(this Avalonia.Media.LinearGradientBrush control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed)  
+   => control._setEx(Avalonia.Media.LinearGradientBrush.StartPointProperty!, obs, changed);
+
 
  // EndPoint
 
@@ -81,6 +85,10 @@ public static Avalonia.Media.LinearGradientBrush EndPoint(this Avalonia.Media.Li
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.LinearGradientBrush EndPoint(this Avalonia.Media.LinearGradientBrush control, ISubject<Avalonia.RelativePoint> subject)  
    => control._set(Avalonia.Media.LinearGradientBrush.EndPointProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.LinearGradientBrush EndPoint(this Avalonia.Media.LinearGradientBrush control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed)  
+   => control._setEx(Avalonia.Media.LinearGradientBrush.EndPointProperty!, obs, changed);
 
 
 

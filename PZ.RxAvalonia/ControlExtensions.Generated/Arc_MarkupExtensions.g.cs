@@ -34,6 +34,10 @@ public static T StartAngle<T>(this T control, IObservable<System.Double> obs) wh
 public static T StartAngle<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Arc 
    => control._set(Avalonia.Controls.Shapes.Arc.StartAngleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StartAngle<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Arc 
+   => control._setEx(Avalonia.Controls.Shapes.Arc.StartAngleProperty!, obs, changed);
+
 
  // SweepAngle
 
@@ -55,6 +59,10 @@ public static T SweepAngle<T>(this T control, IObservable<System.Double> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T SweepAngle<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Arc 
    => control._set(Avalonia.Controls.Shapes.Arc.SweepAngleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SweepAngle<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Arc 
+   => control._setEx(Avalonia.Controls.Shapes.Arc.SweepAngleProperty!, obs, changed);
 
 
 

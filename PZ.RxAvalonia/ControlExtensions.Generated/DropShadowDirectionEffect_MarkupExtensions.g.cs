@@ -34,6 +34,10 @@ public static Avalonia.Media.DropShadowDirectionEffect ShadowDepth(this Avalonia
 public static Avalonia.Media.DropShadowDirectionEffect ShadowDepth(this Avalonia.Media.DropShadowDirectionEffect control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DropShadowDirectionEffect.ShadowDepthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DropShadowDirectionEffect ShadowDepth(this Avalonia.Media.DropShadowDirectionEffect control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DropShadowDirectionEffect.ShadowDepthProperty!, obs, changed);
+
 
  // Direction
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.DropShadowDirectionEffect Direction(this Avalonia.M
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.DropShadowDirectionEffect Direction(this Avalonia.Media.DropShadowDirectionEffect control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DropShadowDirectionEffect.DirectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DropShadowDirectionEffect Direction(this Avalonia.Media.DropShadowDirectionEffect control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DropShadowDirectionEffect.DirectionProperty!, obs, changed);
 
 
 

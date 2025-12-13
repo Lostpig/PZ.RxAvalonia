@@ -34,6 +34,10 @@ public static T AsciiOnly<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T AsciiOnly<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AsciiOnly<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty!, obs, changed);
+
 
  // Culture
 
@@ -55,6 +59,10 @@ public static T Culture<T>(this T control, IObservable<System.Globalization.Cult
 /*SetterFromSubjectGenerator*/
 public static T Culture<T>(this T control, ISubject<System.Globalization.CultureInfo> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.CultureProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Culture<T>(this T control, IObservable<System.Globalization.CultureInfo> obs, IObserver<System.Globalization.CultureInfo> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty!, obs, changed);
 
 
  // HidePromptOnLeave
@@ -78,6 +86,10 @@ public static T HidePromptOnLeave<T>(this T control, IObservable<System.Boolean>
 public static T HidePromptOnLeave<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HidePromptOnLeave<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty!, obs, changed);
+
 
  // Mask
 
@@ -99,6 +111,10 @@ public static T Mask<T>(this T control, IObservable<System.String> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Mask<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.MaskProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Mask<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty!, obs, changed);
 
 
  // PromptChar
@@ -122,6 +138,10 @@ public static T PromptChar<T>(this T control, IObservable<System.Char> obs) wher
 public static T PromptChar<T>(this T control, ISubject<System.Char> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.PromptCharProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PromptChar<T>(this T control, IObservable<System.Char> obs, IObserver<System.Char> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.PromptCharProperty!, obs, changed);
+
 
  // ResetOnPrompt
 
@@ -144,6 +164,10 @@ public static T ResetOnPrompt<T>(this T control, IObservable<System.Boolean> obs
 public static T ResetOnPrompt<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ResetOnPrompt<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty!, obs, changed);
+
 
  // ResetOnSpace
 
@@ -165,6 +189,10 @@ public static T ResetOnSpace<T>(this T control, IObservable<System.Boolean> obs)
 /*SetterFromSubjectGenerator*/
 public static T ResetOnSpace<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ResetOnSpace<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MaskedTextBox 
+   => control._setEx(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty!, obs, changed);
 
 
 

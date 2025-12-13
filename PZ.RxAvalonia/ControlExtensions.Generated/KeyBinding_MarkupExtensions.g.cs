@@ -34,6 +34,10 @@ public static T Command<T>(this T control, IObservable<System.Windows.Input.ICom
 public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Input.KeyBinding 
+   => control._setEx(Avalonia.Input.KeyBinding.CommandProperty!, obs, changed);
+
 
  // CommandParameter
 
@@ -56,6 +60,10 @@ public static T CommandParameter<T>(this T control, IObservable<System.Object> o
 public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.CommandParameterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Input.KeyBinding 
+   => control._setEx(Avalonia.Input.KeyBinding.CommandParameterProperty!, obs, changed);
+
 
  // Gesture
 
@@ -77,6 +85,10 @@ public static T Gesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture
 /*SetterFromSubjectGenerator*/
 public static T Gesture<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Input.KeyBinding 
    => control._set(Avalonia.Input.KeyBinding.GestureProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Gesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Input.KeyBinding 
+   => control._setEx(Avalonia.Input.KeyBinding.GestureProperty!, obs, changed);
 
 
 

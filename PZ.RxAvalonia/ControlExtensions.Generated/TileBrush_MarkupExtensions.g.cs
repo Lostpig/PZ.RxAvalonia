@@ -34,6 +34,10 @@ public static T AlignmentX<T>(this T control, IObservable<Avalonia.Media.Alignme
 public static T AlignmentX<T>(this T control, ISubject<Avalonia.Media.AlignmentX> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.AlignmentXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AlignmentX<T>(this T control, IObservable<Avalonia.Media.AlignmentX> obs, IObserver<Avalonia.Media.AlignmentX> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.AlignmentXProperty!, obs, changed);
+
 
  // AlignmentY
 
@@ -55,6 +59,10 @@ public static T AlignmentY<T>(this T control, IObservable<Avalonia.Media.Alignme
 /*SetterFromSubjectGenerator*/
 public static T AlignmentY<T>(this T control, ISubject<Avalonia.Media.AlignmentY> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.AlignmentYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AlignmentY<T>(this T control, IObservable<Avalonia.Media.AlignmentY> obs, IObserver<Avalonia.Media.AlignmentY> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.AlignmentYProperty!, obs, changed);
 
 
  // DestinationRect
@@ -106,6 +114,10 @@ public static T DestinationRect<T>(this T control, IObservable<Avalonia.Relative
 public static T DestinationRect<T>(this T control, ISubject<Avalonia.RelativeRect> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.DestinationRectProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DestinationRect<T>(this T control, IObservable<Avalonia.RelativeRect> obs, IObserver<Avalonia.RelativeRect> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.DestinationRectProperty!, obs, changed);
+
 
  // SourceRect
 
@@ -156,6 +168,10 @@ public static T SourceRect<T>(this T control, IObservable<Avalonia.RelativeRect>
 public static T SourceRect<T>(this T control, ISubject<Avalonia.RelativeRect> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.SourceRectProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SourceRect<T>(this T control, IObservable<Avalonia.RelativeRect> obs, IObserver<Avalonia.RelativeRect> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.SourceRectProperty!, obs, changed);
+
 
  // Stretch
 
@@ -178,6 +194,10 @@ public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> o
 public static T Stretch<T>(this T control, ISubject<Avalonia.Media.Stretch> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.StretchProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> obs, IObserver<Avalonia.Media.Stretch> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.StretchProperty!, obs, changed);
+
 
  // TileMode
 
@@ -199,6 +219,10 @@ public static T TileMode<T>(this T control, IObservable<Avalonia.Media.TileMode>
 /*SetterFromSubjectGenerator*/
 public static T TileMode<T>(this T control, ISubject<Avalonia.Media.TileMode> subject) where T : Avalonia.Media.TileBrush 
    => control._set(Avalonia.Media.TileBrush.TileModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TileMode<T>(this T control, IObservable<Avalonia.Media.TileMode> obs, IObserver<Avalonia.Media.TileMode> changed) where T : Avalonia.Media.TileBrush 
+   => control._setEx(Avalonia.Media.TileBrush.TileModeProperty!, obs, changed);
 
 
 

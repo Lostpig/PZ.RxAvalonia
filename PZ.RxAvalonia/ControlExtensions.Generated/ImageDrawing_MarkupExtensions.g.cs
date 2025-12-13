@@ -34,6 +34,10 @@ public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageD
 public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, ISubject<Avalonia.Media.IImage> subject)  
    => control._set(Avalonia.Media.ImageDrawing.ImageSourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed)  
+   => control._setEx(Avalonia.Media.ImageDrawing.ImageSourceProperty!, obs, changed);
+
 
  // Rect
 
@@ -78,6 +82,10 @@ public static Avalonia.Media.ImageDrawing Rect(this Avalonia.Media.ImageDrawing 
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.ImageDrawing Rect(this Avalonia.Media.ImageDrawing control, ISubject<Avalonia.Rect> subject)  
    => control._set(Avalonia.Media.ImageDrawing.RectProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ImageDrawing Rect(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Rect> obs, IObserver<Avalonia.Rect> changed)  
+   => control._setEx(Avalonia.Media.ImageDrawing.RectProperty!, obs, changed);
 
 
 

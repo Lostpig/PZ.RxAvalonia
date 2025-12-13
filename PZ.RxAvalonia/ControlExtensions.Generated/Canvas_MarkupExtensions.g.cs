@@ -34,6 +34,10 @@ public static T Canvas_Left<T>(this T control, System.Double value) where T : Av
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T Canvas_Left<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.Canvas.LeftProperty!, obs, changed);
+
 
  // Top
 
@@ -55,6 +59,10 @@ public static T Canvas_Top<T>(this T control, System.Double value) where T : Ava
     control.SetValue(Avalonia.Controls.Canvas.TopProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Canvas_Top<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.Canvas.TopProperty!, obs, changed);
 
 
  // Right
@@ -78,6 +86,10 @@ public static T Canvas_Right<T>(this T control, System.Double value) where T : A
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T Canvas_Right<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.Canvas.RightProperty!, obs, changed);
+
 
  // Bottom
 
@@ -99,6 +111,10 @@ public static T Canvas_Bottom<T>(this T control, System.Double value) where T : 
     control.SetValue(Avalonia.Controls.Canvas.BottomProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Canvas_Bottom<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.Canvas.BottomProperty!, obs, changed);
 
 
 

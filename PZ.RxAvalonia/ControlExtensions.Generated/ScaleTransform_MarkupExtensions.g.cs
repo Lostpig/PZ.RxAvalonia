@@ -34,6 +34,10 @@ public static Avalonia.Media.ScaleTransform ScaleX(this Avalonia.Media.ScaleTran
 public static Avalonia.Media.ScaleTransform ScaleX(this Avalonia.Media.ScaleTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.ScaleTransform.ScaleXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ScaleTransform ScaleX(this Avalonia.Media.ScaleTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.ScaleTransform.ScaleXProperty!, obs, changed);
+
 
  // ScaleY
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.ScaleTransform ScaleY(this Avalonia.Media.ScaleTran
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.ScaleTransform ScaleY(this Avalonia.Media.ScaleTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.ScaleTransform.ScaleYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ScaleTransform ScaleY(this Avalonia.Media.ScaleTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.ScaleTransform.ScaleYProperty!, obs, changed);
 
 
 

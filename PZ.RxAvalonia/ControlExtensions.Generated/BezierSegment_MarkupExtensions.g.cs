@@ -34,6 +34,10 @@ public static Avalonia.Media.BezierSegment Point1(this Avalonia.Media.BezierSegm
 public static Avalonia.Media.BezierSegment Point1(this Avalonia.Media.BezierSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.BezierSegment.Point1Property!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.BezierSegment Point1(this Avalonia.Media.BezierSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.BezierSegment.Point1Property!, obs, changed);
+
 
  // Point2
 
@@ -56,6 +60,10 @@ public static Avalonia.Media.BezierSegment Point2(this Avalonia.Media.BezierSegm
 public static Avalonia.Media.BezierSegment Point2(this Avalonia.Media.BezierSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.BezierSegment.Point2Property!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.BezierSegment Point2(this Avalonia.Media.BezierSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.BezierSegment.Point2Property!, obs, changed);
+
 
  // Point3
 
@@ -77,6 +85,10 @@ public static Avalonia.Media.BezierSegment Point3(this Avalonia.Media.BezierSegm
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.BezierSegment Point3(this Avalonia.Media.BezierSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.BezierSegment.Point3Property!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.BezierSegment Point3(this Avalonia.Media.BezierSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.BezierSegment.Point3Property!, obs, changed);
 
 
 

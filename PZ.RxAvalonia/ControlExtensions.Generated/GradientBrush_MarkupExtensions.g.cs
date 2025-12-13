@@ -34,6 +34,10 @@ public static T SpreadMethod<T>(this T control, IObservable<Avalonia.Media.Gradi
 public static T SpreadMethod<T>(this T control, ISubject<Avalonia.Media.GradientSpreadMethod> subject) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.SpreadMethodProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SpreadMethod<T>(this T control, IObservable<Avalonia.Media.GradientSpreadMethod> obs, IObserver<Avalonia.Media.GradientSpreadMethod> changed) where T : Avalonia.Media.GradientBrush 
+   => control._setEx(Avalonia.Media.GradientBrush.SpreadMethodProperty!, obs, changed);
+
 
  // GradientStops
 
@@ -55,6 +59,10 @@ public static T GradientStops<T>(this T control, IObservable<Avalonia.Media.Grad
 /*SetterFromSubjectGenerator*/
 public static T GradientStops<T>(this T control, ISubject<Avalonia.Media.GradientStops> subject) where T : Avalonia.Media.GradientBrush 
    => control._set(Avalonia.Media.GradientBrush.GradientStopsProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T GradientStops<T>(this T control, IObservable<Avalonia.Media.GradientStops> obs, IObserver<Avalonia.Media.GradientStops> changed) where T : Avalonia.Media.GradientBrush 
+   => control._setEx(Avalonia.Media.GradientBrush.GradientStopsProperty!, obs, changed);
 
 
 

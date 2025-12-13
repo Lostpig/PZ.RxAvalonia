@@ -34,6 +34,10 @@ public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) 
 public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.FillProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.FillProperty!, obs, changed);
+
 
  // Stretch
 
@@ -55,6 +59,10 @@ public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> o
 /*SetterFromSubjectGenerator*/
 public static T Stretch<T>(this T control, ISubject<Avalonia.Media.Stretch> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StretchProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> obs, IObserver<Avalonia.Media.Stretch> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StretchProperty!, obs, changed);
 
 
  // Stroke
@@ -78,6 +86,10 @@ public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs
 public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeProperty!, obs, changed);
+
 
  // StrokeDashArray
 
@@ -99,6 +111,10 @@ public static T StrokeDashArray<T>(this T control, IObservable<Avalonia.Collecti
 /*SetterFromSubjectGenerator*/
 public static T StrokeDashArray<T>(this T control, ISubject<Avalonia.Collections.AvaloniaList<System.Double>> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeDashArrayProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeDashArray<T>(this T control, IObservable<Avalonia.Collections.AvaloniaList<System.Double>> obs, IObserver<Avalonia.Collections.AvaloniaList<System.Double>> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeDashArrayProperty!, obs, changed);
 
 
  // StrokeDashOffset
@@ -122,6 +138,10 @@ public static T StrokeDashOffset<T>(this T control, IObservable<System.Double> o
 public static T StrokeDashOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeDashOffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeDashOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeDashOffsetProperty!, obs, changed);
+
 
  // StrokeThickness
 
@@ -143,6 +163,10 @@ public static T StrokeThickness<T>(this T control, IObservable<System.Double> ob
 /*SetterFromSubjectGenerator*/
 public static T StrokeThickness<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeThicknessProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeThickness<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeThicknessProperty!, obs, changed);
 
 
  // StrokeLineCap
@@ -166,6 +190,10 @@ public static T StrokeLineCap<T>(this T control, IObservable<Avalonia.Media.PenL
 public static T StrokeLineCap<T>(this T control, ISubject<Avalonia.Media.PenLineCap> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeLineCapProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeLineCap<T>(this T control, IObservable<Avalonia.Media.PenLineCap> obs, IObserver<Avalonia.Media.PenLineCap> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeLineCapProperty!, obs, changed);
+
 
  // StrokeJoin
 
@@ -187,6 +215,10 @@ public static T StrokeJoin<T>(this T control, IObservable<Avalonia.Media.PenLine
 /*SetterFromSubjectGenerator*/
 public static T StrokeJoin<T>(this T control, ISubject<Avalonia.Media.PenLineJoin> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeJoinProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeJoin<T>(this T control, IObservable<Avalonia.Media.PenLineJoin> obs, IObserver<Avalonia.Media.PenLineJoin> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeJoinProperty!, obs, changed);
 
 
 

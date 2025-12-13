@@ -34,6 +34,10 @@ public static T Header<T>(this T control, IObservable<System.Object> obs) where 
 public static T Header<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Primitives.HeaderedItemsControl 
    => control._set(Avalonia.Controls.Primitives.HeaderedItemsControl.HeaderProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Header<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Primitives.HeaderedItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.HeaderedItemsControl.HeaderProperty!, obs, changed);
+
 
  // HeaderTemplate
 
@@ -55,6 +59,10 @@ public static T HeaderTemplate<T>(this T control, IObservable<Avalonia.Controls.
 /*SetterFromSubjectGenerator*/
 public static T HeaderTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.Primitives.HeaderedItemsControl 
    => control._set(Avalonia.Controls.Primitives.HeaderedItemsControl.HeaderTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HeaderTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.Primitives.HeaderedItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.HeaderedItemsControl.HeaderTemplateProperty!, obs, changed);
 
 
 

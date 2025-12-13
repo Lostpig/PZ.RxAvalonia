@@ -34,6 +34,10 @@ public static T Position<T>(this T control, IObservable<Avalonia.Controls.Notifi
 public static T Position<T>(this T control, ISubject<Avalonia.Controls.Notifications.NotificationPosition> subject) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
    => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.PositionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Position<T>(this T control, IObservable<Avalonia.Controls.Notifications.NotificationPosition> obs, IObserver<Avalonia.Controls.Notifications.NotificationPosition> changed) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
+   => control._setEx(Avalonia.Controls.Notifications.WindowNotificationManager.PositionProperty!, obs, changed);
+
 
  // MaxItems
 
@@ -55,6 +59,10 @@ public static T MaxItems<T>(this T control, IObservable<System.Int32> obs) where
 /*SetterFromSubjectGenerator*/
 public static T MaxItems<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
    => control._set(Avalonia.Controls.Notifications.WindowNotificationManager.MaxItemsProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxItems<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Notifications.WindowNotificationManager 
+   => control._setEx(Avalonia.Controls.Notifications.WindowNotificationManager.MaxItemsProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry
 public static T Geometry1<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Media.CombinedGeometry 
+   => control._setEx(Avalonia.Media.CombinedGeometry.Geometry1Property!, obs, changed);
+
 
  // Geometry2
 
@@ -56,6 +60,10 @@ public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry
 public static T Geometry2<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Media.CombinedGeometry 
+   => control._setEx(Avalonia.Media.CombinedGeometry.Geometry2Property!, obs, changed);
+
 
  // GeometryCombineMode
 
@@ -77,6 +85,10 @@ public static T GeometryCombineMode<T>(this T control, IObservable<Avalonia.Medi
 /*SetterFromSubjectGenerator*/
 public static T GeometryCombineMode<T>(this T control, ISubject<Avalonia.Media.GeometryCombineMode> subject) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T GeometryCombineMode<T>(this T control, IObservable<Avalonia.Media.GeometryCombineMode> obs, IObserver<Avalonia.Media.GeometryCombineMode> changed) where T : Avalonia.Media.CombinedGeometry 
+   => control._setEx(Avalonia.Media.CombinedGeometry.GeometryCombineModeProperty!, obs, changed);
 
 
 

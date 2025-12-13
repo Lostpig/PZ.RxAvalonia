@@ -34,6 +34,10 @@ public static T SharedSizeGroup<T>(this T control, IObservable<System.String> ob
 public static T SharedSizeGroup<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SharedSizeGroup<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.DefinitionBase 
+   => control._setEx(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, obs, changed);
+
 
 
 }

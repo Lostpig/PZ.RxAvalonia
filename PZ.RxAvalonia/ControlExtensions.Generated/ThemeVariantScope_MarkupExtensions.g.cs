@@ -34,6 +34,10 @@ public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.St
 public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant> subject) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs, IObserver<Avalonia.Styling.ThemeVariant> changed) where T : Avalonia.Controls.ThemeVariantScope 
+   => control._setEx(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

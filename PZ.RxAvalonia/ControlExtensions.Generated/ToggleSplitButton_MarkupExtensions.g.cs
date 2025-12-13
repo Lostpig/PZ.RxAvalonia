@@ -34,6 +34,10 @@ public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsChecked<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ToggleSplitButton 
    => control._set(Avalonia.Controls.ToggleSplitButton.IsCheckedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ToggleSplitButton 
+   => control._setEx(Avalonia.Controls.ToggleSplitButton.IsCheckedProperty!, obs, changed);
+
 
 
 //================= Events ======================//

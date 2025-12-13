@@ -34,6 +34,10 @@ public static T TransparencyLevelHint<T>(this T control, IObservable<System.Coll
 public static T TransparencyLevelHint<T>(this T control, ISubject<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel>> subject) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.TransparencyLevelHintProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TransparencyLevelHint<T>(this T control, IObservable<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel>> obs, IObserver<System.Collections.Generic.IReadOnlyList<Avalonia.Controls.WindowTransparencyLevel>> changed) where T : Avalonia.Controls.TopLevel 
+   => control._setEx(Avalonia.Controls.TopLevel.TransparencyLevelHintProperty!, obs, changed);
+
 
  // TransparencyBackgroundFallback
 
@@ -56,6 +60,10 @@ public static T TransparencyBackgroundFallback<T>(this T control, IObservable<Av
 public static T TransparencyBackgroundFallback<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.TransparencyBackgroundFallbackProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TransparencyBackgroundFallback<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TopLevel 
+   => control._setEx(Avalonia.Controls.TopLevel.TransparencyBackgroundFallbackProperty!, obs, changed);
+
 
  // RequestedThemeVariant
 
@@ -77,6 +85,10 @@ public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.St
 /*SetterFromSubjectGenerator*/
 public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant> subject) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs, IObserver<Avalonia.Styling.ThemeVariant> changed) where T : Avalonia.Controls.TopLevel 
+   => control._setEx(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, obs, changed);
 
 
 
@@ -102,6 +114,10 @@ public static T TopLevel_SystemBarColor<T>(this T control, Avalonia.Media.SolidC
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TopLevel_SystemBarColor<T>(this T control, IObservable<Avalonia.Media.SolidColorBrush> obs, IObserver<Avalonia.Media.SolidColorBrush> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TopLevel.SystemBarColorProperty!, obs, changed);
+
 
  // AutoSafeAreaPadding
 
@@ -123,6 +139,10 @@ public static T TopLevel_AutoSafeAreaPadding<T>(this T control, System.Boolean v
     control.SetValue(Avalonia.Controls.TopLevel.AutoSafeAreaPaddingProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TopLevel_AutoSafeAreaPadding<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TopLevel.AutoSafeAreaPaddingProperty!, obs, changed);
 
 
 

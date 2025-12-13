@@ -34,6 +34,10 @@ public static T MinuteIncrement<T>(this T control, IObservable<System.Int32> obs
 public static T MinuteIncrement<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TimePickerPresenter 
    => control._set(Avalonia.Controls.TimePickerPresenter.MinuteIncrementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MinuteIncrement<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TimePickerPresenter 
+   => control._setEx(Avalonia.Controls.TimePickerPresenter.MinuteIncrementProperty!, obs, changed);
+
 
  // SecondIncrement
 
@@ -55,6 +59,10 @@ public static T SecondIncrement<T>(this T control, IObservable<System.Int32> obs
 /*SetterFromSubjectGenerator*/
 public static T SecondIncrement<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TimePickerPresenter 
    => control._set(Avalonia.Controls.TimePickerPresenter.SecondIncrementProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SecondIncrement<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TimePickerPresenter 
+   => control._setEx(Avalonia.Controls.TimePickerPresenter.SecondIncrementProperty!, obs, changed);
 
 
  // ClockIdentifier
@@ -78,6 +86,10 @@ public static T ClockIdentifier<T>(this T control, IObservable<System.String> ob
 public static T ClockIdentifier<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TimePickerPresenter 
    => control._set(Avalonia.Controls.TimePickerPresenter.ClockIdentifierProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ClockIdentifier<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TimePickerPresenter 
+   => control._setEx(Avalonia.Controls.TimePickerPresenter.ClockIdentifierProperty!, obs, changed);
+
 
  // UseSeconds
 
@@ -100,6 +112,10 @@ public static T UseSeconds<T>(this T control, IObservable<System.Boolean> obs) w
 public static T UseSeconds<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TimePickerPresenter 
    => control._set(Avalonia.Controls.TimePickerPresenter.UseSecondsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T UseSeconds<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TimePickerPresenter 
+   => control._setEx(Avalonia.Controls.TimePickerPresenter.UseSecondsProperty!, obs, changed);
+
 
  // Time
 
@@ -121,6 +137,10 @@ public static T Time<T>(this T control, IObservable<System.TimeSpan> obs) where 
 /*SetterFromSubjectGenerator*/
 public static T Time<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.TimePickerPresenter 
    => control._set(Avalonia.Controls.TimePickerPresenter.TimeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Time<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.TimePickerPresenter 
+   => control._setEx(Avalonia.Controls.TimePickerPresenter.TimeProperty!, obs, changed);
 
 
 

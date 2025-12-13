@@ -34,6 +34,10 @@ public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLine
 public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, ISubject<System.Collections.Generic.IList<Avalonia.Point>> subject)  
    => control._set(Avalonia.Media.PolyLineSegment.PointsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PolyLineSegment Points(this Avalonia.Media.PolyLineSegment control, IObservable<System.Collections.Generic.IList<Avalonia.Point>> obs, IObserver<System.Collections.Generic.IList<Avalonia.Point>> changed)  
+   => control._setEx(Avalonia.Media.PolyLineSegment.PointsProperty!, obs, changed);
+
 
 
 }

@@ -34,6 +34,10 @@ public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropSh
 public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DropShadowEffect.OffsetXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DropShadowEffect OffsetX(this Avalonia.Media.DropShadowEffect control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DropShadowEffect.OffsetXProperty!, obs, changed);
+
 
  // OffsetY
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropSh
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DropShadowEffect.OffsetYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DropShadowEffect OffsetY(this Avalonia.Media.DropShadowEffect control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DropShadowEffect.OffsetYProperty!, obs, changed);
 
 
 

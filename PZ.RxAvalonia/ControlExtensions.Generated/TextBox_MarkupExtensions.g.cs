@@ -34,6 +34,10 @@ public static T IsInactiveSelectionHighlightEnabled<T>(this T control, IObservab
 public static T IsInactiveSelectionHighlightEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsInactiveSelectionHighlightEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabledProperty!, obs, changed);
+
 
  // ClearSelectionOnLostFocus
 
@@ -55,6 +59,10 @@ public static T ClearSelectionOnLostFocus<T>(this T control, IObservable<System.
 /*SetterFromSubjectGenerator*/
 public static T ClearSelectionOnLostFocus<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.ClearSelectionOnLostFocusProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ClearSelectionOnLostFocus<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.ClearSelectionOnLostFocusProperty!, obs, changed);
 
 
  // AcceptsReturn
@@ -78,6 +86,10 @@ public static T AcceptsReturn<T>(this T control, IObservable<System.Boolean> obs
 public static T AcceptsReturn<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.AcceptsReturnProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AcceptsReturn<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.AcceptsReturnProperty!, obs, changed);
+
 
  // AcceptsTab
 
@@ -99,6 +111,10 @@ public static T AcceptsTab<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T AcceptsTab<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.AcceptsTabProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AcceptsTab<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.AcceptsTabProperty!, obs, changed);
 
 
  // CaretIndex
@@ -122,6 +138,10 @@ public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs) whe
 public static T CaretIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretIndexProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.CaretIndexProperty!, obs, changed);
+
 
  // IsReadOnly
 
@@ -143,6 +163,10 @@ public static T IsReadOnly<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T IsReadOnly<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.IsReadOnlyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsReadOnly<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.IsReadOnlyProperty!, obs, changed);
 
 
  // PasswordChar
@@ -166,6 +190,10 @@ public static T PasswordChar<T>(this T control, IObservable<System.Char> obs) wh
 public static T PasswordChar<T>(this T control, ISubject<System.Char> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.PasswordCharProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PasswordChar<T>(this T control, IObservable<System.Char> obs, IObserver<System.Char> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.PasswordCharProperty!, obs, changed);
+
 
  // SelectionBrush
 
@@ -187,6 +215,10 @@ public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBr
 /*SetterFromSubjectGenerator*/
 public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionBrushProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.SelectionBrushProperty!, obs, changed);
 
 
  // SelectionForegroundBrush
@@ -210,6 +242,10 @@ public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia
 public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, obs, changed);
+
 
  // CaretBrush
 
@@ -231,6 +267,10 @@ public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush>
 /*SetterFromSubjectGenerator*/
 public static T CaretBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretBrushProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.CaretBrushProperty!, obs, changed);
 
 
  // CaretBlinkInterval
@@ -254,6 +294,10 @@ public static T CaretBlinkInterval<T>(this T control, IObservable<System.TimeSpa
 public static T CaretBlinkInterval<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretBlinkIntervalProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CaretBlinkInterval<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.CaretBlinkIntervalProperty!, obs, changed);
+
 
  // SelectionStart
 
@@ -275,6 +319,10 @@ public static T SelectionStart<T>(this T control, IObservable<System.Int32> obs)
 /*SetterFromSubjectGenerator*/
 public static T SelectionStart<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionStartProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionStart<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.SelectionStartProperty!, obs, changed);
 
 
  // SelectionEnd
@@ -298,6 +346,10 @@ public static T SelectionEnd<T>(this T control, IObservable<System.Int32> obs) w
 public static T SelectionEnd<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionEndProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectionEnd<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.SelectionEndProperty!, obs, changed);
+
 
  // MaxLength
 
@@ -319,6 +371,10 @@ public static T MaxLength<T>(this T control, IObservable<System.Int32> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T MaxLength<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.MaxLengthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxLength<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.MaxLengthProperty!, obs, changed);
 
 
  // MaxLines
@@ -342,6 +398,10 @@ public static T MaxLines<T>(this T control, IObservable<System.Int32> obs) where
 public static T MaxLines<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.MaxLinesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxLines<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.MaxLinesProperty!, obs, changed);
+
 
  // MinLines
 
@@ -363,6 +423,10 @@ public static T MinLines<T>(this T control, IObservable<System.Int32> obs) where
 /*SetterFromSubjectGenerator*/
 public static T MinLines<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.MinLinesProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MinLines<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.MinLinesProperty!, obs, changed);
 
 
  // Text
@@ -386,6 +450,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.TextProperty!, obs, changed);
+
 
  // TextAlignment
 
@@ -407,6 +475,10 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
 /*SetterFromSubjectGenerator*/
 public static T TextAlignment<T>(this T control, ISubject<Avalonia.Media.TextAlignment> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.TextAlignmentProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -430,6 +502,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.HorizontalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.HorizontalContentAlignmentProperty!, obs, changed);
+
 
  // VerticalContentAlignment
 
@@ -451,6 +527,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.VerticalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.VerticalContentAlignmentProperty!, obs, changed);
 
 
  // TextWrapping
@@ -474,6 +554,10 @@ public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextW
 public static T TextWrapping<T>(this T control, ISubject<Avalonia.Media.TextWrapping> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextWrappingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextWrapping> obs, IObserver<Avalonia.Media.TextWrapping> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.TextWrappingProperty!, obs, changed);
+
 
  // LineHeight
 
@@ -495,6 +579,10 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T LineHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.LineHeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.LineHeightProperty!, obs, changed);
 
 
  // LetterSpacing
@@ -518,6 +606,10 @@ public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs)
 public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.LetterSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.LetterSpacingProperty!, obs, changed);
+
 
  // Watermark
 
@@ -539,6 +631,10 @@ public static T Watermark<T>(this T control, IObservable<System.String> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.WatermarkProperty!, obs, changed);
 
 
  // UseFloatingWatermark
@@ -562,6 +658,10 @@ public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boole
 public static T UseFloatingWatermark<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, obs, changed);
+
 
  // NewLine
 
@@ -583,6 +683,10 @@ public static T NewLine<T>(this T control, IObservable<System.String> obs) where
 /*SetterFromSubjectGenerator*/
 public static T NewLine<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.NewLineProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T NewLine<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.NewLineProperty!, obs, changed);
 
 
  // InnerLeftContent
@@ -606,6 +710,10 @@ public static T InnerLeftContent<T>(this T control, IObservable<System.Object> o
 public static T InnerLeftContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerLeftContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.InnerLeftContentProperty!, obs, changed);
+
 
  // InnerRightContent
 
@@ -627,6 +735,10 @@ public static T InnerRightContent<T>(this T control, IObservable<System.Object> 
 /*SetterFromSubjectGenerator*/
 public static T InnerRightContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerRightContentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.InnerRightContentProperty!, obs, changed);
 
 
  // RevealPassword
@@ -650,6 +762,10 @@ public static T RevealPassword<T>(this T control, IObservable<System.Boolean> ob
 public static T RevealPassword<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.RevealPasswordProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RevealPassword<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.RevealPasswordProperty!, obs, changed);
+
 
  // IsUndoEnabled
 
@@ -672,6 +788,10 @@ public static T IsUndoEnabled<T>(this T control, IObservable<System.Boolean> obs
 public static T IsUndoEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.IsUndoEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsUndoEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.IsUndoEnabledProperty!, obs, changed);
+
 
  // UndoLimit
 
@@ -693,6 +813,10 @@ public static T UndoLimit<T>(this T control, IObservable<System.Int32> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T UndoLimit<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.UndoLimitProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T UndoLimit<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.UndoLimitProperty!, obs, changed);
 
 
 

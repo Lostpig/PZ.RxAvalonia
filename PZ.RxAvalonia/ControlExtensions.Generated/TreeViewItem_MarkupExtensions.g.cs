@@ -34,6 +34,10 @@ public static T IsExpanded<T>(this T control, IObservable<System.Boolean> obs) w
 public static T IsExpanded<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TreeViewItem 
    => control._set(Avalonia.Controls.TreeViewItem.IsExpandedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsExpanded<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TreeViewItem 
+   => control._setEx(Avalonia.Controls.TreeViewItem.IsExpandedProperty!, obs, changed);
+
 
  // IsSelected
 
@@ -55,6 +59,10 @@ public static T IsSelected<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T IsSelected<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TreeViewItem 
    => control._set(Avalonia.Controls.TreeViewItem.IsSelectedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsSelected<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TreeViewItem 
+   => control._setEx(Avalonia.Controls.TreeViewItem.IsSelectedProperty!, obs, changed);
 
 
 

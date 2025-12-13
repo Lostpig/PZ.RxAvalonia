@@ -34,6 +34,10 @@ public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documen
 public static T Inlines<T>(this T control, ISubject<Avalonia.Controls.Documents.InlineCollection> subject) where T : Avalonia.Controls.Documents.Span 
    => control._set(Avalonia.Controls.Documents.Span.InlinesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection> obs, IObserver<Avalonia.Controls.Documents.InlineCollection> changed) where T : Avalonia.Controls.Documents.Span 
+   => control._setEx(Avalonia.Controls.Documents.Span.InlinesProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

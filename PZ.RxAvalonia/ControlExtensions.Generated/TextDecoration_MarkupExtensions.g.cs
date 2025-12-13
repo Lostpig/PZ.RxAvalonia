@@ -34,6 +34,10 @@ public static T Location<T>(this T control, IObservable<Avalonia.Media.TextDecor
 public static T Location<T>(this T control, ISubject<Avalonia.Media.TextDecorationLocation> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.LocationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Location<T>(this T control, IObservable<Avalonia.Media.TextDecorationLocation> obs, IObserver<Avalonia.Media.TextDecorationLocation> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.LocationProperty!, obs, changed);
+
 
  // Stroke
 
@@ -55,6 +59,10 @@ public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs
 /*SetterFromSubjectGenerator*/
 public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeProperty!, obs, changed);
 
 
  // StrokeThicknessUnit
@@ -78,6 +86,10 @@ public static T StrokeThicknessUnit<T>(this T control, IObservable<Avalonia.Medi
 public static T StrokeThicknessUnit<T>(this T control, ISubject<Avalonia.Media.TextDecorationUnit> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeThicknessUnitProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeThicknessUnit<T>(this T control, IObservable<Avalonia.Media.TextDecorationUnit> obs, IObserver<Avalonia.Media.TextDecorationUnit> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeThicknessUnitProperty!, obs, changed);
+
 
  // StrokeDashArray
 
@@ -99,6 +111,10 @@ public static T StrokeDashArray<T>(this T control, IObservable<Avalonia.Collecti
 /*SetterFromSubjectGenerator*/
 public static T StrokeDashArray<T>(this T control, ISubject<Avalonia.Collections.AvaloniaList<System.Double>> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeDashArrayProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeDashArray<T>(this T control, IObservable<Avalonia.Collections.AvaloniaList<System.Double>> obs, IObserver<Avalonia.Collections.AvaloniaList<System.Double>> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeDashArrayProperty!, obs, changed);
 
 
  // StrokeDashOffset
@@ -122,6 +138,10 @@ public static T StrokeDashOffset<T>(this T control, IObservable<System.Double> o
 public static T StrokeDashOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeDashOffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeDashOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeDashOffsetProperty!, obs, changed);
+
 
  // StrokeThickness
 
@@ -143,6 +163,10 @@ public static T StrokeThickness<T>(this T control, IObservable<System.Double> ob
 /*SetterFromSubjectGenerator*/
 public static T StrokeThickness<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeThicknessProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeThickness<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeThicknessProperty!, obs, changed);
 
 
  // StrokeLineCap
@@ -166,6 +190,10 @@ public static T StrokeLineCap<T>(this T control, IObservable<Avalonia.Media.PenL
 public static T StrokeLineCap<T>(this T control, ISubject<Avalonia.Media.PenLineCap> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeLineCapProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeLineCap<T>(this T control, IObservable<Avalonia.Media.PenLineCap> obs, IObserver<Avalonia.Media.PenLineCap> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeLineCapProperty!, obs, changed);
+
 
  // StrokeOffset
 
@@ -188,6 +216,10 @@ public static T StrokeOffset<T>(this T control, IObservable<System.Double> obs) 
 public static T StrokeOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeOffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StrokeOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeOffsetProperty!, obs, changed);
+
 
  // StrokeOffsetUnit
 
@@ -209,6 +241,10 @@ public static T StrokeOffsetUnit<T>(this T control, IObservable<Avalonia.Media.T
 /*SetterFromSubjectGenerator*/
 public static T StrokeOffsetUnit<T>(this T control, ISubject<Avalonia.Media.TextDecorationUnit> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeOffsetUnitProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeOffsetUnit<T>(this T control, IObservable<Avalonia.Media.TextDecorationUnit> obs, IObserver<Avalonia.Media.TextDecorationUnit> changed) where T : Avalonia.Media.TextDecoration 
+   => control._setEx(Avalonia.Media.TextDecoration.StrokeOffsetUnitProperty!, obs, changed);
 
 
 

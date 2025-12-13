@@ -34,6 +34,10 @@ public static T CanHorizontallyScroll<T>(this T control, IObservable<System.Bool
 public static T CanHorizontallyScroll<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
    => control._set(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanHorizontallyScrollProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CanHorizontallyScroll<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
+   => control._setEx(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanHorizontallyScrollProperty!, obs, changed);
+
 
  // CanVerticallyScroll
 
@@ -55,6 +59,10 @@ public static T CanVerticallyScroll<T>(this T control, IObservable<System.Boolea
 /*SetterFromSubjectGenerator*/
 public static T CanVerticallyScroll<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
    => control._set(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanVerticallyScrollProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CanVerticallyScroll<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
+   => control._setEx(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.CanVerticallyScrollProperty!, obs, changed);
 
 
  // IsScrollInertiaEnabled
@@ -78,6 +86,10 @@ public static T IsScrollInertiaEnabled<T>(this T control, IObservable<System.Boo
 public static T IsScrollInertiaEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
    => control._set(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.IsScrollInertiaEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsScrollInertiaEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
+   => control._setEx(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.IsScrollInertiaEnabledProperty!, obs, changed);
+
 
  // ScrollStartDistance
 
@@ -99,6 +111,10 @@ public static T ScrollStartDistance<T>(this T control, IObservable<System.Int32>
 /*SetterFromSubjectGenerator*/
 public static T ScrollStartDistance<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
    => control._set(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.ScrollStartDistanceProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ScrollStartDistance<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer 
+   => control._setEx(Avalonia.Input.GestureRecognizers.ScrollGestureRecognizer.ScrollStartDistanceProperty!, obs, changed);
 
 
 

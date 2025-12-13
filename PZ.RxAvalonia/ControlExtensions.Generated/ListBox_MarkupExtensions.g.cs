@@ -34,6 +34,10 @@ public static T SelectedItems<T>(this T control, IObservable<System.Collections.
 public static T SelectedItems<T>(this T control, ISubject<System.Collections.IList> subject) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList> obs, IObserver<System.Collections.IList> changed) where T : Avalonia.Controls.ListBox 
+   => control._setEx(Avalonia.Controls.ListBox.SelectedItemsProperty!, obs, changed);
+
 
  // Selection
 
@@ -56,6 +60,10 @@ public static T Selection<T>(this T control, IObservable<Avalonia.Controls.Selec
 public static T Selection<T>(this T control, ISubject<Avalonia.Controls.Selection.ISelectionModel> subject) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Selection<T>(this T control, IObservable<Avalonia.Controls.Selection.ISelectionModel> obs, IObserver<Avalonia.Controls.Selection.ISelectionModel> changed) where T : Avalonia.Controls.ListBox 
+   => control._setEx(Avalonia.Controls.ListBox.SelectionProperty!, obs, changed);
+
 
  // SelectionMode
 
@@ -77,6 +85,10 @@ public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.S
 /*SetterFromSubjectGenerator*/
 public static T SelectionMode<T>(this T control, ISubject<Avalonia.Controls.SelectionMode> subject) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectionModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.SelectionMode> obs, IObserver<Avalonia.Controls.SelectionMode> changed) where T : Avalonia.Controls.ListBox 
+   => control._setEx(Avalonia.Controls.ListBox.SelectionModeProperty!, obs, changed);
 
 
 

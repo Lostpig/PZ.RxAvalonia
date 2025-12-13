@@ -47,6 +47,10 @@ public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTr
 public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, ISubject<Avalonia.Matrix> subject)  
    => control._set(Avalonia.Media.MatrixTransform.MatrixProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.MatrixTransform Matrix(this Avalonia.Media.MatrixTransform control, IObservable<Avalonia.Matrix> obs, IObserver<Avalonia.Matrix> changed)  
+   => control._setEx(Avalonia.Media.MatrixTransform.MatrixProperty!, obs, changed);
+
 
 
 }

@@ -34,6 +34,10 @@ public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBru
 public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, ISubject<Avalonia.Media.Drawing> subject)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IObservable<Avalonia.Media.Drawing> obs, IObserver<Avalonia.Media.Drawing> changed)  
+   => control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty!, obs, changed);
+
 
 
 }

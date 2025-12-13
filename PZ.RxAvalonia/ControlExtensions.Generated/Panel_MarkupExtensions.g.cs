@@ -34,6 +34,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Panel 
    => control._set(Avalonia.Controls.Panel.BackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Panel 
+   => control._setEx(Avalonia.Controls.Panel.BackgroundProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

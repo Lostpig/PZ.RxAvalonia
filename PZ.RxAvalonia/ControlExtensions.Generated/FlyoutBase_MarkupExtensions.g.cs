@@ -34,6 +34,10 @@ public static T FlyoutBase_AttachedFlyout<T>(this T control, Avalonia.Controls.P
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T FlyoutBase_AttachedFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Primitives.FlyoutBase.AttachedFlyoutProperty!, obs, changed);
+
 
 
 //================= Events ======================//

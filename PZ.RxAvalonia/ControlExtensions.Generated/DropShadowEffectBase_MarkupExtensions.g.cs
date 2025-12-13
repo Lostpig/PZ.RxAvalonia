@@ -34,6 +34,10 @@ public static T BlurRadius<T>(this T control, IObservable<System.Double> obs) wh
 public static T BlurRadius<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.DropShadowEffectBase 
    => control._set(Avalonia.Media.DropShadowEffectBase.BlurRadiusProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BlurRadius<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.DropShadowEffectBase 
+   => control._setEx(Avalonia.Media.DropShadowEffectBase.BlurRadiusProperty!, obs, changed);
+
 
  // Color
 
@@ -56,6 +60,10 @@ public static T Color<T>(this T control, IObservable<Avalonia.Media.Color> obs) 
 public static T Color<T>(this T control, ISubject<Avalonia.Media.Color> subject) where T : Avalonia.Media.DropShadowEffectBase 
    => control._set(Avalonia.Media.DropShadowEffectBase.ColorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Color<T>(this T control, IObservable<Avalonia.Media.Color> obs, IObserver<Avalonia.Media.Color> changed) where T : Avalonia.Media.DropShadowEffectBase 
+   => control._setEx(Avalonia.Media.DropShadowEffectBase.ColorProperty!, obs, changed);
+
 
  // Opacity
 
@@ -77,6 +85,10 @@ public static T Opacity<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Opacity<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.DropShadowEffectBase 
    => control._set(Avalonia.Media.DropShadowEffectBase.OpacityProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Opacity<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.DropShadowEffectBase 
+   => control._setEx(Avalonia.Media.DropShadowEffectBase.OpacityProperty!, obs, changed);
 
 
 

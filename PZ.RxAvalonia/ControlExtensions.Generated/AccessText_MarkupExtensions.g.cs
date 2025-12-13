@@ -34,6 +34,10 @@ public static T ShowAccessKey<T>(this T control, IObservable<System.Boolean> obs
 public static T ShowAccessKey<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.AccessText 
    => control._set(Avalonia.Controls.Primitives.AccessText.ShowAccessKeyProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowAccessKey<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.AccessText 
+   => control._setEx(Avalonia.Controls.Primitives.AccessText.ShowAccessKeyProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

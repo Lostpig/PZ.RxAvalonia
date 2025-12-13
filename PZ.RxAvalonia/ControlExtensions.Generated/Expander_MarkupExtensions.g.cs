@@ -34,6 +34,10 @@ public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animat
 public static T ContentTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.Expander 
+   => control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty!, obs, changed);
+
 
  // ExpandDirection
 
@@ -56,6 +60,10 @@ public static T ExpandDirection<T>(this T control, IObservable<Avalonia.Controls
 public static T ExpandDirection<T>(this T control, ISubject<Avalonia.Controls.ExpandDirection> subject) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ExpandDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ExpandDirection<T>(this T control, IObservable<Avalonia.Controls.ExpandDirection> obs, IObserver<Avalonia.Controls.ExpandDirection> changed) where T : Avalonia.Controls.Expander 
+   => control._setEx(Avalonia.Controls.Expander.ExpandDirectionProperty!, obs, changed);
+
 
  // IsExpanded
 
@@ -77,6 +85,10 @@ public static T IsExpanded<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T IsExpanded<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.IsExpandedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsExpanded<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Expander 
+   => control._setEx(Avalonia.Controls.Expander.IsExpandedProperty!, obs, changed);
 
 
 

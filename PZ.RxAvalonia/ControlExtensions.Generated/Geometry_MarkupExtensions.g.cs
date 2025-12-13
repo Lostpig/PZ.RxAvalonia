@@ -34,6 +34,10 @@ public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transfor
 public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform> subject) where T : Avalonia.Media.Geometry 
    => control._set(Avalonia.Media.Geometry.TransformProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed) where T : Avalonia.Media.Geometry 
+   => control._setEx(Avalonia.Media.Geometry.TransformProperty!, obs, changed);
+
 
 
 //================= Events ======================//

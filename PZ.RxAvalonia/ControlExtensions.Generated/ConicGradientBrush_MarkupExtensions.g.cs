@@ -47,6 +47,10 @@ public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.Conic
 public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control, ISubject<Avalonia.RelativePoint> subject)  
    => control._set(Avalonia.Media.ConicGradientBrush.CenterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ConicGradientBrush Center(this Avalonia.Media.ConicGradientBrush control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed)  
+   => control._setEx(Avalonia.Media.ConicGradientBrush.CenterProperty!, obs, changed);
+
 
  // Angle
 
@@ -68,6 +72,10 @@ public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicG
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.ConicGradientBrush.AngleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ConicGradientBrush Angle(this Avalonia.Media.ConicGradientBrush control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.ConicGradientBrush.AngleProperty!, obs, changed);
 
 
 

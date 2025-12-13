@@ -34,6 +34,10 @@ public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate
 public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.AngleXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform AngleX(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.AngleXProperty!, obs, changed);
+
 
  // AngleY
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.AngleYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform AngleY(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.AngleYProperty!, obs, changed);
 
 
  // AngleZ
@@ -78,6 +86,10 @@ public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate
 public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.AngleZProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform AngleZ(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.AngleZProperty!, obs, changed);
+
 
  // CenterX
 
@@ -99,6 +111,10 @@ public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotat
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.CenterXProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform CenterX(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.CenterXProperty!, obs, changed);
 
 
  // CenterY
@@ -122,6 +138,10 @@ public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotat
 public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.CenterYProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform CenterY(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.CenterYProperty!, obs, changed);
+
 
  // CenterZ
 
@@ -144,6 +164,10 @@ public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotat
 public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.CenterZProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform CenterZ(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.CenterZProperty!, obs, changed);
+
 
  // Depth
 
@@ -165,6 +189,10 @@ public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Rotate3DTransform.DepthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Rotate3DTransform Depth(this Avalonia.Media.Rotate3DTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Rotate3DTransform.DepthProperty!, obs, changed);
 
 
 

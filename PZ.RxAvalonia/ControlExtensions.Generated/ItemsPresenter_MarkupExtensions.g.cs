@@ -34,6 +34,10 @@ public static T ItemsPanel<T>(this T control, IObservable<Avalonia.Controls.ITem
 public static T ItemsPanel<T>(this T control, ISubject<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> subject) where T : Avalonia.Controls.Presenters.ItemsPresenter 
    => control._set(Avalonia.Controls.Presenters.ItemsPresenter.ItemsPanelProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemsPanel<T>(this T control, IObservable<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> obs, IObserver<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> changed) where T : Avalonia.Controls.Presenters.ItemsPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ItemsPresenter.ItemsPanelProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

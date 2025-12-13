@@ -34,6 +34,10 @@ public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> 
 public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Decorator 
    => control._set(Avalonia.Controls.Decorator.ChildProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Decorator 
+   => control._setEx(Avalonia.Controls.Decorator.ChildProperty!, obs, changed);
+
 
  // Padding
 
@@ -73,6 +77,10 @@ public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs) 
 /*SetterFromSubjectGenerator*/
 public static T Padding<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Controls.Decorator 
    => control._set(Avalonia.Controls.Decorator.PaddingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Controls.Decorator 
+   => control._setEx(Avalonia.Controls.Decorator.PaddingProperty!, obs, changed);
 
 
 

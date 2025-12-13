@@ -34,6 +34,10 @@ public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Con
 public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, ISubject<Avalonia.Media.Transform> subject)  
    => control._set(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed)  
+   => control._setEx(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, obs, changed);
+
 
  // WindowManagerAddShadowHint
 
@@ -55,6 +59,10 @@ public static Avalonia.Controls.Primitives.PopupRoot WindowManagerAddShadowHint(
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Controls.Primitives.PopupRoot WindowManagerAddShadowHint(this Avalonia.Controls.Primitives.PopupRoot control, ISubject<System.Boolean> subject)  
    => control._set(Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHintProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Controls.Primitives.PopupRoot WindowManagerAddShadowHint(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed)  
+   => control._setEx(Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHintProperty!, obs, changed);
 
 
 

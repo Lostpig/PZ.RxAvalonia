@@ -34,6 +34,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Documents.Run 
    => control._set(Avalonia.Controls.Documents.Run.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Documents.Run 
+   => control._setEx(Avalonia.Controls.Documents.Run.TextProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

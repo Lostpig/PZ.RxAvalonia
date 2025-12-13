@@ -47,6 +47,10 @@ public static Avalonia.Media.RadialGradientBrush Center(this Avalonia.Media.Radi
 public static Avalonia.Media.RadialGradientBrush Center(this Avalonia.Media.RadialGradientBrush control, ISubject<Avalonia.RelativePoint> subject)  
    => control._set(Avalonia.Media.RadialGradientBrush.CenterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RadialGradientBrush Center(this Avalonia.Media.RadialGradientBrush control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed)  
+   => control._setEx(Avalonia.Media.RadialGradientBrush.CenterProperty!, obs, changed);
+
 
  // GradientOrigin
 
@@ -82,6 +86,10 @@ public static Avalonia.Media.RadialGradientBrush GradientOrigin(this Avalonia.Me
 public static Avalonia.Media.RadialGradientBrush GradientOrigin(this Avalonia.Media.RadialGradientBrush control, ISubject<Avalonia.RelativePoint> subject)  
    => control._set(Avalonia.Media.RadialGradientBrush.GradientOriginProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RadialGradientBrush GradientOrigin(this Avalonia.Media.RadialGradientBrush control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed)  
+   => control._setEx(Avalonia.Media.RadialGradientBrush.GradientOriginProperty!, obs, changed);
+
 
  // RadiusX
 
@@ -104,6 +112,10 @@ public static Avalonia.Media.RadialGradientBrush RadiusX(this Avalonia.Media.Rad
 public static Avalonia.Media.RadialGradientBrush RadiusX(this Avalonia.Media.RadialGradientBrush control, ISubject<Avalonia.RelativeScalar> subject)  
    => control._set(Avalonia.Media.RadialGradientBrush.RadiusXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RadialGradientBrush RadiusX(this Avalonia.Media.RadialGradientBrush control, IObservable<Avalonia.RelativeScalar> obs, IObserver<Avalonia.RelativeScalar> changed)  
+   => control._setEx(Avalonia.Media.RadialGradientBrush.RadiusXProperty!, obs, changed);
+
 
  // RadiusY
 
@@ -125,6 +137,10 @@ public static Avalonia.Media.RadialGradientBrush RadiusY(this Avalonia.Media.Rad
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.RadialGradientBrush RadiusY(this Avalonia.Media.RadialGradientBrush control, ISubject<Avalonia.RelativeScalar> subject)  
    => control._set(Avalonia.Media.RadialGradientBrush.RadiusYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RadialGradientBrush RadiusY(this Avalonia.Media.RadialGradientBrush control, IObservable<Avalonia.RelativeScalar> obs, IObserver<Avalonia.RelativeScalar> changed)  
+   => control._setEx(Avalonia.Media.RadialGradientBrush.RadiusYProperty!, obs, changed);
 
 
 

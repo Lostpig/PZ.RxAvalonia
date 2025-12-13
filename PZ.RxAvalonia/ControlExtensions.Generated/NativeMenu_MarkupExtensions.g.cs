@@ -34,6 +34,10 @@ public static T NativeMenu_Menu<T>(this T control, Avalonia.Controls.NativeMenu 
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu> obs, IObserver<Avalonia.Controls.NativeMenu> changed) where T : Avalonia.AvaloniaObject 
+   => control._setEx(Avalonia.Controls.NativeMenu.MenuProperty!, obs, changed);
+
 
 
 //================= Events ======================//

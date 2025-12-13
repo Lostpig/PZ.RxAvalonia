@@ -34,6 +34,10 @@ public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry> obs
 public static T Data<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Controls.PathIcon 
    => control._set(Avalonia.Controls.PathIcon.DataProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Controls.PathIcon 
+   => control._setEx(Avalonia.Controls.PathIcon.DataProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

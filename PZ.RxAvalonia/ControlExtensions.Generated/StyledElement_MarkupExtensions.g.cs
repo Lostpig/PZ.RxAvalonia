@@ -34,6 +34,10 @@ public static T DataContext<T>(this T control, IObservable<System.Object> obs) w
 public static T DataContext<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DataContext<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.StyledElement 
+   => control._setEx(Avalonia.StyledElement.DataContextProperty!, obs, changed);
+
 
  // Name
 
@@ -56,6 +60,10 @@ public static T Name<T>(this T control, IObservable<System.String> obs) where T 
 public static T Name<T>(this T control, ISubject<System.String> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Name<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.StyledElement 
+   => control._setEx(Avalonia.StyledElement.NameProperty!, obs, changed);
+
 
  // Theme
 
@@ -77,6 +85,10 @@ public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlThe
 /*SetterFromSubjectGenerator*/
 public static T Theme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.StyledElement 
+   => control._setEx(Avalonia.StyledElement.ThemeProperty!, obs, changed);
 
 
 

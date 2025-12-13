@@ -34,6 +34,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.OrientationProperty!, obs, changed);
+
 
  // IsDirectionReversed
 
@@ -55,6 +59,10 @@ public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolea
 /*SetterFromSubjectGenerator*/
 public static T IsDirectionReversed<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsDirectionReversedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.IsDirectionReversedProperty!, obs, changed);
 
 
  // IsSnapToTickEnabled
@@ -78,6 +86,10 @@ public static T IsSnapToTickEnabled<T>(this T control, IObservable<System.Boolea
 public static T IsSnapToTickEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsSnapToTickEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty!, obs, changed);
+
 
  // TickFrequency
 
@@ -99,6 +111,10 @@ public static T TickFrequency<T>(this T control, IObservable<System.Double> obs)
 /*SetterFromSubjectGenerator*/
 public static T TickFrequency<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickFrequencyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TickFrequency<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.TickFrequencyProperty!, obs, changed);
 
 
  // TickPlacement
@@ -122,6 +138,10 @@ public static T TickPlacement<T>(this T control, IObservable<Avalonia.Controls.T
 public static T TickPlacement<T>(this T control, ISubject<Avalonia.Controls.TickPlacement> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TickPlacementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TickPlacement<T>(this T control, IObservable<Avalonia.Controls.TickPlacement> obs, IObserver<Avalonia.Controls.TickPlacement> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.TickPlacementProperty!, obs, changed);
+
 
  // Ticks
 
@@ -143,6 +163,10 @@ public static T Ticks<T>(this T control, IObservable<Avalonia.Collections.Avalon
 /*SetterFromSubjectGenerator*/
 public static T Ticks<T>(this T control, ISubject<Avalonia.Collections.AvaloniaList<System.Double>> subject) where T : Avalonia.Controls.Slider 
    => control._set(Avalonia.Controls.Slider.TicksProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Ticks<T>(this T control, IObservable<Avalonia.Collections.AvaloniaList<System.Double>> obs, IObserver<Avalonia.Collections.AvaloniaList<System.Double>> changed) where T : Avalonia.Controls.Slider 
+   => control._setEx(Avalonia.Controls.Slider.TicksProperty!, obs, changed);
 
 
 

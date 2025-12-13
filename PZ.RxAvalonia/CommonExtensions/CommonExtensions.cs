@@ -1,7 +1,6 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media;
 using System.Diagnostics;
-using System.Reactive.Linq;
 using System.Reactive.Subjects;
 
 namespace PZ.RxAvalonia;
@@ -27,11 +26,5 @@ public static class CommonExtensions
             menu.Menu.Items.Add(item);
 
         return menu;
-    }
-
-    public static void Reducer<T>(this BehaviorSubject<T> subject, Func<T, T> reducer)
-    {
-        var newValue = reducer(subject.Value);
-        subject.OnNext(newValue);
     }
 }

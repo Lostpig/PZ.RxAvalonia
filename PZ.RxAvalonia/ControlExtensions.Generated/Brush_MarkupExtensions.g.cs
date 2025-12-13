@@ -34,6 +34,10 @@ public static T Opacity<T>(this T control, IObservable<System.Double> obs) where
 public static T Opacity<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.OpacityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Opacity<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.Brush 
+   => control._setEx(Avalonia.Media.Brush.OpacityProperty!, obs, changed);
+
 
  // Transform
 
@@ -55,6 +59,10 @@ public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransfo
 /*SetterFromSubjectGenerator*/
 public static T Transform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Media.Brush 
+   => control._setEx(Avalonia.Media.Brush.TransformProperty!, obs, changed);
 
 
  // TransformOrigin
@@ -90,6 +98,10 @@ public static T TransformOrigin<T>(this T control, IObservable<Avalonia.Relative
 /*SetterFromSubjectGenerator*/
 public static T TransformOrigin<T>(this T control, ISubject<Avalonia.RelativePoint> subject) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformOriginProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TransformOrigin<T>(this T control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed) where T : Avalonia.Media.Brush 
+   => control._setEx(Avalonia.Media.Brush.TransformOriginProperty!, obs, changed);
 
 
 

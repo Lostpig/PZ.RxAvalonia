@@ -34,6 +34,10 @@ public static T MaxHeight<T>(this T control, IObservable<System.Double> obs) whe
 public static T MaxHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.RowDefinition 
    => control._set(Avalonia.Controls.RowDefinition.MaxHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.RowDefinition 
+   => control._setEx(Avalonia.Controls.RowDefinition.MaxHeightProperty!, obs, changed);
+
 
  // MinHeight
 
@@ -55,6 +59,10 @@ public static T MinHeight<T>(this T control, IObservable<System.Double> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T MinHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.RowDefinition 
    => control._set(Avalonia.Controls.RowDefinition.MinHeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MinHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.RowDefinition 
+   => control._setEx(Avalonia.Controls.RowDefinition.MinHeightProperty!, obs, changed);
 
 
  // Height
@@ -90,6 +98,10 @@ public static T Height<T>(this T control, IObservable<Avalonia.Controls.GridLeng
 /*SetterFromSubjectGenerator*/
 public static T Height<T>(this T control, ISubject<Avalonia.Controls.GridLength> subject) where T : Avalonia.Controls.RowDefinition 
    => control._set(Avalonia.Controls.RowDefinition.HeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Height<T>(this T control, IObservable<Avalonia.Controls.GridLength> obs, IObserver<Avalonia.Controls.GridLength> changed) where T : Avalonia.Controls.RowDefinition 
+   => control._setEx(Avalonia.Controls.RowDefinition.HeightProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T NativeMenuBar_EnableMenuItemClickForwarding<T>(this T control, S
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T NativeMenuBar_EnableMenuItemClickForwarding<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.NativeMenuBar.EnableMenuItemClickForwardingProperty!, obs, changed);
+
 
 
 }

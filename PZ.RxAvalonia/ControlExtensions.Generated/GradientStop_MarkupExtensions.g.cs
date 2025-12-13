@@ -34,6 +34,10 @@ public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientSto
 public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.GradientStop.OffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.GradientStop Offset(this Avalonia.Media.GradientStop control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.GradientStop.OffsetProperty!, obs, changed);
+
 
  // Color
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control, ISubject<Avalonia.Media.Color> subject)  
    => control._set(Avalonia.Media.GradientStop.ColorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.GradientStop Color(this Avalonia.Media.GradientStop control, IObservable<Avalonia.Media.Color> obs, IObserver<Avalonia.Media.Color> changed)  
+   => control._setEx(Avalonia.Media.GradientStop.ColorProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> 
 public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Documents.InlineUIContainer 
    => control._set(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Documents.InlineUIContainer 
+   => control._setEx(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

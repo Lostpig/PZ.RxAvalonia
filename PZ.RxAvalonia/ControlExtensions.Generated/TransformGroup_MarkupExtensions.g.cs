@@ -34,6 +34,10 @@ public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.Transfo
 public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control, ISubject<Avalonia.Media.Transforms> subject)  
    => control._set(Avalonia.Media.TransformGroup.ChildrenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.TransformGroup Children(this Avalonia.Media.TransformGroup control, IObservable<Avalonia.Media.Transforms> obs, IObserver<Avalonia.Media.Transforms> changed)  
+   => control._setEx(Avalonia.Media.TransformGroup.ChildrenProperty!, obs, changed);
+
 
 
 }

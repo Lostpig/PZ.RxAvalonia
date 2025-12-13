@@ -34,6 +34,10 @@ public static T ItemSpacing<T>(this T control, IObservable<System.Double> obs) w
 public static T ItemSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.ItemSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.ItemSpacingProperty!, obs, changed);
+
 
  // LineSpacing
 
@@ -55,6 +59,10 @@ public static T LineSpacing<T>(this T control, IObservable<System.Double> obs) w
 /*SetterFromSubjectGenerator*/
 public static T LineSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.LineSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LineSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.LineSpacingProperty!, obs, changed);
 
 
  // Orientation
@@ -78,6 +86,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.OrientationProperty!, obs, changed);
+
 
  // ItemsAlignment
 
@@ -99,6 +111,10 @@ public static T ItemsAlignment<T>(this T control, IObservable<Avalonia.Controls.
 /*SetterFromSubjectGenerator*/
 public static T ItemsAlignment<T>(this T control, ISubject<Avalonia.Controls.WrapPanelItemsAlignment> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.ItemsAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ItemsAlignment<T>(this T control, IObservable<Avalonia.Controls.WrapPanelItemsAlignment> obs, IObserver<Avalonia.Controls.WrapPanelItemsAlignment> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.ItemsAlignmentProperty!, obs, changed);
 
 
  // ItemWidth
@@ -122,6 +138,10 @@ public static T ItemWidth<T>(this T control, IObservable<System.Double> obs) whe
 public static T ItemWidth<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.ItemWidthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemWidth<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.ItemWidthProperty!, obs, changed);
+
 
  // ItemHeight
 
@@ -143,6 +163,10 @@ public static T ItemHeight<T>(this T control, IObservable<System.Double> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T ItemHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.WrapPanel 
    => control._set(Avalonia.Controls.WrapPanel.ItemHeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ItemHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.WrapPanel 
+   => control._setEx(Avalonia.Controls.WrapPanel.ItemHeightProperty!, obs, changed);
 
 
 

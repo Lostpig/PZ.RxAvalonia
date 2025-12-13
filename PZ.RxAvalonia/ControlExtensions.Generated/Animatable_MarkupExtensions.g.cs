@@ -34,6 +34,10 @@ public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Tr
 public static T Transitions<T>(this T control, ISubject<Avalonia.Animation.Transitions> subject) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Transitions> obs, IObserver<Avalonia.Animation.Transitions> changed) where T : Avalonia.Animation.Animatable 
+   => control._setEx(Avalonia.Animation.Animatable.TransitionsProperty!, obs, changed);
+
 
 
 }

@@ -34,6 +34,10 @@ public static T CanHorizontallyScroll<T>(this T control, IObservable<System.Bool
 public static T CanHorizontallyScroll<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScrollProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CanHorizontallyScroll<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScrollProperty!, obs, changed);
+
 
  // CanVerticallyScroll
 
@@ -55,6 +59,10 @@ public static T CanVerticallyScroll<T>(this T control, IObservable<System.Boolea
 /*SetterFromSubjectGenerator*/
 public static T CanVerticallyScroll<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScrollProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CanVerticallyScroll<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScrollProperty!, obs, changed);
 
 
  // Offset
@@ -78,6 +86,10 @@ public static T Offset<T>(this T control, IObservable<Avalonia.Vector> obs) wher
 public static T Offset<T>(this T control, ISubject<Avalonia.Vector> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.OffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Offset<T>(this T control, IObservable<Avalonia.Vector> obs, IObserver<Avalonia.Vector> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.OffsetProperty!, obs, changed);
+
 
  // HorizontalSnapPointsType
 
@@ -99,6 +111,10 @@ public static T HorizontalSnapPointsType<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T HorizontalSnapPointsType<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsType> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsTypeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsTypeProperty!, obs, changed);
 
 
  // VerticalSnapPointsType
@@ -122,6 +138,10 @@ public static T VerticalSnapPointsType<T>(this T control, IObservable<Avalonia.C
 public static T VerticalSnapPointsType<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsType> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsTypeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsTypeProperty!, obs, changed);
+
 
  // HorizontalSnapPointsAlignment
 
@@ -143,6 +163,10 @@ public static T HorizontalSnapPointsAlignment<T>(this T control, IObservable<Ava
 /*SetterFromSubjectGenerator*/
 public static T HorizontalSnapPointsAlignment<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsAlignment> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty!, obs, changed);
 
 
  // VerticalSnapPointsAlignment
@@ -166,6 +190,10 @@ public static T VerticalSnapPointsAlignment<T>(this T control, IObservable<Avalo
 public static T VerticalSnapPointsAlignment<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsAlignment> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignmentProperty!, obs, changed);
+
 
  // IsScrollChainingEnabled
 
@@ -187,6 +215,10 @@ public static T IsScrollChainingEnabled<T>(this T control, IObservable<System.Bo
 /*SetterFromSubjectGenerator*/
 public static T IsScrollChainingEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
    => control._set(Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsScrollChainingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabledProperty!, obs, changed);
 
 
 

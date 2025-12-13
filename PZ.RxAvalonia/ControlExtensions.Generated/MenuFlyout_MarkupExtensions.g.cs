@@ -34,6 +34,10 @@ public static T ItemsSource<T>(this T control, IObservable<System.Collections.IE
 public static T ItemsSource<T>(this T control, ISubject<System.Collections.IEnumerable> subject) where T : Avalonia.Controls.MenuFlyout 
    => control._set(Avalonia.Controls.MenuFlyout.ItemsSourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable> obs, IObserver<System.Collections.IEnumerable> changed) where T : Avalonia.Controls.MenuFlyout 
+   => control._setEx(Avalonia.Controls.MenuFlyout.ItemsSourceProperty!, obs, changed);
+
 
  // ItemTemplate
 
@@ -55,6 +59,10 @@ public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Te
 /*SetterFromSubjectGenerator*/
 public static T ItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.MenuFlyout 
    => control._set(Avalonia.Controls.MenuFlyout.ItemTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.MenuFlyout 
+   => control._setEx(Avalonia.Controls.MenuFlyout.ItemTemplateProperty!, obs, changed);
 
 
  // ItemContainerTheme
@@ -78,6 +86,10 @@ public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styli
 public static T ItemContainerTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.Controls.MenuFlyout 
    => control._set(Avalonia.Controls.MenuFlyout.ItemContainerThemeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.Controls.MenuFlyout 
+   => control._setEx(Avalonia.Controls.MenuFlyout.ItemContainerThemeProperty!, obs, changed);
+
 
  // FlyoutPresenterTheme
 
@@ -99,6 +111,10 @@ public static T FlyoutPresenterTheme<T>(this T control, IObservable<Avalonia.Sty
 /*SetterFromSubjectGenerator*/
 public static T FlyoutPresenterTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.Controls.MenuFlyout 
    => control._set(Avalonia.Controls.MenuFlyout.FlyoutPresenterThemeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FlyoutPresenterTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.Controls.MenuFlyout 
+   => control._setEx(Avalonia.Controls.MenuFlyout.FlyoutPresenterThemeProperty!, obs, changed);
 
 
 

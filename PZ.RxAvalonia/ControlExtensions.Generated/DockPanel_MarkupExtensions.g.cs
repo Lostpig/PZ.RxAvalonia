@@ -34,6 +34,10 @@ public static T LastChildFill<T>(this T control, IObservable<System.Boolean> obs
 public static T LastChildFill<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.LastChildFillProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LastChildFill<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.DockPanel 
+   => control._setEx(Avalonia.Controls.DockPanel.LastChildFillProperty!, obs, changed);
+
 
  // HorizontalSpacing
 
@@ -56,6 +60,10 @@ public static T HorizontalSpacing<T>(this T control, IObservable<System.Double> 
 public static T HorizontalSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.HorizontalSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.DockPanel 
+   => control._setEx(Avalonia.Controls.DockPanel.HorizontalSpacingProperty!, obs, changed);
+
 
  // VerticalSpacing
 
@@ -77,6 +85,10 @@ public static T VerticalSpacing<T>(this T control, IObservable<System.Double> ob
 /*SetterFromSubjectGenerator*/
 public static T VerticalSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.DockPanel 
    => control._set(Avalonia.Controls.DockPanel.VerticalSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.DockPanel 
+   => control._setEx(Avalonia.Controls.DockPanel.VerticalSpacingProperty!, obs, changed);
 
 
 
@@ -101,6 +113,10 @@ public static T DockPanel_Dock<T>(this T control, Avalonia.Controls.Dock value) 
     control.SetValue(Avalonia.Controls.DockPanel.DockProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T DockPanel_Dock<T>(this T control, IObservable<Avalonia.Controls.Dock> obs, IObserver<Avalonia.Controls.Dock> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.DockPanel.DockProperty!, obs, changed);
 
 
 

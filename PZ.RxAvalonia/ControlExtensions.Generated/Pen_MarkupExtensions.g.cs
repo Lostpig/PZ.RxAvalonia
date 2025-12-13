@@ -34,6 +34,10 @@ public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObserva
 public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IBrush> subject)  
    => control._set(Avalonia.Media.Pen.BrushProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed)  
+   => control._setEx(Avalonia.Media.Pen.BrushProperty!, obs, changed);
+
 
  // Thickness
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, IObs
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Pen.ThicknessProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Pen.ThicknessProperty!, obs, changed);
 
 
  // DashStyle
@@ -78,6 +86,10 @@ public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObs
 public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IDashStyle> subject)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IDashStyle> obs, IObserver<Avalonia.Media.IDashStyle> changed)  
+   => control._setEx(Avalonia.Media.Pen.DashStyleProperty!, obs, changed);
+
 
  // LineCap
 
@@ -99,6 +111,10 @@ public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, IObser
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.PenLineCap> subject)  
    => control._set(Avalonia.Media.Pen.LineCapProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen LineCap(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.PenLineCap> obs, IObserver<Avalonia.Media.PenLineCap> changed)  
+   => control._setEx(Avalonia.Media.Pen.LineCapProperty!, obs, changed);
 
 
  // LineJoin
@@ -122,6 +138,10 @@ public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, IObse
 public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.PenLineJoin> subject)  
    => control._set(Avalonia.Media.Pen.LineJoinProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen LineJoin(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.PenLineJoin> obs, IObserver<Avalonia.Media.PenLineJoin> changed)  
+   => control._setEx(Avalonia.Media.Pen.LineJoinProperty!, obs, changed);
+
 
  // MiterLimit
 
@@ -143,6 +163,10 @@ public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, IOb
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.Pen.MiterLimitProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.Pen MiterLimit(this Avalonia.Media.Pen control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.Pen.MiterLimitProperty!, obs, changed);
 
 
 

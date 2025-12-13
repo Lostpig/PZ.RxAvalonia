@@ -34,6 +34,10 @@ public static T Content<T>(this T control, IObservable<System.Object> obs) where
 public static T Content<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Flyout 
    => control._set(Avalonia.Controls.Flyout.ContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Content<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Flyout 
+   => control._setEx(Avalonia.Controls.Flyout.ContentProperty!, obs, changed);
+
 
  // ContentTemplate
 
@@ -56,6 +60,10 @@ public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls
 public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.Flyout 
    => control._set(Avalonia.Controls.Flyout.ContentTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.Flyout 
+   => control._setEx(Avalonia.Controls.Flyout.ContentTemplateProperty!, obs, changed);
+
 
  // FlyoutPresenterTheme
 
@@ -77,6 +85,10 @@ public static T FlyoutPresenterTheme<T>(this T control, IObservable<Avalonia.Sty
 /*SetterFromSubjectGenerator*/
 public static T FlyoutPresenterTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.Controls.Flyout 
    => control._set(Avalonia.Controls.Flyout.FlyoutPresenterThemeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FlyoutPresenterTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.Controls.Flyout 
+   => control._setEx(Avalonia.Controls.Flyout.FlyoutPresenterThemeProperty!, obs, changed);
 
 
 

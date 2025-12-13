@@ -34,6 +34,10 @@ public static T Topmost<T>(this T control, IObservable<System.Boolean> obs) wher
 public static T Topmost<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.WindowBase 
    => control._set(Avalonia.Controls.WindowBase.TopmostProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Topmost<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.WindowBase 
+   => control._setEx(Avalonia.Controls.WindowBase.TopmostProperty!, obs, changed);
+
 
 
 //================= Events ======================//

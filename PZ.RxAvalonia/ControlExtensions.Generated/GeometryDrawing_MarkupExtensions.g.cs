@@ -34,6 +34,10 @@ public static Avalonia.Media.GeometryDrawing Geometry(this Avalonia.Media.Geomet
 public static Avalonia.Media.GeometryDrawing Geometry(this Avalonia.Media.GeometryDrawing control, ISubject<Avalonia.Media.Geometry> subject)  
    => control._set(Avalonia.Media.GeometryDrawing.GeometryProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.GeometryDrawing Geometry(this Avalonia.Media.GeometryDrawing control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed)  
+   => control._setEx(Avalonia.Media.GeometryDrawing.GeometryProperty!, obs, changed);
+
 
  // Brush
 
@@ -56,6 +60,10 @@ public static Avalonia.Media.GeometryDrawing Brush(this Avalonia.Media.GeometryD
 public static Avalonia.Media.GeometryDrawing Brush(this Avalonia.Media.GeometryDrawing control, ISubject<Avalonia.Media.IBrush> subject)  
    => control._set(Avalonia.Media.GeometryDrawing.BrushProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.GeometryDrawing Brush(this Avalonia.Media.GeometryDrawing control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed)  
+   => control._setEx(Avalonia.Media.GeometryDrawing.BrushProperty!, obs, changed);
+
 
  // Pen
 
@@ -77,6 +85,10 @@ public static Avalonia.Media.GeometryDrawing Pen(this Avalonia.Media.GeometryDra
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.GeometryDrawing Pen(this Avalonia.Media.GeometryDrawing control, ISubject<Avalonia.Media.IPen> subject)  
    => control._set(Avalonia.Media.GeometryDrawing.PenProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.GeometryDrawing Pen(this Avalonia.Media.GeometryDrawing control, IObservable<Avalonia.Media.IPen> obs, IObserver<Avalonia.Media.IPen> changed)  
+   => control._setEx(Avalonia.Media.GeometryDrawing.PenProperty!, obs, changed);
 
 
 

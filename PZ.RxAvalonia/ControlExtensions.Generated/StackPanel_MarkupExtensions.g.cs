@@ -34,6 +34,10 @@ public static T Spacing<T>(this T control, IObservable<System.Double> obs) where
 public static T Spacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.StackPanel 
    => control._set(Avalonia.Controls.StackPanel.SpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Spacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.StackPanel 
+   => control._setEx(Avalonia.Controls.StackPanel.SpacingProperty!, obs, changed);
+
 
  // Orientation
 
@@ -55,6 +59,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 /*SetterFromSubjectGenerator*/
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.StackPanel 
    => control._set(Avalonia.Controls.StackPanel.OrientationProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.StackPanel 
+   => control._setEx(Avalonia.Controls.StackPanel.OrientationProperty!, obs, changed);
 
 
  // AreHorizontalSnapPointsRegular
@@ -78,6 +86,10 @@ public static T AreHorizontalSnapPointsRegular<T>(this T control, IObservable<Sy
 public static T AreHorizontalSnapPointsRegular<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.StackPanel 
    => control._set(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AreHorizontalSnapPointsRegular<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.StackPanel 
+   => control._setEx(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty!, obs, changed);
+
 
  // AreVerticalSnapPointsRegular
 
@@ -99,6 +111,10 @@ public static T AreVerticalSnapPointsRegular<T>(this T control, IObservable<Syst
 /*SetterFromSubjectGenerator*/
 public static T AreVerticalSnapPointsRegular<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.StackPanel 
    => control._set(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AreVerticalSnapPointsRegular<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.StackPanel 
+   => control._setEx(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty!, obs, changed);
 
 
 

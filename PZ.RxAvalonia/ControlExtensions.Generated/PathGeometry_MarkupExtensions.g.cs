@@ -34,6 +34,10 @@ public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigure
 public static T Figures<T>(this T control, ISubject<Avalonia.Media.PathFigures> subject) where T : Avalonia.Media.PathGeometry 
    => control._set(Avalonia.Media.PathGeometry.FiguresProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigures> obs, IObserver<Avalonia.Media.PathFigures> changed) where T : Avalonia.Media.PathGeometry 
+   => control._setEx(Avalonia.Media.PathGeometry.FiguresProperty!, obs, changed);
+
 
  // FillRule
 
@@ -55,6 +59,10 @@ public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule>
 /*SetterFromSubjectGenerator*/
 public static T FillRule<T>(this T control, ISubject<Avalonia.Media.FillRule> subject) where T : Avalonia.Media.PathGeometry 
    => control._set(Avalonia.Media.PathGeometry.FillRuleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule> obs, IObserver<Avalonia.Media.FillRule> changed) where T : Avalonia.Media.PathGeometry 
+   => control._setEx(Avalonia.Media.PathGeometry.FillRuleProperty!, obs, changed);
 
 
 

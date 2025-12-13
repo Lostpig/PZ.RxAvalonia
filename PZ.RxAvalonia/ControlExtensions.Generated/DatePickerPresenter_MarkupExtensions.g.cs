@@ -34,6 +34,10 @@ public static T Date<T>(this T control, IObservable<System.DateTimeOffset> obs) 
 public static T Date<T>(this T control, ISubject<System.DateTimeOffset> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Date<T>(this T control, IObservable<System.DateTimeOffset> obs, IObserver<System.DateTimeOffset> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.DateProperty!, obs, changed);
+
 
  // DayFormat
 
@@ -55,6 +59,10 @@ public static T DayFormat<T>(this T control, IObservable<System.String> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T DayFormat<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayFormatProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DayFormat<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.DayFormatProperty!, obs, changed);
 
 
  // DayVisible
@@ -78,6 +86,10 @@ public static T DayVisible<T>(this T control, IObservable<System.Boolean> obs) w
 public static T DayVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T DayVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.DayVisibleProperty!, obs, changed);
+
 
  // MaxYear
 
@@ -99,6 +111,10 @@ public static T MaxYear<T>(this T control, IObservable<System.DateTimeOffset> ob
 /*SetterFromSubjectGenerator*/
 public static T MaxYear<T>(this T control, ISubject<System.DateTimeOffset> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MaxYearProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxYear<T>(this T control, IObservable<System.DateTimeOffset> obs, IObserver<System.DateTimeOffset> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.MaxYearProperty!, obs, changed);
 
 
  // MinYear
@@ -122,6 +138,10 @@ public static T MinYear<T>(this T control, IObservable<System.DateTimeOffset> ob
 public static T MinYear<T>(this T control, ISubject<System.DateTimeOffset> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MinYearProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MinYear<T>(this T control, IObservable<System.DateTimeOffset> obs, IObserver<System.DateTimeOffset> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.MinYearProperty!, obs, changed);
+
 
  // MonthFormat
 
@@ -143,6 +163,10 @@ public static T MonthFormat<T>(this T control, IObservable<System.String> obs) w
 /*SetterFromSubjectGenerator*/
 public static T MonthFormat<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MonthFormat<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.MonthFormatProperty!, obs, changed);
 
 
  // MonthVisible
@@ -166,6 +190,10 @@ public static T MonthVisible<T>(this T control, IObservable<System.Boolean> obs)
 public static T MonthVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MonthVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.MonthVisibleProperty!, obs, changed);
+
 
  // YearFormat
 
@@ -188,6 +216,10 @@ public static T YearFormat<T>(this T control, IObservable<System.String> obs) wh
 public static T YearFormat<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearFormatProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T YearFormat<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.YearFormatProperty!, obs, changed);
+
 
  // YearVisible
 
@@ -209,6 +241,10 @@ public static T YearVisible<T>(this T control, IObservable<System.Boolean> obs) 
 /*SetterFromSubjectGenerator*/
 public static T YearVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.DatePickerPresenter 
    => control._set(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T YearVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.DatePickerPresenter 
+   => control._setEx(Avalonia.Controls.DatePickerPresenter.YearVisibleProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static Avalonia.Media.DashStyle Dashes(this Avalonia.Media.DashStyle cont
 public static Avalonia.Media.DashStyle Dashes(this Avalonia.Media.DashStyle control, ISubject<Avalonia.Collections.AvaloniaList<System.Double>> subject)  
    => control._set(Avalonia.Media.DashStyle.DashesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DashStyle Dashes(this Avalonia.Media.DashStyle control, IObservable<Avalonia.Collections.AvaloniaList<System.Double>> obs, IObserver<Avalonia.Collections.AvaloniaList<System.Double>> changed)  
+   => control._setEx(Avalonia.Media.DashStyle.DashesProperty!, obs, changed);
+
 
  // Offset
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.DashStyle Offset(this Avalonia.Media.DashStyle cont
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.DashStyle Offset(this Avalonia.Media.DashStyle control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DashStyle.OffsetProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DashStyle Offset(this Avalonia.Media.DashStyle control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DashStyle.OffsetProperty!, obs, changed);
 
 
 

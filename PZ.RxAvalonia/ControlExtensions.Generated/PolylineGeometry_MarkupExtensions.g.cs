@@ -34,6 +34,10 @@ public static T Points<T>(this T control, IObservable<System.Collections.Generic
 public static T Points<T>(this T control, ISubject<System.Collections.Generic.IList<Avalonia.Point>> subject) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.PointsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Points<T>(this T control, IObservable<System.Collections.Generic.IList<Avalonia.Point>> obs, IObserver<System.Collections.Generic.IList<Avalonia.Point>> changed) where T : Avalonia.Media.PolylineGeometry 
+   => control._setEx(Avalonia.Media.PolylineGeometry.PointsProperty!, obs, changed);
+
 
  // IsFilled
 
@@ -55,6 +59,10 @@ public static T IsFilled<T>(this T control, IObservable<System.Boolean> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T IsFilled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Media.PolylineGeometry 
    => control._set(Avalonia.Media.PolylineGeometry.IsFilledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsFilled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Media.PolylineGeometry 
+   => control._setEx(Avalonia.Media.PolylineGeometry.IsFilledProperty!, obs, changed);
 
 
 

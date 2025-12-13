@@ -34,6 +34,10 @@ public static Avalonia.Media.DrawingGroup Opacity(this Avalonia.Media.DrawingGro
 public static Avalonia.Media.DrawingGroup Opacity(this Avalonia.Media.DrawingGroup control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.DrawingGroup.OpacityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingGroup Opacity(this Avalonia.Media.DrawingGroup control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.DrawingGroup.OpacityProperty!, obs, changed);
+
 
  // Transform
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.DrawingGroup Transform(this Avalonia.Media.DrawingG
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.DrawingGroup Transform(this Avalonia.Media.DrawingGroup control, ISubject<Avalonia.Media.Transform> subject)  
    => control._set(Avalonia.Media.DrawingGroup.TransformProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingGroup Transform(this Avalonia.Media.DrawingGroup control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed)  
+   => control._setEx(Avalonia.Media.DrawingGroup.TransformProperty!, obs, changed);
 
 
  // ClipGeometry
@@ -78,6 +86,10 @@ public static Avalonia.Media.DrawingGroup ClipGeometry(this Avalonia.Media.Drawi
 public static Avalonia.Media.DrawingGroup ClipGeometry(this Avalonia.Media.DrawingGroup control, ISubject<Avalonia.Media.Geometry> subject)  
    => control._set(Avalonia.Media.DrawingGroup.ClipGeometryProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingGroup ClipGeometry(this Avalonia.Media.DrawingGroup control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed)  
+   => control._setEx(Avalonia.Media.DrawingGroup.ClipGeometryProperty!, obs, changed);
+
 
  // OpacityMask
 
@@ -100,6 +112,10 @@ public static Avalonia.Media.DrawingGroup OpacityMask(this Avalonia.Media.Drawin
 public static Avalonia.Media.DrawingGroup OpacityMask(this Avalonia.Media.DrawingGroup control, ISubject<Avalonia.Media.IBrush> subject)  
    => control._set(Avalonia.Media.DrawingGroup.OpacityMaskProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingGroup OpacityMask(this Avalonia.Media.DrawingGroup control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed)  
+   => control._setEx(Avalonia.Media.DrawingGroup.OpacityMaskProperty!, obs, changed);
+
 
  // Children
 
@@ -121,6 +137,10 @@ public static Avalonia.Media.DrawingGroup Children(this Avalonia.Media.DrawingGr
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.DrawingGroup Children(this Avalonia.Media.DrawingGroup control, ISubject<Avalonia.Media.DrawingCollection> subject)  
    => control._set(Avalonia.Media.DrawingGroup.ChildrenProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.DrawingGroup Children(this Avalonia.Media.DrawingGroup control, IObservable<Avalonia.Media.DrawingCollection> obs, IObserver<Avalonia.Media.DrawingCollection> changed)  
+   => control._setEx(Avalonia.Media.DrawingGroup.ChildrenProperty!, obs, changed);
 
 
 

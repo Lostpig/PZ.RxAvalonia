@@ -34,6 +34,10 @@ public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styli
 public static T ItemContainerTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.Controls.ItemsControl 
+   => control._setEx(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, obs, changed);
+
 
  // ItemsPanel
 
@@ -55,6 +59,10 @@ public static T ItemsPanel<T>(this T control, IObservable<Avalonia.Controls.ITem
 /*SetterFromSubjectGenerator*/
 public static T ItemsPanel<T>(this T control, ISubject<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsPanelProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ItemsPanel<T>(this T control, IObservable<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> obs, IObserver<Avalonia.Controls.ITemplate<Avalonia.Controls.Panel>> changed) where T : Avalonia.Controls.ItemsControl 
+   => control._setEx(Avalonia.Controls.ItemsControl.ItemsPanelProperty!, obs, changed);
 
 
  // ItemsSource
@@ -78,6 +86,10 @@ public static T ItemsSource<T>(this T control, IObservable<System.Collections.IE
 public static T ItemsSource<T>(this T control, ISubject<System.Collections.IEnumerable> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable> obs, IObserver<System.Collections.IEnumerable> changed) where T : Avalonia.Controls.ItemsControl 
+   => control._setEx(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, obs, changed);
+
 
  // ItemTemplate
 
@@ -100,6 +112,10 @@ public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Te
 public static T ItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ItemsControl 
+   => control._setEx(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, obs, changed);
+
 
  // DisplayMemberBinding
 
@@ -121,6 +137,10 @@ public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Dat
 /*SetterFromSubjectGenerator*/
 public static T DisplayMemberBinding<T>(this T control, ISubject<Avalonia.Data.IBinding> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding> obs, IObserver<Avalonia.Data.IBinding> changed) where T : Avalonia.Controls.ItemsControl 
+   => control._setEx(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, obs, changed);
 
 
 

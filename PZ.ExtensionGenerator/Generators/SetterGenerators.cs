@@ -20,6 +20,12 @@ public class SetterFromSubjectGenerator : ExtensionGeneratorBase<PropertyExtensi
         $"public static {info.ReturnType} {info.ExtensionName}{info.GenericArg}(this {info.ReturnType} control, ISubject<{info.ValueTypeSource}> subject) {info.GenericConstraint} {Environment.NewLine}" +
         $"   => control._set({info.ControlTypeName}.{info.FieldInfo.Name}!, subject);";
 }
+public class SetterFromTwoWayGenerator : ExtensionGeneratorBase<PropertyExtensionInfo>
+{
+    protected override string? GetExtension(PropertyExtensionInfo info) =>
+        $"public static {info.ReturnType} {info.ExtensionName}{info.GenericArg}(this {info.ReturnType} control, IObservable<{info.ValueTypeSource}> obs, IObserver<{info.ValueTypeSource}> changed) {info.GenericConstraint} {Environment.NewLine}" +
+        $"   => control._setEx({info.ControlTypeName}.{info.FieldInfo.Name}!, obs, changed);";
+}
 
 public class ValueOverloadsSetterGenerator : ExtensionGeneratorBase<PropertyExtensionInfo>
 {

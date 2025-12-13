@@ -34,6 +34,10 @@ public static T AutoScrollToSelectedItem<T>(this T control, IObservable<System.B
 public static T AutoScrollToSelectedItem<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AutoScrollToSelectedItem<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty!, obs, changed);
+
 
  // SelectedIndex
 
@@ -55,6 +59,10 @@ public static T SelectedIndex<T>(this T control, IObservable<System.Int32> obs) 
 /*SetterFromSubjectGenerator*/
 public static T SelectedIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndexProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectedIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedIndexProperty!, obs, changed);
 
 
  // SelectedItem
@@ -78,6 +86,10 @@ public static T SelectedItem<T>(this T control, IObservable<System.Object> obs) 
 public static T SelectedItem<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItemProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedItem<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedItemProperty!, obs, changed);
+
 
  // SelectedValue
 
@@ -99,6 +111,10 @@ public static T SelectedValue<T>(this T control, IObservable<System.Object> obs)
 /*SetterFromSubjectGenerator*/
 public static T SelectedValue<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectedValue<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty!, obs, changed);
 
 
  // SelectedValueBinding
@@ -122,6 +138,10 @@ public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Dat
 public static T SelectedValueBinding<T>(this T control, ISubject<Avalonia.Data.IBinding> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Data.IBinding> obs, IObserver<Avalonia.Data.IBinding> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, obs, changed);
+
 
  // IsTextSearchEnabled
 
@@ -144,6 +164,10 @@ public static T IsTextSearchEnabled<T>(this T control, IObservable<System.Boolea
 public static T IsTextSearchEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsTextSearchEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty!, obs, changed);
+
 
  // WrapSelection
 
@@ -165,6 +189,10 @@ public static T WrapSelection<T>(this T control, IObservable<System.Boolean> obs
 /*SetterFromSubjectGenerator*/
 public static T WrapSelection<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T WrapSelection<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+   => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty!, obs, changed);
 
 
 

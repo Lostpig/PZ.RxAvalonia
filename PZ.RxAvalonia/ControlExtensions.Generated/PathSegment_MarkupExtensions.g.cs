@@ -34,6 +34,10 @@ public static T IsStroked<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsStroked<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Media.PathSegment 
    => control._set(Avalonia.Media.PathSegment.IsStrokedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsStroked<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Media.PathSegment 
+   => control._setEx(Avalonia.Media.PathSegment.IsStrokedProperty!, obs, changed);
+
 
 
 }

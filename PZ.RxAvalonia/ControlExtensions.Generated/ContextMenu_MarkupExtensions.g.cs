@@ -34,6 +34,10 @@ public static T HorizontalOffset<T>(this T control, IObservable<System.Double> o
 public static T HorizontalOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.HorizontalOffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.HorizontalOffsetProperty!, obs, changed);
+
 
  // VerticalOffset
 
@@ -55,6 +59,10 @@ public static T VerticalOffset<T>(this T control, IObservable<System.Double> obs
 /*SetterFromSubjectGenerator*/
 public static T VerticalOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.VerticalOffsetProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.VerticalOffsetProperty!, obs, changed);
 
 
  // PlacementAnchor
@@ -78,6 +86,10 @@ public static T PlacementAnchor<T>(this T control, IObservable<Avalonia.Controls
 public static T PlacementAnchor<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementAnchorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlacementAnchor<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementAnchorProperty!, obs, changed);
+
 
  // PlacementConstraintAdjustment
 
@@ -99,6 +111,10 @@ public static T PlacementConstraintAdjustment<T>(this T control, IObservable<Ava
 /*SetterFromSubjectGenerator*/
 public static T PlacementConstraintAdjustment<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementConstraintAdjustmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlacementConstraintAdjustment<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementConstraintAdjustmentProperty!, obs, changed);
 
 
  // PlacementGravity
@@ -122,6 +138,10 @@ public static T PlacementGravity<T>(this T control, IObservable<Avalonia.Control
 public static T PlacementGravity<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementGravityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlacementGravity<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementGravityProperty!, obs, changed);
+
 
  // Placement
 
@@ -143,6 +163,10 @@ public static T Placement<T>(this T control, IObservable<Avalonia.Controls.Place
 /*SetterFromSubjectGenerator*/
 public static T Placement<T>(this T control, ISubject<Avalonia.Controls.PlacementMode> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Placement<T>(this T control, IObservable<Avalonia.Controls.PlacementMode> obs, IObserver<Avalonia.Controls.PlacementMode> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementProperty!, obs, changed);
 
 
  // PlacementRect
@@ -166,6 +190,10 @@ public static T PlacementRect<T>(this T control, IObservable<System.Nullable<Ava
 public static T PlacementRect<T>(this T control, ISubject<System.Nullable<Avalonia.Rect>> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementRectProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlacementRect<T>(this T control, IObservable<System.Nullable<Avalonia.Rect>> obs, IObserver<System.Nullable<Avalonia.Rect>> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementRectProperty!, obs, changed);
+
 
  // WindowManagerAddShadowHint
 
@@ -187,6 +215,10 @@ public static T WindowManagerAddShadowHint<T>(this T control, IObservable<System
 /*SetterFromSubjectGenerator*/
 public static T WindowManagerAddShadowHint<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.WindowManagerAddShadowHintProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T WindowManagerAddShadowHint<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.WindowManagerAddShadowHintProperty!, obs, changed);
 
 
  // PlacementTarget
@@ -210,6 +242,10 @@ public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls
 public static T PlacementTarget<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, obs, changed);
+
 
  // CustomPopupPlacementCallback
 
@@ -231,6 +267,10 @@ public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Aval
 /*SetterFromSubjectGenerator*/
 public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.ContextMenu 
+   => control._setEx(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 
 

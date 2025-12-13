@@ -34,6 +34,10 @@ public static T Width<T>(this T control, IObservable<System.Double> obs) where T
 public static T Width<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.WidthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Width<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.WidthProperty!, obs, changed);
+
 
  // Height
 
@@ -55,6 +59,10 @@ public static T Height<T>(this T control, IObservable<System.Double> obs) where 
 /*SetterFromSubjectGenerator*/
 public static T Height<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Height<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.HeightProperty!, obs, changed);
 
 
  // MinWidth
@@ -78,6 +86,10 @@ public static T MinWidth<T>(this T control, IObservable<System.Double> obs) wher
 public static T MinWidth<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinWidthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MinWidth<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.MinWidthProperty!, obs, changed);
+
 
  // MaxWidth
 
@@ -99,6 +111,10 @@ public static T MaxWidth<T>(this T control, IObservable<System.Double> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T MaxWidth<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxWidthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxWidth<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.MaxWidthProperty!, obs, changed);
 
 
  // MinHeight
@@ -122,6 +138,10 @@ public static T MinHeight<T>(this T control, IObservable<System.Double> obs) whe
 public static T MinHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MinHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MinHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.MinHeightProperty!, obs, changed);
+
 
  // MaxHeight
 
@@ -143,6 +163,10 @@ public static T MaxHeight<T>(this T control, IObservable<System.Double> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T MaxHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MaxHeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.MaxHeightProperty!, obs, changed);
 
 
  // Margin
@@ -184,6 +208,10 @@ public static T Margin<T>(this T control, IObservable<Avalonia.Thickness> obs) w
 public static T Margin<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.MarginProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Margin<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.MarginProperty!, obs, changed);
+
 
  // HorizontalAlignment
 
@@ -205,6 +233,10 @@ public static T HorizontalAlignment<T>(this T control, IObservable<Avalonia.Layo
 /*SetterFromSubjectGenerator*/
 public static T HorizontalAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty!, obs, changed);
 
 
  // VerticalAlignment
@@ -228,6 +260,10 @@ public static T VerticalAlignment<T>(this T control, IObservable<Avalonia.Layout
 public static T VerticalAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.VerticalAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.VerticalAlignmentProperty!, obs, changed);
+
 
  // UseLayoutRounding
 
@@ -249,6 +285,10 @@ public static T UseLayoutRounding<T>(this T control, IObservable<System.Boolean>
 /*SetterFromSubjectGenerator*/
 public static T UseLayoutRounding<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Layout.Layoutable 
    => control._set(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T UseLayoutRounding<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Layout.Layoutable 
+   => control._setEx(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty!, obs, changed);
 
 
 

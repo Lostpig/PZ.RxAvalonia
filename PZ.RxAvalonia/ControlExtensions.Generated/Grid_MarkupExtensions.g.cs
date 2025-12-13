@@ -34,6 +34,10 @@ public static T ShowGridLines<T>(this T control, IObservable<System.Boolean> obs
 public static T ShowGridLines<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Grid 
    => control._set(Avalonia.Controls.Grid.ShowGridLinesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowGridLines<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Grid 
+   => control._setEx(Avalonia.Controls.Grid.ShowGridLinesProperty!, obs, changed);
+
 
  // RowSpacing
 
@@ -56,6 +60,10 @@ public static T RowSpacing<T>(this T control, IObservable<System.Double> obs) wh
 public static T RowSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Grid 
    => control._set(Avalonia.Controls.Grid.RowSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RowSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Grid 
+   => control._setEx(Avalonia.Controls.Grid.RowSpacingProperty!, obs, changed);
+
 
  // ColumnSpacing
 
@@ -77,6 +85,10 @@ public static T ColumnSpacing<T>(this T control, IObservable<System.Double> obs)
 /*SetterFromSubjectGenerator*/
 public static T ColumnSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Grid 
    => control._set(Avalonia.Controls.Grid.ColumnSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ColumnSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Grid 
+   => control._setEx(Avalonia.Controls.Grid.ColumnSpacingProperty!, obs, changed);
 
 
 
@@ -102,6 +114,10 @@ public static T Grid_Column<T>(this T control, System.Int32 value) where T : Ava
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T Grid_Column<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Grid.ColumnProperty!, obs, changed);
+
 
  // Row
 
@@ -123,6 +139,10 @@ public static T Grid_Row<T>(this T control, System.Int32 value) where T : Avalon
     control.SetValue(Avalonia.Controls.Grid.RowProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Grid_Row<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Grid.RowProperty!, obs, changed);
 
 
  // ColumnSpan
@@ -146,6 +166,10 @@ public static T Grid_ColumnSpan<T>(this T control, System.Int32 value) where T :
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T Grid_ColumnSpan<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Grid.ColumnSpanProperty!, obs, changed);
+
 
  // RowSpan
 
@@ -168,6 +192,10 @@ public static T Grid_RowSpan<T>(this T control, System.Int32 value) where T : Av
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T Grid_RowSpan<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Grid.RowSpanProperty!, obs, changed);
+
 
  // IsSharedSizeScope
 
@@ -189,6 +217,10 @@ public static T Grid_IsSharedSizeScope<T>(this T control, System.Boolean value) 
     control.SetValue(Avalonia.Controls.Grid.IsSharedSizeScopeProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Grid_IsSharedSizeScope<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Grid.IsSharedSizeScopeProperty!, obs, changed);
 
 
 

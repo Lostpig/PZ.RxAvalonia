@@ -34,6 +34,10 @@ public static T Command<T>(this T control, IObservable<System.Windows.Input.ICom
 public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.CommandProperty!, obs, changed);
+
 
  // HotKey
 
@@ -55,6 +59,10 @@ public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture>
 /*SetterFromSubjectGenerator*/
 public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.HotKeyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.HotKeyProperty!, obs, changed);
 
 
  // CommandParameter
@@ -78,6 +86,10 @@ public static T CommandParameter<T>(this T control, IObservable<System.Object> o
 public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandParameterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.CommandParameterProperty!, obs, changed);
+
 
  // Icon
 
@@ -99,6 +111,10 @@ public static T Icon<T>(this T control, IObservable<System.Object> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Icon<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IconProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Icon<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.IconProperty!, obs, changed);
 
 
  // InputGesture
@@ -122,6 +138,10 @@ public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGe
 public static T InputGesture<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.InputGestureProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.InputGestureProperty!, obs, changed);
+
 
  // IsSubMenuOpen
 
@@ -143,6 +163,10 @@ public static T IsSubMenuOpen<T>(this T control, IObservable<System.Boolean> obs
 /*SetterFromSubjectGenerator*/
 public static T IsSubMenuOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IsSubMenuOpenProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsSubMenuOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.IsSubMenuOpenProperty!, obs, changed);
 
 
  // StaysOpenOnClick
@@ -166,6 +190,10 @@ public static T StaysOpenOnClick<T>(this T control, IObservable<System.Boolean> 
 public static T StaysOpenOnClick<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.StaysOpenOnClickProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StaysOpenOnClick<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.StaysOpenOnClickProperty!, obs, changed);
+
 
  // ToggleType
 
@@ -187,6 +215,10 @@ public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.Menu
 /*SetterFromSubjectGenerator*/
 public static T ToggleType<T>(this T control, ISubject<Avalonia.Controls.MenuItemToggleType> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.ToggleTypeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.MenuItemToggleType> obs, IObserver<Avalonia.Controls.MenuItemToggleType> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.ToggleTypeProperty!, obs, changed);
 
 
  // IsChecked
@@ -210,6 +242,10 @@ public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsChecked<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IsCheckedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.IsCheckedProperty!, obs, changed);
+
 
  // GroupName
 
@@ -231,6 +267,10 @@ public static T GroupName<T>(this T control, IObservable<System.String> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T GroupName<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.GroupNameProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T GroupName<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.MenuItem 
+   => control._setEx(Avalonia.Controls.MenuItem.GroupNameProperty!, obs, changed);
 
 
 

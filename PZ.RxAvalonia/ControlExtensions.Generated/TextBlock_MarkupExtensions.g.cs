@@ -34,6 +34,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.BackgroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.BackgroundProperty!, obs, changed);
+
 
  // Padding
 
@@ -74,6 +78,10 @@ public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs) 
 public static T Padding<T>(this T control, ISubject<Avalonia.Thickness> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.PaddingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs, IObserver<Avalonia.Thickness> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.PaddingProperty!, obs, changed);
+
 
  // FontFamily
 
@@ -95,6 +103,10 @@ public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFam
 /*SetterFromSubjectGenerator*/
 public static T FontFamily<T>(this T control, ISubject<Avalonia.Media.FontFamily> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontFamilyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFamily> obs, IObserver<Avalonia.Media.FontFamily> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontFamilyProperty!, obs, changed);
 
 
  // FontSize
@@ -118,6 +130,10 @@ public static T FontSize<T>(this T control, IObservable<System.Double> obs) wher
 public static T FontSize<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontSizeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontSizeProperty!, obs, changed);
+
 
  // FontStyle
 
@@ -139,6 +155,10 @@ public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyl
 /*SetterFromSubjectGenerator*/
 public static T FontStyle<T>(this T control, ISubject<Avalonia.Media.FontStyle> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontStyleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontStyle<T>(this T control, IObservable<Avalonia.Media.FontStyle> obs, IObserver<Avalonia.Media.FontStyle> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontStyleProperty!, obs, changed);
 
 
  // FontWeight
@@ -162,6 +182,10 @@ public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWei
 public static T FontWeight<T>(this T control, ISubject<Avalonia.Media.FontWeight> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontWeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontWeight<T>(this T control, IObservable<Avalonia.Media.FontWeight> obs, IObserver<Avalonia.Media.FontWeight> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontWeightProperty!, obs, changed);
+
 
  // FontStretch
 
@@ -183,6 +207,10 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
 /*SetterFromSubjectGenerator*/
 public static T FontStretch<T>(this T control, ISubject<Avalonia.Media.FontStretch> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontStretchProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontStretch> obs, IObserver<Avalonia.Media.FontStretch> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontStretchProperty!, obs, changed);
 
 
  // Foreground
@@ -206,6 +234,10 @@ public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.ForegroundProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.ForegroundProperty!, obs, changed);
+
 
  // BaselineOffset
 
@@ -227,6 +259,10 @@ public static T BaselineOffset<T>(this T control, IObservable<System.Double> obs
 /*SetterFromSubjectGenerator*/
 public static T BaselineOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.BaselineOffsetProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BaselineOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.BaselineOffsetProperty!, obs, changed);
 
 
  // LineHeight
@@ -250,6 +286,10 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs) wh
 public static T LineHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.LineHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.LineHeightProperty!, obs, changed);
+
 
  // LineSpacing
 
@@ -271,6 +311,10 @@ public static T LineSpacing<T>(this T control, IObservable<System.Double> obs) w
 /*SetterFromSubjectGenerator*/
 public static T LineSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.LineSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LineSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.LineSpacingProperty!, obs, changed);
 
 
  // LetterSpacing
@@ -294,6 +338,10 @@ public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs)
 public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.LetterSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.LetterSpacingProperty!, obs, changed);
+
 
  // MaxLines
 
@@ -315,6 +363,10 @@ public static T MaxLines<T>(this T control, IObservable<System.Int32> obs) where
 /*SetterFromSubjectGenerator*/
 public static T MaxLines<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.MaxLinesProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaxLines<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.MaxLinesProperty!, obs, changed);
 
 
  // Text
@@ -338,6 +390,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.TextProperty!, obs, changed);
+
 
  // TextAlignment
 
@@ -359,6 +415,10 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
 /*SetterFromSubjectGenerator*/
 public static T TextAlignment<T>(this T control, ISubject<Avalonia.Media.TextAlignment> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.TextAlignmentProperty!, obs, changed);
 
 
  // TextWrapping
@@ -382,6 +442,10 @@ public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextW
 public static T TextWrapping<T>(this T control, ISubject<Avalonia.Media.TextWrapping> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextWrappingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextWrapping> obs, IObserver<Avalonia.Media.TextWrapping> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.TextWrappingProperty!, obs, changed);
+
 
  // TextTrimming
 
@@ -403,6 +467,10 @@ public static T TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextT
 /*SetterFromSubjectGenerator*/
 public static T TextTrimming<T>(this T control, ISubject<Avalonia.Media.TextTrimming> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextTrimmingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextTrimming> obs, IObserver<Avalonia.Media.TextTrimming> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.TextTrimmingProperty!, obs, changed);
 
 
  // TextDecorations
@@ -426,6 +494,10 @@ public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.Te
 public static T TextDecorations<T>(this T control, ISubject<Avalonia.Media.TextDecorationCollection> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextDecorationsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection> obs, IObserver<Avalonia.Media.TextDecorationCollection> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.TextDecorationsProperty!, obs, changed);
+
 
  // FontFeatures
 
@@ -448,6 +520,10 @@ public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontF
 public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontFeaturesProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.FontFeaturesProperty!, obs, changed);
+
 
  // Inlines
 
@@ -469,6 +545,10 @@ public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documen
 /*SetterFromSubjectGenerator*/
 public static T Inlines<T>(this T control, ISubject<Avalonia.Controls.Documents.InlineCollection> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.InlinesProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection> obs, IObserver<Avalonia.Controls.Documents.InlineCollection> changed) where T : Avalonia.Controls.TextBlock 
+   => control._setEx(Avalonia.Controls.TextBlock.InlinesProperty!, obs, changed);
 
 
 
@@ -494,6 +574,10 @@ public static T TextBlock_BaselineOffset<T>(this T control, System.Double value)
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_BaselineOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.BaselineOffsetProperty!, obs, changed);
+
 
  // LineHeight
 
@@ -515,6 +599,10 @@ public static T TextBlock_LineHeight<T>(this T control, System.Double value) whe
     control.SetValue(Avalonia.Controls.TextBlock.LineHeightProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_LineHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.LineHeightProperty!, obs, changed);
 
 
  // LetterSpacing
@@ -538,6 +626,10 @@ public static T TextBlock_LetterSpacing<T>(this T control, System.Double value) 
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.LetterSpacingProperty!, obs, changed);
+
 
  // MaxLines
 
@@ -559,6 +651,10 @@ public static T TextBlock_MaxLines<T>(this T control, System.Int32 value) where 
     control.SetValue(Avalonia.Controls.TextBlock.MaxLinesProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_MaxLines<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.MaxLinesProperty!, obs, changed);
 
 
  // TextAlignment
@@ -582,6 +678,10 @@ public static T TextBlock_TextAlignment<T>(this T control, Avalonia.Media.TextAl
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.TextAlignmentProperty!, obs, changed);
+
 
  // TextWrapping
 
@@ -604,6 +704,10 @@ public static T TextBlock_TextWrapping<T>(this T control, Avalonia.Media.TextWra
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextWrapping> obs, IObserver<Avalonia.Media.TextWrapping> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.TextWrappingProperty!, obs, changed);
+
 
  // TextTrimming
 
@@ -625,6 +729,10 @@ public static T TextBlock_TextTrimming<T>(this T control, Avalonia.Media.TextTri
     control.SetValue(Avalonia.Controls.TextBlock.TextTrimmingProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextBlock_TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextTrimming> obs, IObserver<Avalonia.Media.TextTrimming> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.TextBlock.TextTrimmingProperty!, obs, changed);
 
 
 

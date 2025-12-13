@@ -34,6 +34,10 @@ public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegmen
 public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control, ISubject<System.Boolean> subject)  
    => control._set(Avalonia.Media.ArcSegment.IsLargeArcProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ArcSegment IsLargeArc(this Avalonia.Media.ArcSegment control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed)  
+   => control._setEx(Avalonia.Media.ArcSegment.IsLargeArcProperty!, obs, changed);
+
 
  // Point
 
@@ -56,6 +60,10 @@ public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment con
 public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.ArcSegment.PointProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ArcSegment Point(this Avalonia.Media.ArcSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.ArcSegment.PointProperty!, obs, changed);
+
 
  // RotationAngle
 
@@ -77,6 +85,10 @@ public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSeg
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.ArcSegment.RotationAngleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ArcSegment RotationAngle(this Avalonia.Media.ArcSegment control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.ArcSegment.RotationAngleProperty!, obs, changed);
 
 
  // Size
@@ -113,6 +125,10 @@ public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment cont
 public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control, ISubject<Avalonia.Size> subject)  
    => control._set(Avalonia.Media.ArcSegment.SizeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ArcSegment Size(this Avalonia.Media.ArcSegment control, IObservable<Avalonia.Size> obs, IObserver<Avalonia.Size> changed)  
+   => control._setEx(Avalonia.Media.ArcSegment.SizeProperty!, obs, changed);
+
 
  // SweepDirection
 
@@ -134,6 +150,10 @@ public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSe
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control, ISubject<Avalonia.Media.SweepDirection> subject)  
    => control._set(Avalonia.Media.ArcSegment.SweepDirectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ArcSegment SweepDirection(this Avalonia.Media.ArcSegment control, IObservable<Avalonia.Media.SweepDirection> obs, IObserver<Avalonia.Media.SweepDirection> changed)  
+   => control._setEx(Avalonia.Media.ArcSegment.SweepDirectionProperty!, obs, changed);
 
 
 

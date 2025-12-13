@@ -34,6 +34,10 @@ public static T IsClosed<T>(this T control, IObservable<System.Boolean> obs) whe
 public static T IsClosed<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Notifications.NotificationCard 
    => control._set(Avalonia.Controls.Notifications.NotificationCard.IsClosedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsClosed<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Notifications.NotificationCard 
+   => control._setEx(Avalonia.Controls.Notifications.NotificationCard.IsClosedProperty!, obs, changed);
+
 
  // NotificationType
 
@@ -55,6 +59,10 @@ public static T NotificationType<T>(this T control, IObservable<Avalonia.Control
 /*SetterFromSubjectGenerator*/
 public static T NotificationType<T>(this T control, ISubject<Avalonia.Controls.Notifications.NotificationType> subject) where T : Avalonia.Controls.Notifications.NotificationCard 
    => control._set(Avalonia.Controls.Notifications.NotificationCard.NotificationTypeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T NotificationType<T>(this T control, IObservable<Avalonia.Controls.Notifications.NotificationType> obs, IObserver<Avalonia.Controls.Notifications.NotificationType> changed) where T : Avalonia.Controls.Notifications.NotificationCard 
+   => control._setEx(Avalonia.Controls.Notifications.NotificationCard.NotificationTypeProperty!, obs, changed);
 
 
 
@@ -79,6 +87,10 @@ public static T NotificationCard_CloseOnClick<T>(this T control, System.Boolean 
     control.SetValue(Avalonia.Controls.Notifications.NotificationCard.CloseOnClickProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T NotificationCard_CloseOnClick<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Button 
+   => control._setEx(Avalonia.Controls.Notifications.NotificationCard.CloseOnClickProperty!, obs, changed);
 
 
 

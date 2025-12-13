@@ -34,6 +34,10 @@ public static T IsChecked<T>(this T control, IObservable<System.Nullable<System.
 public static T IsChecked<T>(this T control, ISubject<System.Nullable<System.Boolean>> subject) where T : Avalonia.Controls.Primitives.ToggleButton 
    => control._set(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsChecked<T>(this T control, IObservable<System.Nullable<System.Boolean>> obs, IObserver<System.Nullable<System.Boolean>> changed) where T : Avalonia.Controls.Primitives.ToggleButton 
+   => control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty!, obs, changed);
+
 
  // IsThreeState
 
@@ -55,6 +59,10 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs)
 /*SetterFromSubjectGenerator*/
 public static T IsThreeState<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.ToggleButton 
    => control._set(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.ToggleButton 
+   => control._setEx(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty!, obs, changed);
 
 
 

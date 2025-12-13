@@ -34,6 +34,10 @@ public static T SizeToContent<T>(this T control, IObservable<Avalonia.Controls.S
 public static T SizeToContent<T>(this T control, ISubject<Avalonia.Controls.SizeToContent> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.SizeToContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SizeToContent<T>(this T control, IObservable<Avalonia.Controls.SizeToContent> obs, IObserver<Avalonia.Controls.SizeToContent> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.SizeToContentProperty!, obs, changed);
+
 
  // ExtendClientAreaToDecorationsHint
 
@@ -55,6 +59,10 @@ public static T ExtendClientAreaToDecorationsHint<T>(this T control, IObservable
 /*SetterFromSubjectGenerator*/
 public static T ExtendClientAreaToDecorationsHint<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ExtendClientAreaToDecorationsHint<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, obs, changed);
 
 
  // ExtendClientAreaChromeHints
@@ -78,6 +86,10 @@ public static T ExtendClientAreaChromeHints<T>(this T control, IObservable<Avalo
 public static T ExtendClientAreaChromeHints<T>(this T control, ISubject<Avalonia.Platform.ExtendClientAreaChromeHints> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ExtendClientAreaChromeHints<T>(this T control, IObservable<Avalonia.Platform.ExtendClientAreaChromeHints> obs, IObserver<Avalonia.Platform.ExtendClientAreaChromeHints> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, obs, changed);
+
 
  // ExtendClientAreaTitleBarHeightHint
 
@@ -99,6 +111,10 @@ public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, IObservabl
 /*SetterFromSubjectGenerator*/
 public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, obs, changed);
 
 
  // SystemDecorations
@@ -122,6 +138,10 @@ public static T SystemDecorations<T>(this T control, IObservable<Avalonia.Contro
 public static T SystemDecorations<T>(this T control, ISubject<Avalonia.Controls.SystemDecorations> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SystemDecorations<T>(this T control, IObservable<Avalonia.Controls.SystemDecorations> obs, IObserver<Avalonia.Controls.SystemDecorations> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.SystemDecorationsProperty!, obs, changed);
+
 
  // ShowActivated
 
@@ -143,6 +163,10 @@ public static T ShowActivated<T>(this T control, IObservable<System.Boolean> obs
 /*SetterFromSubjectGenerator*/
 public static T ShowActivated<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ShowActivatedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ShowActivated<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ShowActivatedProperty!, obs, changed);
 
 
  // ShowInTaskbar
@@ -166,6 +190,10 @@ public static T ShowInTaskbar<T>(this T control, IObservable<System.Boolean> obs
 public static T ShowInTaskbar<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ShowInTaskbarProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowInTaskbar<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ShowInTaskbarProperty!, obs, changed);
+
 
  // ClosingBehavior
 
@@ -187,6 +215,10 @@ public static T ClosingBehavior<T>(this T control, IObservable<Avalonia.Controls
 /*SetterFromSubjectGenerator*/
 public static T ClosingBehavior<T>(this T control, ISubject<Avalonia.Controls.WindowClosingBehavior> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.ClosingBehaviorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ClosingBehavior<T>(this T control, IObservable<Avalonia.Controls.WindowClosingBehavior> obs, IObserver<Avalonia.Controls.WindowClosingBehavior> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.ClosingBehaviorProperty!, obs, changed);
 
 
  // WindowState
@@ -210,6 +242,10 @@ public static T WindowState<T>(this T control, IObservable<Avalonia.Controls.Win
 public static T WindowState<T>(this T control, ISubject<Avalonia.Controls.WindowState> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.WindowStateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T WindowState<T>(this T control, IObservable<Avalonia.Controls.WindowState> obs, IObserver<Avalonia.Controls.WindowState> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.WindowStateProperty!, obs, changed);
+
 
  // Title
 
@@ -231,6 +267,10 @@ public static T Title<T>(this T control, IObservable<System.String> obs) where T
 /*SetterFromSubjectGenerator*/
 public static T Title<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.TitleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Title<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.TitleProperty!, obs, changed);
 
 
  // Icon
@@ -254,6 +294,10 @@ public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon
 public static T Icon<T>(this T control, ISubject<Avalonia.Controls.WindowIcon> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.IconProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon> obs, IObserver<Avalonia.Controls.WindowIcon> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.IconProperty!, obs, changed);
+
 
  // WindowStartupLocation
 
@@ -275,6 +319,10 @@ public static T WindowStartupLocation<T>(this T control, IObservable<Avalonia.Co
 /*SetterFromSubjectGenerator*/
 public static T WindowStartupLocation<T>(this T control, ISubject<Avalonia.Controls.WindowStartupLocation> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.WindowStartupLocationProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T WindowStartupLocation<T>(this T control, IObservable<Avalonia.Controls.WindowStartupLocation> obs, IObserver<Avalonia.Controls.WindowStartupLocation> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.WindowStartupLocationProperty!, obs, changed);
 
 
  // CanResize
@@ -298,6 +346,10 @@ public static T CanResize<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T CanResize<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanResizeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CanResize<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.CanResizeProperty!, obs, changed);
+
 
  // CanMinimize
 
@@ -320,6 +372,10 @@ public static T CanMinimize<T>(this T control, IObservable<System.Boolean> obs) 
 public static T CanMinimize<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanMinimizeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CanMinimize<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.CanMinimizeProperty!, obs, changed);
+
 
  // CanMaximize
 
@@ -341,6 +397,10 @@ public static T CanMaximize<T>(this T control, IObservable<System.Boolean> obs) 
 /*SetterFromSubjectGenerator*/
 public static T CanMaximize<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.CanMaximizeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CanMaximize<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.CanMaximizeProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Controls.Ref
 public static T Orientation<T>(this T control, ISubject<Avalonia.Controls.RefreshVisualizerOrientation> subject) where T : Avalonia.Controls.RefreshVisualizer 
    => control._set(Avalonia.Controls.RefreshVisualizer.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizerOrientation> obs, IObserver<Avalonia.Controls.RefreshVisualizerOrientation> changed) where T : Avalonia.Controls.RefreshVisualizer 
+   => control._setEx(Avalonia.Controls.RefreshVisualizer.OrientationProperty!, obs, changed);
+
 
 
 //================= Events ======================//

@@ -34,6 +34,10 @@ public static T TintColor<T>(this T control, IObservable<Avalonia.Media.Color> o
 public static T TintColor<T>(this T control, ISubject<Avalonia.Media.Color> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TintColor<T>(this T control, IObservable<Avalonia.Media.Color> obs, IObserver<Avalonia.Media.Color> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintColorProperty!, obs, changed);
+
 
  // BackgroundSource
 
@@ -55,6 +59,10 @@ public static T BackgroundSource<T>(this T control, IObservable<Avalonia.Media.A
 /*SetterFromSubjectGenerator*/
 public static T BackgroundSource<T>(this T control, ISubject<Avalonia.Media.AcrylicBackgroundSource> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BackgroundSource<T>(this T control, IObservable<Avalonia.Media.AcrylicBackgroundSource> obs, IObserver<Avalonia.Media.AcrylicBackgroundSource> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.BackgroundSourceProperty!, obs, changed);
 
 
  // TintOpacity
@@ -78,6 +86,10 @@ public static T TintOpacity<T>(this T control, IObservable<System.Double> obs) w
 public static T TintOpacity<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TintOpacity<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.TintOpacityProperty!, obs, changed);
+
 
  // MaterialOpacity
 
@@ -99,6 +111,10 @@ public static T MaterialOpacity<T>(this T control, IObservable<System.Double> ob
 /*SetterFromSubjectGenerator*/
 public static T MaterialOpacity<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MaterialOpacity<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.MaterialOpacityProperty!, obs, changed);
 
 
  // PlatformTransparencyCompensationLevel
@@ -122,6 +138,10 @@ public static T PlatformTransparencyCompensationLevel<T>(this T control, IObserv
 public static T PlatformTransparencyCompensationLevel<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlatformTransparencyCompensationLevel<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.PlatformTransparencyCompensationLevelProperty!, obs, changed);
+
 
  // FallbackColor
 
@@ -143,6 +163,10 @@ public static T FallbackColor<T>(this T control, IObservable<Avalonia.Media.Colo
 /*SetterFromSubjectGenerator*/
 public static T FallbackColor<T>(this T control, ISubject<Avalonia.Media.Color> subject) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
    => control._set(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FallbackColor<T>(this T control, IObservable<Avalonia.Media.Color> obs, IObserver<Avalonia.Media.Color> changed) where T : Avalonia.Media.ExperimentalAcrylicMaterial 
+   => control._setEx(Avalonia.Media.ExperimentalAcrylicMaterial.FallbackColorProperty!, obs, changed);
 
 
 

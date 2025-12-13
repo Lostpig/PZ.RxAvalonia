@@ -34,6 +34,10 @@ public static T ClipToBounds<T>(this T control, IObservable<System.Boolean> obs)
 public static T ClipToBounds<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ClipToBoundsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ClipToBounds<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.ClipToBoundsProperty!, obs, changed);
+
 
  // Clip
 
@@ -55,6 +59,10 @@ public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry> obs
 /*SetterFromSubjectGenerator*/
 public static T Clip<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ClipProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.ClipProperty!, obs, changed);
 
 
  // IsVisible
@@ -78,6 +86,10 @@ public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.IsVisibleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.IsVisibleProperty!, obs, changed);
+
 
  // Opacity
 
@@ -99,6 +111,10 @@ public static T Opacity<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Opacity<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.OpacityProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Opacity<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.OpacityProperty!, obs, changed);
 
 
  // OpacityMask
@@ -122,6 +138,10 @@ public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush
 public static T OpacityMask<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.OpacityMaskProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.OpacityMaskProperty!, obs, changed);
+
 
  // Effect
 
@@ -144,6 +164,10 @@ public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect> ob
 public static T Effect<T>(this T control, ISubject<Avalonia.Media.IEffect> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.EffectProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect> obs, IObserver<Avalonia.Media.IEffect> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.EffectProperty!, obs, changed);
+
 
  // RenderTransform
 
@@ -165,6 +189,10 @@ public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.IT
 /*SetterFromSubjectGenerator*/
 public static T RenderTransform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.RenderTransformProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.RenderTransformProperty!, obs, changed);
 
 
  // RenderTransformOrigin
@@ -201,6 +229,10 @@ public static T RenderTransformOrigin<T>(this T control, IObservable<Avalonia.Re
 public static T RenderTransformOrigin<T>(this T control, ISubject<Avalonia.RelativePoint> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.RenderTransformOriginProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RenderTransformOrigin<T>(this T control, IObservable<Avalonia.RelativePoint> obs, IObserver<Avalonia.RelativePoint> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.RenderTransformOriginProperty!, obs, changed);
+
 
  // FlowDirection
 
@@ -223,6 +255,10 @@ public static T FlowDirection<T>(this T control, IObservable<Avalonia.Media.Flow
 public static T FlowDirection<T>(this T control, ISubject<Avalonia.Media.FlowDirection> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.FlowDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T FlowDirection<T>(this T control, IObservable<Avalonia.Media.FlowDirection> obs, IObserver<Avalonia.Media.FlowDirection> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.FlowDirectionProperty!, obs, changed);
+
 
  // ZIndex
 
@@ -244,6 +280,10 @@ public static T ZIndex<T>(this T control, IObservable<System.Int32> obs) where T
 /*SetterFromSubjectGenerator*/
 public static T ZIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ZIndexProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ZIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.ZIndexProperty!, obs, changed);
 
 
 
@@ -268,6 +308,10 @@ public static T Visual_FlowDirection<T>(this T control, Avalonia.Media.FlowDirec
     control.SetValue(Avalonia.Visual.FlowDirectionProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Visual_FlowDirection<T>(this T control, IObservable<Avalonia.Media.FlowDirection> obs, IObserver<Avalonia.Media.FlowDirection> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.FlowDirectionProperty!, obs, changed);
 
 
 

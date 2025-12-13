@@ -34,6 +34,10 @@ public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment c
 public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.LineSegment.PointProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.LineSegment Point(this Avalonia.Media.LineSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.LineSegment.PointProperty!, obs, changed);
+
 
 
 }

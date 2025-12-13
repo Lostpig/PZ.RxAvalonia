@@ -34,6 +34,10 @@ public static T Minimum<T>(this T control, IObservable<System.Double> obs) where
 public static T Minimum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.RangeBase 
    => control._set(Avalonia.Controls.Primitives.RangeBase.MinimumProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Minimum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.RangeBase 
+   => control._setEx(Avalonia.Controls.Primitives.RangeBase.MinimumProperty!, obs, changed);
+
 
  // Maximum
 
@@ -55,6 +59,10 @@ public static T Maximum<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Maximum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.RangeBase 
    => control._set(Avalonia.Controls.Primitives.RangeBase.MaximumProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Maximum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.RangeBase 
+   => control._setEx(Avalonia.Controls.Primitives.RangeBase.MaximumProperty!, obs, changed);
 
 
  // Value
@@ -78,6 +86,10 @@ public static T Value<T>(this T control, IObservable<System.Double> obs) where T
 public static T Value<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.RangeBase 
    => control._set(Avalonia.Controls.Primitives.RangeBase.ValueProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Value<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.RangeBase 
+   => control._setEx(Avalonia.Controls.Primitives.RangeBase.ValueProperty!, obs, changed);
+
 
  // SmallChange
 
@@ -100,6 +112,10 @@ public static T SmallChange<T>(this T control, IObservable<System.Double> obs) w
 public static T SmallChange<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.RangeBase 
    => control._set(Avalonia.Controls.Primitives.RangeBase.SmallChangeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SmallChange<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.RangeBase 
+   => control._setEx(Avalonia.Controls.Primitives.RangeBase.SmallChangeProperty!, obs, changed);
+
 
  // LargeChange
 
@@ -121,6 +137,10 @@ public static T LargeChange<T>(this T control, IObservable<System.Double> obs) w
 /*SetterFromSubjectGenerator*/
 public static T LargeChange<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.RangeBase 
    => control._set(Avalonia.Controls.Primitives.RangeBase.LargeChangeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LargeChange<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.RangeBase 
+   => control._setEx(Avalonia.Controls.Primitives.RangeBase.LargeChangeProperty!, obs, changed);
 
 
 

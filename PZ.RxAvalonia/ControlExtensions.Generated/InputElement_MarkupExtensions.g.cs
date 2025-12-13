@@ -34,6 +34,10 @@ public static T Focusable<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T Focusable<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.FocusableProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Focusable<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.FocusableProperty!, obs, changed);
+
 
  // IsEnabled
 
@@ -55,6 +59,10 @@ public static T IsEnabled<T>(this T control, IObservable<System.Boolean> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T IsEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.IsEnabledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.IsEnabledProperty!, obs, changed);
 
 
  // Cursor
@@ -78,6 +86,10 @@ public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor> obs
 public static T Cursor<T>(this T control, ISubject<Avalonia.Input.Cursor> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.CursorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor> obs, IObserver<Avalonia.Input.Cursor> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.CursorProperty!, obs, changed);
+
 
  // IsHitTestVisible
 
@@ -99,6 +111,10 @@ public static T IsHitTestVisible<T>(this T control, IObservable<System.Boolean> 
 /*SetterFromSubjectGenerator*/
 public static T IsHitTestVisible<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.IsHitTestVisibleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsHitTestVisible<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.IsHitTestVisibleProperty!, obs, changed);
 
 
  // IsTabStop
@@ -122,6 +138,10 @@ public static T IsTabStop<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T IsTabStop<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.IsTabStopProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsTabStop<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.IsTabStopProperty!, obs, changed);
+
 
  // TabIndex
 
@@ -143,6 +163,10 @@ public static T TabIndex<T>(this T control, IObservable<System.Int32> obs) where
 /*SetterFromSubjectGenerator*/
 public static T TabIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.TabIndexProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TabIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Input.InputElement 
+   => control._setEx(Avalonia.Input.InputElement.TabIndexProperty!, obs, changed);
 
 
 

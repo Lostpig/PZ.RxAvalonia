@@ -34,6 +34,10 @@ public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs
 public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage> subject) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed) where T : Avalonia.Controls.Image 
+   => control._setEx(Avalonia.Controls.Image.SourceProperty!, obs, changed);
+
 
  // BlendMode
 
@@ -55,6 +59,10 @@ public static T BlendMode<T>(this T control, IObservable<Avalonia.Media.Imaging.
 /*SetterFromSubjectGenerator*/
 public static T BlendMode<T>(this T control, ISubject<Avalonia.Media.Imaging.BitmapBlendingMode> subject) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.BlendModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T BlendMode<T>(this T control, IObservable<Avalonia.Media.Imaging.BitmapBlendingMode> obs, IObserver<Avalonia.Media.Imaging.BitmapBlendingMode> changed) where T : Avalonia.Controls.Image 
+   => control._setEx(Avalonia.Controls.Image.BlendModeProperty!, obs, changed);
 
 
  // Stretch
@@ -78,6 +86,10 @@ public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> o
 public static T Stretch<T>(this T control, ISubject<Avalonia.Media.Stretch> subject) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> obs, IObserver<Avalonia.Media.Stretch> changed) where T : Avalonia.Controls.Image 
+   => control._setEx(Avalonia.Controls.Image.StretchProperty!, obs, changed);
+
 
  // StretchDirection
 
@@ -99,6 +111,10 @@ public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.S
 /*SetterFromSubjectGenerator*/
 public static T StretchDirection<T>(this T control, ISubject<Avalonia.Media.StretchDirection> subject) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.StretchDirectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.StretchDirection> obs, IObserver<Avalonia.Media.StretchDirection> changed) where T : Avalonia.Controls.Image 
+   => control._setEx(Avalonia.Controls.Image.StretchDirectionProperty!, obs, changed);
 
 
 

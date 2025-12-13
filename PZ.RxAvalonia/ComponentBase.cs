@@ -7,6 +7,22 @@ using System.Diagnostics;
 
 namespace PZ.RxAvalonia;
 
+/// <summary>
+/// Defines when a view should be initialized.
+/// </summary>
+public enum ViewInitializationStrategy
+{
+    /// <summary>
+    /// View is initialized lazily when first accessed (e.g., when Child property is accessed or when attached to visual tree).
+    /// </summary>
+    Lazy,
+
+    /// <summary>
+    /// View is initialized immediately in the constructor.
+    /// </summary>
+    Immediate
+}
+
 public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeComponent
 {
     internal readonly List<RxPropertyState> _rxPropStates = [];
@@ -18,11 +34,15 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     protected abstract Control Build();
     protected virtual StyleGroup? BuildStyles() => null;
 
-    protected ComponentBase()
+    protected ComponentBase(ViewInitializationStrategy initializationStrategy)
     {
         OnCreated();
-        Initialize();
+        if (initializationStrategy == ViewInitializationStrategy.Immediate)
+        {
+            Initialize();
+        }
     }
+    protected ComponentBase() : this(ViewInitializationStrategy.Immediate) { }
 
     public event Action? ViewInitialized;
     private bool _isInitialized = false;

@@ -34,6 +34,10 @@ public static T Content<T>(this T control, IObservable<System.Object> obs) where
 public static T Content<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Content<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ContentControl 
+   => control._setEx(Avalonia.Controls.ContentControl.ContentProperty!, obs, changed);
+
 
  // ContentTemplate
 
@@ -55,6 +59,10 @@ public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls
 /*SetterFromSubjectGenerator*/
 public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ContentControl 
+   => control._setEx(Avalonia.Controls.ContentControl.ContentTemplateProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -78,6 +86,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.ContentControl 
+   => control._setEx(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty!, obs, changed);
+
 
  // VerticalContentAlignment
 
@@ -99,6 +111,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.ContentControl 
+   => control._setEx(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty!, obs, changed);
 
 
 

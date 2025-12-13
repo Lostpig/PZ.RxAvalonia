@@ -34,6 +34,10 @@ public static T Duration<T>(this T control, IObservable<System.TimeSpan> obs) wh
 public static T Duration<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DurationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Duration<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Animation.TransitionBase 
+   => control._setEx(Avalonia.Animation.TransitionBase.DurationProperty!, obs, changed);
+
 
  // Delay
 
@@ -56,6 +60,10 @@ public static T Delay<T>(this T control, IObservable<System.TimeSpan> obs) where
 public static T Delay<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.DelayProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Delay<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Animation.TransitionBase 
+   => control._setEx(Avalonia.Animation.TransitionBase.DelayProperty!, obs, changed);
+
 
  // Easing
 
@@ -77,6 +85,10 @@ public static T Easing<T>(this T control, IObservable<Avalonia.Animation.Easings
 /*SetterFromSubjectGenerator*/
 public static T Easing<T>(this T control, ISubject<Avalonia.Animation.Easings.Easing> subject) where T : Avalonia.Animation.TransitionBase 
    => control._set(Avalonia.Animation.TransitionBase.EasingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Easing<T>(this T control, IObservable<Avalonia.Animation.Easings.Easing> obs, IObserver<Avalonia.Animation.Easings.Easing> changed) where T : Avalonia.Animation.TransitionBase 
+   => control._setEx(Avalonia.Animation.TransitionBase.EasingProperty!, obs, changed);
 
 
 

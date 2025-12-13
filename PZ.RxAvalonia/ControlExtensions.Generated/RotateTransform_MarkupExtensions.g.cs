@@ -34,6 +34,10 @@ public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTra
 public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.RotateTransform.AngleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RotateTransform Angle(this Avalonia.Media.RotateTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.RotateTransform.AngleProperty!, obs, changed);
+
 
  // CenterX
 
@@ -56,6 +60,10 @@ public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateT
 public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.RotateTransform.CenterXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RotateTransform CenterX(this Avalonia.Media.RotateTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.RotateTransform.CenterXProperty!, obs, changed);
+
 
  // CenterY
 
@@ -77,6 +85,10 @@ public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateT
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.RotateTransform.CenterYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.RotateTransform CenterY(this Avalonia.Media.RotateTransform control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.RotateTransform.CenterYProperty!, obs, changed);
 
 
 

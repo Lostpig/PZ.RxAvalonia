@@ -34,6 +34,10 @@ public static T GroupName<T>(this T control, IObservable<System.String> obs) whe
 public static T GroupName<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.RadioButton 
    => control._set(Avalonia.Controls.RadioButton.GroupNameProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T GroupName<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.RadioButton 
+   => control._setEx(Avalonia.Controls.RadioButton.GroupNameProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

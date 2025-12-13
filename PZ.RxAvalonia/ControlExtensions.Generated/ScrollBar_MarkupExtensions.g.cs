@@ -34,6 +34,10 @@ public static T ViewportSize<T>(this T control, IObservable<System.Double> obs) 
 public static T ViewportSize<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.ViewportSizeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ViewportSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.ViewportSizeProperty!, obs, changed);
+
 
  // Visibility
 
@@ -55,6 +59,10 @@ public static T Visibility<T>(this T control, IObservable<Avalonia.Controls.Prim
 /*SetterFromSubjectGenerator*/
 public static T Visibility<T>(this T control, ISubject<Avalonia.Controls.Primitives.ScrollBarVisibility> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.VisibilityProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Visibility<T>(this T control, IObservable<Avalonia.Controls.Primitives.ScrollBarVisibility> obs, IObserver<Avalonia.Controls.Primitives.ScrollBarVisibility> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.VisibilityProperty!, obs, changed);
 
 
  // Orientation
@@ -78,6 +86,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.OrientationProperty!, obs, changed);
+
 
  // AllowAutoHide
 
@@ -99,6 +111,10 @@ public static T AllowAutoHide<T>(this T control, IObservable<System.Boolean> obs
 /*SetterFromSubjectGenerator*/
 public static T AllowAutoHide<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.AllowAutoHideProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AllowAutoHide<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.AllowAutoHideProperty!, obs, changed);
 
 
  // HideDelay
@@ -122,6 +138,10 @@ public static T HideDelay<T>(this T control, IObservable<System.TimeSpan> obs) w
 public static T HideDelay<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.HideDelayProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HideDelay<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.HideDelayProperty!, obs, changed);
+
 
  // ShowDelay
 
@@ -143,6 +163,10 @@ public static T ShowDelay<T>(this T control, IObservable<System.TimeSpan> obs) w
 /*SetterFromSubjectGenerator*/
 public static T ShowDelay<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.Primitives.ScrollBar 
    => control._set(Avalonia.Controls.Primitives.ScrollBar.ShowDelayProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ShowDelay<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.Primitives.ScrollBar 
+   => control._setEx(Avalonia.Controls.Primitives.ScrollBar.ShowDelayProperty!, obs, changed);
 
 
 

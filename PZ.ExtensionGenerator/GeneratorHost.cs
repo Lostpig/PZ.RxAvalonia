@@ -69,7 +69,8 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
                 new ValueOverloadsSetterGenerator(),
                 new SetterFromFuncGenerator(),
                 new SetterFromObservableGenerator(),
-                new SetterFromSubjectGenerator()
+                new SetterFromSubjectGenerator(),
+                new SetterFromTwoWayGenerator()
 
             ),
 
@@ -81,7 +82,8 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
                 new AttachedPropertyFuncGenerator(),
                 new AttachedPropertyObservableGenerator(),
                 new AttachedPropertySubjectGenerator(),
-                new AttachedPropertyValueGenerator()
+                new AttachedPropertyValueGenerator(),
+                new AttachedPropertyTwoWayGenerator()
             ),
 
             new("Events",

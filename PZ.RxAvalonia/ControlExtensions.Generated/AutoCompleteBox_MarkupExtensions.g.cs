@@ -34,6 +34,10 @@ public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs) whe
 public static T CaretIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, obs, changed);
+
 
  // Watermark
 
@@ -55,6 +59,10 @@ public static T Watermark<T>(this T control, IObservable<System.String> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, obs, changed);
 
 
  // MinimumPrefixLength
@@ -78,6 +86,10 @@ public static T MinimumPrefixLength<T>(this T control, IObservable<System.Int32>
 public static T MinimumPrefixLength<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MinimumPrefixLength<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty!, obs, changed);
+
 
  // MinimumPopulateDelay
 
@@ -99,6 +111,10 @@ public static T MinimumPopulateDelay<T>(this T control, IObservable<System.TimeS
 /*SetterFromSubjectGenerator*/
 public static T MinimumPopulateDelay<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T MinimumPopulateDelay<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty!, obs, changed);
 
 
  // MaxDropDownHeight
@@ -122,6 +138,10 @@ public static T MaxDropDownHeight<T>(this T control, IObservable<System.Double> 
 public static T MaxDropDownHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxDropDownHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty!, obs, changed);
+
 
  // IsTextCompletionEnabled
 
@@ -143,6 +163,10 @@ public static T IsTextCompletionEnabled<T>(this T control, IObservable<System.Bo
 /*SetterFromSubjectGenerator*/
 public static T IsTextCompletionEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsTextCompletionEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty!, obs, changed);
 
 
  // ItemTemplate
@@ -166,6 +190,10 @@ public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Te
 public static T ItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty!, obs, changed);
+
 
  // ClearSelectionOnLostFocus
 
@@ -187,6 +215,10 @@ public static T ClearSelectionOnLostFocus<T>(this T control, IObservable<System.
 /*SetterFromSubjectGenerator*/
 public static T ClearSelectionOnLostFocus<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ClearSelectionOnLostFocus<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty!, obs, changed);
 
 
  // IsDropDownOpen
@@ -210,6 +242,10 @@ public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> ob
 public static T IsDropDownOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsDropDownOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty!, obs, changed);
+
 
  // SelectedItem
 
@@ -231,6 +267,10 @@ public static T SelectedItem<T>(this T control, IObservable<System.Object> obs) 
 /*SetterFromSubjectGenerator*/
 public static T SelectedItem<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectedItem<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty!, obs, changed);
 
 
  // Text
@@ -254,6 +294,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.TextProperty!, obs, changed);
+
 
  // FilterMode
 
@@ -275,6 +319,10 @@ public static T FilterMode<T>(this T control, IObservable<Avalonia.Controls.Auto
 /*SetterFromSubjectGenerator*/
 public static T FilterMode<T>(this T control, ISubject<Avalonia.Controls.AutoCompleteFilterMode> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.FilterModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FilterMode<T>(this T control, IObservable<Avalonia.Controls.AutoCompleteFilterMode> obs, IObserver<Avalonia.Controls.AutoCompleteFilterMode> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.FilterModeProperty!, obs, changed);
 
 
  // ItemFilter
@@ -298,6 +346,10 @@ public static T ItemFilter<T>(this T control, IObservable<Avalonia.Controls.Auto
 public static T ItemFilter<T>(this T control, ISubject<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemFilter<T>(this T control, IObservable<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>> obs, IObserver<Avalonia.Controls.AutoCompleteFilterPredicate<System.Object>> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty!, obs, changed);
+
 
  // TextFilter
 
@@ -319,6 +371,10 @@ public static T TextFilter<T>(this T control, IObservable<Avalonia.Controls.Auto
 /*SetterFromSubjectGenerator*/
 public static T TextFilter<T>(this T control, ISubject<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextFilterProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextFilter<T>(this T control, IObservable<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>> obs, IObserver<Avalonia.Controls.AutoCompleteFilterPredicate<System.String>> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.TextFilterProperty!, obs, changed);
 
 
  // ItemSelector
@@ -342,6 +398,10 @@ public static T ItemSelector<T>(this T control, IObservable<Avalonia.Controls.Au
 public static T ItemSelector<T>(this T control, ISubject<Avalonia.Controls.AutoCompleteSelector<System.Object>> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemSelector<T>(this T control, IObservable<Avalonia.Controls.AutoCompleteSelector<System.Object>> obs, IObserver<Avalonia.Controls.AutoCompleteSelector<System.Object>> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty!, obs, changed);
+
 
  // TextSelector
 
@@ -363,6 +423,10 @@ public static T TextSelector<T>(this T control, IObservable<Avalonia.Controls.Au
 /*SetterFromSubjectGenerator*/
 public static T TextSelector<T>(this T control, ISubject<Avalonia.Controls.AutoCompleteSelector<System.String>> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextSelector<T>(this T control, IObservable<Avalonia.Controls.AutoCompleteSelector<System.String>> obs, IObserver<Avalonia.Controls.AutoCompleteSelector<System.String>> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty!, obs, changed);
 
 
  // ItemsSource
@@ -386,6 +450,10 @@ public static T ItemsSource<T>(this T control, IObservable<System.Collections.IE
 public static T ItemsSource<T>(this T control, ISubject<System.Collections.IEnumerable> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable> obs, IObserver<System.Collections.IEnumerable> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty!, obs, changed);
+
 
  // AsyncPopulator
 
@@ -407,6 +475,10 @@ public static T AsyncPopulator<T>(this T control, IObservable<System.Func<System
 /*SetterFromSubjectGenerator*/
 public static T AsyncPopulator<T>(this T control, ISubject<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AsyncPopulator<T>(this T control, IObservable<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>> obs, IObserver<System.Func<System.String,System.Threading.CancellationToken,System.Threading.Tasks.Task<System.Collections.Generic.IEnumerable<System.Object>>>> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty!, obs, changed);
 
 
  // MaxLength
@@ -430,6 +502,10 @@ public static T MaxLength<T>(this T control, IObservable<System.Int32> obs) wher
 public static T MaxLength<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T MaxLength<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty!, obs, changed);
+
 
  // InnerLeftContent
 
@@ -452,6 +528,10 @@ public static T InnerLeftContent<T>(this T control, IObservable<System.Object> o
 public static T InnerLeftContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty!, obs, changed);
+
 
  // InnerRightContent
 
@@ -473,6 +553,10 @@ public static T InnerRightContent<T>(this T control, IObservable<System.Object> 
 /*SetterFromSubjectGenerator*/
 public static T InnerRightContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.AutoCompleteBox 
    => control._set(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing> o
 public static T Drawing<T>(this T control, ISubject<Avalonia.Media.Drawing> subject) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing> obs, IObserver<Avalonia.Media.Drawing> changed) where T : Avalonia.Media.DrawingImage 
+   => control._setEx(Avalonia.Media.DrawingImage.DrawingProperty!, obs, changed);
+
 
 
 //================= Events ======================//

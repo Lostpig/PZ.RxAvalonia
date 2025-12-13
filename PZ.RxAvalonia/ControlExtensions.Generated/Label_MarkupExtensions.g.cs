@@ -34,6 +34,10 @@ public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputEleme
 public static T Target<T>(this T control, ISubject<Avalonia.Input.IInputElement> subject) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs, IObserver<Avalonia.Input.IInputElement> changed) where T : Avalonia.Controls.Label 
+   => control._setEx(Avalonia.Controls.Label.TargetProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

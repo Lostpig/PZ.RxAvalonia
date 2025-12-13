@@ -34,6 +34,10 @@ public static T Interval<T>(this T control, IObservable<System.Int32> obs) where
 public static T Interval<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.RepeatButton 
    => control._set(Avalonia.Controls.RepeatButton.IntervalProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Interval<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.RepeatButton 
+   => control._setEx(Avalonia.Controls.RepeatButton.IntervalProperty!, obs, changed);
+
 
  // Delay
 
@@ -55,6 +59,10 @@ public static T Delay<T>(this T control, IObservable<System.Int32> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Delay<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.RepeatButton 
    => control._set(Avalonia.Controls.RepeatButton.DelayProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Delay<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.RepeatButton 
+   => control._setEx(Avalonia.Controls.RepeatButton.DelayProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Points<T>(this T control, IObservable<System.Collections.Generic
 public static T Points<T>(this T control, ISubject<System.Collections.Generic.IList<Avalonia.Point>> subject) where T : Avalonia.Controls.Shapes.Polyline 
    => control._set(Avalonia.Controls.Shapes.Polyline.PointsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Points<T>(this T control, IObservable<System.Collections.Generic.IList<Avalonia.Point>> obs, IObserver<System.Collections.Generic.IList<Avalonia.Point>> changed) where T : Avalonia.Controls.Shapes.Polyline 
+   => control._setEx(Avalonia.Controls.Shapes.Polyline.PointsProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

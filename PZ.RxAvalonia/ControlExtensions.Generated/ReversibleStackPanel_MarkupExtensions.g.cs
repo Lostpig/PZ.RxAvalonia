@@ -34,6 +34,10 @@ public static T ReverseOrder<T>(this T control, IObservable<System.Boolean> obs)
 public static T ReverseOrder<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ReversibleStackPanel 
    => control._set(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ReverseOrder<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ReversibleStackPanel 
+   => control._setEx(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

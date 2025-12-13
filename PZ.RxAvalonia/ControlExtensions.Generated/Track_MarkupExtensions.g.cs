@@ -34,6 +34,10 @@ public static T Minimum<T>(this T control, IObservable<System.Double> obs) where
 public static T Minimum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.MinimumProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Minimum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.MinimumProperty!, obs, changed);
+
 
  // Maximum
 
@@ -55,6 +59,10 @@ public static T Maximum<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T Maximum<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.MaximumProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Maximum<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.MaximumProperty!, obs, changed);
 
 
  // Value
@@ -78,6 +86,10 @@ public static T Value<T>(this T control, IObservable<System.Double> obs) where T
 public static T Value<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ValueProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Value<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.ValueProperty!, obs, changed);
+
 
  // ViewportSize
 
@@ -99,6 +111,10 @@ public static T ViewportSize<T>(this T control, IObservable<System.Double> obs) 
 /*SetterFromSubjectGenerator*/
 public static T ViewportSize<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ViewportSizeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ViewportSize<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.ViewportSizeProperty!, obs, changed);
 
 
  // Orientation
@@ -122,6 +138,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.OrientationProperty!, obs, changed);
+
 
  // Thumb
 
@@ -143,6 +163,10 @@ public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitive
 /*SetterFromSubjectGenerator*/
 public static T Thumb<T>(this T control, ISubject<Avalonia.Controls.Primitives.Thumb> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitives.Thumb> obs, IObserver<Avalonia.Controls.Primitives.Thumb> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty!, obs, changed);
 
 
  // IncreaseButton
@@ -166,6 +190,10 @@ public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.
 public static T IncreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs, IObserver<Avalonia.Controls.Button> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, obs, changed);
+
 
  // DecreaseButton
 
@@ -187,6 +215,10 @@ public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.
 /*SetterFromSubjectGenerator*/
 public static T DecreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs, IObserver<Avalonia.Controls.Button> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, obs, changed);
 
 
  // IsDirectionReversed
@@ -210,6 +242,10 @@ public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolea
 public static T IsDirectionReversed<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsDirectionReversed<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty!, obs, changed);
+
 
  // IgnoreThumbDrag
 
@@ -232,6 +268,10 @@ public static T IgnoreThumbDrag<T>(this T control, IObservable<System.Boolean> o
 public static T IgnoreThumbDrag<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IgnoreThumbDrag<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty!, obs, changed);
+
 
  // DeferThumbDrag
 
@@ -253,6 +293,10 @@ public static T DeferThumbDrag<T>(this T control, IObservable<System.Boolean> ob
 /*SetterFromSubjectGenerator*/
 public static T DeferThumbDrag<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T DeferThumbDrag<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.Track 
+   => control._setEx(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty!, obs, changed);
 
 
 

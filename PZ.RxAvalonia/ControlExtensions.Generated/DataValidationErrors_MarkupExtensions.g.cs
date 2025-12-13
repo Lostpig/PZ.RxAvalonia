@@ -34,6 +34,10 @@ public static T ErrorTemplate<T>(this T control, IObservable<Avalonia.Controls.T
 public static T ErrorTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ErrorTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.DataValidationErrors 
+   => control._setEx(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty!, obs, changed);
+
 
  // Owner
 
@@ -55,6 +59,10 @@ public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control> 
 /*SetterFromSubjectGenerator*/
 public static T Owner<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.DataValidationErrors 
+   => control._setEx(Avalonia.Controls.DataValidationErrors.OwnerProperty!, obs, changed);
 
 
 
@@ -80,6 +88,10 @@ public static T DataValidationErrors_Errors<T>(this T control, System.Collection
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T DataValidationErrors_Errors<T>(this T control, IObservable<System.Collections.Generic.IEnumerable<System.Object>> obs, IObserver<System.Collections.Generic.IEnumerable<System.Object>> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.DataValidationErrors.ErrorsProperty!, obs, changed);
+
 
  // ErrorConverter
 
@@ -101,6 +113,10 @@ public static T DataValidationErrors_ErrorConverter<T>(this T control, System.Fu
     control.SetValue(Avalonia.Controls.DataValidationErrors.ErrorConverterProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T DataValidationErrors_ErrorConverter<T>(this T control, IObservable<System.Func<System.Object,System.Object>> obs, IObserver<System.Func<System.Object,System.Object>> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.DataValidationErrors.ErrorConverterProperty!, obs, changed);
 
 
 

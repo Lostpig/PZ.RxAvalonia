@@ -34,6 +34,10 @@ public static T ValidSpinDirection<T>(this T control, IObservable<Avalonia.Contr
 public static T ValidSpinDirection<T>(this T control, ISubject<Avalonia.Controls.ValidSpinDirections> subject) where T : Avalonia.Controls.Spinner 
    => control._set(Avalonia.Controls.Spinner.ValidSpinDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ValidSpinDirection<T>(this T control, IObservable<Avalonia.Controls.ValidSpinDirections> obs, IObserver<Avalonia.Controls.ValidSpinDirections> changed) where T : Avalonia.Controls.Spinner 
+   => control._setEx(Avalonia.Controls.Spinner.ValidSpinDirectionProperty!, obs, changed);
+
 
 
 //================= Events ======================//

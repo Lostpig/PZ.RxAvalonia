@@ -52,6 +52,10 @@ public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadiu
 public static T CornerRadius<T>(this T control, ISubject<Avalonia.CornerRadius> subject) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadius> obs, IObserver<Avalonia.CornerRadius> changed) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+   => control._setEx(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty!, obs, changed);
+
 
  // Material
 
@@ -73,6 +77,10 @@ public static T Material<T>(this T control, IObservable<Avalonia.Media.Experimen
 /*SetterFromSubjectGenerator*/
 public static T Material<T>(this T control, ISubject<Avalonia.Media.ExperimentalAcrylicMaterial> subject) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Material<T>(this T control, IObservable<Avalonia.Media.ExperimentalAcrylicMaterial> obs, IObserver<Avalonia.Media.ExperimentalAcrylicMaterial> changed) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+   => control._setEx(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, obs, changed);
 
 
 

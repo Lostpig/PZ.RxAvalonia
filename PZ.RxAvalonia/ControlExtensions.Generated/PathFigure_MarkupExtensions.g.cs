@@ -34,6 +34,10 @@ public static Avalonia.Media.PathFigure IsClosed(this Avalonia.Media.PathFigure 
 public static Avalonia.Media.PathFigure IsClosed(this Avalonia.Media.PathFigure control, ISubject<System.Boolean> subject)  
    => control._set(Avalonia.Media.PathFigure.IsClosedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PathFigure IsClosed(this Avalonia.Media.PathFigure control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed)  
+   => control._setEx(Avalonia.Media.PathFigure.IsClosedProperty!, obs, changed);
+
 
  // IsFilled
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.PathFigure IsFilled(this Avalonia.Media.PathFigure 
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.PathFigure IsFilled(this Avalonia.Media.PathFigure control, ISubject<System.Boolean> subject)  
    => control._set(Avalonia.Media.PathFigure.IsFilledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PathFigure IsFilled(this Avalonia.Media.PathFigure control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed)  
+   => control._setEx(Avalonia.Media.PathFigure.IsFilledProperty!, obs, changed);
 
 
  // Segments
@@ -78,6 +86,10 @@ public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure 
 public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, ISubject<Avalonia.Media.PathSegments> subject)  
    => control._set(Avalonia.Media.PathFigure.SegmentsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Media.PathSegments> obs, IObserver<Avalonia.Media.PathSegments> changed)  
+   => control._setEx(Avalonia.Media.PathFigure.SegmentsProperty!, obs, changed);
+
 
  // StartPoint
 
@@ -99,6 +111,10 @@ public static Avalonia.Media.PathFigure StartPoint(this Avalonia.Media.PathFigur
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.PathFigure StartPoint(this Avalonia.Media.PathFigure control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.PathFigure.StartPointProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.PathFigure StartPoint(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.PathFigure.StartPointProperty!, obs, changed);
 
 
 

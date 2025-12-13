@@ -34,6 +34,10 @@ public static T IsSelected<T>(this T control, IObservable<System.Boolean> obs) w
 public static T IsSelected<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ListBoxItem 
    => control._set(Avalonia.Controls.ListBoxItem.IsSelectedProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsSelected<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ListBoxItem 
+   => control._setEx(Avalonia.Controls.ListBoxItem.IsSelectedProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

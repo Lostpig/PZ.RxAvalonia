@@ -34,6 +34,10 @@ public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColo
 public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, ISubject<Avalonia.Media.Color> subject)  
    => control._set(Avalonia.Media.SolidColorBrush.ColorProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.SolidColorBrush Color(this Avalonia.Media.SolidColorBrush control, IObservable<Avalonia.Media.Color> obs, IObserver<Avalonia.Media.Color> changed)  
+   => control._setEx(Avalonia.Media.SolidColorBrush.ColorProperty!, obs, changed);
+
 
 
 }

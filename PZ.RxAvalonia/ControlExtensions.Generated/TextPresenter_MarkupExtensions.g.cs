@@ -34,6 +34,10 @@ public static T ShowSelectionHighlight<T>(this T control, IObservable<System.Boo
 public static T ShowSelectionHighlight<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowSelectionHighlight<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty!, obs, changed);
+
 
  // CaretIndex
 
@@ -55,6 +59,10 @@ public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T CaretIndex<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty!, obs, changed);
 
 
  // RevealPassword
@@ -78,6 +86,10 @@ public static T RevealPassword<T>(this T control, IObservable<System.Boolean> ob
 public static T RevealPassword<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RevealPassword<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty!, obs, changed);
+
 
  // PasswordChar
 
@@ -99,6 +111,10 @@ public static T PasswordChar<T>(this T control, IObservable<System.Char> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T PasswordChar<T>(this T control, ISubject<System.Char> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PasswordChar<T>(this T control, IObservable<System.Char> obs, IObserver<System.Char> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty!, obs, changed);
 
 
  // SelectionBrush
@@ -122,6 +138,10 @@ public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBr
 public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty!, obs, changed);
+
 
  // SelectionForegroundBrush
 
@@ -143,6 +163,10 @@ public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty!, obs, changed);
 
 
  // CaretBrush
@@ -166,6 +190,10 @@ public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T CaretBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty!, obs, changed);
+
 
  // CaretBlinkInterval
 
@@ -187,6 +215,10 @@ public static T CaretBlinkInterval<T>(this T control, IObservable<System.TimeSpa
 /*SetterFromSubjectGenerator*/
 public static T CaretBlinkInterval<T>(this T control, ISubject<System.TimeSpan> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CaretBlinkInterval<T>(this T control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty!, obs, changed);
 
 
  // SelectionStart
@@ -210,6 +242,10 @@ public static T SelectionStart<T>(this T control, IObservable<System.Int32> obs)
 public static T SelectionStart<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectionStart<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty!, obs, changed);
+
 
  // SelectionEnd
 
@@ -231,6 +267,10 @@ public static T SelectionEnd<T>(this T control, IObservable<System.Int32> obs) w
 /*SetterFromSubjectGenerator*/
 public static T SelectionEnd<T>(this T control, ISubject<System.Int32> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionEnd<T>(this T control, IObservable<System.Int32> obs, IObserver<System.Int32> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty!, obs, changed);
 
 
  // Text
@@ -254,6 +294,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.TextProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextProperty!, obs, changed);
+
 
  // PreeditText
 
@@ -275,6 +319,10 @@ public static T PreeditText<T>(this T control, IObservable<System.String> obs) w
 /*SetterFromSubjectGenerator*/
 public static T PreeditText<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PreeditText<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty!, obs, changed);
 
 
  // PreeditTextCursorPosition
@@ -298,6 +346,10 @@ public static T PreeditTextCursorPosition<T>(this T control, IObservable<System.
 public static T PreeditTextCursorPosition<T>(this T control, ISubject<System.Nullable<System.Int32>> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PreeditTextCursorPosition<T>(this T control, IObservable<System.Nullable<System.Int32>> obs, IObserver<System.Nullable<System.Int32>> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty!, obs, changed);
+
 
  // TextAlignment
 
@@ -319,6 +371,10 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
 /*SetterFromSubjectGenerator*/
 public static T TextAlignment<T>(this T control, ISubject<Avalonia.Media.TextAlignment> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty!, obs, changed);
 
 
  // TextWrapping
@@ -342,6 +398,10 @@ public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextW
 public static T TextWrapping<T>(this T control, ISubject<Avalonia.Media.TextWrapping> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextWrapping<T>(this T control, IObservable<Avalonia.Media.TextWrapping> obs, IObserver<Avalonia.Media.TextWrapping> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty!, obs, changed);
+
 
  // LineHeight
 
@@ -363,6 +423,10 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs) wh
 /*SetterFromSubjectGenerator*/
 public static T LineHeight<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty!, obs, changed);
 
 
  // LetterSpacing
@@ -386,6 +450,10 @@ public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs)
 public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty!, obs, changed);
+
 
  // Background
 
@@ -407,6 +475,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 /*SetterFromSubjectGenerator*/
 public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Presenters.TextPresenter 
    => control._set(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Presenters.TextPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty!, obs, changed);
 
 
 

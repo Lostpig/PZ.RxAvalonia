@@ -34,6 +34,10 @@ public static Avalonia.Animation.Animation Duration(this Avalonia.Animation.Anim
 public static Avalonia.Animation.Animation Duration(this Avalonia.Animation.Animation control, ISubject<System.TimeSpan> subject)  
    => control._set(Avalonia.Animation.Animation.DurationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation Duration(this Avalonia.Animation.Animation control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed)  
+   => control._setEx(Avalonia.Animation.Animation.DurationProperty!, obs, changed);
+
 
  // IterationCount
 
@@ -69,6 +73,10 @@ public static Avalonia.Animation.Animation IterationCount(this Avalonia.Animatio
 public static Avalonia.Animation.Animation IterationCount(this Avalonia.Animation.Animation control, ISubject<Avalonia.Animation.IterationCount> subject)  
    => control._set(Avalonia.Animation.Animation.IterationCountProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation IterationCount(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.IterationCount> obs, IObserver<Avalonia.Animation.IterationCount> changed)  
+   => control._setEx(Avalonia.Animation.Animation.IterationCountProperty!, obs, changed);
+
 
  // PlaybackDirection
 
@@ -90,6 +98,10 @@ public static Avalonia.Animation.Animation PlaybackDirection(this Avalonia.Anima
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Animation.Animation PlaybackDirection(this Avalonia.Animation.Animation control, ISubject<Avalonia.Animation.PlaybackDirection> subject)  
    => control._set(Avalonia.Animation.Animation.PlaybackDirectionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation PlaybackDirection(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.PlaybackDirection> obs, IObserver<Avalonia.Animation.PlaybackDirection> changed)  
+   => control._setEx(Avalonia.Animation.Animation.PlaybackDirectionProperty!, obs, changed);
 
 
  // FillMode
@@ -113,6 +125,10 @@ public static Avalonia.Animation.Animation FillMode(this Avalonia.Animation.Anim
 public static Avalonia.Animation.Animation FillMode(this Avalonia.Animation.Animation control, ISubject<Avalonia.Animation.FillMode> subject)  
    => control._set(Avalonia.Animation.Animation.FillModeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation FillMode(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.FillMode> obs, IObserver<Avalonia.Animation.FillMode> changed)  
+   => control._setEx(Avalonia.Animation.Animation.FillModeProperty!, obs, changed);
+
 
  // Easing
 
@@ -134,6 +150,10 @@ public static Avalonia.Animation.Animation Easing(this Avalonia.Animation.Animat
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Animation.Animation Easing(this Avalonia.Animation.Animation control, ISubject<Avalonia.Animation.Easings.Easing> subject)  
    => control._set(Avalonia.Animation.Animation.EasingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation Easing(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.Easings.Easing> obs, IObserver<Avalonia.Animation.Easings.Easing> changed)  
+   => control._setEx(Avalonia.Animation.Animation.EasingProperty!, obs, changed);
 
 
  // Delay
@@ -157,6 +177,10 @@ public static Avalonia.Animation.Animation Delay(this Avalonia.Animation.Animati
 public static Avalonia.Animation.Animation Delay(this Avalonia.Animation.Animation control, ISubject<System.TimeSpan> subject)  
    => control._set(Avalonia.Animation.Animation.DelayProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation Delay(this Avalonia.Animation.Animation control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed)  
+   => control._setEx(Avalonia.Animation.Animation.DelayProperty!, obs, changed);
+
 
  // DelayBetweenIterations
 
@@ -179,6 +203,10 @@ public static Avalonia.Animation.Animation DelayBetweenIterations(this Avalonia.
 public static Avalonia.Animation.Animation DelayBetweenIterations(this Avalonia.Animation.Animation control, ISubject<System.TimeSpan> subject)  
    => control._set(Avalonia.Animation.Animation.DelayBetweenIterationsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation DelayBetweenIterations(this Avalonia.Animation.Animation control, IObservable<System.TimeSpan> obs, IObserver<System.TimeSpan> changed)  
+   => control._setEx(Avalonia.Animation.Animation.DelayBetweenIterationsProperty!, obs, changed);
+
 
  // SpeedRatio
 
@@ -200,6 +228,10 @@ public static Avalonia.Animation.Animation SpeedRatio(this Avalonia.Animation.An
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Animation.Animation SpeedRatio(this Avalonia.Animation.Animation control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Animation.Animation.SpeedRatioProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation SpeedRatio(this Avalonia.Animation.Animation control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Animation.Animation.SpeedRatioProperty!, obs, changed);
 
 
 

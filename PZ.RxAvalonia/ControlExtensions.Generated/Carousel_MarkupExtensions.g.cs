@@ -34,6 +34,10 @@ public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation
 public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.Carousel 
    => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.Carousel 
+   => control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

@@ -34,6 +34,10 @@ public static T RadiusX<T>(this T control, IObservable<System.Double> obs) where
 public static T RadiusX<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.RectangleGeometry 
    => control._set(Avalonia.Media.RectangleGeometry.RadiusXProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T RadiusX<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.RectangleGeometry 
+   => control._setEx(Avalonia.Media.RectangleGeometry.RadiusXProperty!, obs, changed);
+
 
  // RadiusY
 
@@ -55,6 +59,10 @@ public static T RadiusY<T>(this T control, IObservable<System.Double> obs) where
 /*SetterFromSubjectGenerator*/
 public static T RadiusY<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Media.RectangleGeometry 
    => control._set(Avalonia.Media.RectangleGeometry.RadiusYProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T RadiusY<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Media.RectangleGeometry 
+   => control._setEx(Avalonia.Media.RectangleGeometry.RadiusYProperty!, obs, changed);
 
 
  // Rect
@@ -100,6 +108,10 @@ public static T Rect<T>(this T control, IObservable<Avalonia.Rect> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Rect<T>(this T control, ISubject<Avalonia.Rect> subject) where T : Avalonia.Media.RectangleGeometry 
    => control._set(Avalonia.Media.RectangleGeometry.RectProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Rect<T>(this T control, IObservable<Avalonia.Rect> obs, IObserver<Avalonia.Rect> changed) where T : Avalonia.Media.RectangleGeometry 
+   => control._setEx(Avalonia.Media.RectangleGeometry.RectProperty!, obs, changed);
 
 
 

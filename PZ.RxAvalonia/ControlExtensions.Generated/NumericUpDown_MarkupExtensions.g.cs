@@ -34,6 +34,10 @@ public static T AllowSpin<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T AllowSpin<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.AllowSpinProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AllowSpin<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.AllowSpinProperty!, obs, changed);
+
 
  // ButtonSpinnerLocation
 
@@ -55,6 +59,10 @@ public static T ButtonSpinnerLocation<T>(this T control, IObservable<Avalonia.Co
 /*SetterFromSubjectGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, ISubject<Avalonia.Controls.Location> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ButtonSpinnerLocation<T>(this T control, IObservable<Avalonia.Controls.Location> obs, IObserver<Avalonia.Controls.Location> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty!, obs, changed);
 
 
  // ShowButtonSpinner
@@ -78,6 +86,10 @@ public static T ShowButtonSpinner<T>(this T control, IObservable<System.Boolean>
 public static T ShowButtonSpinner<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowButtonSpinner<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty!, obs, changed);
+
 
  // ClipValueToMinMax
 
@@ -99,6 +111,10 @@ public static T ClipValueToMinMax<T>(this T control, IObservable<System.Boolean>
 /*SetterFromSubjectGenerator*/
 public static T ClipValueToMinMax<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ClipValueToMinMax<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty!, obs, changed);
 
 
  // NumberFormat
@@ -122,6 +138,10 @@ public static T NumberFormat<T>(this T control, IObservable<System.Globalization
 public static T NumberFormat<T>(this T control, ISubject<System.Globalization.NumberFormatInfo> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T NumberFormat<T>(this T control, IObservable<System.Globalization.NumberFormatInfo> obs, IObserver<System.Globalization.NumberFormatInfo> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, obs, changed);
+
 
  // FormatString
 
@@ -143,6 +163,10 @@ public static T FormatString<T>(this T control, IObservable<System.String> obs) 
 /*SetterFromSubjectGenerator*/
 public static T FormatString<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.FormatStringProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FormatString<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.FormatStringProperty!, obs, changed);
 
 
  // Increment
@@ -166,6 +190,10 @@ public static T Increment<T>(this T control, IObservable<System.Decimal> obs) wh
 public static T Increment<T>(this T control, ISubject<System.Decimal> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.IncrementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Increment<T>(this T control, IObservable<System.Decimal> obs, IObserver<System.Decimal> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.IncrementProperty!, obs, changed);
+
 
  // IsReadOnly
 
@@ -187,6 +215,10 @@ public static T IsReadOnly<T>(this T control, IObservable<System.Boolean> obs) w
 /*SetterFromSubjectGenerator*/
 public static T IsReadOnly<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsReadOnly<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty!, obs, changed);
 
 
  // Maximum
@@ -210,6 +242,10 @@ public static T Maximum<T>(this T control, IObservable<System.Decimal> obs) wher
 public static T Maximum<T>(this T control, ISubject<System.Decimal> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.MaximumProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Maximum<T>(this T control, IObservable<System.Decimal> obs, IObserver<System.Decimal> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.MaximumProperty!, obs, changed);
+
 
  // Minimum
 
@@ -231,6 +267,10 @@ public static T Minimum<T>(this T control, IObservable<System.Decimal> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T Minimum<T>(this T control, ISubject<System.Decimal> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.MinimumProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Minimum<T>(this T control, IObservable<System.Decimal> obs, IObserver<System.Decimal> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.MinimumProperty!, obs, changed);
 
 
  // ParsingNumberStyle
@@ -254,6 +294,10 @@ public static T ParsingNumberStyle<T>(this T control, IObservable<System.Globali
 public static T ParsingNumberStyle<T>(this T control, ISubject<System.Globalization.NumberStyles> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ParsingNumberStyle<T>(this T control, IObservable<System.Globalization.NumberStyles> obs, IObserver<System.Globalization.NumberStyles> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty!, obs, changed);
+
 
  // Text
 
@@ -275,6 +319,10 @@ public static T Text<T>(this T control, IObservable<System.String> obs) where T 
 /*SetterFromSubjectGenerator*/
 public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.TextProperty!, obs, changed);
 
 
  // TextConverter
@@ -298,6 +346,10 @@ public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Conve
 public static T TextConverter<T>(this T control, ISubject<Avalonia.Data.Converters.IValueConverter> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextConverterProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Converters.IValueConverter> obs, IObserver<Avalonia.Data.Converters.IValueConverter> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty!, obs, changed);
+
 
  // Value
 
@@ -319,6 +371,10 @@ public static T Value<T>(this T control, IObservable<System.Nullable<System.Deci
 /*SetterFromSubjectGenerator*/
 public static T Value<T>(this T control, ISubject<System.Nullable<System.Decimal>> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Value<T>(this T control, IObservable<System.Nullable<System.Decimal>> obs, IObserver<System.Nullable<System.Decimal>> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty!, obs, changed);
 
 
  // Watermark
@@ -342,6 +398,10 @@ public static T Watermark<T>(this T control, IObservable<System.String> obs) whe
 public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty!, obs, changed);
+
 
  // HorizontalContentAlignment
 
@@ -363,6 +423,10 @@ public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalon
 /*SetterFromSubjectGenerator*/
 public static T HorizontalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.HorizontalAlignment> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.HorizontalAlignment> obs, IObserver<Avalonia.Layout.HorizontalAlignment> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty!, obs, changed);
 
 
  // VerticalContentAlignment
@@ -386,6 +450,10 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 public static T VerticalContentAlignment<T>(this T control, ISubject<Avalonia.Layout.VerticalAlignment> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia.Layout.VerticalAlignment> obs, IObserver<Avalonia.Layout.VerticalAlignment> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty!, obs, changed);
+
 
  // TextAlignment
 
@@ -407,6 +475,10 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
 /*SetterFromSubjectGenerator*/
 public static T TextAlignment<T>(this T control, ISubject<Avalonia.Media.TextAlignment> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.TextAlignment> obs, IObserver<Avalonia.Media.TextAlignment> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.TextAlignmentProperty!, obs, changed);
 
 
  // InnerLeftContent
@@ -430,6 +502,10 @@ public static T InnerLeftContent<T>(this T control, IObservable<System.Object> o
 public static T InnerLeftContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, obs, changed);
+
 
  // InnerRightContent
 
@@ -451,6 +527,10 @@ public static T InnerRightContent<T>(this T control, IObservable<System.Object> 
 /*SetterFromSubjectGenerator*/
 public static T InnerRightContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, obs, changed);
 
 
 

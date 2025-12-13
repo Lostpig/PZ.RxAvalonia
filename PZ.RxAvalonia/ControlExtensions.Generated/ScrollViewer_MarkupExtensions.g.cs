@@ -34,6 +34,10 @@ public static T BringIntoViewOnFocusChange<T>(this T control, IObservable<System
 public static T BringIntoViewOnFocusChange<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChangeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T BringIntoViewOnFocusChange<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChangeProperty!, obs, changed);
+
 
  // Offset
 
@@ -55,6 +59,10 @@ public static T Offset<T>(this T control, IObservable<Avalonia.Vector> obs) wher
 /*SetterFromSubjectGenerator*/
 public static T Offset<T>(this T control, ISubject<Avalonia.Vector> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.OffsetProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Offset<T>(this T control, IObservable<Avalonia.Vector> obs, IObserver<Avalonia.Vector> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.OffsetProperty!, obs, changed);
 
 
  // HorizontalScrollBarVisibility
@@ -78,6 +86,10 @@ public static T HorizontalScrollBarVisibility<T>(this T control, IObservable<Ava
 public static T HorizontalScrollBarVisibility<T>(this T control, ISubject<Avalonia.Controls.Primitives.ScrollBarVisibility> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalScrollBarVisibility<T>(this T control, IObservable<Avalonia.Controls.Primitives.ScrollBarVisibility> obs, IObserver<Avalonia.Controls.Primitives.ScrollBarVisibility> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty!, obs, changed);
+
 
  // HorizontalSnapPointsType
 
@@ -99,6 +111,10 @@ public static T HorizontalSnapPointsType<T>(this T control, IObservable<Avalonia
 /*SetterFromSubjectGenerator*/
 public static T HorizontalSnapPointsType<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsType> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsTypeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsTypeProperty!, obs, changed);
 
 
  // VerticalSnapPointsType
@@ -122,6 +138,10 @@ public static T VerticalSnapPointsType<T>(this T control, IObservable<Avalonia.C
 public static T VerticalSnapPointsType<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsType> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.VerticalSnapPointsTypeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalSnapPointsTypeProperty!, obs, changed);
+
 
  // HorizontalSnapPointsAlignment
 
@@ -143,6 +163,10 @@ public static T HorizontalSnapPointsAlignment<T>(this T control, IObservable<Ava
 /*SetterFromSubjectGenerator*/
 public static T HorizontalSnapPointsAlignment<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsAlignment> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignmentProperty!, obs, changed);
 
 
  // VerticalSnapPointsAlignment
@@ -166,6 +190,10 @@ public static T VerticalSnapPointsAlignment<T>(this T control, IObservable<Avalo
 public static T VerticalSnapPointsAlignment<T>(this T control, ISubject<Avalonia.Controls.Primitives.SnapPointsAlignment> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignmentProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignmentProperty!, obs, changed);
+
 
  // VerticalScrollBarVisibility
 
@@ -187,6 +215,10 @@ public static T VerticalScrollBarVisibility<T>(this T control, IObservable<Avalo
 /*SetterFromSubjectGenerator*/
 public static T VerticalScrollBarVisibility<T>(this T control, ISubject<Avalonia.Controls.Primitives.ScrollBarVisibility> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T VerticalScrollBarVisibility<T>(this T control, IObservable<Avalonia.Controls.Primitives.ScrollBarVisibility> obs, IObserver<Avalonia.Controls.Primitives.ScrollBarVisibility> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty!, obs, changed);
 
 
  // AllowAutoHide
@@ -210,6 +242,10 @@ public static T AllowAutoHide<T>(this T control, IObservable<System.Boolean> obs
 public static T AllowAutoHide<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.AllowAutoHideProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AllowAutoHide<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.AllowAutoHideProperty!, obs, changed);
+
 
  // IsScrollChainingEnabled
 
@@ -231,6 +267,10 @@ public static T IsScrollChainingEnabled<T>(this T control, IObservable<System.Bo
 /*SetterFromSubjectGenerator*/
 public static T IsScrollChainingEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.IsScrollChainingEnabledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsScrollChainingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsScrollChainingEnabledProperty!, obs, changed);
 
 
  // IsScrollInertiaEnabled
@@ -254,6 +294,10 @@ public static T IsScrollInertiaEnabled<T>(this T control, IObservable<System.Boo
 public static T IsScrollInertiaEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabledProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsScrollInertiaEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabledProperty!, obs, changed);
+
 
  // IsDeferredScrollingEnabled
 
@@ -275,6 +319,10 @@ public static T IsDeferredScrollingEnabled<T>(this T control, IObservable<System
 /*SetterFromSubjectGenerator*/
 public static T IsDeferredScrollingEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ScrollViewer 
    => control._set(Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabledProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsDeferredScrollingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ScrollViewer 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabledProperty!, obs, changed);
 
 
 
@@ -300,6 +348,10 @@ public static T ScrollViewer_BringIntoViewOnFocusChange<T>(this T control, Syste
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_BringIntoViewOnFocusChange<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.BringIntoViewOnFocusChangeProperty!, obs, changed);
+
 
  // HorizontalScrollBarVisibility
 
@@ -321,6 +373,10 @@ public static T ScrollViewer_HorizontalScrollBarVisibility<T>(this T control, Av
     control.SetValue(Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_HorizontalScrollBarVisibility<T>(this T control, IObservable<Avalonia.Controls.Primitives.ScrollBarVisibility> obs, IObserver<Avalonia.Controls.Primitives.ScrollBarVisibility> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalScrollBarVisibilityProperty!, obs, changed);
 
 
  // HorizontalSnapPointsType
@@ -344,6 +400,10 @@ public static T ScrollViewer_HorizontalSnapPointsType<T>(this T control, Avaloni
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_HorizontalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsTypeProperty!, obs, changed);
+
 
  // VerticalSnapPointsType
 
@@ -365,6 +425,10 @@ public static T ScrollViewer_VerticalSnapPointsType<T>(this T control, Avalonia.
     control.SetValue(Avalonia.Controls.ScrollViewer.VerticalSnapPointsTypeProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_VerticalSnapPointsType<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsType> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsType> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalSnapPointsTypeProperty!, obs, changed);
 
 
  // HorizontalSnapPointsAlignment
@@ -388,6 +452,10 @@ public static T ScrollViewer_HorizontalSnapPointsAlignment<T>(this T control, Av
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_HorizontalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.HorizontalSnapPointsAlignmentProperty!, obs, changed);
+
 
  // VerticalSnapPointsAlignment
 
@@ -409,6 +477,10 @@ public static T ScrollViewer_VerticalSnapPointsAlignment<T>(this T control, Aval
     control.SetValue(Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignmentProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_VerticalSnapPointsAlignment<T>(this T control, IObservable<Avalonia.Controls.Primitives.SnapPointsAlignment> obs, IObserver<Avalonia.Controls.Primitives.SnapPointsAlignment> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalSnapPointsAlignmentProperty!, obs, changed);
 
 
  // VerticalScrollBarVisibility
@@ -432,6 +504,10 @@ public static T ScrollViewer_VerticalScrollBarVisibility<T>(this T control, Aval
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_VerticalScrollBarVisibility<T>(this T control, IObservable<Avalonia.Controls.Primitives.ScrollBarVisibility> obs, IObserver<Avalonia.Controls.Primitives.ScrollBarVisibility> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.VerticalScrollBarVisibilityProperty!, obs, changed);
+
 
  // AllowAutoHide
 
@@ -453,6 +529,10 @@ public static T ScrollViewer_AllowAutoHide<T>(this T control, System.Boolean val
     control.SetValue(Avalonia.Controls.ScrollViewer.AllowAutoHideProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_AllowAutoHide<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.AllowAutoHideProperty!, obs, changed);
 
 
  // IsScrollChainingEnabled
@@ -476,6 +556,10 @@ public static T ScrollViewer_IsScrollChainingEnabled<T>(this T control, System.B
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_IsScrollChainingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsScrollChainingEnabledProperty!, obs, changed);
+
 
  // IsScrollInertiaEnabled
 
@@ -498,6 +582,10 @@ public static T ScrollViewer_IsScrollInertiaEnabled<T>(this T control, System.Bo
     return control;
 }
 
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_IsScrollInertiaEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsScrollInertiaEnabledProperty!, obs, changed);
+
 
  // IsDeferredScrollingEnabled
 
@@ -519,6 +607,10 @@ public static T ScrollViewer_IsDeferredScrollingEnabled<T>(this T control, Syste
     control.SetValue(Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabledProperty!, value);
     return control;
 }
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T ScrollViewer_IsDeferredScrollingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.ScrollViewer.IsDeferredScrollingEnabledProperty!, obs, changed);
 
 
 

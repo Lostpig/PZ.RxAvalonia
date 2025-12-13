@@ -34,6 +34,10 @@ public static T AutoScrollToSelectedItem<T>(this T control, IObservable<System.B
 public static T AutoScrollToSelectedItem<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AutoScrollToSelectedItem<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TreeView 
+   => control._setEx(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty!, obs, changed);
+
 
  // SelectedItem
 
@@ -55,6 +59,10 @@ public static T SelectedItem<T>(this T control, IObservable<System.Object> obs) 
 /*SetterFromSubjectGenerator*/
 public static T SelectedItem<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectedItem<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TreeView 
+   => control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty!, obs, changed);
 
 
  // SelectedItems
@@ -78,6 +86,10 @@ public static T SelectedItems<T>(this T control, IObservable<System.Collections.
 public static T SelectedItems<T>(this T control, ISubject<System.Collections.IList> subject) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemsProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList> obs, IObserver<System.Collections.IList> changed) where T : Avalonia.Controls.TreeView 
+   => control._setEx(Avalonia.Controls.TreeView.SelectedItemsProperty!, obs, changed);
+
 
  // SelectionMode
 
@@ -99,6 +111,10 @@ public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.S
 /*SetterFromSubjectGenerator*/
 public static T SelectionMode<T>(this T control, ISubject<Avalonia.Controls.SelectionMode> subject) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectionModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.SelectionMode> obs, IObserver<Avalonia.Controls.SelectionMode> changed) where T : Avalonia.Controls.TreeView 
+   => control._setEx(Avalonia.Controls.TreeView.SelectionModeProperty!, obs, changed);
 
 
 

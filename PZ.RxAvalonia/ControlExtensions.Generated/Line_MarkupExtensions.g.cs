@@ -34,6 +34,10 @@ public static T StartPoint<T>(this T control, IObservable<Avalonia.Point> obs) w
 public static T StartPoint<T>(this T control, ISubject<Avalonia.Point> subject) where T : Avalonia.Controls.Shapes.Line 
    => control._set(Avalonia.Controls.Shapes.Line.StartPointProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StartPoint<T>(this T control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed) where T : Avalonia.Controls.Shapes.Line 
+   => control._setEx(Avalonia.Controls.Shapes.Line.StartPointProperty!, obs, changed);
+
 
  // EndPoint
 
@@ -55,6 +59,10 @@ public static T EndPoint<T>(this T control, IObservable<Avalonia.Point> obs) whe
 /*SetterFromSubjectGenerator*/
 public static T EndPoint<T>(this T control, ISubject<Avalonia.Point> subject) where T : Avalonia.Controls.Shapes.Line 
    => control._set(Avalonia.Controls.Shapes.Line.EndPointProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T EndPoint<T>(this T control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed) where T : Avalonia.Controls.Shapes.Line 
+   => control._setEx(Avalonia.Controls.Shapes.Line.EndPointProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T IsIndeterminate<T>(this T control, IObservable<System.Boolean> o
 public static T IsIndeterminate<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.IsIndeterminateProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T IsIndeterminate<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ProgressBar 
+   => control._setEx(Avalonia.Controls.ProgressBar.IsIndeterminateProperty!, obs, changed);
+
 
  // ShowProgressText
 
@@ -55,6 +59,10 @@ public static T ShowProgressText<T>(this T control, IObservable<System.Boolean> 
 /*SetterFromSubjectGenerator*/
 public static T ShowProgressText<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ShowProgressTextProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ShowProgressText<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ProgressBar 
+   => control._setEx(Avalonia.Controls.ProgressBar.ShowProgressTextProperty!, obs, changed);
 
 
  // ProgressTextFormat
@@ -78,6 +86,10 @@ public static T ProgressTextFormat<T>(this T control, IObservable<System.String>
 public static T ProgressTextFormat<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ProgressTextFormat<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.ProgressBar 
+   => control._setEx(Avalonia.Controls.ProgressBar.ProgressTextFormatProperty!, obs, changed);
+
 
  // Orientation
 
@@ -99,6 +111,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 /*SetterFromSubjectGenerator*/
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.ProgressBar 
    => control._set(Avalonia.Controls.ProgressBar.OrientationProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.ProgressBar 
+   => control._setEx(Avalonia.Controls.ProgressBar.OrientationProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush 
 public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control, ISubject<Avalonia.Visual> subject)  
    => control._set(Avalonia.Media.VisualBrush.VisualProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.VisualBrush Visual(this Avalonia.Media.VisualBrush control, IObservable<Avalonia.Visual> obs, IObserver<Avalonia.Visual> changed)  
+   => control._setEx(Avalonia.Media.VisualBrush.VisualProperty!, obs, changed);
+
 
 
 }

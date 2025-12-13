@@ -34,6 +34,10 @@ public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.IT
 public static T LayoutTransform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Controls.LayoutTransformControl 
+   => control._setEx(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, obs, changed);
+
 
  // UseRenderTransform
 
@@ -55,6 +59,10 @@ public static T UseRenderTransform<T>(this T control, IObservable<System.Boolean
 /*SetterFromSubjectGenerator*/
 public static T UseRenderTransform<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T UseRenderTransform<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.LayoutTransformControl 
+   => control._setEx(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty!, obs, changed);
 
 
 

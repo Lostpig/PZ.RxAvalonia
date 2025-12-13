@@ -34,6 +34,10 @@ public static Avalonia.Media.QuadraticBezierSegment Point1(this Avalonia.Media.Q
 public static Avalonia.Media.QuadraticBezierSegment Point1(this Avalonia.Media.QuadraticBezierSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.QuadraticBezierSegment.Point1Property!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.QuadraticBezierSegment Point1(this Avalonia.Media.QuadraticBezierSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.QuadraticBezierSegment.Point1Property!, obs, changed);
+
 
  // Point2
 
@@ -55,6 +59,10 @@ public static Avalonia.Media.QuadraticBezierSegment Point2(this Avalonia.Media.Q
 /*SetterFromSubjectGenerator*/
 public static Avalonia.Media.QuadraticBezierSegment Point2(this Avalonia.Media.QuadraticBezierSegment control, ISubject<Avalonia.Point> subject)  
    => control._set(Avalonia.Media.QuadraticBezierSegment.Point2Property!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.QuadraticBezierSegment Point2(this Avalonia.Media.QuadraticBezierSegment control, IObservable<Avalonia.Point> obs, IObserver<Avalonia.Point> changed)  
+   => control._setEx(Avalonia.Media.QuadraticBezierSegment.Point2Property!, obs, changed);
 
 
 

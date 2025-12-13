@@ -34,6 +34,10 @@ public static T PullDirection<T>(this T control, IObservable<Avalonia.Input.Pull
 public static T PullDirection<T>(this T control, ISubject<Avalonia.Input.PullDirection> subject) where T : Avalonia.Input.PullGestureRecognizer 
    => control._set(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PullDirection<T>(this T control, IObservable<Avalonia.Input.PullDirection> obs, IObserver<Avalonia.Input.PullDirection> changed) where T : Avalonia.Input.PullGestureRecognizer 
+   => control._setEx(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty!, obs, changed);
+
 
 
 //================= Styles ======================//

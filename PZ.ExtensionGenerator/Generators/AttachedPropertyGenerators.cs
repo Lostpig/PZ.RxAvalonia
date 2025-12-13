@@ -22,6 +22,16 @@ public class AttachedPropertyObservableGenerator : ExtensionGeneratorBase<Attach
             $"   => control._set({info.ControlTypeName}.{info.FieldInfo.Name}!, obs);";
     }
 }
+public class AttachedPropertyTwoWayGenerator : ExtensionGeneratorBase<AttachedPropertyExtensionInfo>
+{
+    protected override string? GetExtension(AttachedPropertyExtensionInfo info)
+    {
+        return
+            $"public static {info.ReturnType} {info.ExtensionName}{info.GenericArg}(this {info.ReturnType} control, IObservable<{info.ValueTypeSource}> obs, IObserver<{info.ValueTypeSource}> changed)" +
+            $" where T : {info.AttachedPropertyHostTypeName} {Environment.NewLine}" +
+            $"   => control._setEx({info.ControlTypeName}.{info.FieldInfo.Name}!, obs, changed);";
+    }
+}
 public class AttachedPropertySubjectGenerator : ExtensionGeneratorBase<AttachedPropertyExtensionInfo>
 {
     protected override string? GetExtension(AttachedPropertyExtensionInfo info)

@@ -34,6 +34,10 @@ public static T Placement<T>(this T control, IObservable<Avalonia.Controls.Place
 public static T Placement<T>(this T control, ISubject<Avalonia.Controls.PlacementMode> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Placement<T>(this T control, IObservable<Avalonia.Controls.PlacementMode> obs, IObserver<Avalonia.Controls.PlacementMode> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementProperty!, obs, changed);
+
 
  // HorizontalOffset
 
@@ -55,6 +59,10 @@ public static T HorizontalOffset<T>(this T control, IObservable<System.Double> o
 /*SetterFromSubjectGenerator*/
 public static T HorizontalOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.HorizontalOffsetProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HorizontalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.HorizontalOffsetProperty!, obs, changed);
 
 
  // VerticalOffset
@@ -78,6 +86,10 @@ public static T VerticalOffset<T>(this T control, IObservable<System.Double> obs
 public static T VerticalOffset<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.VerticalOffsetProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T VerticalOffset<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.VerticalOffsetProperty!, obs, changed);
+
 
  // PlacementAnchor
 
@@ -99,6 +111,10 @@ public static T PlacementAnchor<T>(this T control, IObservable<Avalonia.Controls
 /*SetterFromSubjectGenerator*/
 public static T PlacementAnchor<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementAnchorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlacementAnchor<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupAnchor> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementAnchorProperty!, obs, changed);
 
 
  // PlacementGravity
@@ -122,6 +138,10 @@ public static T PlacementGravity<T>(this T control, IObservable<Avalonia.Control
 public static T PlacementGravity<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementGravityProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PlacementGravity<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupGravity> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementGravityProperty!, obs, changed);
+
 
  // CustomPopupPlacementCallback
 
@@ -143,6 +163,10 @@ public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Aval
 /*SetterFromSubjectGenerator*/
 public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.CustomPopupPlacementCallbackProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 
  // ShowMode
@@ -166,6 +190,10 @@ public static T ShowMode<T>(this T control, IObservable<Avalonia.Controls.Flyout
 public static T ShowMode<T>(this T control, ISubject<Avalonia.Controls.FlyoutShowMode> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.ShowModeProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowMode<T>(this T control, IObservable<Avalonia.Controls.FlyoutShowMode> obs, IObserver<Avalonia.Controls.FlyoutShowMode> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.ShowModeProperty!, obs, changed);
+
 
  // OverlayDismissEventPassThrough
 
@@ -187,6 +215,10 @@ public static T OverlayDismissEventPassThrough<T>(this T control, IObservable<Sy
 /*SetterFromSubjectGenerator*/
 public static T OverlayDismissEventPassThrough<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThroughProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T OverlayDismissEventPassThrough<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayDismissEventPassThroughProperty!, obs, changed);
 
 
  // OverlayInputPassThroughElement
@@ -210,6 +242,10 @@ public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Av
 public static T OverlayInputPassThroughElement<T>(this T control, ISubject<Avalonia.Input.IInputElement> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElementProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs, IObserver<Avalonia.Input.IInputElement> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.OverlayInputPassThroughElementProperty!, obs, changed);
+
 
  // PlacementConstraintAdjustment
 
@@ -231,6 +267,10 @@ public static T PlacementConstraintAdjustment<T>(this T control, IObservable<Ava
 /*SetterFromSubjectGenerator*/
 public static T PlacementConstraintAdjustment<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> subject) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
    => control._set(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementConstraintAdjustmentProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlacementConstraintAdjustment<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.PopupPositionerConstraintAdjustment> changed) where T : Avalonia.Controls.Primitives.PopupFlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.PopupFlyoutBase.PlacementConstraintAdjustmentProperty!, obs, changed);
 
 
 

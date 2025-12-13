@@ -34,6 +34,10 @@ public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation
 public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.TransitioningContentControl 
+   => control._setEx(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, obs, changed);
+
 
  // IsTransitionReversed
 
@@ -55,6 +59,10 @@ public static T IsTransitionReversed<T>(this T control, IObservable<System.Boole
 /*SetterFromSubjectGenerator*/
 public static T IsTransitionReversed<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsTransitionReversed<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TransitioningContentControl 
+   => control._setEx(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static Avalonia.Media.BlurEffect Radius(this Avalonia.Media.BlurEffect co
 public static Avalonia.Media.BlurEffect Radius(this Avalonia.Media.BlurEffect control, ISubject<System.Double> subject)  
    => control._set(Avalonia.Media.BlurEffect.RadiusProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.BlurEffect Radius(this Avalonia.Media.BlurEffect control, IObservable<System.Double> obs, IObserver<System.Double> changed)  
+   => control._setEx(Avalonia.Media.BlurEffect.RadiusProperty!, obs, changed);
+
 
 
 }

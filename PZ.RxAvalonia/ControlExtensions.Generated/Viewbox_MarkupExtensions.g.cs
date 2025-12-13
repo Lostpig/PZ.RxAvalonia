@@ -34,6 +34,10 @@ public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> o
 public static T Stretch<T>(this T control, ISubject<Avalonia.Media.Stretch> subject) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> obs, IObserver<Avalonia.Media.Stretch> changed) where T : Avalonia.Controls.Viewbox 
+   => control._setEx(Avalonia.Controls.Viewbox.StretchProperty!, obs, changed);
+
 
  // StretchDirection
 
@@ -56,6 +60,10 @@ public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.S
 public static T StretchDirection<T>(this T control, ISubject<Avalonia.Media.StretchDirection> subject) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.StretchDirectionProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.StretchDirection> obs, IObserver<Avalonia.Media.StretchDirection> changed) where T : Avalonia.Controls.Viewbox 
+   => control._setEx(Avalonia.Controls.Viewbox.StretchDirectionProperty!, obs, changed);
+
 
  // Child
 
@@ -77,6 +85,10 @@ public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> 
 /*SetterFromSubjectGenerator*/
 public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Viewbox 
+   => control._setEx(Avalonia.Controls.Viewbox.ChildProperty!, obs, changed);
 
 
 

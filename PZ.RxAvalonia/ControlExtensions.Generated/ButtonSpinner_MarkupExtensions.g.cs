@@ -34,6 +34,10 @@ public static T AllowSpin<T>(this T control, IObservable<System.Boolean> obs) wh
 public static T AllowSpin<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AllowSpin<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ButtonSpinner 
+   => control._setEx(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, obs, changed);
+
 
  // ShowButtonSpinner
 
@@ -56,6 +60,10 @@ public static T ShowButtonSpinner<T>(this T control, IObservable<System.Boolean>
 public static T ShowButtonSpinner<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T ShowButtonSpinner<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.ButtonSpinner 
+   => control._setEx(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, obs, changed);
+
 
  // ButtonSpinnerLocation
 
@@ -77,6 +85,10 @@ public static T ButtonSpinnerLocation<T>(this T control, IObservable<Avalonia.Co
 /*SetterFromSubjectGenerator*/
 public static T ButtonSpinnerLocation<T>(this T control, ISubject<Avalonia.Controls.Location> subject) where T : Avalonia.Controls.ButtonSpinner 
    => control._set(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ButtonSpinnerLocation<T>(this T control, IObservable<Avalonia.Controls.Location> obs, IObserver<Avalonia.Controls.Location> changed) where T : Avalonia.Controls.ButtonSpinner 
+   => control._setEx(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, obs, changed);
 
 
 

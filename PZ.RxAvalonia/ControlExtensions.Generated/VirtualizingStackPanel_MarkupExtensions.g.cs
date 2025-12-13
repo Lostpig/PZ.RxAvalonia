@@ -34,6 +34,10 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
 public static T Orientation<T>(this T control, ISubject<Avalonia.Layout.Orientation> subject) where T : Avalonia.Controls.VirtualizingStackPanel 
    => control._set(Avalonia.Controls.VirtualizingStackPanel.OrientationProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orientation> obs, IObserver<Avalonia.Layout.Orientation> changed) where T : Avalonia.Controls.VirtualizingStackPanel 
+   => control._setEx(Avalonia.Controls.VirtualizingStackPanel.OrientationProperty!, obs, changed);
+
 
  // AreHorizontalSnapPointsRegular
 
@@ -55,6 +59,10 @@ public static T AreHorizontalSnapPointsRegular<T>(this T control, IObservable<Sy
 /*SetterFromSubjectGenerator*/
 public static T AreHorizontalSnapPointsRegular<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.VirtualizingStackPanel 
    => control._set(Avalonia.Controls.VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T AreHorizontalSnapPointsRegular<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.VirtualizingStackPanel 
+   => control._setEx(Avalonia.Controls.VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty!, obs, changed);
 
 
  // AreVerticalSnapPointsRegular
@@ -78,6 +86,10 @@ public static T AreVerticalSnapPointsRegular<T>(this T control, IObservable<Syst
 public static T AreVerticalSnapPointsRegular<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.VirtualizingStackPanel 
    => control._set(Avalonia.Controls.VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T AreVerticalSnapPointsRegular<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.VirtualizingStackPanel 
+   => control._setEx(Avalonia.Controls.VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty!, obs, changed);
+
 
  // CacheLength
 
@@ -99,6 +111,10 @@ public static T CacheLength<T>(this T control, IObservable<System.Double> obs) w
 /*SetterFromSubjectGenerator*/
 public static T CacheLength<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.VirtualizingStackPanel 
    => control._set(Avalonia.Controls.VirtualizingStackPanel.CacheLengthProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CacheLength<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.VirtualizingStackPanel 
+   => control._setEx(Avalonia.Controls.VirtualizingStackPanel.CacheLengthProperty!, obs, changed);
 
 
 

@@ -34,6 +34,10 @@ public static T Command<T>(this T control, IObservable<System.Windows.Input.ICom
 public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.SplitButton 
+   => control._setEx(Avalonia.Controls.SplitButton.CommandProperty!, obs, changed);
+
 
  // CommandParameter
 
@@ -55,6 +59,10 @@ public static T CommandParameter<T>(this T control, IObservable<System.Object> o
 /*SetterFromSubjectGenerator*/
 public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.CommandParameterProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.SplitButton 
+   => control._setEx(Avalonia.Controls.SplitButton.CommandParameterProperty!, obs, changed);
 
 
  // Flyout
@@ -78,6 +86,10 @@ public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitiv
 public static T Flyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase> subject) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.FlyoutProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase> changed) where T : Avalonia.Controls.SplitButton 
+   => control._setEx(Avalonia.Controls.SplitButton.FlyoutProperty!, obs, changed);
+
 
  // HotKey
 
@@ -99,6 +111,10 @@ public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture>
 /*SetterFromSubjectGenerator*/
 public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.SplitButton 
    => control._set(Avalonia.Controls.SplitButton.HotKeyProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.SplitButton 
+   => control._setEx(Avalonia.Controls.SplitButton.HotKeyProperty!, obs, changed);
 
 
 

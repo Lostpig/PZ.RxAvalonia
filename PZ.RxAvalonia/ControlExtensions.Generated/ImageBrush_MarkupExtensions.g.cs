@@ -34,6 +34,10 @@ public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush co
 public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, ISubject<Avalonia.Media.IImageBrushSource> subject)  
    => control._set(Avalonia.Media.ImageBrush.SourceProperty!, subject);
 
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, IObservable<Avalonia.Media.IImageBrushSource> obs, IObserver<Avalonia.Media.IImageBrushSource> changed)  
+   => control._setEx(Avalonia.Media.ImageBrush.SourceProperty!, obs, changed);
+
 
 
 }
