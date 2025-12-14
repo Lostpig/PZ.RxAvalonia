@@ -129,6 +129,14 @@ public static T OnContextRequested<T>(this T control, Action<Avalonia.Controls.C
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxContextRequested<T>(this T control, IObserver<Avalonia.Controls.ContextRequestedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
+{
+  control.AddHandler(Avalonia.Controls.Control.ContextRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Control.ContextRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Loaded
 
@@ -136,6 +144,14 @@ public static T OnContextRequested<T>(this T control, Action<Avalonia.Controls.C
 public static T OnLoaded<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
 {
   control.AddHandler(Avalonia.Controls.Control.LoadedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Control.LoadedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxLoaded<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
+{
+  control.AddHandler(Avalonia.Controls.Control.LoadedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Control.LoadedEvent.RoutingStrategies);
   return control;
 }
 
@@ -151,6 +167,14 @@ public static T OnUnloaded<T>(this T control, Action<Avalonia.Interactivity.Rout
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxUnloaded<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
+{
+  control.AddHandler(Avalonia.Controls.Control.UnloadedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Control.UnloadedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // SizeChanged
 
@@ -158,6 +182,14 @@ public static T OnUnloaded<T>(this T control, Action<Avalonia.Interactivity.Rout
 public static T OnSizeChanged<T>(this T control, Action<Avalonia.Controls.SizeChangedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
 {
   control.AddHandler(Avalonia.Controls.Control.SizeChangedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Control.SizeChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxSizeChanged<T>(this T control, IObserver<Avalonia.Controls.SizeChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
+{
+  control.AddHandler(Avalonia.Controls.Control.SizeChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Control.SizeChangedEvent.RoutingStrategies);
   return control;
 }
 

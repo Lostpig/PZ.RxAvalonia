@@ -181,6 +181,14 @@ public static T OnGotFocus<T>(this T control, Action<Avalonia.Input.GotFocusEven
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxGotFocus<T>(this T control, IObserver<Avalonia.Input.GotFocusEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.GotFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.GotFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // LostFocus
 
@@ -188,6 +196,14 @@ public static T OnGotFocus<T>(this T control, Action<Avalonia.Input.GotFocusEven
 public static T OnLostFocus<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.LostFocusEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.LostFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxLostFocus<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.LostFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.LostFocusEvent.RoutingStrategies);
   return control;
 }
 
@@ -203,6 +219,14 @@ public static T OnKeyDown<T>(this T control, Action<Avalonia.Input.KeyEventArgs>
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxKeyDown<T>(this T control, IObserver<Avalonia.Input.KeyEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.KeyDownEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.KeyDownEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // KeyUp
 
@@ -210,6 +234,14 @@ public static T OnKeyDown<T>(this T control, Action<Avalonia.Input.KeyEventArgs>
 public static T OnKeyUp<T>(this T control, Action<Avalonia.Input.KeyEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.KeyUpEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.KeyUpEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxKeyUp<T>(this T control, IObserver<Avalonia.Input.KeyEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.KeyUpEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.KeyUpEvent.RoutingStrategies);
   return control;
 }
 
@@ -225,6 +257,14 @@ public static T OnTextInput<T>(this T control, Action<Avalonia.Input.TextInputEv
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxTextInput<T>(this T control, IObserver<Avalonia.Input.TextInputEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.TextInputEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.TextInputEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // TextInputMethodClientRequested
 
@@ -232,6 +272,14 @@ public static T OnTextInput<T>(this T control, Action<Avalonia.Input.TextInputEv
 public static T OnTextInputMethodClientRequested<T>(this T control, Action<Avalonia.Input.TextInput.TextInputMethodClientRequestedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.TextInputMethodClientRequestedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.TextInputMethodClientRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxTextInputMethodClientRequested<T>(this T control, IObserver<Avalonia.Input.TextInput.TextInputMethodClientRequestedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.TextInputMethodClientRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.TextInputMethodClientRequestedEvent.RoutingStrategies);
   return control;
 }
 
@@ -247,6 +295,14 @@ public static T OnPointerEntered<T>(this T control, Action<Avalonia.Input.Pointe
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPointerEntered<T>(this T control, IObserver<Avalonia.Input.PointerEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerEnteredEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerEnteredEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PointerExited
 
@@ -254,6 +310,14 @@ public static T OnPointerEntered<T>(this T control, Action<Avalonia.Input.Pointe
 public static T OnPointerExited<T>(this T control, Action<Avalonia.Input.PointerEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.PointerExitedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerExitedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerExited<T>(this T control, IObserver<Avalonia.Input.PointerEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerExitedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerExitedEvent.RoutingStrategies);
   return control;
 }
 
@@ -269,6 +333,14 @@ public static T OnPointerMoved<T>(this T control, Action<Avalonia.Input.PointerE
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPointerMoved<T>(this T control, IObserver<Avalonia.Input.PointerEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerMovedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerMovedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PointerPressed
 
@@ -276,6 +348,14 @@ public static T OnPointerMoved<T>(this T control, Action<Avalonia.Input.PointerE
 public static T OnPointerPressed<T>(this T control, Action<Avalonia.Input.PointerPressedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.PointerPressedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerPressedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerPressed<T>(this T control, IObserver<Avalonia.Input.PointerPressedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerPressedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerPressedEvent.RoutingStrategies);
   return control;
 }
 
@@ -291,6 +371,14 @@ public static T OnPointerReleased<T>(this T control, Action<Avalonia.Input.Point
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPointerReleased<T>(this T control, IObserver<Avalonia.Input.PointerReleasedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerReleasedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerReleasedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PointerCaptureLost
 
@@ -298,6 +386,14 @@ public static T OnPointerReleased<T>(this T control, Action<Avalonia.Input.Point
 public static T OnPointerCaptureLost<T>(this T control, Action<Avalonia.Input.PointerCaptureLostEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.PointerCaptureLostEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerCaptureLostEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerCaptureLost<T>(this T control, IObserver<Avalonia.Input.PointerCaptureLostEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerCaptureLostEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerCaptureLostEvent.RoutingStrategies);
   return control;
 }
 
@@ -313,6 +409,14 @@ public static T OnPointerWheelChanged<T>(this T control, Action<Avalonia.Input.P
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPointerWheelChanged<T>(this T control, IObserver<Avalonia.Input.PointerWheelEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerWheelChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerWheelChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Tapped
 
@@ -320,6 +424,14 @@ public static T OnPointerWheelChanged<T>(this T control, Action<Avalonia.Input.P
 public static T OnTapped<T>(this T control, Action<Avalonia.Input.TappedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.TappedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.TappedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxTapped<T>(this T control, IObserver<Avalonia.Input.TappedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.TappedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.TappedEvent.RoutingStrategies);
   return control;
 }
 
@@ -335,6 +447,14 @@ public static T OnHolding<T>(this T control, Action<Avalonia.Input.HoldingRouted
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxHolding<T>(this T control, IObserver<Avalonia.Input.HoldingRoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.HoldingEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.HoldingEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // DoubleTapped
 
@@ -342,6 +462,14 @@ public static T OnHolding<T>(this T control, Action<Avalonia.Input.HoldingRouted
 public static T OnDoubleTapped<T>(this T control, Action<Avalonia.Input.TappedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.DoubleTappedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.DoubleTappedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxDoubleTapped<T>(this T control, IObserver<Avalonia.Input.TappedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.DoubleTappedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.DoubleTappedEvent.RoutingStrategies);
   return control;
 }
 

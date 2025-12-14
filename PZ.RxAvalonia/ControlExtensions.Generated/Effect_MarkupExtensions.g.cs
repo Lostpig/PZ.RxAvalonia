@@ -19,6 +19,10 @@ public static partial class Effect_MarkupExtensions
 public static T OnInvalidated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Media.Effect  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Invalidated += h);
 
+/*ReactiveEventGenerator*/
+public static T RxInvalidated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Media.Effect  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Invalidated += h);
+
 
 
 }

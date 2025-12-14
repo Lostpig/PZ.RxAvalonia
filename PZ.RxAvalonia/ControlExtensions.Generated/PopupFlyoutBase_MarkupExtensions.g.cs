@@ -281,12 +281,20 @@ public static T PlacementConstraintAdjustment<T>(this T control, IObservable<Ava
 public static T OnClosing<T>(this T control, Action<System.ComponentModel.CancelEventArgs> action) where T : Avalonia.Controls.Primitives.PopupFlyoutBase  => 
  control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Closing += h);
 
+/*ReactiveEventGenerator*/
+public static T RxClosing<T>(this T control, IObserver<System.ComponentModel.CancelEventArgs> observer) where T : Avalonia.Controls.Primitives.PopupFlyoutBase  => 
+ control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closing += h);
+
 
  // Opening
 
 /*ActionToEventGenerator*/
 public static T OnOpening<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Primitives.PopupFlyoutBase  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Opening += h);
+
+/*ReactiveEventGenerator*/
+public static T RxOpening<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Primitives.PopupFlyoutBase  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Opening += h);
 
 
 

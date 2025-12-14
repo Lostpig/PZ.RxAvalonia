@@ -105,6 +105,14 @@ public static T OnNotificationClosed<T>(this T control, Action<Avalonia.Interact
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxNotificationClosed<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Notifications.NotificationCard 
+{
+  control.AddHandler(Avalonia.Controls.Notifications.NotificationCard.NotificationClosedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Notifications.NotificationCard.NotificationClosedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

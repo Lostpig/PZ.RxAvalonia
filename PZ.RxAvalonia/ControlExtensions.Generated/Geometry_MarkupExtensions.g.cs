@@ -47,6 +47,10 @@ public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transfor
 public static T OnChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Media.Geometry  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Changed += h);
 
+/*ReactiveEventGenerator*/
+public static T RxChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Media.Geometry  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Changed += h);
+
 
 
 }

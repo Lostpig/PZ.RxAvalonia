@@ -99,6 +99,10 @@ public static T Name<T>(this T control, IObservable<System.String> obs, IObserve
 public static T OnResourcesChanged<T>(this T control, Action<Avalonia.Controls.ResourcesChangedEventArgs> action) where T : Avalonia.Application  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.ResourcesChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxResourcesChanged<T>(this T control, IObserver<Avalonia.Controls.ResourcesChangedEventArgs> observer) where T : Avalonia.Application  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ResourcesChanged += h);
+
 
  // UrlsOpened
 
@@ -106,12 +110,20 @@ public static T OnResourcesChanged<T>(this T control, Action<Avalonia.Controls.R
 [Obsolete]public static T OnUrlsOpened<T>(this T control, Action<Avalonia.UrlOpenedEventArgs> action) where T : Avalonia.Application  => 
  control._setEvent((System.EventHandler<Avalonia.UrlOpenedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.UrlsOpened += h);
 
+/*ReactiveEventGenerator*/
+[Obsolete]public static T RxUrlsOpened<T>(this T control, IObserver<Avalonia.UrlOpenedEventArgs> observer) where T : Avalonia.Application  => 
+ control._setEvent((System.EventHandler<Avalonia.UrlOpenedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.UrlsOpened += h);
+
 
  // ActualThemeVariantChanged
 
 /*ActionToEventGenerator*/
 public static T OnActualThemeVariantChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Application  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.ActualThemeVariantChanged += h);
+
+/*ReactiveEventGenerator*/
+public static T RxActualThemeVariantChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Application  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ActualThemeVariantChanged += h);
 
 
 

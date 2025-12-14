@@ -1,4 +1,5 @@
 ﻿using Avalonia;
+using Avalonia.Threading;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 
@@ -50,6 +51,20 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     }
 
     protected void SetValue(TValue newValue)
+    {
+        if (Dispatcher.UIThread.CheckAccess())
+        {
+            // If on UI thread, proceed directly
+            PerformSetValue(newValue);
+        }
+        else
+        {
+            // If not on UI thread, dispatch to UI thread
+            Dispatcher.UIThread.Post(() => PerformSetValue(newValue), DispatcherPriority.Normal);
+        }
+    }
+
+    protected void PerformSetValue(TValue newValue)
     {
         if (_avap != null)
         {

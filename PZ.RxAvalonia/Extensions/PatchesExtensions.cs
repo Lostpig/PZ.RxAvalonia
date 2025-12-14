@@ -1,11 +1,10 @@
 ﻿using Avalonia;
+using Avalonia.Controls;
 using Avalonia.Controls.Primitives;
-using Avalonia.Styling;
 using PZ.RxAvalonia.Reactive;
 using System.Reactive;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
-using System.Runtime.InteropServices.JavaScript;
 
 namespace PZ.RxAvalonia;
 
@@ -20,6 +19,11 @@ public static class PatchesExtensions
         component.AddRxPropertyState(state);
 
         return control;
+    }
+
+    public static T ItemsSourceEx<T, TValue>(this T control, ReactiveList<TValue> list) where T : ItemsControl
+    {
+        return control._set(ItemsControl.ItemsSourceProperty!, obs: list.WhenChanged);
     }
 
     public static TControl SelectedItemEx<TControl, TValue>(this TControl control, ISubject<TValue> subject) 

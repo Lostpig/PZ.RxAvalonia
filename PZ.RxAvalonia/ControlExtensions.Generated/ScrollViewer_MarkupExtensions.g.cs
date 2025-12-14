@@ -625,6 +625,14 @@ public static T OnScrollChanged<T>(this T control, Action<Avalonia.Controls.Scro
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxScrollChanged<T>(this T control, IObserver<Avalonia.Controls.ScrollChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.ScrollViewer 
+{
+  control.AddHandler(Avalonia.Controls.ScrollViewer.ScrollChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.ScrollViewer.ScrollChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

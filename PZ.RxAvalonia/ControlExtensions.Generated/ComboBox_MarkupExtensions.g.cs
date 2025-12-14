@@ -255,12 +255,20 @@ public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia
 public static T OnDropDownClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.ComboBox  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.DropDownClosed += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDropDownClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.ComboBox  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownClosed += h);
+
 
  // DropDownOpened
 
 /*ActionToEventGenerator*/
 public static T OnDropDownOpened<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.ComboBox  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.DropDownOpened += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDropDownOpened<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.ComboBox  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownOpened += h);
 
 
 

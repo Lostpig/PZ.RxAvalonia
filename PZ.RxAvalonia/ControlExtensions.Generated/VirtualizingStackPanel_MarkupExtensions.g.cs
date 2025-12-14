@@ -129,6 +129,14 @@ public static T OnHorizontalSnapPointsChanged<T>(this T control, Action<Avalonia
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxHorizontalSnapPointsChanged<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.VirtualizingStackPanel 
+{
+  control.AddHandler(Avalonia.Controls.VirtualizingStackPanel.HorizontalSnapPointsChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.VirtualizingStackPanel.HorizontalSnapPointsChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // VerticalSnapPointsChanged
 
@@ -136,6 +144,14 @@ public static T OnHorizontalSnapPointsChanged<T>(this T control, Action<Avalonia
 public static T OnVerticalSnapPointsChanged<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.VirtualizingStackPanel 
 {
   control.AddHandler(Avalonia.Controls.VirtualizingStackPanel.VerticalSnapPointsChangedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.VirtualizingStackPanel.VerticalSnapPointsChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxVerticalSnapPointsChanged<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.VirtualizingStackPanel 
+{
+  control.AddHandler(Avalonia.Controls.VirtualizingStackPanel.VerticalSnapPointsChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.VirtualizingStackPanel.VerticalSnapPointsChangedEvent.RoutingStrategies);
   return control;
 }
 

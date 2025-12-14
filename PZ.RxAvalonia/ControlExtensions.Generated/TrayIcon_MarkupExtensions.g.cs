@@ -205,6 +205,10 @@ public static T TrayIcon_Icons<T>(this T control, IObservable<Avalonia.Controls.
 public static T OnClicked<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.TrayIcon  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Clicked += h);
 
+/*ReactiveEventGenerator*/
+public static T RxClicked<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.TrayIcon  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Clicked += h);
+
 
 
 }

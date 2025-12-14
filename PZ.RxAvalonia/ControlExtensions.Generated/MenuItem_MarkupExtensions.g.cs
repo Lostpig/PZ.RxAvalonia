@@ -285,6 +285,14 @@ public static T OnClick<T>(this T control, Action<Avalonia.Interactivity.RoutedE
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxClick<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
+{
+  control.AddHandler(Avalonia.Controls.MenuItem.ClickEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuItem.ClickEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PointerEnteredItem
 
@@ -292,6 +300,14 @@ public static T OnClick<T>(this T control, Action<Avalonia.Interactivity.RoutedE
 public static T OnPointerEnteredItem<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
 {
   control.AddHandler(Avalonia.Controls.MenuItem.PointerEnteredItemEvent, (_, args) => action(args), routes ?? Avalonia.Controls.MenuItem.PointerEnteredItemEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerEnteredItem<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
+{
+  control.AddHandler(Avalonia.Controls.MenuItem.PointerEnteredItemEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuItem.PointerEnteredItemEvent.RoutingStrategies);
   return control;
 }
 
@@ -307,6 +323,14 @@ public static T OnPointerExitedItem<T>(this T control, Action<Avalonia.Interacti
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPointerExitedItem<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
+{
+  control.AddHandler(Avalonia.Controls.MenuItem.PointerExitedItemEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuItem.PointerExitedItemEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // SubmenuOpened
 
@@ -314,6 +338,14 @@ public static T OnPointerExitedItem<T>(this T control, Action<Avalonia.Interacti
 public static T OnSubmenuOpened<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
 {
   control.AddHandler(Avalonia.Controls.MenuItem.SubmenuOpenedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.MenuItem.SubmenuOpenedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxSubmenuOpened<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuItem 
+{
+  control.AddHandler(Avalonia.Controls.MenuItem.SubmenuOpenedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuItem.SubmenuOpenedEvent.RoutingStrategies);
   return control;
 }
 

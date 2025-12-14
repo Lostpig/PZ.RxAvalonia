@@ -177,6 +177,10 @@ public static T ShowDelay<T>(this T control, IObservable<System.TimeSpan> obs, I
 public static T OnScroll<T>(this T control, Action<Avalonia.Controls.Primitives.ScrollEventArgs> action) where T : Avalonia.Controls.Primitives.ScrollBar  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.Primitives.ScrollEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Scroll += h);
 
+/*ReactiveEventGenerator*/
+public static T RxScroll<T>(this T control, IObserver<Avalonia.Controls.Primitives.ScrollEventArgs> observer) where T : Avalonia.Controls.Primitives.ScrollBar  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.Primitives.ScrollEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Scroll += h);
+
 
 
 //================= Styles ======================//

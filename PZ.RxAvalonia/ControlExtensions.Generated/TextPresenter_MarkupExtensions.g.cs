@@ -489,6 +489,10 @@ public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush>
 public static T OnCaretBoundsChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Presenters.TextPresenter  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.CaretBoundsChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxCaretBoundsChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Presenters.TextPresenter  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.CaretBoundsChanged += h);
+
 
 
 //================= Styles ======================//

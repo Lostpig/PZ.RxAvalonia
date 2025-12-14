@@ -151,6 +151,10 @@ public static T SelectedTime<T>(this T control, IObservable<System.Nullable<Syst
 public static T OnSelectedTimeChanged<T>(this T control, Action<Avalonia.Controls.TimePickerSelectedValueChangedEventArgs> action) where T : Avalonia.Controls.TimePicker  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.TimePickerSelectedValueChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.SelectedTimeChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxSelectedTimeChanged<T>(this T control, IObserver<Avalonia.Controls.TimePickerSelectedValueChangedEventArgs> observer) where T : Avalonia.Controls.TimePicker  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.TimePickerSelectedValueChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectedTimeChanged += h);
+
 
 
 //================= Styles ======================//

@@ -207,6 +207,14 @@ public static T OnClick<T>(this T control, Action<Avalonia.Interactivity.RoutedE
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxClick<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Button 
+{
+  control.AddHandler(Avalonia.Controls.Button.ClickEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Button.ClickEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

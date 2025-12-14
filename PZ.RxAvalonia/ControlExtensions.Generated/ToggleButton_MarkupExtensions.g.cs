@@ -77,6 +77,14 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs,
 }
 
 
+/*ReactiveEventGenerator*/
+[Obsolete]public static T RxChecked<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.CheckedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.CheckedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Unchecked
 
@@ -84,6 +92,14 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs,
 [Obsolete]public static T OnUnchecked<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
 {
   control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+[Obsolete]public static T RxUnchecked<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent.RoutingStrategies);
   return control;
 }
 
@@ -99,6 +115,14 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs,
 }
 
 
+/*ReactiveEventGenerator*/
+[Obsolete]public static T RxIndeterminate<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // IsCheckedChanged
 
@@ -106,6 +130,14 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs,
 public static T OnIsCheckedChanged<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
 {
   control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.IsCheckedChangedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.IsCheckedChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxIsCheckedChanged<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.IsCheckedChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.IsCheckedChangedEvent.RoutingStrategies);
   return control;
 }
 

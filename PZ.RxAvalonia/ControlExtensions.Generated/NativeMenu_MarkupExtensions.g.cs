@@ -47,6 +47,10 @@ public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls
 public static T OnNeedsUpdate<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.NativeMenu  => 
  control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => action(arg1)), h => control.NeedsUpdate += h);
 
+/*ReactiveEventGenerator*/
+public static T RxNeedsUpdate<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.NativeMenu  => 
+ control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.NeedsUpdate += h);
+
 
  // Opening
 
@@ -54,12 +58,20 @@ public static T OnNeedsUpdate<T>(this T control, Action<System.EventArgs> action
 public static T OnOpening<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.NativeMenu  => 
  control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => action(arg1)), h => control.Opening += h);
 
+/*ReactiveEventGenerator*/
+public static T RxOpening<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.NativeMenu  => 
+ control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Opening += h);
+
 
  // Closed
 
 /*ActionToEventGenerator*/
 public static T OnClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.NativeMenu  => 
  control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => action(arg1)), h => control.Closed += h);
+
+/*ReactiveEventGenerator*/
+public static T RxClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.NativeMenu  => 
+ control._setEvent((System.EventHandler<System.EventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closed += h);
 
 
 

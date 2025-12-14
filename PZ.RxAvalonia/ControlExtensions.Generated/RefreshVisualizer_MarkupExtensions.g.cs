@@ -51,6 +51,14 @@ public static T OnRefreshRequested<T>(this T control, Action<Avalonia.Controls.R
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxRefreshRequested<T>(this T control, IObserver<Avalonia.Controls.RefreshRequestedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.RefreshVisualizer 
+{
+  control.AddHandler(Avalonia.Controls.RefreshVisualizer.RefreshRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.RefreshVisualizer.RefreshRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 }

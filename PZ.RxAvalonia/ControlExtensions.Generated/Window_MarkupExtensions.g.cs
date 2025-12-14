@@ -411,6 +411,10 @@ public static T CanMaximize<T>(this T control, IObservable<System.Boolean> obs, 
 public static T OnClosing<T>(this T control, Action<Avalonia.Controls.WindowClosingEventArgs> action) where T : Avalonia.Controls.Window  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.WindowClosingEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Closing += h);
 
+/*ReactiveEventGenerator*/
+public static T RxClosing<T>(this T control, IObserver<Avalonia.Controls.WindowClosingEventArgs> observer) where T : Avalonia.Controls.Window  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.WindowClosingEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closing += h);
+
 
 
 //================= Styles ======================//

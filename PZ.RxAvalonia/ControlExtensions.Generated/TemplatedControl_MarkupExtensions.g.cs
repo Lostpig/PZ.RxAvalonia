@@ -471,6 +471,14 @@ public static T OnTemplateApplied<T>(this T control, Action<Avalonia.Controls.Pr
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxTemplateApplied<T>(this T control, IObserver<Avalonia.Controls.Primitives.TemplateAppliedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.TemplatedControl 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.TemplatedControl.TemplateAppliedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.TemplatedControl.TemplateAppliedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

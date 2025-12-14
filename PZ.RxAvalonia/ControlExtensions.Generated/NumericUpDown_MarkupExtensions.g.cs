@@ -541,6 +541,10 @@ public static T InnerRightContent<T>(this T control, IObservable<System.Object> 
 public static T OnSpinned<T>(this T control, Action<Avalonia.Controls.SpinEventArgs> action) where T : Avalonia.Controls.NumericUpDown  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.SpinEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Spinned += h);
 
+/*ReactiveEventGenerator*/
+public static T RxSpinned<T>(this T control, IObserver<Avalonia.Controls.SpinEventArgs> observer) where T : Avalonia.Controls.NumericUpDown  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.SpinEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Spinned += h);
+
 
  // ValueChanged
 
@@ -548,6 +552,14 @@ public static T OnSpinned<T>(this T control, Action<Avalonia.Controls.SpinEventA
 public static T OnValueChanged<T>(this T control, Action<Avalonia.Controls.NumericUpDownValueChangedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.NumericUpDown 
 {
   control.AddHandler(Avalonia.Controls.NumericUpDown.ValueChangedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.NumericUpDown.ValueChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxValueChanged<T>(this T control, IObserver<Avalonia.Controls.NumericUpDownValueChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.NumericUpDown 
+{
+  control.AddHandler(Avalonia.Controls.NumericUpDown.ValueChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.NumericUpDown.ValueChangedEvent.RoutingStrategies);
   return control;
 }
 

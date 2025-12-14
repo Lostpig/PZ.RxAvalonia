@@ -129,6 +129,14 @@ public static T OnCopyingToClipboard<T>(this T control, Action<Avalonia.Interact
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxCopyingToClipboard<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SelectableTextBlock 
+{
+  control.AddHandler(Avalonia.Controls.SelectableTextBlock.CopyingToClipboardEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.SelectableTextBlock.CopyingToClipboardEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

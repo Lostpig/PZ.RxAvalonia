@@ -307,6 +307,10 @@ public static T IsVisible<T>(this T control, IObservable<System.Boolean> obs, IO
 public static T OnClick<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.NativeMenuItem  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Click += h);
 
+/*ReactiveEventGenerator*/
+public static T RxClick<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.NativeMenuItem  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Click += h);
+
 
 
 }

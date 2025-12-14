@@ -47,12 +47,20 @@ public static T FlyoutBase_AttachedFlyout<T>(this T control, IObservable<Avaloni
 public static T OnOpened<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Primitives.FlyoutBase  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Opened += h);
 
+/*ReactiveEventGenerator*/
+public static T RxOpened<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Primitives.FlyoutBase  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Opened += h);
+
 
  // Closed
 
 /*ActionToEventGenerator*/
 public static T OnClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Primitives.FlyoutBase  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Closed += h);
+
+/*ReactiveEventGenerator*/
+public static T RxClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Primitives.FlyoutBase  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closed += h);
 
 
 

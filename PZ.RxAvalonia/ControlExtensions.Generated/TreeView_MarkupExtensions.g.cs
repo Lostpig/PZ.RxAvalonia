@@ -125,6 +125,10 @@ public static T SelectionMode<T>(this T control, IObservable<Avalonia.Controls.S
 public static T OnSelectionChanged<T>(this T control, Action<Avalonia.Controls.SelectionChangedEventArgs> action) where T : Avalonia.Controls.TreeView  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.SelectionChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxSelectionChanged<T>(this T control, IObserver<Avalonia.Controls.SelectionChangedEventArgs> observer) where T : Avalonia.Controls.TreeView  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectionChanged += h);
+
 
 
 //================= Styles ======================//

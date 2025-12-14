@@ -571,12 +571,24 @@ public static T OnTextChanged<T>(this T control, Action<Avalonia.Controls.TextCh
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxTextChanged<T>(this T control, IObserver<Avalonia.Controls.TextChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.AutoCompleteBox 
+{
+  control.AddHandler(Avalonia.Controls.AutoCompleteBox.TextChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.AutoCompleteBox.TextChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Populating
 
 /*ActionToEventGenerator*/
 public static T OnPopulating<T>(this T control, Action<Avalonia.Controls.PopulatingEventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.PopulatingEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Populating += h);
+
+/*ReactiveEventGenerator*/
+public static T RxPopulating<T>(this T control, IObserver<Avalonia.Controls.PopulatingEventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.PopulatingEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Populating += h);
 
 
  // Populated
@@ -585,12 +597,20 @@ public static T OnPopulating<T>(this T control, Action<Avalonia.Controls.Populat
 public static T OnPopulated<T>(this T control, Action<Avalonia.Controls.PopulatedEventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.PopulatedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Populated += h);
 
+/*ReactiveEventGenerator*/
+public static T RxPopulated<T>(this T control, IObserver<Avalonia.Controls.PopulatedEventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.PopulatedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Populated += h);
+
 
  // DropDownOpening
 
 /*ActionToEventGenerator*/
 public static T OnDropDownOpening<T>(this T control, Action<System.ComponentModel.CancelEventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DropDownOpening += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDropDownOpening<T>(this T control, IObserver<System.ComponentModel.CancelEventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownOpening += h);
 
 
  // DropDownOpened
@@ -599,12 +619,20 @@ public static T OnDropDownOpening<T>(this T control, Action<System.ComponentMode
 public static T OnDropDownOpened<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.DropDownOpened += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDropDownOpened<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownOpened += h);
+
 
  // DropDownClosing
 
 /*ActionToEventGenerator*/
 public static T OnDropDownClosing<T>(this T control, Action<System.ComponentModel.CancelEventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DropDownClosing += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDropDownClosing<T>(this T control, IObserver<System.ComponentModel.CancelEventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler<System.ComponentModel.CancelEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownClosing += h);
 
 
  // DropDownClosed
@@ -613,6 +641,10 @@ public static T OnDropDownClosing<T>(this T control, Action<System.ComponentMode
 public static T OnDropDownClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.AutoCompleteBox  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.DropDownClosed += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDropDownClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.AutoCompleteBox  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DropDownClosed += h);
+
 
  // SelectionChanged
 
@@ -620,6 +652,14 @@ public static T OnDropDownClosed<T>(this T control, Action<System.EventArgs> act
 public static T OnSelectionChanged<T>(this T control, Action<Avalonia.Controls.SelectionChangedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.AutoCompleteBox 
 {
   control.AddHandler(Avalonia.Controls.AutoCompleteBox.SelectionChangedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.AutoCompleteBox.SelectionChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxSelectionChanged<T>(this T control, IObserver<Avalonia.Controls.SelectionChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.AutoCompleteBox 
+{
+  control.AddHandler(Avalonia.Controls.AutoCompleteBox.SelectionChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.AutoCompleteBox.SelectionChangedEvent.RoutingStrategies);
   return control;
 }
 

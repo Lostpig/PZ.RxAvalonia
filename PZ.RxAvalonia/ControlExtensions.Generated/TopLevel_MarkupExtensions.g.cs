@@ -153,12 +153,20 @@ public static T TopLevel_AutoSafeAreaPadding<T>(this T control, IObservable<Syst
 public static T OnOpened<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.TopLevel  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Opened += h);
 
+/*ReactiveEventGenerator*/
+public static T RxOpened<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.TopLevel  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Opened += h);
+
 
  // Closed
 
 /*ActionToEventGenerator*/
 public static T OnClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.TopLevel  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Closed += h);
+
+/*ReactiveEventGenerator*/
+public static T RxClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.TopLevel  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closed += h);
 
 
  // ScalingChanged
@@ -167,6 +175,10 @@ public static T OnClosed<T>(this T control, Action<System.EventArgs> action) whe
 public static T OnScalingChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.TopLevel  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.ScalingChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxScalingChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.TopLevel  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ScalingChanged += h);
+
 
  // BackRequested
 
@@ -174,6 +186,14 @@ public static T OnScalingChanged<T>(this T control, Action<System.EventArgs> act
 public static T OnBackRequested<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TopLevel 
 {
   control.AddHandler(Avalonia.Controls.TopLevel.BackRequestedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.TopLevel.BackRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxBackRequested<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TopLevel 
+{
+  control.AddHandler(Avalonia.Controls.TopLevel.BackRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.TopLevel.BackRequestedEvent.RoutingStrategies);
   return control;
 }
 

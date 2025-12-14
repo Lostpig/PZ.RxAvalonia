@@ -51,6 +51,14 @@ public static T OnSpin<T>(this T control, Action<Avalonia.Controls.SpinEventArgs
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxSpin<T>(this T control, IObserver<Avalonia.Controls.SpinEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Spinner 
+{
+  control.AddHandler(Avalonia.Controls.Spinner.SpinEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Spinner.SpinEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

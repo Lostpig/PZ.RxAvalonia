@@ -281,12 +281,20 @@ public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Aval
 public static T OnOpening<T>(this T control, Action<System.ComponentModel.CancelEventArgs> action) where T : Avalonia.Controls.ContextMenu  => 
  control._setEvent((System.ComponentModel.CancelEventHandler) ((arg0, arg1) => action(arg1)), h => control.Opening += h);
 
+/*ReactiveEventGenerator*/
+public static T RxOpening<T>(this T control, IObserver<System.ComponentModel.CancelEventArgs> observer) where T : Avalonia.Controls.ContextMenu  => 
+ control._setEvent((System.ComponentModel.CancelEventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Opening += h);
+
 
  // Closing
 
 /*ActionToEventGenerator*/
 public static T OnClosing<T>(this T control, Action<System.ComponentModel.CancelEventArgs> action) where T : Avalonia.Controls.ContextMenu  => 
  control._setEvent((System.ComponentModel.CancelEventHandler) ((arg0, arg1) => action(arg1)), h => control.Closing += h);
+
+/*ReactiveEventGenerator*/
+public static T RxClosing<T>(this T control, IObserver<System.ComponentModel.CancelEventArgs> observer) where T : Avalonia.Controls.ContextMenu  => 
+ control._setEvent((System.ComponentModel.CancelEventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Closing += h);
 
 
 

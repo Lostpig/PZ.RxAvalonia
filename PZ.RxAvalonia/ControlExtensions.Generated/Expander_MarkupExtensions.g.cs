@@ -103,6 +103,14 @@ public static T OnCollapsed<T>(this T control, Action<Avalonia.Interactivity.Rou
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxCollapsed<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
+{
+  control.AddHandler(Avalonia.Controls.Expander.CollapsedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Expander.CollapsedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Collapsing
 
@@ -110,6 +118,14 @@ public static T OnCollapsed<T>(this T control, Action<Avalonia.Interactivity.Rou
 public static T OnCollapsing<T>(this T control, Action<Avalonia.Interactivity.CancelRoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
 {
   control.AddHandler(Avalonia.Controls.Expander.CollapsingEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Expander.CollapsingEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxCollapsing<T>(this T control, IObserver<Avalonia.Interactivity.CancelRoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
+{
+  control.AddHandler(Avalonia.Controls.Expander.CollapsingEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Expander.CollapsingEvent.RoutingStrategies);
   return control;
 }
 
@@ -125,6 +141,14 @@ public static T OnExpanded<T>(this T control, Action<Avalonia.Interactivity.Rout
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxExpanded<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
+{
+  control.AddHandler(Avalonia.Controls.Expander.ExpandedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Expander.ExpandedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Expanding
 
@@ -132,6 +156,14 @@ public static T OnExpanded<T>(this T control, Action<Avalonia.Interactivity.Rout
 public static T OnExpanding<T>(this T control, Action<Avalonia.Interactivity.CancelRoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
 {
   control.AddHandler(Avalonia.Controls.Expander.ExpandingEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Expander.ExpandingEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxExpanding<T>(this T control, IObserver<Avalonia.Interactivity.CancelRoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Expander 
+{
+  control.AddHandler(Avalonia.Controls.Expander.ExpandingEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Expander.ExpandingEvent.RoutingStrategies);
   return control;
 }
 

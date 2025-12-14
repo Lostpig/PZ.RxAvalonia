@@ -23,6 +23,14 @@ public static T OnOpened<T>(this T control, Action<Avalonia.Interactivity.Routed
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxOpened<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuBase 
+{
+  control.AddHandler(Avalonia.Controls.MenuBase.OpenedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuBase.OpenedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Closed
 
@@ -30,6 +38,14 @@ public static T OnOpened<T>(this T control, Action<Avalonia.Interactivity.Routed
 public static T OnClosed<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuBase 
 {
   control.AddHandler(Avalonia.Controls.MenuBase.ClosedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.MenuBase.ClosedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxClosed<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.MenuBase 
+{
+  control.AddHandler(Avalonia.Controls.MenuBase.ClosedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.MenuBase.ClosedEvent.RoutingStrategies);
   return control;
 }
 

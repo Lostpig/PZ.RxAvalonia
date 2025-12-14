@@ -99,12 +99,20 @@ public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlThe
 public static T OnAttachedToLogicalTree<T>(this T control, Action<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs>) ((arg0, arg1) => action(arg1)), h => control.AttachedToLogicalTree += h);
 
+/*ReactiveEventGenerator*/
+public static T RxAttachedToLogicalTree<T>(this T control, IObserver<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.AttachedToLogicalTree += h);
+
 
  // DetachedFromLogicalTree
 
 /*ActionToEventGenerator*/
 public static T OnDetachedFromLogicalTree<T>(this T control, Action<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DetachedFromLogicalTree += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDetachedFromLogicalTree<T>(this T control, IObserver<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler<Avalonia.LogicalTree.LogicalTreeAttachmentEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DetachedFromLogicalTree += h);
 
 
  // DataContextChanged
@@ -113,12 +121,20 @@ public static T OnDetachedFromLogicalTree<T>(this T control, Action<Avalonia.Log
 public static T OnDataContextChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.DataContextChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDataContextChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DataContextChanged += h);
+
 
  // Initialized
 
 /*ActionToEventGenerator*/
 public static T OnInitialized<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Initialized += h);
+
+/*ReactiveEventGenerator*/
+public static T RxInitialized<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Initialized += h);
 
 
  // ResourcesChanged
@@ -127,12 +143,20 @@ public static T OnInitialized<T>(this T control, Action<System.EventArgs> action
 public static T OnResourcesChanged<T>(this T control, Action<Avalonia.Controls.ResourcesChangedEventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.ResourcesChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxResourcesChanged<T>(this T control, IObserver<Avalonia.Controls.ResourcesChangedEventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ResourcesChanged += h);
+
 
  // ActualThemeVariantChanged
 
 /*ActionToEventGenerator*/
 public static T OnActualThemeVariantChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.StyledElement  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.ActualThemeVariantChanged += h);
+
+/*ReactiveEventGenerator*/
+public static T RxActualThemeVariantChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.StyledElement  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ActualThemeVariantChanged += h);
 
 
 

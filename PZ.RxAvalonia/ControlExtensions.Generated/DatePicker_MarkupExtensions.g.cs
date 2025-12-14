@@ -255,6 +255,10 @@ public static T SelectedDate<T>(this T control, IObservable<System.Nullable<Syst
 public static T OnSelectedDateChanged<T>(this T control, Action<Avalonia.Controls.DatePickerSelectedValueChangedEventArgs> action) where T : Avalonia.Controls.DatePicker  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.DatePickerSelectedValueChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.SelectedDateChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxSelectedDateChanged<T>(this T control, IObserver<Avalonia.Controls.DatePickerSelectedValueChangedEventArgs> observer) where T : Avalonia.Controls.DatePicker  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.DatePickerSelectedValueChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectedDateChanged += h);
+
 
 
 //================= Styles ======================//

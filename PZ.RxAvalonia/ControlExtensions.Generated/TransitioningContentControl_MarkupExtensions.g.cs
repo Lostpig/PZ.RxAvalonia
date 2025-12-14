@@ -77,6 +77,14 @@ public static T OnTransitionCompleted<T>(this T control, Action<Avalonia.Control
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxTransitionCompleted<T>(this T control, IObserver<Avalonia.Controls.TransitionCompletedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TransitioningContentControl 
+{
+  control.AddHandler(Avalonia.Controls.TransitioningContentControl.TransitionCompletedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.TransitioningContentControl.TransitionCompletedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

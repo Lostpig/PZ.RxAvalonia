@@ -51,6 +51,14 @@ public static T OnIsCheckedChanged<T>(this T control, Action<Avalonia.Interactiv
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxIsCheckedChanged<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.ToggleSplitButton 
+{
+  control.AddHandler(Avalonia.Controls.ToggleSplitButton.IsCheckedChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.ToggleSplitButton.IsCheckedChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

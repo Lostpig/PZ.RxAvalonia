@@ -299,12 +299,20 @@ public static T UseLayoutRounding<T>(this T control, IObservable<System.Boolean>
 public static T OnEffectiveViewportChanged<T>(this T control, Action<Avalonia.Layout.EffectiveViewportChangedEventArgs> action) where T : Avalonia.Layout.Layoutable  => 
  control._setEvent((System.EventHandler<Avalonia.Layout.EffectiveViewportChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.EffectiveViewportChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxEffectiveViewportChanged<T>(this T control, IObserver<Avalonia.Layout.EffectiveViewportChangedEventArgs> observer) where T : Avalonia.Layout.Layoutable  => 
+ control._setEvent((System.EventHandler<Avalonia.Layout.EffectiveViewportChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.EffectiveViewportChanged += h);
+
 
  // LayoutUpdated
 
 /*ActionToEventGenerator*/
 public static T OnLayoutUpdated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Layout.Layoutable  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.LayoutUpdated += h);
+
+/*ReactiveEventGenerator*/
+public static T RxLayoutUpdated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Layout.Layoutable  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.LayoutUpdated += h);
 
 
 

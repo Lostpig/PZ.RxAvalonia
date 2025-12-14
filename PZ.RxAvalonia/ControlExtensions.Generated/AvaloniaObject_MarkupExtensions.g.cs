@@ -19,6 +19,10 @@ public static partial class AvaloniaObject_MarkupExtensions
 public static T OnPropertyChanged<T>(this T control, Action<Avalonia.AvaloniaPropertyChangedEventArgs> action) where T : Avalonia.AvaloniaObject  => 
  control._setEvent((System.EventHandler<Avalonia.AvaloniaPropertyChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.PropertyChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxPropertyChanged<T>(this T control, IObserver<Avalonia.AvaloniaPropertyChangedEventArgs> observer) where T : Avalonia.AvaloniaObject  => 
+ control._setEvent((System.EventHandler<Avalonia.AvaloniaPropertyChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.PropertyChanged += h);
+
 
 
 }

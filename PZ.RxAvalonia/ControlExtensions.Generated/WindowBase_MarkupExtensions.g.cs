@@ -47,12 +47,20 @@ public static T Topmost<T>(this T control, IObservable<System.Boolean> obs, IObs
 public static T OnActivated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.WindowBase  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Activated += h);
 
+/*ReactiveEventGenerator*/
+public static T RxActivated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.WindowBase  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Activated += h);
+
 
  // Deactivated
 
 /*ActionToEventGenerator*/
 public static T OnDeactivated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.WindowBase  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Deactivated += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDeactivated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.WindowBase  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Deactivated += h);
 
 
  // PositionChanged
@@ -61,12 +69,20 @@ public static T OnDeactivated<T>(this T control, Action<System.EventArgs> action
 public static T OnPositionChanged<T>(this T control, Action<Avalonia.Controls.PixelPointEventArgs> action) where T : Avalonia.Controls.WindowBase  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.PixelPointEventArgs>) ((arg0, arg1) => action(arg1)), h => control.PositionChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxPositionChanged<T>(this T control, IObserver<Avalonia.Controls.PixelPointEventArgs> observer) where T : Avalonia.Controls.WindowBase  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.PixelPointEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.PositionChanged += h);
+
 
  // Resized
 
 /*ActionToEventGenerator*/
 public static T OnResized<T>(this T control, Action<Avalonia.Controls.WindowResizedEventArgs> action) where T : Avalonia.Controls.WindowBase  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.WindowResizedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.Resized += h);
+
+/*ReactiveEventGenerator*/
+public static T RxResized<T>(this T control, IObserver<Avalonia.Controls.WindowResizedEventArgs> observer) where T : Avalonia.Controls.WindowBase  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.WindowResizedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Resized += h);
 
 
 

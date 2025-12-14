@@ -151,12 +151,20 @@ public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Dat
 public static T OnPreparingContainer<T>(this T control, Action<Avalonia.Controls.ContainerPreparedEventArgs> action) where T : Avalonia.Controls.ItemsControl  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.PreparingContainer += h);
 
+/*ReactiveEventGenerator*/
+public static T RxPreparingContainer<T>(this T control, IObserver<Avalonia.Controls.ContainerPreparedEventArgs> observer) where T : Avalonia.Controls.ItemsControl  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.PreparingContainer += h);
+
 
  // ContainerPrepared
 
 /*ActionToEventGenerator*/
 public static T OnContainerPrepared<T>(this T control, Action<Avalonia.Controls.ContainerPreparedEventArgs> action) where T : Avalonia.Controls.ItemsControl  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.ContainerPrepared += h);
+
+/*ReactiveEventGenerator*/
+public static T RxContainerPrepared<T>(this T control, IObserver<Avalonia.Controls.ContainerPreparedEventArgs> observer) where T : Avalonia.Controls.ItemsControl  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ContainerPreparedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ContainerPrepared += h);
 
 
  // ContainerIndexChanged
@@ -165,12 +173,20 @@ public static T OnContainerPrepared<T>(this T control, Action<Avalonia.Controls.
 public static T OnContainerIndexChanged<T>(this T control, Action<Avalonia.Controls.ContainerIndexChangedEventArgs> action) where T : Avalonia.Controls.ItemsControl  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ContainerIndexChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.ContainerIndexChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxContainerIndexChanged<T>(this T control, IObserver<Avalonia.Controls.ContainerIndexChangedEventArgs> observer) where T : Avalonia.Controls.ItemsControl  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ContainerIndexChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ContainerIndexChanged += h);
+
 
  // ContainerClearing
 
 /*ActionToEventGenerator*/
 public static T OnContainerClearing<T>(this T control, Action<Avalonia.Controls.ContainerClearingEventArgs> action) where T : Avalonia.Controls.ItemsControl  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.ContainerClearingEventArgs>) ((arg0, arg1) => action(arg1)), h => control.ContainerClearing += h);
+
+/*ReactiveEventGenerator*/
+public static T RxContainerClearing<T>(this T control, IObserver<Avalonia.Controls.ContainerClearingEventArgs> observer) where T : Avalonia.Controls.ItemsControl  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.ContainerClearingEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ContainerClearing += h);
 
 
 

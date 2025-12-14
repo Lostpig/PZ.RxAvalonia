@@ -155,6 +155,14 @@ public static T OnValueChanged<T>(this T control, Action<Avalonia.Controls.Primi
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxValueChanged<T>(this T control, IObserver<Avalonia.Controls.Primitives.RangeBaseValueChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.RangeBase 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.RangeBase.ValueChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.RangeBase.ValueChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

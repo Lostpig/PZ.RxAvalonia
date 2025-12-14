@@ -77,6 +77,14 @@ public static T OnExpanded<T>(this T control, Action<Avalonia.Interactivity.Rout
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxExpanded<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TreeViewItem 
+{
+  control.AddHandler(Avalonia.Controls.TreeViewItem.ExpandedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.TreeViewItem.ExpandedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // Collapsed
 
@@ -84,6 +92,14 @@ public static T OnExpanded<T>(this T control, Action<Avalonia.Interactivity.Rout
 public static T OnCollapsed<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TreeViewItem 
 {
   control.AddHandler(Avalonia.Controls.TreeViewItem.CollapsedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.TreeViewItem.CollapsedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxCollapsed<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.TreeViewItem 
+{
+  control.AddHandler(Avalonia.Controls.TreeViewItem.CollapsedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.TreeViewItem.CollapsedEvent.RoutingStrategies);
   return control;
 }
 

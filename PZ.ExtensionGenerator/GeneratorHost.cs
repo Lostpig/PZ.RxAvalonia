@@ -91,7 +91,10 @@ public class GeneratorHost(ExtensionGeneratorConfig config)
                     .Where(x => x.DeclaringType == t)
                     .Select(x => new EventExtensionInfo(x)),
 
-                new ActionToEventGenerator()),
+                new ActionToEventGenerator(),
+                new ReactiveEventGenerator()
+                
+            ),
 
             new("Styles",
                 t => !IsStyledElement(t) ? [] : t

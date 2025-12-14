@@ -23,6 +23,14 @@ public static T OnDragStarted<T>(this T control, Action<Avalonia.Input.VectorEve
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxDragStarted<T>(this T control, IObserver<Avalonia.Input.VectorEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.Thumb 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.Thumb.DragStartedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.Thumb.DragStartedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // DragDelta
 
@@ -34,6 +42,14 @@ public static T OnDragDelta<T>(this T control, Action<Avalonia.Input.VectorEvent
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxDragDelta<T>(this T control, IObserver<Avalonia.Input.VectorEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.Thumb 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.Thumb.DragDeltaEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.Thumb.DragDeltaEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // DragCompleted
 
@@ -41,6 +57,14 @@ public static T OnDragDelta<T>(this T control, Action<Avalonia.Input.VectorEvent
 public static T OnDragCompleted<T>(this T control, Action<Avalonia.Input.VectorEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.Thumb 
 {
   control.AddHandler(Avalonia.Controls.Primitives.Thumb.DragCompletedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.Thumb.DragCompletedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxDragCompleted<T>(this T control, IObserver<Avalonia.Input.VectorEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.Thumb 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.Thumb.DragCompletedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.Thumb.DragCompletedEvent.RoutingStrategies);
   return control;
 }
 

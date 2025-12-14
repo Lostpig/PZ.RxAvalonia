@@ -207,6 +207,14 @@ public static T OnSelectionChanged<T>(this T control, Action<Avalonia.Controls.S
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxSelectionChanged<T>(this T control, IObserver<Avalonia.Controls.SelectionChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+{
+  control.AddHandler(Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChangedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.SelectingItemsControl.SelectionChangedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
 
 //================= Styles ======================//

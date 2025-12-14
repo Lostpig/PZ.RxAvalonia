@@ -59,7 +59,10 @@ internal class MainView : ComponentBase
                     ),
                 new TabItem()
                     .Header("Rx")
-                    .Content(new Border().Child(new RxDemoView()))
+                    .Content(new Border().Child(new RxDemoView())),
+                new TabItem()
+                    .Header("Rx Event")
+                    .Content(new Border().Child(new RxEventView()))
             );
     }
 }

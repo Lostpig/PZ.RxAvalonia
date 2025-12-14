@@ -281,6 +281,10 @@ public static T DisplayDateEnd<T>(this T control, IObservable<System.Nullable<Sy
 public static T OnSelectedDatesChanged<T>(this T control, Action<Avalonia.Controls.SelectionChangedEventArgs> action) where T : Avalonia.Controls.Calendar  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.SelectedDatesChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxSelectedDatesChanged<T>(this T control, IObserver<Avalonia.Controls.SelectionChangedEventArgs> observer) where T : Avalonia.Controls.Calendar  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectedDatesChanged += h);
+
 
  // DisplayDateChanged
 
@@ -288,12 +292,20 @@ public static T OnSelectedDatesChanged<T>(this T control, Action<Avalonia.Contro
 public static T OnDisplayDateChanged<T>(this T control, Action<Avalonia.Controls.CalendarDateChangedEventArgs> action) where T : Avalonia.Controls.Calendar  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.CalendarDateChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DisplayDateChanged += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDisplayDateChanged<T>(this T control, IObserver<Avalonia.Controls.CalendarDateChangedEventArgs> observer) where T : Avalonia.Controls.Calendar  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.CalendarDateChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DisplayDateChanged += h);
+
 
  // DisplayModeChanged
 
 /*ActionToEventGenerator*/
 public static T OnDisplayModeChanged<T>(this T control, Action<Avalonia.Controls.CalendarModeChangedEventArgs> action) where T : Avalonia.Controls.Calendar  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.CalendarModeChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DisplayModeChanged += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDisplayModeChanged<T>(this T control, IObserver<Avalonia.Controls.CalendarModeChangedEventArgs> observer) where T : Avalonia.Controls.Calendar  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.CalendarModeChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DisplayModeChanged += h);
 
 
 

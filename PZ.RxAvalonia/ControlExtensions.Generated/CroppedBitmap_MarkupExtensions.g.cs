@@ -96,6 +96,10 @@ public static T SourceRect<T>(this T control, IObservable<Avalonia.PixelRect> ob
 public static T OnInvalidated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Media.Imaging.CroppedBitmap  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.Invalidated += h);
 
+/*ReactiveEventGenerator*/
+public static T RxInvalidated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Media.Imaging.CroppedBitmap  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.Invalidated += h);
+
 
 
 }

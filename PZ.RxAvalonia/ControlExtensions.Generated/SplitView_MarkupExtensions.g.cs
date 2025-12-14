@@ -259,6 +259,14 @@ public static T OnPaneClosed<T>(this T control, Action<Avalonia.Interactivity.Ro
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPaneClosed<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
+{
+  control.AddHandler(Avalonia.Controls.SplitView.PaneClosedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.SplitView.PaneClosedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PaneClosing
 
@@ -266,6 +274,14 @@ public static T OnPaneClosed<T>(this T control, Action<Avalonia.Interactivity.Ro
 public static T OnPaneClosing<T>(this T control, Action<Avalonia.Interactivity.CancelRoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
 {
   control.AddHandler(Avalonia.Controls.SplitView.PaneClosingEvent, (_, args) => action(args), routes ?? Avalonia.Controls.SplitView.PaneClosingEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPaneClosing<T>(this T control, IObserver<Avalonia.Interactivity.CancelRoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
+{
+  control.AddHandler(Avalonia.Controls.SplitView.PaneClosingEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.SplitView.PaneClosingEvent.RoutingStrategies);
   return control;
 }
 
@@ -281,6 +297,14 @@ public static T OnPaneOpened<T>(this T control, Action<Avalonia.Interactivity.Ro
 }
 
 
+/*ReactiveEventGenerator*/
+public static T RxPaneOpened<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
+{
+  control.AddHandler(Avalonia.Controls.SplitView.PaneOpenedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.SplitView.PaneOpenedEvent.RoutingStrategies);
+  return control;
+}
+
+
 
  // PaneOpening
 
@@ -288,6 +312,14 @@ public static T OnPaneOpened<T>(this T control, Action<Avalonia.Interactivity.Ro
 public static T OnPaneOpening<T>(this T control, Action<Avalonia.Interactivity.CancelRoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
 {
   control.AddHandler(Avalonia.Controls.SplitView.PaneOpeningEvent, (_, args) => action(args), routes ?? Avalonia.Controls.SplitView.PaneOpeningEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPaneOpening<T>(this T control, IObserver<Avalonia.Interactivity.CancelRoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.SplitView 
+{
+  control.AddHandler(Avalonia.Controls.SplitView.PaneOpeningEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.SplitView.PaneOpeningEvent.RoutingStrategies);
   return control;
 }
 

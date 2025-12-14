@@ -125,12 +125,20 @@ public static T ShouldLoop<T>(this T control, IObservable<System.Boolean> obs, I
 public static T OnScrollInvalidated<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Primitives.DateTimePickerPanel  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.ScrollInvalidated += h);
 
+/*ReactiveEventGenerator*/
+public static T RxScrollInvalidated<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Primitives.DateTimePickerPanel  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ScrollInvalidated += h);
+
 
  // SelectionChanged
 
 /*ActionToEventGenerator*/
 public static T OnSelectionChanged<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.Primitives.DateTimePickerPanel  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.SelectionChanged += h);
+
+/*ReactiveEventGenerator*/
+public static T RxSelectionChanged<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.Primitives.DateTimePickerPanel  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectionChanged += h);
 
 
 

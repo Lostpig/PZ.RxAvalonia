@@ -322,12 +322,20 @@ public static T Visual_FlowDirection<T>(this T control, IObservable<Avalonia.Med
 public static T OnAttachedToVisualTree<T>(this T control, Action<Avalonia.VisualTreeAttachmentEventArgs> action) where T : Avalonia.Visual  => 
  control._setEvent((System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs>) ((arg0, arg1) => action(arg1)), h => control.AttachedToVisualTree += h);
 
+/*ReactiveEventGenerator*/
+public static T RxAttachedToVisualTree<T>(this T control, IObserver<Avalonia.VisualTreeAttachmentEventArgs> observer) where T : Avalonia.Visual  => 
+ control._setEvent((System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.AttachedToVisualTree += h);
+
 
  // DetachedFromVisualTree
 
 /*ActionToEventGenerator*/
 public static T OnDetachedFromVisualTree<T>(this T control, Action<Avalonia.VisualTreeAttachmentEventArgs> action) where T : Avalonia.Visual  => 
  control._setEvent((System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DetachedFromVisualTree += h);
+
+/*ReactiveEventGenerator*/
+public static T RxDetachedFromVisualTree<T>(this T control, IObserver<Avalonia.VisualTreeAttachmentEventArgs> observer) where T : Avalonia.Visual  => 
+ control._setEvent((System.EventHandler<Avalonia.VisualTreeAttachmentEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DetachedFromVisualTree += h);
 
 
 

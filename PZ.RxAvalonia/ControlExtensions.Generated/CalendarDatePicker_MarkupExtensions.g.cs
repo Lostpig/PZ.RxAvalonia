@@ -385,12 +385,20 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
 public static T OnCalendarClosed<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.CalendarDatePicker  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.CalendarClosed += h);
 
+/*ReactiveEventGenerator*/
+public static T RxCalendarClosed<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.CalendarDatePicker  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.CalendarClosed += h);
+
 
  // CalendarOpened
 
 /*ActionToEventGenerator*/
 public static T OnCalendarOpened<T>(this T control, Action<System.EventArgs> action) where T : Avalonia.Controls.CalendarDatePicker  => 
  control._setEvent((System.EventHandler) ((arg0, arg1) => action(arg1)), h => control.CalendarOpened += h);
+
+/*ReactiveEventGenerator*/
+public static T RxCalendarOpened<T>(this T control, IObserver<System.EventArgs> observer) where T : Avalonia.Controls.CalendarDatePicker  => 
+ control._setEvent((System.EventHandler) ((arg0, arg1) => observer.OnNext((arg1))), h => control.CalendarOpened += h);
 
 
  // DateValidationError
@@ -399,12 +407,20 @@ public static T OnCalendarOpened<T>(this T control, Action<System.EventArgs> act
 public static T OnDateValidationError<T>(this T control, Action<Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs> action) where T : Avalonia.Controls.CalendarDatePicker  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs>) ((arg0, arg1) => action(arg1)), h => control.DateValidationError += h);
 
+/*ReactiveEventGenerator*/
+public static T RxDateValidationError<T>(this T control, IObserver<Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs> observer) where T : Avalonia.Controls.CalendarDatePicker  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.CalendarDatePickerDateValidationErrorEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.DateValidationError += h);
+
 
  // SelectedDateChanged
 
 /*ActionToEventGenerator*/
 public static T OnSelectedDateChanged<T>(this T control, Action<Avalonia.Controls.SelectionChangedEventArgs> action) where T : Avalonia.Controls.CalendarDatePicker  => 
  control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.SelectedDateChanged += h);
+
+/*ReactiveEventGenerator*/
+public static T RxSelectedDateChanged<T>(this T control, IObserver<Avalonia.Controls.SelectionChangedEventArgs> observer) where T : Avalonia.Controls.CalendarDatePicker  => 
+ control._setEvent((System.EventHandler<Avalonia.Controls.SelectionChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.SelectedDateChanged += h);
 
 
 
