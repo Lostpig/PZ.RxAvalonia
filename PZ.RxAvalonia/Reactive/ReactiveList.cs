@@ -10,38 +10,33 @@ public class ReactiveList<T> : IList<T>
     public record InsertArgs(int Index, T Item);
 
     private readonly List<T> _items;
-    private readonly Subject<T[]> _add;
-    private readonly Subject<T[]> _remove;
-    private readonly Subject<int> _clear;
+    private readonly Subject<IEnumerable<T>> _add;
+    private readonly Subject<IEnumerable<T>> _remove;
     private readonly Subject<InsertArgs> _insert;
+    private readonly Subject<IEnumerable<T>> _change;
 
     public ReactiveList()
     {
         _items = [];
         _add = new();
         _remove = new();
-        _clear = new();
         _insert = new();
+        _change = new();
 
         WhenAdd = _add.AsObservable();
         WhenRemove = _remove.AsObservable();
-        WhenClear = _clear.AsObservable();
         WhenInsert = _insert.AsObservable();
 
-        WhenChanged = Observable.When(
-                WhenAdd
-                    .And(WhenRemove)
-                    .And(WhenClear)
-                    .And(WhenInsert)
-                    .Then((_, _, _, _) => _items.ToArray())
-            );
+        WhenAdd.Subscribe(_ => _change.OnNext([.. _items]));
+        WhenRemove.Subscribe(_ => _change.OnNext([.. _items]));
+        WhenInsert.Subscribe(_ => _change.OnNext([.. _items]));
+        WhenChanged = _change.AsObservable();
     }
 
-    public IObservable<T[]> WhenAdd { get; init; }
-    public IObservable<T[]> WhenRemove { get; init; }
-    public IObservable<int> WhenClear { get; init; }
+    public IObservable<IEnumerable<T>> WhenAdd { get; init; }
+    public IObservable<IEnumerable<T>> WhenRemove { get; init; }
     public IObservable<InsertArgs> WhenInsert { get; init; }
-    public IObservable<T[]> WhenChanged { get; init; }
+    public IObservable<IEnumerable<T>> WhenChanged { get; init; }
 
     public T this[int index]
     {
@@ -102,12 +97,9 @@ public class ReactiveList<T> : IList<T>
 
         _remove.OnNext([.. removed]);
     }
-
     public void Clear()
     {
-        int count = _items.Count;
-        _items.Clear();
-        _clear.OnNext(count);
+        RemoveRange(0, _items.Count);
     }
 
     public bool Contains(T item) => _items.Contains(item);
