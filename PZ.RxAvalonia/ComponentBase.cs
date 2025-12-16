@@ -1,5 +1,6 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using Avalonia.Interactivity;
 using Avalonia.Styling;
 using Avalonia.Threading;
 using System.Collections.Immutable;
@@ -27,6 +28,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 {
     internal readonly List<RxPropertyState> _rxPropStates = [];
     internal readonly List<FuncPropertyState> _funcPropStates = [];
+    private readonly List<IDisposable> _subscriptions = [];
     internal List<IDeclarativeComponent> DependentViews { get; set; } = [];
     private INameScope? _nameScope;
     protected INameScope Scope => _nameScope ??= new NameScope();
@@ -98,6 +100,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
     protected virtual void OnCreated() { }
     protected virtual void OnAfterInitialized() { }
+    protected virtual IEnumerable<IDisposable> WhenActivate() { return []; }
 
     private bool _isUpdatingState = false;
     public void UpdateState()
@@ -145,6 +148,19 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
             _funcPropStates.Add(state);
     }
 
+    protected override void OnLoaded(RoutedEventArgs e)
+    {
+        base.OnLoaded(e);
+        foreach (var s in _rxPropStates) s.Activate();
+        _subscriptions.AddRange(WhenActivate());
+    }
+    protected override void OnUnloaded(RoutedEventArgs e)
+    {
+        base.OnUnloaded(e);
+        foreach (var s in _rxPropStates) s.DeActivate();
+        foreach (var s in _subscriptions) s.Dispose();
+    }
+
     #region Hot reload stuff
     public void Reload()
     {
@@ -172,20 +188,6 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
     protected virtual void OnBeforeReload()
     {
-    }
-
-    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
-    {
-        base.OnAttachedToVisualTree(e);
-        HotReloadManager.RegisterInstance(this);
-        EnsureInitialized();
-    }
-
-
-    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
-    {
-        base.OnDetachedFromVisualTree(e);
-        HotReloadManager.UnregisterInstance(this);
     }
     #endregion
 }

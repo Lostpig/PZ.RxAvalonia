@@ -4,39 +4,24 @@ using System.Reactive.Subjects;
 
 namespace PZ.RxAvalonia.Reactive;
 
-
-public class ReactiveList<T> : IList<T>
+public enum ChangedType
 {
-    public record InsertArgs(int Index, T Item);
-
+    Add, Remove, Insert
+}
+public record ChangedArgs<T>(ChangedType Type, int Index, IEnumerable<T> Item);
+public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
+{
     private readonly List<T> _items;
-    private readonly Subject<IEnumerable<T>> _add;
-    private readonly Subject<IEnumerable<T>> _remove;
-    private readonly Subject<InsertArgs> _insert;
-    private readonly Subject<IEnumerable<T>> _change;
+    private readonly Subject<ChangedArgs<T>> _subject;
+    public IObservable<IEnumerable<T>> Current { get; init; }
 
     public ReactiveList()
     {
         _items = [];
-        _add = new();
-        _remove = new();
-        _insert = new();
-        _change = new();
+        _subject = new();
 
-        WhenAdd = _add.AsObservable();
-        WhenRemove = _remove.AsObservable();
-        WhenInsert = _insert.AsObservable();
-
-        WhenAdd.Subscribe(_ => _change.OnNext([.. _items]));
-        WhenRemove.Subscribe(_ => _change.OnNext([.. _items]));
-        WhenInsert.Subscribe(_ => _change.OnNext([.. _items]));
-        WhenChanged = _change.AsObservable();
+        Current = _subject.Select<ChangedArgs<T>,IEnumerable<T>>(_ => [.. _items]);
     }
-
-    public IObservable<IEnumerable<T>> WhenAdd { get; init; }
-    public IObservable<IEnumerable<T>> WhenRemove { get; init; }
-    public IObservable<InsertArgs> WhenInsert { get; init; }
-    public IObservable<IEnumerable<T>> WhenChanged { get; init; }
 
     public T this[int index]
     {
@@ -55,24 +40,30 @@ public class ReactiveList<T> : IList<T>
     public void Add(T item)
     {
         _items.Add(item);
-        _add.OnNext([item]);
+        _subject.OnNext(new(ChangedType.Add, 0, [item]));
     }
     public void AddRange(IEnumerable<T> collection)
     {
         _items.AddRange(collection);
-        _add.OnNext([.. collection]);
+        _subject.OnNext(new(ChangedType.Add, 0, [.. collection]));
     }
     public void Insert(int index, T item)
     {
         _items.Insert(index, item);
-        _insert.OnNext(new(index, item));
+        _subject.OnNext(new(ChangedType.Insert, index, [item]));
     }
+    public void InsertRange(int index, IEnumerable<T> collection)
+    {
+        _items.InsertRange(index, collection);
+        _subject.OnNext(new(ChangedType.Insert, index, [.. collection]));
+    }
+
     public bool Remove(T item)
     {
         bool removed = _items.Remove(item);
         if (removed)
         {
-            _remove.OnNext([item]);
+            _subject.OnNext(new(ChangedType.Remove, 0, [item]));
         }
         return removed;
     }
@@ -80,13 +71,13 @@ public class ReactiveList<T> : IList<T>
     {
         var item = _items[index];
         _items.RemoveAt(index);
-        _remove.OnNext([item]);
+        _subject.OnNext(new(ChangedType.Remove, 0, [item]));
     }
     public int RemoveAll(Predicate<T> match)
     {
         var removed = _items.Where(i => match(i));
         var count = _items.RemoveAll(match);
-        _remove.OnNext([.. removed]);
+        _subject.OnNext(new(ChangedType.Remove, 0, [.. removed]));
 
         return count;
     }
@@ -95,7 +86,7 @@ public class ReactiveList<T> : IList<T>
         var removed = _items[index..(index + count)];
         _items.RemoveRange(index, count);
 
-        _remove.OnNext([.. removed]);
+        _subject.OnNext(new(ChangedType.Remove, 0, [.. removed]));
     }
     public void Clear()
     {
@@ -109,5 +100,10 @@ public class ReactiveList<T> : IList<T>
     IEnumerator IEnumerable.GetEnumerator()
     {
         return GetEnumerator();
+    }
+
+    IDisposable IObservable<ChangedArgs<T>>.Subscribe(IObserver<ChangedArgs<T>> observer)
+    {
+        return _subject.Subscribe(observer);
     }
 }

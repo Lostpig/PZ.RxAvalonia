@@ -37,12 +37,15 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
         _setter = setter;
         _avap = avap;
 
-        if (obs is BehaviorSubject<TValue> bs)
+        if (obs is BehaviorSubject<TValue> initValue)
         {
-            SetValue(bs.Value);
+            SetValue(initValue.Value);
         }
-        _subscriptions.Add(obs.Subscribe(SetValue));
+    }
 
+    public override void Activate()
+    {
+        _subscriptions.Add(_obs.Subscribe(SetValue));
         if (_avap != null && _changed != null)
         {
             var avapObs = _control.GetObservable(_avap);
@@ -82,10 +85,13 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     }
 }
 
-internal abstract class RxPropertyState : IDisposable
+internal abstract class RxPropertyState
 {
     protected abstract List<IDisposable> _subscriptions { get; init; }
-    public virtual void Dispose()
+
+    public abstract void Activate();
+
+    public virtual void DeActivate()
     {
         foreach (var subscription in _subscriptions) subscription.Dispose();
     }

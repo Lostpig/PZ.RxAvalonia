@@ -23,7 +23,7 @@ public static class PatchesExtensions
 
     public static T ItemsSourceEx<T, TValue>(this T control, ReactiveList<TValue> list) where T : ItemsControl
     {
-        return control._set(ItemsControl.ItemsSourceProperty!, obs: list.WhenChanged);
+        return control._set(ItemsControl.ItemsSourceProperty!, obs: list.Current);
     }
 
     public static TControl SelectedItemEx<TControl, TValue>(this TControl control, ISubject<TValue> subject) 
