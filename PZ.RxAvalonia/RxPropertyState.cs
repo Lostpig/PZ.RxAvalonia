@@ -41,16 +41,20 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
         {
             SetValue(initValue.Value);
         }
+        Activate();
     }
 
     public override void Activate()
     {
+        if (IsActived) return;
+
         _subscriptions.Add(_obs.Subscribe(SetValue));
         if (_avap != null && _changed != null)
         {
             var avapObs = _control.GetObservable(_avap);
             _subscriptions.Add(avapObs.Subscribe(_changed));
         }
+        IsActived = true;
     }
 
     protected void SetValue(TValue newValue)
@@ -87,6 +91,7 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
 
 internal abstract class RxPropertyState
 {
+    protected bool IsActived { get; set; } = false;
     protected abstract List<IDisposable> _subscriptions { get; init; }
 
     public abstract void Activate();
@@ -94,5 +99,6 @@ internal abstract class RxPropertyState
     public virtual void DeActivate()
     {
         foreach (var subscription in _subscriptions) subscription.Dispose();
+        IsActived = false;
     }
 }

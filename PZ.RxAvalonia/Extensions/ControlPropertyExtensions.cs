@@ -288,7 +288,7 @@ public static class ControlPropertyExtensions
         this TItemsControl control,
         Func<TItem, Control> build) where TItemsControl : ItemsControl
     {
-        control.ItemTemplate = control.ItemTemplate = new FuncDataTemplate<TItem>((val, _) => build(val));
+        control.ItemTemplate = new FuncDataTemplate<TItem>((val, _) => build(val));
         return control;
     }
 
