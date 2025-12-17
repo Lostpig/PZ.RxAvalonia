@@ -2,8 +2,6 @@
 using Avalonia.Layout;
 using PZ.RxAvalonia.Reactive;
 using System.Data;
-using System.Diagnostics.Metrics;
-using System.Reactive;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
 

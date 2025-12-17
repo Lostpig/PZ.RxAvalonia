@@ -44,24 +44,24 @@ internal class RxEventView : ComponentBase
             );
     }
 
-    protected override void OnCreated()
+    protected override IEnumerable<IDisposable> WhenActivate()
     {
-        base.OnCreated();
+        return [
+            OnOpenImage.WithLatestFrom(SelectedFile)
+                .Where(t => !string.IsNullOrEmpty(t.Second))
+                .Select(t => LoadImage(t.Second))
+                .Subscribe(ImageSource),
 
-        OnOpenImage.WithLatestFrom(SelectedFile)
-            .Where(t => !string.IsNullOrEmpty(t.Second))
-            .Select(t => LoadImage(t.Second))
-            .Subscribe(ImageSource);
+            OnSelectFile.Select(_ => SelectFile())
+                .Concat()
+                .Subscribe(SelectedFile),
 
-        OnSelectFile.Select(_ => SelectFile())
-            .Concat()
-            .Subscribe(SelectedFile);
-
-        OnToMd5.WithLatestFrom(Text)
-            .Select(t => t.Second)
-            .WhereNotEmpty(true)
-            .Select(ToMd5)
-            .Subscribe(Md5Text);
+            OnToMd5.WithLatestFrom(Text)
+                .Select(t => t.Second)
+                .WhereNotEmpty(true)
+                .Select(ToMd5)
+                .Subscribe(Md5Text)
+            ];
     }
 
     private readonly BehaviorSubject<string> SelectedFile = new(string.Empty);

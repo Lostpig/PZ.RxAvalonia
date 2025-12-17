@@ -414,6 +414,12 @@ public static class ControlPropertyExtensions
 
         return control;
     }
+    public static TElement ToolTip<TElement, TValue>(this TElement control, Func<TValue> func)
+        where TElement : Control
+    {
+        static void setter(TElement c, TValue v) => c[Avalonia.Controls.ToolTip.TipProperty] = v;
+        return control._set(setter, func);
+    }
 
     /// <summary>
     /// Adds flyout to button and activates it on button click
