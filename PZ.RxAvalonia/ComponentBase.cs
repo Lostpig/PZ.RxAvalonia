@@ -5,6 +5,8 @@ using Avalonia.Styling;
 using Avalonia.Threading;
 using System.Collections.Immutable;
 using System.Diagnostics;
+using System.Diagnostics.CodeAnalysis;
+using System.Reflection;
 
 namespace PZ.RxAvalonia;
 
@@ -24,6 +26,7 @@ public enum ViewInitializationStrategy
     Immediate
 }
 
+[DynamicallyAccessedMembers(DynamicallyAccessedMemberTypes.PublicProperties | DynamicallyAccessedMemberTypes.NonPublicProperties | DynamicallyAccessedMemberTypes.NonPublicFields)]
 public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeComponent
 {
     internal readonly List<RxPropertyState> _rxPropStates = [];
@@ -38,6 +41,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
     protected ComponentBase(ViewInitializationStrategy initializationStrategy)
     {
+        InjectServices();
         OnCreated();
         if (initializationStrategy == ViewInitializationStrategy.Immediate)
         {
@@ -161,6 +165,54 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         foreach (var s in _subscriptions) s.Dispose();
     }
 
+    [RequiresUnreferencedCode("Method InjectServices is using reflection to iterate through Type hierarchy. That's can not be analyzed statically.")]
+    private void InjectServices()
+    {
+        var componentType = GetType();
+        var types = new List<Type>();
+
+        // Walk up the inheritance chain, but stop at object
+        for (var type = componentType; type != null && type != typeof(object); type = type.BaseType)
+        {
+            types.Add(type);
+        }
+
+        // Go from base to derived so base properties are injected first
+        types.Reverse();
+
+        foreach (var type in types)
+        {
+            var injectProps = type.GetProperties(BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.DeclaredOnly)
+                .Where(x => x.GetCustomAttribute(typeof(InjectAttribute)) != null)
+                .ToArray();
+
+            foreach (var propertyInfo in injectProps)
+            {
+                var service = GetServiceFromProvider(propertyInfo.PropertyType);
+
+                if (propertyInfo.CanWrite)
+                {
+                    propertyInfo.SetValue(this, service);
+                }
+                else
+                {
+                    if (type.GetField($"<{propertyInfo.Name}>k__BackingField", BindingFlags.NonPublic | BindingFlags.Instance) is { } backingField)
+                        backingField.SetValue(this, service);
+                    else
+                        throw new InvalidOperationException($"Can't inject {service?.GetType()} service. Ensure that target property: {type.Name}.{propertyInfo.Name} has public setter or it's an auto-property");
+                }
+            }
+        }
+    }
+
+    private static object? GetServiceFromProvider(Type serviceType)
+    {
+        if (AppBuilderExtensions.ServiceProvider == null)
+            throw new InvalidOperationException("Please set Service Provider by calling UseServiceProvider on AppBuilder");
+
+        return AppBuilderExtensions.ServiceProvider.GetService(serviceType);
+    }
+
     #region Hot reload stuff
     public void Reload()
     {
@@ -185,9 +237,22 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
             InvalidateVisual();
         });
     }
-
     protected virtual void OnBeforeReload()
     {
+    }
+
+    protected override void OnAttachedToVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnAttachedToVisualTree(e);
+        HotReloadManager.RegisterInstance(this);
+        EnsureInitialized();
+    }
+
+
+    protected override void OnDetachedFromVisualTree(VisualTreeAttachmentEventArgs e)
+    {
+        base.OnDetachedFromVisualTree(e);
+        HotReloadManager.UnregisterInstance(this);
     }
     #endregion
 }
