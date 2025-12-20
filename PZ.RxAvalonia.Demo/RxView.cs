@@ -11,7 +11,7 @@ using System.Text;
 
 namespace PZ.RxAvalonia.Demo;
 
-internal class RxEventView : ComponentBase
+internal class RxView : ComponentBase
 {
     protected override Control Build()
     {
@@ -89,13 +89,13 @@ internal class RxEventView : ComponentBase
 
         return "";
     }
-    private string ToMd5(string text)
+    private static string ToMd5(string text)
     {
         var bytes = Encoding.UTF8.GetBytes(text);
-        var hashBytes = MD5.Create().ComputeHash(bytes);
+        var hashBytes = MD5.HashData(bytes);
         return Convert.ToHexString(hashBytes);
     }
-    private Bitmap? LoadImage(string file)
+    private static Bitmap? LoadImage(string file)
     {
         FileInfo fileInfo = new FileInfo(file);
         bool isImage = fileInfo.Extension switch

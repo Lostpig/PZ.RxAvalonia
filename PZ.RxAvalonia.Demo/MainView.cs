@@ -58,11 +58,14 @@ internal class MainView : ComponentBase
                                     new TextBox().Text("Left2").Dock(Dock.Left)))
                     ),
                 new TabItem()
-                    .Header("Rx")
-                    .Content(new Border().Child(new RxDemoView())),
+                    .Header("Demo")
+                    .Content(new Border().Child(new DemoView())),
                 new TabItem()
-                    .Header("Rx Event")
-                    .Content(new Border().Child(new RxEventView()))
+                    .Header("Rx")
+                    .Content(new Border().Child(new RxView())),
+                new TabItem()
+                    .Header("Mvu")
+                    .Content(new Border().Child(new MvuView()))
             );
     }
 }

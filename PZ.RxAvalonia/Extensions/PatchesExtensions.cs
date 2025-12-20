@@ -49,50 +49,50 @@ public static class PatchesExtensions
     }
 
     public static T ValueEx<T>(this T control, ISubject<decimal> subject)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
         var nbSubject = new NullableSubject<decimal>(subject);
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, nbSubject);
+        return control._set(NumericUpDown.ValueProperty!, nbSubject);
     }
     public static T ValueEx<T>(this T control, IObservable<decimal> obs)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, obs.Select(x => (decimal?)x));
+        return control._set(NumericUpDown.ValueProperty!, obs.Select(x => (decimal?)x));
     }
     public static T ValueEx<T>(this T control, ISubject<int> subject)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
         var nbSubject = new NullableSubject<decimal>(
                 subject.Select(x => (decimal)x),
                 Observer.Create<decimal>(x => subject.OnNext((int)x))
             );
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, nbSubject);
+        return control._set(NumericUpDown.ValueProperty!, nbSubject);
     }
     public static T ValueEx<T>(this T control, ISubject<double> subject)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
         var nbSubject = new NullableSubject<decimal>(
                 subject.Select(x => (decimal)x),
                 Observer.Create<decimal>(x => subject.OnNext((double)x))
             );
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, nbSubject);
+        return control._set(NumericUpDown.ValueProperty!, nbSubject);
     }
     public static T ValueEx<T>(this T control, ISubject<float> subject)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
         var nbSubject = new NullableSubject<decimal>(
                 subject.Select(x => (decimal)x),
                 Observer.Create<decimal>(x => subject.OnNext((float)x))
             );
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, nbSubject);
+        return control._set(NumericUpDown.ValueProperty!, nbSubject);
     }
     public static T ValueEx<T>(this T control, ISubject<long> subject)
-        where T : Avalonia.Controls.NumericUpDown
+        where T : NumericUpDown
     {
         var nbSubject = new NullableSubject<decimal>(
                 subject.Select(x => (decimal)x),
                 Observer.Create<decimal>(x => subject.OnNext((long)x))
             );
-        return control._set(Avalonia.Controls.NumericUpDown.ValueProperty!, nbSubject);
+        return control._set(NumericUpDown.ValueProperty!, nbSubject);
     }
 }

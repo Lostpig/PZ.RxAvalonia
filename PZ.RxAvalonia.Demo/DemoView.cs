@@ -7,7 +7,7 @@ using System.Reactive.Subjects;
 
 namespace PZ.RxAvalonia.Demo;
 
-public class RxDemoView : ComponentBase
+public class DemoView : ComponentBase
 {
     RxDemoData data = new();
 
@@ -21,7 +21,7 @@ public class RxDemoView : ComponentBase
                     .Text(() => data.Title),
                 new Button()
                     .Content("Change Title")
-                    .OnClick(_ => ChangeTitle())
+                    .OnClick(_ => UpdateTitle())
             );
     }
     private Control BuildCounter()
@@ -71,8 +71,6 @@ public class RxDemoView : ComponentBase
 
     protected override Control Build()
     {
-        UpdateState();
-
         return new StackPanel()
             .Orientation(Orientation.Vertical)
             .Spacing(10)
@@ -85,7 +83,7 @@ public class RxDemoView : ComponentBase
     }
 
     // func property need call UpdateState to render
-    void ChangeTitle()
+    void UpdateTitle()
     {
         UpdateState();
     }
@@ -104,7 +102,6 @@ public class RxDemoData
     public RxDemoData()
     {
         RxCounter = new(1);
-        
 
         RxCounter.Subscribe(i =>
         {
