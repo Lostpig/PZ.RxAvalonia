@@ -12,7 +12,7 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     protected readonly TControl _control;
     protected readonly AvaloniaProperty<TValue>? _avap;
     protected readonly Action<TControl, TValue>? _setter;
-    protected override List<IDisposable> _subscriptions { get; init; } = [];
+    protected override List<IDisposable> Subscriptions { get; init; } = [];
     private TValue? _cacheValue;
 
     public RxPropertyState(TControl control, Action<TControl, TValue> setter, ISubject<TValue> subject)
@@ -48,11 +48,11 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     {
         if (IsActived) return;
 
-        _subscriptions.Add(_obs.Subscribe(SetValue));
+        Subscriptions.Add(_obs.Subscribe(SetValue));
         if (_avap != null && _changed != null)
         {
             var avapObs = _control.GetObservable(_avap);
-            _subscriptions.Add(avapObs.Subscribe(_changed));
+            Subscriptions.Add(avapObs.Subscribe(_changed));
         }
         IsActived = true;
     }
@@ -92,13 +92,13 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
 internal abstract class RxPropertyState
 {
     protected bool IsActived { get; set; } = false;
-    protected abstract List<IDisposable> _subscriptions { get; init; }
+    protected abstract List<IDisposable> Subscriptions { get; init; }
 
     public abstract void Activate();
 
     public virtual void DeActivate()
     {
-        foreach (var subscription in _subscriptions) subscription.Dispose();
+        foreach (var subscription in Subscriptions) subscription.Dispose();
         IsActived = false;
     }
 }

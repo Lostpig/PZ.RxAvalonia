@@ -1,9 +1,8 @@
 <Solution>
   <Folder Name="/解决方案项/">
+    <File Path="Documents/api-cn.md" />
+    <File Path="Documents/readme-cn.md" />
     <File Path="readme.md" />
-  </Folder>
-  <Folder Name="/解决方案项/documents/">
-    <File Path="readme-cn.md" />
   </Folder>
   <Project Path="PZ.ExtensionGenerator/PZ.ExtensionGenerator.csproj" Id="ed07885e-3887-48a5-b11d-71e39bf2e276" />
   <Project Path="PZ.RxAvalonia.Demo/PZ.RxAvalonia.Demo.csproj" />

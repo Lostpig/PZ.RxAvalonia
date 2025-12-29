@@ -11,6 +11,7 @@ var lifetime = new ClassicDesktopStyleApplicationLifetime { Args = args, Shutdow
 var appBuilder = AppBuilder.Configure<Application>()
     .UsePlatformDetect()
     .AfterSetup(b => b.Instance?.Styles.Add(new FluentTheme()))
+    .UseHotReload()
     .SetupWithLifetime(lifetime);
 
 // var icon = AssetLoader.Open(new Uri($"avares://PZPK.Desktop/avalonia-logo.ico"));

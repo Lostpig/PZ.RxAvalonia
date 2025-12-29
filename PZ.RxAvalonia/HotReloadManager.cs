@@ -2,6 +2,7 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
 
+[assembly: System.Reflection.Metadata.MetadataUpdateHandler(typeof(PZ.RxAvalonia.HotReloadManager))]
 namespace PZ.RxAvalonia;
 
 public static class HotReloadManager
