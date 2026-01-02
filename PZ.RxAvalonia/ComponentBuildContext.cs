@@ -14,14 +14,15 @@ internal enum ComponentBuildState
 
 internal class ComponentBuildContext : IDisposable
 {
-    private static readonly Stack<ComponentBuildContext> ComponentStack = new();
-    private static ComponentBuildContext? _currentContext;
+    internal static readonly Stack<ComponentBuildContext> ComponentStack = new();
+    internal static ComponentBuildContext? _currentContext;
 
     internal static ComponentBase? CurrentComponent => _currentContext?._component;
     internal static ComponentBuildState? CurrentState => _currentContext?._state;
 
     private readonly ComponentBase _component;
     private ComponentBuildState _state;
+    public ComponentBase Component => _component;
 
     public ComponentBuildContext(ComponentBase component)
     {

@@ -1,6 +1,7 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Styling;
+using PZ.RxAvalonia.Styles;
 using System.Reactive.Linq;
 
 namespace PZ.RxAvalonia;
@@ -75,4 +76,38 @@ public static class StylePropertyExtensions
         return style;
     }
 
+    public static Style Setters(this Style style, params SetterBase[] setters)
+    {
+        foreach (var setter in setters) 
+        {
+            style.Setters.Add(setter);
+        }
+        return style;
+    }
+    public static Style SetterEx(this Style style, AvaloniaProperty avap, Func<object> func)
+    {
+        var component = ComponentBuildContext.CurrentComponent ?? throw new InvalidOperationException("Current component is not set! ");
+        if (ComponentBuildContext.CurrentState != ComponentBuildState.StyleBuilding)
+        {
+            throw new InvalidOperationException("Current invoke outside of BuildStyles! ");
+        }
+
+        var state = new StyleState(style, func, avap);
+        component.AddStyleState(state);
+
+        return style;
+    }
+    public static Style SetterEx(this Style style, AvaloniaProperty avap, IObservable<object> obs)
+    {
+        var component = ComponentBuildContext.CurrentComponent ?? throw new InvalidOperationException("Current component is not set! ");
+        if (ComponentBuildContext.CurrentState != ComponentBuildState.StyleBuilding)
+        {
+            throw new InvalidOperationException("Current invoke outside of BuildStyles! ");
+        }
+
+        var state = new StyleState(style, obs, avap);
+        component.AddStyleState(state);
+
+        return style;
+    }
 }

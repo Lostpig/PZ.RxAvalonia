@@ -10,7 +10,10 @@ var lifetime = new ClassicDesktopStyleApplicationLifetime { Args = args, Shutdow
 
 var appBuilder = AppBuilder.Configure<Application>()
     .UsePlatformDetect()
-    .AfterSetup(b => b.Instance?.Styles.Add(new FluentTheme()))
+    .AfterSetup(b => {
+        b.Instance?.Styles.Add(new FluentTheme());
+        Resources.AddAppResources(b.Instance!);
+    })
     .UseHotReload()
     .SetupWithLifetime(lifetime);
 

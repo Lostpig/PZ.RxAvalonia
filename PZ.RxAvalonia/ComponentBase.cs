@@ -1,8 +1,12 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
+using Avalonia.Media;
 using Avalonia.Styling;
 using Avalonia.Threading;
+using PZ.RxAvalonia.Helpers;
+using PZ.RxAvalonia.Styles;
+using System;
 using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
@@ -31,6 +35,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 {
     internal readonly List<RxPropertyState> _rxPropStates = [];
     internal readonly List<FuncPropertyState> _funcPropStates = [];
+    internal readonly List<StyleState> _styleStates = [];
     private readonly List<IDisposable> _subscriptions = [];
     internal List<IDeclarativeComponent> DependentViews { get; set; } = [];
     private INameScope? _nameScope;
@@ -49,6 +54,49 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         }
     }
     protected ComponentBase() : this(ViewInitializationStrategy.Immediate) { }
+
+    protected T StaticResource<T>(object key, Func<object?, T> converter, IResourceHost? anchor = null)
+    {
+        anchor ??= this;
+        object? resource;
+        if (anchor.TryFindResource(key, out resource) && resource != null)
+        {
+            if (resource is T t) return t;
+            return converter(resource);
+        }
+        if (ComponentBuildContext.CurrentState == ComponentBuildState.StyleBuilding 
+            || ComponentBuildContext.CurrentState == ComponentBuildState.ViewBuilding)
+        {
+            var parentContext = ComponentBuildContext.ComponentStack.Last();
+            if (parentContext != null) 
+            {
+                if (parentContext.Component.TryFindResource(key, out resource) && resource != null)
+                {
+                    if (resource is T t) return t;
+                    return converter(resource);
+                }
+            }
+        }
+        if (Application.Current!.TryFindResource(key, out resource) && resource != null)
+        {
+            if (resource is T t) return t;
+            return converter(resource);
+        }
+
+        return converter(null);
+    }
+    protected IBrush StaticColor(object key, IResourceHost? anchor = null)
+    {
+        return StaticResource(key, ResourceHelpers.BrushConverter, anchor);
+    }
+    protected IObservable<T> DynamicResource<T>(object key, Func<object?, T> converter, IResourceHost? anchor = null) 
+    {
+        return ResourceHelpers.DynamicResource<T>(key, anchor ?? this, converter);
+    }
+    protected IObservable<IBrush> DynamicColor(object key, IResourceHost? anchor = null)
+    {
+        return DynamicResource<IBrush>(key, ResourceHelpers.BrushConverter, anchor);
+    }
 
     public event Action? ViewInitialized;
     private bool _isInitialized = false;
@@ -132,6 +180,9 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
             foreach (var funcPropState in _funcPropStates)
                 funcPropState.UpdateValue();
+
+            foreach (var styleState in _styleStates)
+                styleState.UpdateValue();
         }
         finally
         {
@@ -151,17 +202,25 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         if (!_funcPropStates.Contains(state))
             _funcPropStates.Add(state);
     }
+    internal void AddStyleState(StyleState state)
+    {
+        ArgumentNullException.ThrowIfNull(state);
+        if (!_styleStates.Contains(state))
+            _styleStates.Add(state);
+    }
 
     protected override void OnLoaded(RoutedEventArgs e)
     {
         base.OnLoaded(e);
         foreach (var s in _rxPropStates) s.Activate();
+        foreach (var s in _styleStates) s.Activate();
         _subscriptions.AddRange(WhenActivate());
     }
     protected override void OnUnloaded(RoutedEventArgs e)
     {
         base.OnUnloaded(e);
         foreach (var s in _rxPropStates) s.DeActivate();
+        foreach (var s in _styleStates) s.DeActivate();
         foreach (var s in _subscriptions) s.Dispose();
     }
 
@@ -214,11 +273,23 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     }
 
     #region Hot reload stuff
+    private void ClearPropStates()
+    {
+        foreach (var r in _rxPropStates) r.DeActivate();
+        foreach (var s in _styleStates) s.DeActivate();
+        foreach (var s in _subscriptions) s.Dispose();
+
+        _rxPropStates.Clear();
+        _funcPropStates.Clear();
+        _styleStates.Clear();
+        _subscriptions.Clear();
+    }
+
     public void Reload()
     {
         Dispatcher.UIThread.InvokeAsync(() =>
         {
-            _rxPropStates.Clear();
+            ClearPropStates();
             OnBeforeReload();
             SetValue(ChildProperty, null);
             VisualChildren.Clear();
@@ -231,6 +302,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
             Initialize();
             DataContext = oldDataContext; // set DataContext back
+            _subscriptions.AddRange(WhenActivate());
 
             InvalidateArrange();
             InvalidateMeasure();
