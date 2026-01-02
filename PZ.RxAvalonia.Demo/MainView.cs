@@ -68,7 +68,10 @@ internal class MainView : ComponentBase
                     .Content(new Border().Child(new MvuView())),
                 new TabItem()
                     .Header("Style")
-                    .Content(new Border().Child(new StyleView()))
+                    .Content(new Border().Child(new StyleView())),
+                new TabItem()
+                    .Header("Data Valid")
+                    .Content(new Border().Child(new DataValidView()))
             );
     }
 }

@@ -18,7 +18,7 @@ internal class RxPropertyState<TControl, TValue> : RxPropertyState where TContro
     public RxPropertyState(TControl control, Action<TControl, TValue> setter, ISubject<TValue> subject)
         : this(control, subject, subject, setter, null) { }
     public RxPropertyState(TControl control, AvaloniaProperty<TValue> avap, ISubject<TValue> subject)
-        : this(control, subject, subject, null, avap) {}
+        : this(control, subject, subject, null, avap) { }
     public RxPropertyState(TControl control, Action<TControl, TValue> setter, IObservable<TValue> obs)
         : this(control, obs, null, setter, null) { }
     public RxPropertyState(TControl control, AvaloniaProperty<TValue> avap, IObservable<TValue> obs)

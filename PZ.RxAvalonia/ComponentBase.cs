@@ -4,10 +4,12 @@ using Avalonia.Interactivity;
 using Avalonia.Media;
 using Avalonia.Styling;
 using Avalonia.Threading;
+using PZ.RxAvalonia.DataValidations;
 using PZ.RxAvalonia.Helpers;
 using PZ.RxAvalonia.Styles;
 using System;
 using System.Collections.Immutable;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
@@ -40,6 +42,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     internal List<IDeclarativeComponent> DependentViews { get; set; } = [];
     private INameScope? _nameScope;
     protected INameScope Scope => _nameScope ??= new NameScope();
+    private bool _isRegisterDataValidation = false;
 
     protected abstract Control Build();
     protected virtual StyleGroup? BuildStyles() => null;
@@ -67,7 +70,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         if (ComponentBuildContext.CurrentState == ComponentBuildState.StyleBuilding 
             || ComponentBuildContext.CurrentState == ComponentBuildState.ViewBuilding)
         {
-            var parentContext = ComponentBuildContext.ComponentStack.Last();
+            var parentContext = ComponentBuildContext.ComponentStack.LastOrDefault();
             if (parentContext != null) 
             {
                 if (parentContext.Component.TryFindResource(key, out resource) && resource != null)
@@ -96,6 +99,24 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     protected IObservable<IBrush> DynamicColor(object key, IResourceHost? anchor = null)
     {
         return DynamicResource<IBrush>(key, ResourceHelpers.BrushConverter, anchor);
+    }
+    protected void RegisterDataValidation()
+    {
+        ComponentValidation.Register(this);
+        _isRegisterDataValidation = true;
+    }
+    protected bool CheckDataValidation()
+    {
+        if (_isRegisterDataValidation) 
+        {
+            var validation = ComponentValidation.Get(this);
+            if (validation != null)
+            {
+                return validation.IsValid();
+            }
+        }
+
+        return true;
     }
 
     public event Action? ViewInitialized;
@@ -215,6 +236,11 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         foreach (var s in _rxPropStates) s.Activate();
         foreach (var s in _styleStates) s.Activate();
         _subscriptions.AddRange(WhenActivate());
+
+        if (_isRegisterDataValidation)
+        {
+            ComponentValidation.Get(this)?.ActivateAll();
+        }
     }
     protected override void OnUnloaded(RoutedEventArgs e)
     {
@@ -222,6 +248,11 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         foreach (var s in _rxPropStates) s.DeActivate();
         foreach (var s in _styleStates) s.DeActivate();
         foreach (var s in _subscriptions) s.Dispose();
+
+        if (_isRegisterDataValidation)
+        {
+            ComponentValidation.Get(this)?.DeactivateAll();
+        }
     }
 
     [RequiresUnreferencedCode("Method InjectServices is using reflection to iterate through Type hierarchy. That's can not be analyzed statically.")]
