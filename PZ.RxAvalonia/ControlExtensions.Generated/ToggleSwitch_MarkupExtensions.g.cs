@@ -16,104 +16,104 @@ public static partial class ToggleSwitch_MarkupExtensions
  // OffContent
 
 /*ValueSetterGenerator*/
-public static T OffContent<T>(this T control, System.Object value) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.ToggleSwitch 
 {
     control.OffContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OffContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OffContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OffContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OffContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.ToggleSwitch 
    => control._setEx(Avalonia.Controls.ToggleSwitch.OffContentProperty!, obs, changed);
 
 
  // OffContentTemplate
 
 /*ValueSetterGenerator*/
-public static T OffContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ToggleSwitch 
 {
     control.OffContentTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OffContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OffContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ToggleSwitch 
+public static T OffContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.ToggleSwitch 
    => control._setEx(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, obs, changed);
 
 
  // OnContent
 
 /*ValueSetterGenerator*/
-public static T OnContent<T>(this T control, System.Object value) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.ToggleSwitch 
 {
     control.OnContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OnContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OnContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OnContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OnContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.ToggleSwitch 
    => control._setEx(Avalonia.Controls.ToggleSwitch.OnContentProperty!, obs, changed);
 
 
  // OnContentTemplate
 
 /*ValueSetterGenerator*/
-public static T OnContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ToggleSwitch 
 {
     control.OnContentTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OnContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OnContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.ToggleSwitch 
    => control._set(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ToggleSwitch 
+public static T OnContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.ToggleSwitch 
    => control._setEx(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, obs, changed);
 
 
@@ -148,7 +148,7 @@ public static T KnobTransitions<T>(this T control, IObservable<Avalonia.Animatio
  // OffContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OffContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OffContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -159,7 +159,7 @@ public static Style<T> OffContent<T>(this Style<T> style, IBinding binding) wher
  // OffContentTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OffContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OffContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -170,7 +170,7 @@ public static Style<T> OffContentTemplate<T>(this Style<T> style, IBinding bindi
  // OnContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OnContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OnContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -181,7 +181,7 @@ public static Style<T> OnContent<T>(this Style<T> style, IBinding binding) where
  // OnContentTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OnContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OnContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

@@ -7,6 +7,7 @@ using System.Reactive.Subjects;
 
 namespace PZ.RxAvalonia.Demo;
 
+
 internal class StyleView : ComponentBase
 {
     protected override StyleGroup? BuildStyles()

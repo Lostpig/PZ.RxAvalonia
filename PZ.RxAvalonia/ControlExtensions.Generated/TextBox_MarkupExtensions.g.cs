@@ -198,78 +198,78 @@ public static T PasswordChar<T>(this T control, IObservable<System.Char> obs, IO
  // SelectionBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 {
     control.SelectionBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TextBox 
+public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TextBox 
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
+public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.SelectionBrushProperty!, obs, changed);
 
 
  // SelectionForegroundBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 {
     control.SelectionForegroundBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TextBox 
+public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TextBox 
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
+public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, obs, changed);
 
 
  // CaretBrush
 
 /*ValueSetterGenerator*/
-public static T CaretBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static T CaretBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 {
     control.CaretBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T CaretBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TextBox 
+public static T CaretBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TextBox 
+public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T CaretBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBox 
+public static T CaretBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.CaretBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBox 
+public static T CaretBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.CaretBrushProperty!, obs, changed);
 
 
@@ -432,26 +432,26 @@ public static T MinLines<T>(this T control, IObservable<System.Int32> obs, IObse
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.TextBox 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.TextBox 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.TextBox 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.TextBox 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBox 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBox 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.TextProperty!, obs, changed);
 
 
@@ -614,26 +614,26 @@ public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs,
  // Watermark
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String value) where T : Avalonia.Controls.TextBox 
+public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.TextBox 
 {
     control.Watermark = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.TextBox 
+public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.TextBox 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBox 
+public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBox 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.WatermarkProperty!, obs, changed);
 
 
@@ -692,52 +692,52 @@ public static T NewLine<T>(this T control, IObservable<System.String> obs, IObse
  // InnerLeftContent
 
 /*ValueSetterGenerator*/
-public static T InnerLeftContent<T>(this T control, System.Object value) where T : Avalonia.Controls.TextBox 
+public static T InnerLeftContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.TextBox 
 {
     control.InnerLeftContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T InnerLeftContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.TextBox 
+public static T InnerLeftContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerLeftContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.TextBox 
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerLeftContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T InnerLeftContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TextBox 
+public static T InnerLeftContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerLeftContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TextBox 
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.InnerLeftContentProperty!, obs, changed);
 
 
  // InnerRightContent
 
 /*ValueSetterGenerator*/
-public static T InnerRightContent<T>(this T control, System.Object value) where T : Avalonia.Controls.TextBox 
+public static T InnerRightContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.TextBox 
 {
     control.InnerRightContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T InnerRightContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.TextBox 
+public static T InnerRightContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerRightContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.TextBox 
+public static T InnerRightContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerRightContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T InnerRightContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TextBox 
+public static T InnerRightContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.TextBox 
    => control._set(Avalonia.Controls.TextBox.InnerRightContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TextBox 
+public static T InnerRightContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.TextBox 
    => control._setEx(Avalonia.Controls.TextBox.InnerRightContentProperty!, obs, changed);
 
 
@@ -998,7 +998,7 @@ public static Style<T> PasswordChar<T>(this Style<T> style, IBinding binding) wh
  // SelectionBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1009,7 +1009,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) 
  // SelectionForegroundBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1020,7 +1020,7 @@ public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, IBinding
  // CaretBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBox 
+public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.CaretBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1097,7 +1097,7 @@ public static Style<T> MinLines<T>(this Style<T> style, IBinding binding) where 
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.TextBox 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1174,7 +1174,7 @@ public static Style<T> LetterSpacing<T>(this Style<T> style, IBinding binding) w
  // Watermark
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.TextBox 
+public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.WatermarkProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1207,7 +1207,7 @@ public static Style<T> NewLine<T>(this Style<T> style, IBinding binding) where T
  // InnerLeftContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.TextBox 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -1218,7 +1218,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding
  // InnerRightContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.TextBox 
+public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

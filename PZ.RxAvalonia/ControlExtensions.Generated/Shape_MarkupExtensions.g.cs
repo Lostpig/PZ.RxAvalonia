@@ -16,26 +16,26 @@ public static partial class Shape_MarkupExtensions
  // Fill
 
 /*ValueSetterGenerator*/
-public static T Fill<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Shapes.Shape 
+public static T Fill<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Shapes.Shape 
 {
     control.Fill = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Fill<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Shapes.Shape 
+public static T Fill<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.FillProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Shapes.Shape 
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.FillProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Shapes.Shape 
+public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.FillProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Shapes.Shape 
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Shapes.Shape 
    => control._setEx(Avalonia.Controls.Shapes.Shape.FillProperty!, obs, changed);
 
 
@@ -68,26 +68,26 @@ public static T Stretch<T>(this T control, IObservable<Avalonia.Media.Stretch> o
  // Stroke
 
 /*ValueSetterGenerator*/
-public static T Stroke<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Shapes.Shape 
+public static T Stroke<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Shapes.Shape 
 {
     control.Stroke = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Stroke<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Shapes.Shape 
+public static T Stroke<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Shapes.Shape 
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Shapes.Shape 
+public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Shapes.Shape 
    => control._set(Avalonia.Controls.Shapes.Shape.StrokeProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Shapes.Shape 
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Shapes.Shape 
    => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeProperty!, obs, changed);
 
 
@@ -226,7 +226,7 @@ public static T StrokeJoin<T>(this T control, IObservable<Avalonia.Media.PenLine
  // Fill
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Fill<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> Fill<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.FillProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -248,7 +248,7 @@ public static Style<T> Stretch<T>(this Style<T> style, IBinding binding) where T
  // Stroke
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Stroke<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> Stroke<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

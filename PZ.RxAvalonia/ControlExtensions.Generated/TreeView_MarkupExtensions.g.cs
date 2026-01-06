@@ -42,26 +42,26 @@ public static T AutoScrollToSelectedItem<T>(this T control, IObservable<System.B
  // SelectedItem
 
 /*ValueSetterGenerator*/
-public static T SelectedItem<T>(this T control, System.Object value) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, System.Object? value) where T : Avalonia.Controls.TreeView 
 {
     control.SelectedItem = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectedItem<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectedItem<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectedItem<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.TreeView 
    => control._set(Avalonia.Controls.TreeView.SelectedItemProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectedItem<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.TreeView 
+public static T SelectedItem<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.TreeView 
    => control._setEx(Avalonia.Controls.TreeView.SelectedItemProperty!, obs, changed);
 
 

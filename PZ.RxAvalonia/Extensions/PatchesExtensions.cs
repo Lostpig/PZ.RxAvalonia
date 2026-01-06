@@ -26,7 +26,8 @@ public static class PatchesExtensions
         return control._set(ItemsControl.ItemsSourceProperty!, obs: list.Current);
     }
 
-    public static TControl SelectedItemEx<TControl, TValue>(this TControl control, ISubject<TValue> subject) 
+    /*
+    public static TControl SelectedItemEx<TControl, TValue>(this TControl control, ISubject<TValue?> subject) 
             where TControl : SelectingItemsControl
     {
         var objSubject = new ObjectSubject<TValue>(subject);
@@ -36,6 +37,28 @@ public static class PatchesExtensions
         where TControl : SelectingItemsControl
     {
         return control._set(SelectingItemsControl.SelectedItemProperty!, obs.Select(x => x is null ? null : (object)x));
+    }
+    */
+    public static TControl SelectedValueEx<TControl, TValue>(this TControl control, ISubject<TValue?> subject)
+        where TControl : SelectingItemsControl
+    {
+        var objSubject = new ObjectSubject<TValue>(subject);
+        return control._set(SelectingItemsControl.SelectedValueProperty!, objSubject);
+    }
+    public static TControl SelectedValueEx<TControl, TValue>(this TControl control, IObservable<TValue> obs)
+        where TControl : SelectingItemsControl
+    {
+        return control._set(SelectingItemsControl.SelectedValueProperty!, obs.Select(x => x is null ? null : (object)x));
+    }
+    public static DatePicker SelectedDateEx(this DatePicker control, ISubject<DateTimeOffset> subject)
+    {
+        var nbSubject = new NullableSubject<DateTimeOffset>(subject);
+        return control._set(DatePicker.SelectedDateProperty!, nbSubject);
+    }
+    public static Calendar SelectedDateEx(this Calendar control, ISubject<DateTime> subject)
+    {
+        var nbSubject = new NullableSubject<DateTime>(subject);
+        return control._set(Calendar.SelectedDateProperty!, nbSubject);
     }
 
     public static T IsCheckedEx<T>(this T control, ISubject<bool> subject) where T : ToggleButton

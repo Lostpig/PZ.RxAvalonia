@@ -16,78 +16,78 @@ public static partial class Application_MarkupExtensions
  // DataContext
 
 /*ValueSetterGenerator*/
-public static T DataContext<T>(this T control, System.Object value) where T : Avalonia.Application 
+public static T DataContext<T>(this T control, System.Object? value) where T : Avalonia.Application 
 {
     control.DataContext = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T DataContext<T>(this T control, Func<System.Object> func) where T : Avalonia.Application 
+public static T DataContext<T>(this T control, Func<System.Object?> func) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T DataContext<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Application 
+public static T DataContext<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T DataContext<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Application 
+public static T DataContext<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Application 
    => control._set(Avalonia.Application.DataContextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T DataContext<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Application 
+public static T DataContext<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Application 
    => control._setEx(Avalonia.Application.DataContextProperty!, obs, changed);
 
 
  // RequestedThemeVariant
 
 /*ValueSetterGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant value) where T : Avalonia.Application 
+public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant? value) where T : Avalonia.Application 
 {
     control.RequestedThemeVariant = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant> func) where T : Avalonia.Application 
+public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant?> func) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs) where T : Avalonia.Application 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant> subject) where T : Avalonia.Application 
+public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant?> subject) where T : Avalonia.Application 
    => control._set(Avalonia.Application.RequestedThemeVariantProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs, IObserver<Avalonia.Styling.ThemeVariant> changed) where T : Avalonia.Application 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs, IObserver<Avalonia.Styling.ThemeVariant?> changed) where T : Avalonia.Application 
    => control._setEx(Avalonia.Application.RequestedThemeVariantProperty!, obs, changed);
 
 
  // Name
 
 /*ValueSetterGenerator*/
-public static T Name<T>(this T control, System.String value) where T : Avalonia.Application 
+public static T Name<T>(this T control, System.String? value) where T : Avalonia.Application 
 {
     control.Name = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Name<T>(this T control, Func<System.String> func) where T : Avalonia.Application 
+public static T Name<T>(this T control, Func<System.String?> func) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Name<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Application 
+public static T Name<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Name<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Application 
+public static T Name<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Application 
    => control._set(Avalonia.Application.NameProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Name<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Application 
+public static T Name<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Application 
    => control._setEx(Avalonia.Application.NameProperty!, obs, changed);
 
 

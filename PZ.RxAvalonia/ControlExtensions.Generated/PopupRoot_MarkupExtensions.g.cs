@@ -16,26 +16,26 @@ public static partial class PopupRoot_MarkupExtensions
  // Transform
 
 /*ValueSetterGenerator*/
-public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, Avalonia.Media.Transform value)  
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, Avalonia.Media.Transform? value)  
 {
     control.Transform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, Func<Avalonia.Media.Transform> func)  
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, Func<Avalonia.Media.Transform?> func)  
    => control._set(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<Avalonia.Media.Transform> obs)  
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<Avalonia.Media.Transform?> obs)  
    => control._set(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, ISubject<Avalonia.Media.Transform> subject)  
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, ISubject<Avalonia.Media.Transform?> subject)  
    => control._set(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed)  
+public static Avalonia.Controls.Primitives.PopupRoot Transform(this Avalonia.Controls.Primitives.PopupRoot control, IObservable<Avalonia.Media.Transform?> obs, IObserver<Avalonia.Media.Transform?> changed)  
    => control._setEx(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, obs, changed);
 
 
@@ -70,7 +70,7 @@ public static Avalonia.Controls.Primitives.PopupRoot WindowManagerAddShadowHint(
  // Transform
 
 /*ValueStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.PopupRoot> Transform(this Style<Avalonia.Controls.Primitives.PopupRoot> style, Avalonia.Media.Transform value)  
+public static Style<Avalonia.Controls.Primitives.PopupRoot> Transform(this Style<Avalonia.Controls.Primitives.PopupRoot> style, Avalonia.Media.Transform? value)  
 => style._addSetter(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

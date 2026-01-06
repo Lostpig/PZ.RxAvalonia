@@ -16,26 +16,26 @@ public static partial class CalendarItem_MarkupExtensions
  // HeaderBackground
 
 /*ValueSetterGenerator*/
-public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, Avalonia.Media.IBrush value)  
+public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, Avalonia.Media.IBrush? value)  
 {
     control.HeaderBackground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, Func<Avalonia.Media.IBrush> func)  
+public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, Func<Avalonia.Media.IBrush?> func)  
    => control._set(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, IObservable<Avalonia.Media.IBrush> obs)  
+public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, IObservable<Avalonia.Media.IBrush?> obs)  
    => control._set(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, ISubject<Avalonia.Media.IBrush> subject)  
+public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, ISubject<Avalonia.Media.IBrush?> subject)  
    => control._set(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed)  
+public static Avalonia.Controls.Primitives.CalendarItem HeaderBackground(this Avalonia.Controls.Primitives.CalendarItem control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed)  
    => control._setEx(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, obs, changed);
 
 
@@ -70,7 +70,7 @@ public static Avalonia.Controls.Primitives.CalendarItem DayTitleTemplate(this Av
  // HeaderBackground
 
 /*ValueStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.CalendarItem> HeaderBackground(this Style<Avalonia.Controls.Primitives.CalendarItem> style, Avalonia.Media.IBrush value)  
+public static Style<Avalonia.Controls.Primitives.CalendarItem> HeaderBackground(this Style<Avalonia.Controls.Primitives.CalendarItem> style, Avalonia.Media.IBrush? value)  
 => style._addSetter(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

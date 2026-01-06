@@ -68,26 +68,26 @@ public static T TransparencyBackgroundFallback<T>(this T control, IObservable<Av
  // RequestedThemeVariant
 
 /*ValueSetterGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant value) where T : Avalonia.Controls.TopLevel 
+public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant? value) where T : Avalonia.Controls.TopLevel 
 {
     control.RequestedThemeVariant = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant> func) where T : Avalonia.Controls.TopLevel 
+public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant?> func) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs) where T : Avalonia.Controls.TopLevel 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant> subject) where T : Avalonia.Controls.TopLevel 
+public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant?> subject) where T : Avalonia.Controls.TopLevel 
    => control._set(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs, IObserver<Avalonia.Styling.ThemeVariant> changed) where T : Avalonia.Controls.TopLevel 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs, IObserver<Avalonia.Styling.ThemeVariant?> changed) where T : Avalonia.Controls.TopLevel 
    => control._setEx(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, obs, changed);
 
 
@@ -96,26 +96,26 @@ public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.St
  // SystemBarColor
 
 /*AttachedPropertyFuncGenerator*/
-public static T TopLevel_SystemBarColor<T>(this T control, Func<Avalonia.Media.SolidColorBrush> getter) where T : Avalonia.Controls.Control 
+public static T TopLevel_SystemBarColor<T>(this T control, Func<Avalonia.Media.SolidColorBrush?> getter) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.TopLevel.SystemBarColorProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T TopLevel_SystemBarColor<T>(this T control, IObservable<Avalonia.Media.SolidColorBrush> obs) where T : Avalonia.Controls.Control 
+public static T TopLevel_SystemBarColor<T>(this T control, IObservable<Avalonia.Media.SolidColorBrush?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.TopLevel.SystemBarColorProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T TopLevel_SystemBarColor<T>(this T control, ISubject<Avalonia.Media.SolidColorBrush> subject) where T : Avalonia.Controls.Control 
+public static T TopLevel_SystemBarColor<T>(this T control, ISubject<Avalonia.Media.SolidColorBrush?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.TopLevel.SystemBarColorProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T TopLevel_SystemBarColor<T>(this T control, Avalonia.Media.SolidColorBrush value) where T : Avalonia.Controls.Control 
+public static T TopLevel_SystemBarColor<T>(this T control, Avalonia.Media.SolidColorBrush? value) where T : Avalonia.Controls.Control 
 {
     control.SetValue(Avalonia.Controls.TopLevel.SystemBarColorProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T TopLevel_SystemBarColor<T>(this T control, IObservable<Avalonia.Media.SolidColorBrush> obs, IObserver<Avalonia.Media.SolidColorBrush> changed) where T : Avalonia.Controls.Control 
+public static T TopLevel_SystemBarColor<T>(this T control, IObservable<Avalonia.Media.SolidColorBrush?> obs, IObserver<Avalonia.Media.SolidColorBrush?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.TopLevel.SystemBarColorProperty!, obs, changed);
 
 
@@ -226,7 +226,7 @@ public static Style<T> TransparencyBackgroundFallback<T>(this Style<T> style, IB
  // RequestedThemeVariant
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.Styling.ThemeVariant value) where T : Avalonia.Controls.TopLevel 
+public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.Styling.ThemeVariant? value) where T : Avalonia.Controls.TopLevel 
 => style._addSetter(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

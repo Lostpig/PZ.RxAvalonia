@@ -16,26 +16,26 @@ public static partial class Carousel_MarkupExtensions
  // PageTransition
 
 /*ValueSetterGenerator*/
-public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Carousel 
 {
     control.PageTransition = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func) where T : Avalonia.Controls.Carousel 
    => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs) where T : Avalonia.Controls.Carousel 
    => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition?> subject) where T : Avalonia.Controls.Carousel 
    => control._set(Avalonia.Controls.Carousel.PageTransitionProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.Carousel 
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs, IObserver<Avalonia.Animation.IPageTransition?> changed) where T : Avalonia.Controls.Carousel 
    => control._setEx(Avalonia.Controls.Carousel.PageTransitionProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation
  // PageTransition
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Carousel 
+public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Carousel 
 => style._addSetter(Avalonia.Controls.Carousel.PageTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

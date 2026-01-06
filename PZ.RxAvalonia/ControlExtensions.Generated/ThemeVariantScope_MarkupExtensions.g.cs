@@ -16,26 +16,26 @@ public static partial class ThemeVariantScope_MarkupExtensions
  // RequestedThemeVariant
 
 /*ValueSetterGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant value) where T : Avalonia.Controls.ThemeVariantScope 
+public static T RequestedThemeVariant<T>(this T control, Avalonia.Styling.ThemeVariant? value) where T : Avalonia.Controls.ThemeVariantScope 
 {
     control.RequestedThemeVariant = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant> func) where T : Avalonia.Controls.ThemeVariantScope 
+public static T RequestedThemeVariant<T>(this T control, Func<Avalonia.Styling.ThemeVariant?> func) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs) where T : Avalonia.Controls.ThemeVariantScope 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant> subject) where T : Avalonia.Controls.ThemeVariantScope 
+public static T RequestedThemeVariant<T>(this T control, ISubject<Avalonia.Styling.ThemeVariant?> subject) where T : Avalonia.Controls.ThemeVariantScope 
    => control._set(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant> obs, IObserver<Avalonia.Styling.ThemeVariant> changed) where T : Avalonia.Controls.ThemeVariantScope 
+public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.Styling.ThemeVariant?> obs, IObserver<Avalonia.Styling.ThemeVariant?> changed) where T : Avalonia.Controls.ThemeVariantScope 
    => control._setEx(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T RequestedThemeVariant<T>(this T control, IObservable<Avalonia.St
  // RequestedThemeVariant
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.Styling.ThemeVariant value) where T : Avalonia.Controls.ThemeVariantScope 
+public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.Styling.ThemeVariant? value) where T : Avalonia.Controls.ThemeVariantScope 
 => style._addSetter(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

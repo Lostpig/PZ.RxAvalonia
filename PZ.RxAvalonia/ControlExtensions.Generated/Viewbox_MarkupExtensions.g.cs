@@ -68,26 +68,26 @@ public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.S
  // Child
 
 /*ValueSetterGenerator*/
-public static T Child<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.Viewbox 
+public static T Child<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Viewbox 
 {
     control.Child = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Child<T>(this T control, Func<Avalonia.Controls.Control> func) where T : Avalonia.Controls.Viewbox 
+public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Controls.Viewbox 
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Viewbox 
+public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Controls.Viewbox 
    => control._set(Avalonia.Controls.Viewbox.ChildProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Viewbox 
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Controls.Viewbox 
    => control._setEx(Avalonia.Controls.Viewbox.ChildProperty!, obs, changed);
 
 
@@ -118,7 +118,7 @@ public static Style<T> StretchDirection<T>(this Style<T> style, IBinding binding
  // Child
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control value) where T : Avalonia.Controls.Viewbox 
+public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Viewbox 
 => style._addSetter(Avalonia.Controls.Viewbox.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

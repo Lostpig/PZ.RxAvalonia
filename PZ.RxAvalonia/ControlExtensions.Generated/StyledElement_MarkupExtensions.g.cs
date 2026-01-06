@@ -16,78 +16,78 @@ public static partial class StyledElement_MarkupExtensions
  // DataContext
 
 /*ValueSetterGenerator*/
-public static T DataContext<T>(this T control, System.Object value) where T : Avalonia.StyledElement 
+public static T DataContext<T>(this T control, System.Object? value) where T : Avalonia.StyledElement 
 {
     control.DataContext = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T DataContext<T>(this T control, Func<System.Object> func) where T : Avalonia.StyledElement 
+public static T DataContext<T>(this T control, Func<System.Object?> func) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T DataContext<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.StyledElement 
+public static T DataContext<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T DataContext<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.StyledElement 
+public static T DataContext<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.DataContextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T DataContext<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.StyledElement 
+public static T DataContext<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.StyledElement 
    => control._setEx(Avalonia.StyledElement.DataContextProperty!, obs, changed);
 
 
  // Name
 
 /*ValueSetterGenerator*/
-public static T Name<T>(this T control, System.String value) where T : Avalonia.StyledElement 
+public static T Name<T>(this T control, System.String? value) where T : Avalonia.StyledElement 
 {
     control.Name = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Name<T>(this T control, Func<System.String> func) where T : Avalonia.StyledElement 
+public static T Name<T>(this T control, Func<System.String?> func) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Name<T>(this T control, IObservable<System.String> obs) where T : Avalonia.StyledElement 
+public static T Name<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Name<T>(this T control, ISubject<System.String> subject) where T : Avalonia.StyledElement 
+public static T Name<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.NameProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Name<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.StyledElement 
+public static T Name<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.StyledElement 
    => control._setEx(Avalonia.StyledElement.NameProperty!, obs, changed);
 
 
  // Theme
 
 /*ValueSetterGenerator*/
-public static T Theme<T>(this T control, Avalonia.Styling.ControlTheme value) where T : Avalonia.StyledElement 
+public static T Theme<T>(this T control, Avalonia.Styling.ControlTheme? value) where T : Avalonia.StyledElement 
 {
     control.Theme = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Theme<T>(this T control, Func<Avalonia.Styling.ControlTheme> func) where T : Avalonia.StyledElement 
+public static T Theme<T>(this T control, Func<Avalonia.Styling.ControlTheme?> func) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs) where T : Avalonia.StyledElement 
+public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Theme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.StyledElement 
+public static T Theme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme?> subject) where T : Avalonia.StyledElement 
    => control._set(Avalonia.StyledElement.ThemeProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.StyledElement 
+public static T Theme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs, IObserver<Avalonia.Styling.ControlTheme?> changed) where T : Avalonia.StyledElement 
    => control._setEx(Avalonia.StyledElement.ThemeProperty!, obs, changed);
 
 
@@ -164,7 +164,7 @@ public static T RxActualThemeVariantChanged<T>(this T control, IObserver<System.
  // DataContext
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> DataContext<T>(this Style<T> style, System.Object value) where T : Avalonia.StyledElement 
+public static Style<T> DataContext<T>(this Style<T> style, System.Object? value) where T : Avalonia.StyledElement 
 => style._addSetter(Avalonia.StyledElement.DataContextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -175,7 +175,7 @@ public static Style<T> DataContext<T>(this Style<T> style, IBinding binding) whe
  // Theme
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Theme<T>(this Style<T> style, Avalonia.Styling.ControlTheme value) where T : Avalonia.StyledElement 
+public static Style<T> Theme<T>(this Style<T> style, Avalonia.Styling.ControlTheme? value) where T : Avalonia.StyledElement 
 => style._addSetter(Avalonia.StyledElement.ThemeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

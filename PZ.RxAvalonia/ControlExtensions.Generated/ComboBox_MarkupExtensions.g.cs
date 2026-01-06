@@ -94,52 +94,52 @@ public static T MaxDropDownHeight<T>(this T control, IObservable<System.Double> 
  // PlaceholderText
 
 /*ValueSetterGenerator*/
-public static T PlaceholderText<T>(this T control, System.String value) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderText<T>(this T control, System.String? value) where T : Avalonia.Controls.ComboBox 
 {
     control.PlaceholderText = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PlaceholderText<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderText<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PlaceholderText<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PlaceholderText<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderText<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PlaceholderText<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.ComboBox 
    => control._setEx(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, obs, changed);
 
 
  // PlaceholderForeground
 
 /*ValueSetterGenerator*/
-public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.ComboBox 
 {
     control.PlaceholderForeground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.ComboBox 
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.ComboBox 
    => control._setEx(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, obs, changed);
 
 
@@ -198,52 +198,52 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.ComboBox 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.ComboBox 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.ComboBox 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.ComboBox 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.ComboBox 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.ComboBox 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.ComboBox 
    => control._setEx(Avalonia.Controls.ComboBox.TextProperty!, obs, changed);
 
 
  // SelectionBoxItemTemplate
 
 /*ValueSetterGenerator*/
-public static T SelectionBoxItemTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ComboBox 
+public static T SelectionBoxItemTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ComboBox 
 {
     control.SelectionBoxItemTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectionBoxItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.ComboBox 
+public static T SelectionBoxItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.ComboBox 
+public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectionBoxItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ComboBox 
+public static T SelectionBoxItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.ComboBox 
    => control._set(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ComboBox 
+public static T SelectionBoxItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.ComboBox 
    => control._setEx(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, obs, changed);
 
 
@@ -309,7 +309,7 @@ public static Style<T> MaxDropDownHeight<T>(this Style<T> style, IBinding bindin
  // PlaceholderText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PlaceholderText<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.ComboBox 
+public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -320,7 +320,7 @@ public static Style<T> PlaceholderText<T>(this Style<T> style, IBinding binding)
  // PlaceholderForeground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.ComboBox 
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -353,7 +353,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.ComboBox 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -364,7 +364,7 @@ public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : 
  // SelectionBoxItemTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionBoxItemTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ComboBox 
+public static Style<T> SelectionBoxItemTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

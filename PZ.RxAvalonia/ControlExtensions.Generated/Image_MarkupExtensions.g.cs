@@ -16,26 +16,26 @@ public static partial class Image_MarkupExtensions
  // Source
 
 /*ValueSetterGenerator*/
-public static T Source<T>(this T control, Avalonia.Media.IImage value) where T : Avalonia.Controls.Image 
+public static T Source<T>(this T control, Avalonia.Media.IImage? value) where T : Avalonia.Controls.Image 
 {
     control.Source = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Source<T>(this T control, Func<Avalonia.Media.IImage> func) where T : Avalonia.Controls.Image 
+public static T Source<T>(this T control, Func<Avalonia.Media.IImage?> func) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs) where T : Avalonia.Controls.Image 
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage?> obs) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage> subject) where T : Avalonia.Controls.Image 
+public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage?> subject) where T : Avalonia.Controls.Image 
    => control._set(Avalonia.Controls.Image.SourceProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed) where T : Avalonia.Controls.Image 
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage?> obs, IObserver<Avalonia.Media.IImage?> changed) where T : Avalonia.Controls.Image 
    => control._setEx(Avalonia.Controls.Image.SourceProperty!, obs, changed);
 
 
@@ -122,7 +122,7 @@ public static T StretchDirection<T>(this T control, IObservable<Avalonia.Media.S
  // Source
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Source<T>(this Style<T> style, Avalonia.Media.IImage value) where T : Avalonia.Controls.Image 
+public static Style<T> Source<T>(this Style<T> style, Avalonia.Media.IImage? value) where T : Avalonia.Controls.Image 
 => style._addSetter(Avalonia.Controls.Image.SourceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

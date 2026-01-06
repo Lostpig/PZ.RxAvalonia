@@ -7,9 +7,7 @@ using Avalonia.Threading;
 using PZ.RxAvalonia.DataValidations;
 using PZ.RxAvalonia.Helpers;
 using PZ.RxAvalonia.Styles;
-using System;
 using System.Collections.Immutable;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
@@ -42,7 +40,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     internal List<IDeclarativeComponent> DependentViews { get; set; } = [];
     private INameScope? _nameScope;
     protected INameScope Scope => _nameScope ??= new NameScope();
-    private bool _isRegisterDataValidation = false;
+    public bool IsRegisterDataValidation { get; private set; } = false;
 
     protected abstract Control Build();
     protected virtual StyleGroup? BuildStyles() => null;
@@ -58,11 +56,24 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     }
     protected ComponentBase() : this(ViewInitializationStrategy.Immediate) { }
 
+    private bool TryFindResourceFromContext(object key, out object? resource)
+    {
+        foreach(var context in ComponentBuildContext.ComponentStack)
+        {
+            if (context.Component.TryFindResource(key, out resource))
+            {
+                return true;
+            }
+        }
+
+        resource = null;
+        return false;
+    }
     protected T StaticResource<T>(object key, Func<object?, T> converter, IResourceHost? anchor = null)
     {
         anchor ??= this;
         object? resource;
-        if (anchor.TryFindResource(key, out resource) && resource != null)
+        if (anchor.TryFindResource(key, out resource))
         {
             if (resource is T t) return t;
             return converter(resource);
@@ -70,14 +81,12 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         if (ComponentBuildContext.CurrentState == ComponentBuildState.StyleBuilding 
             || ComponentBuildContext.CurrentState == ComponentBuildState.ViewBuilding)
         {
-            var parentContext = ComponentBuildContext.ComponentStack.LastOrDefault();
-            if (parentContext != null) 
+            // when building component not attach to visual tree yet
+            // try to find resource in parent component context
+            if (TryFindResourceFromContext(key, out resource))
             {
-                if (parentContext.Component.TryFindResource(key, out resource) && resource != null)
-                {
-                    if (resource is T t) return t;
-                    return converter(resource);
-                }
+                if (resource is T t) return t;
+                return converter(resource);
             }
         }
         if (Application.Current!.TryFindResource(key, out resource) && resource != null)
@@ -87,6 +96,15 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         }
 
         return converter(null);
+    }
+    protected object? StaticResource(object key, IResourceHost? anchor = null)
+    {
+        return StaticResource<object?>(key, o => o, anchor);
+    }
+    protected T? StaticResource<T>(object key, IResourceHost? anchor = null)
+    {
+        var obj = StaticResource(key, anchor);
+        return obj is T t ? t : default;
     }
     protected IBrush StaticColor(object key, IResourceHost? anchor = null)
     {
@@ -100,14 +118,15 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     {
         return DynamicResource<IBrush>(key, ResourceHelpers.BrushConverter, anchor);
     }
-    protected void RegisterDataValidation()
+    protected ComponentValidation RegisterDataValidation()
     {
-        ComponentValidation.Register(this);
-        _isRegisterDataValidation = true;
+        var compValid = ComponentValidation.Register(this);
+        IsRegisterDataValidation = true;
+        return compValid;
     }
     protected bool CheckDataValidation()
     {
-        if (_isRegisterDataValidation) 
+        if (IsRegisterDataValidation) 
         {
             var validation = ComponentValidation.Get(this);
             if (validation != null)
@@ -174,6 +193,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     protected virtual void OnCreated() { }
     protected virtual void OnAfterInitialized() { }
     protected virtual IEnumerable<IDisposable> WhenActivate() { return []; }
+    protected virtual void OnStateUpdated() { }
 
     private bool _isUpdatingState = false;
     public void UpdateState()
@@ -204,6 +224,8 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
 
             foreach (var styleState in _styleStates)
                 styleState.UpdateValue();
+
+            OnStateUpdated();
         }
         finally
         {
@@ -217,17 +239,26 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         if (!_rxPropStates.Contains(state))
             _rxPropStates.Add(state);
     }
-    internal void AddFuncPropertyState(FuncPropertyState state)
+    internal void AddFuncPropertyState<TControl>(FuncPropertyState state, TControl dependentControl)
+        where TControl : AvaloniaObject
     {
         ArgumentNullException.ThrowIfNull(state);
         if (!_funcPropStates.Contains(state))
             _funcPropStates.Add(state);
+
+        if (dependentControl is ComponentBase targetView)
+            AddDependentView(targetView);
     }
     internal void AddStyleState(StyleState state)
     {
         ArgumentNullException.ThrowIfNull(state);
         if (!_styleStates.Contains(state))
             _styleStates.Add(state);
+    }
+    protected void AddDependentView(ComponentBase view)
+    {
+        if (!DependentViews.Contains(view))
+            DependentViews.Add(view);
     }
 
     protected override void OnLoaded(RoutedEventArgs e)
@@ -237,7 +268,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         foreach (var s in _styleStates) s.Activate();
         _subscriptions.AddRange(WhenActivate());
 
-        if (_isRegisterDataValidation)
+        if (IsRegisterDataValidation)
         {
             ComponentValidation.Get(this)?.ActivateAll();
         }
@@ -249,7 +280,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         foreach (var s in _styleStates) s.DeActivate();
         foreach (var s in _subscriptions) s.Dispose();
 
-        if (_isRegisterDataValidation)
+        if (IsRegisterDataValidation)
         {
             ComponentValidation.Get(this)?.DeactivateAll();
         }

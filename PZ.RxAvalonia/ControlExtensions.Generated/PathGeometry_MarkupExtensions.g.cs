@@ -16,26 +16,26 @@ public static partial class PathGeometry_MarkupExtensions
  // Figures
 
 /*ValueSetterGenerator*/
-public static T Figures<T>(this T control, Avalonia.Media.PathFigures value) where T : Avalonia.Media.PathGeometry 
+public static T Figures<T>(this T control, Avalonia.Media.PathFigures? value) where T : Avalonia.Media.PathGeometry 
 {
     control.Figures = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Figures<T>(this T control, Func<Avalonia.Media.PathFigures> func) where T : Avalonia.Media.PathGeometry 
+public static T Figures<T>(this T control, Func<Avalonia.Media.PathFigures?> func) where T : Avalonia.Media.PathGeometry 
    => control._set(Avalonia.Media.PathGeometry.FiguresProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigures> obs) where T : Avalonia.Media.PathGeometry 
+public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigures?> obs) where T : Avalonia.Media.PathGeometry 
    => control._set(Avalonia.Media.PathGeometry.FiguresProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Figures<T>(this T control, ISubject<Avalonia.Media.PathFigures> subject) where T : Avalonia.Media.PathGeometry 
+public static T Figures<T>(this T control, ISubject<Avalonia.Media.PathFigures?> subject) where T : Avalonia.Media.PathGeometry 
    => control._set(Avalonia.Media.PathGeometry.FiguresProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigures> obs, IObserver<Avalonia.Media.PathFigures> changed) where T : Avalonia.Media.PathGeometry 
+public static T Figures<T>(this T control, IObservable<Avalonia.Media.PathFigures?> obs, IObserver<Avalonia.Media.PathFigures?> changed) where T : Avalonia.Media.PathGeometry 
    => control._setEx(Avalonia.Media.PathGeometry.FiguresProperty!, obs, changed);
 
 

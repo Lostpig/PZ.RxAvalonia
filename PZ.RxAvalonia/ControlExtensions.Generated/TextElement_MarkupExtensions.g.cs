@@ -16,26 +16,26 @@ public static partial class TextElement_MarkupExtensions
  // Background
 
 /*ValueSetterGenerator*/
-public static T Background<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Documents.TextElement 
+public static T Background<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Documents.TextElement 
 {
     control.Background = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Background<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Documents.TextElement 
+public static T Background<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Documents.TextElement 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Documents.TextElement 
+public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Documents.TextElement 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Documents.TextElement 
    => control._setEx(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, obs, changed);
 
 
@@ -68,26 +68,26 @@ public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFam
  // FontFeatures
 
 /*ValueSetterGenerator*/
-public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.Documents.TextElement 
+public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.Documents.TextElement 
 {
     control.FontFeatures = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection> func) where T : Avalonia.Controls.Documents.TextElement 
+public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection?> func) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs) where T : Avalonia.Controls.Documents.TextElement 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.Documents.TextElement 
+public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection?> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.Documents.TextElement 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs, IObserver<Avalonia.Media.FontFeatureCollection?> changed) where T : Avalonia.Controls.Documents.TextElement 
    => control._setEx(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs, changed);
 
 
@@ -198,26 +198,26 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
  // Foreground
 
 /*ValueSetterGenerator*/
-public static T Foreground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Documents.TextElement 
+public static T Foreground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Documents.TextElement 
 {
     control.Foreground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Documents.TextElement 
+public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Documents.TextElement 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Documents.TextElement 
+public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Documents.TextElement 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Documents.TextElement 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Documents.TextElement 
    => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
@@ -252,26 +252,26 @@ public static T TextElement_FontFamily<T>(this T control, IObservable<Avalonia.M
  // FontFeatures
 
 /*AttachedPropertyFuncGenerator*/
-public static T TextElement_FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection> getter) where T : Avalonia.Controls.Control 
+public static T TextElement_FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection?> getter) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T TextElement_FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs) where T : Avalonia.Controls.Control 
+public static T TextElement_FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T TextElement_FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.Control 
+public static T TextElement_FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T TextElement_FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.Control 
+public static T TextElement_FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.Control 
 {
     control.SetValue(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T TextElement_FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.Control 
+public static T TextElement_FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs, IObserver<Avalonia.Media.FontFeatureCollection?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, obs, changed);
 
 
@@ -382,26 +382,26 @@ public static T TextElement_FontStretch<T>(this T control, IObservable<Avalonia.
  // Foreground
 
 /*AttachedPropertyFuncGenerator*/
-public static T TextElement_Foreground<T>(this T control, Func<Avalonia.Media.IBrush> getter) where T : Avalonia.Controls.Control 
+public static T TextElement_Foreground<T>(this T control, Func<Avalonia.Media.IBrush?> getter) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Control 
+public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T TextElement_Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Control 
+public static T TextElement_Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T TextElement_Foreground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Control 
+public static T TextElement_Foreground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Control 
 {
     control.SetValue(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Control 
+public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
@@ -410,7 +410,7 @@ public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.M
  // Background
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -432,7 +432,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) wher
  // FontFeatures
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -487,7 +487,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) whe
  // Foreground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

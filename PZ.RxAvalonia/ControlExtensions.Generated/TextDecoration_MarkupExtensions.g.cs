@@ -42,26 +42,26 @@ public static T Location<T>(this T control, IObservable<Avalonia.Media.TextDecor
  // Stroke
 
 /*ValueSetterGenerator*/
-public static T Stroke<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Media.TextDecoration 
+public static T Stroke<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Media.TextDecoration 
 {
     control.Stroke = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Stroke<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Media.TextDecoration 
+public static T Stroke<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Media.TextDecoration 
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Media.TextDecoration 
+public static T Stroke<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Media.TextDecoration 
    => control._set(Avalonia.Media.TextDecoration.StrokeProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Media.TextDecoration 
+public static T Stroke<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Media.TextDecoration 
    => control._setEx(Avalonia.Media.TextDecoration.StrokeProperty!, obs, changed);
 
 

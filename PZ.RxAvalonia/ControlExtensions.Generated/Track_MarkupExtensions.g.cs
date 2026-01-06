@@ -146,78 +146,78 @@ public static T Orientation<T>(this T control, IObservable<Avalonia.Layout.Orien
  // Thumb
 
 /*ValueSetterGenerator*/
-public static T Thumb<T>(this T control, Avalonia.Controls.Primitives.Thumb value) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, Avalonia.Controls.Primitives.Thumb? value) where T : Avalonia.Controls.Primitives.Track 
 {
     control.Thumb = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Thumb<T>(this T control, Func<Avalonia.Controls.Primitives.Thumb> func) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, Func<Avalonia.Controls.Primitives.Thumb?> func) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitives.Thumb> obs) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitives.Thumb?> obs) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Thumb<T>(this T control, ISubject<Avalonia.Controls.Primitives.Thumb> subject) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, ISubject<Avalonia.Controls.Primitives.Thumb?> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.ThumbProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitives.Thumb> obs, IObserver<Avalonia.Controls.Primitives.Thumb> changed) where T : Avalonia.Controls.Primitives.Track 
+public static T Thumb<T>(this T control, IObservable<Avalonia.Controls.Primitives.Thumb?> obs, IObserver<Avalonia.Controls.Primitives.Thumb?> changed) where T : Avalonia.Controls.Primitives.Track 
    => control._setEx(Avalonia.Controls.Primitives.Track.ThumbProperty!, obs, changed);
 
 
  // IncreaseButton
 
 /*ValueSetterGenerator*/
-public static T IncreaseButton<T>(this T control, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 {
     control.IncreaseButton = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T IncreaseButton<T>(this T control, Func<Avalonia.Controls.Button> func) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button?> obs) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T IncreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button> subject) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button?> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs, IObserver<Avalonia.Controls.Button> changed) where T : Avalonia.Controls.Primitives.Track 
+public static T IncreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button?> obs, IObserver<Avalonia.Controls.Button?> changed) where T : Avalonia.Controls.Primitives.Track 
    => control._setEx(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, obs, changed);
 
 
  // DecreaseButton
 
 /*ValueSetterGenerator*/
-public static T DecreaseButton<T>(this T control, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 {
     control.DecreaseButton = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T DecreaseButton<T>(this T control, Func<Avalonia.Controls.Button> func) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, Func<Avalonia.Controls.Button?> func) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button?> obs) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T DecreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button> subject) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, ISubject<Avalonia.Controls.Button?> subject) where T : Avalonia.Controls.Primitives.Track 
    => control._set(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button> obs, IObserver<Avalonia.Controls.Button> changed) where T : Avalonia.Controls.Primitives.Track 
+public static T DecreaseButton<T>(this T control, IObservable<Avalonia.Controls.Button?> obs, IObserver<Avalonia.Controls.Button?> changed) where T : Avalonia.Controls.Primitives.Track 
    => control._setEx(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, obs, changed);
 
 
@@ -359,7 +359,7 @@ public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) whe
  // Thumb
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Thumb<T>(this Style<T> style, Avalonia.Controls.Primitives.Thumb value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Thumb<T>(this Style<T> style, Avalonia.Controls.Primitives.Thumb? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ThumbProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -370,7 +370,7 @@ public static Style<T> Thumb<T>(this Style<T> style, IBinding binding) where T :
  // IncreaseButton
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> IncreaseButton<T>(this Style<T> style, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> IncreaseButton<T>(this Style<T> style, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -381,7 +381,7 @@ public static Style<T> IncreaseButton<T>(this Style<T> style, IBinding binding) 
  // DecreaseButton
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> DecreaseButton<T>(this Style<T> style, Avalonia.Controls.Button value) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> DecreaseButton<T>(this Style<T> style, Avalonia.Controls.Button? value) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

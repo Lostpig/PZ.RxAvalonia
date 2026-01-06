@@ -16,52 +16,52 @@ public static partial class ContentControl_MarkupExtensions
  // Content
 
 /*ValueSetterGenerator*/
-public static T Content<T>(this T control, System.Object value) where T : Avalonia.Controls.ContentControl 
+public static T Content<T>(this T control, System.Object? value) where T : Avalonia.Controls.ContentControl 
 {
     control.Content = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Content<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.ContentControl 
+public static T Content<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Content<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.ContentControl 
+public static T Content<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Content<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.ContentControl 
+public static T Content<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Content<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.ContentControl 
+public static T Content<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.ContentControl 
    => control._setEx(Avalonia.Controls.ContentControl.ContentProperty!, obs, changed);
 
 
  // ContentTemplate
 
 /*ValueSetterGenerator*/
-public static T ContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ContentControl 
+public static T ContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ContentControl 
 {
     control.ContentTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.ContentControl 
+public static T ContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.ContentControl 
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ContentControl 
+public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.ContentControl 
    => control._set(Avalonia.Controls.ContentControl.ContentTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ContentControl 
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.ContentControl 
    => control._setEx(Avalonia.Controls.ContentControl.ContentTemplateProperty!, obs, changed);
 
 
@@ -122,7 +122,7 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
  // Content
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Content<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.ContentControl 
+public static Style<T> Content<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.ContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -133,7 +133,7 @@ public static Style<T> Content<T>(this Style<T> style, IBinding binding) where T
  // ContentTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ContentControl 
+public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.ContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

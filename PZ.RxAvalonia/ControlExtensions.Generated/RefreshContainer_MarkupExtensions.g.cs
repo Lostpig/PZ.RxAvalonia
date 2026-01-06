@@ -16,26 +16,26 @@ public static partial class RefreshContainer_MarkupExtensions
  // Visualizer
 
 /*ValueSetterGenerator*/
-public static T Visualizer<T>(this T control, Avalonia.Controls.RefreshVisualizer value) where T : Avalonia.Controls.RefreshContainer 
+public static T Visualizer<T>(this T control, Avalonia.Controls.RefreshVisualizer? value) where T : Avalonia.Controls.RefreshContainer 
 {
     control.Visualizer = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Visualizer<T>(this T control, Func<Avalonia.Controls.RefreshVisualizer> func) where T : Avalonia.Controls.RefreshContainer 
+public static T Visualizer<T>(this T control, Func<Avalonia.Controls.RefreshVisualizer?> func) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizer> obs) where T : Avalonia.Controls.RefreshContainer 
+public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizer?> obs) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Visualizer<T>(this T control, ISubject<Avalonia.Controls.RefreshVisualizer> subject) where T : Avalonia.Controls.RefreshContainer 
+public static T Visualizer<T>(this T control, ISubject<Avalonia.Controls.RefreshVisualizer?> subject) where T : Avalonia.Controls.RefreshContainer 
    => control._set(Avalonia.Controls.RefreshContainer.VisualizerProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizer> obs, IObserver<Avalonia.Controls.RefreshVisualizer> changed) where T : Avalonia.Controls.RefreshContainer 
+public static T Visualizer<T>(this T control, IObservable<Avalonia.Controls.RefreshVisualizer?> obs, IObserver<Avalonia.Controls.RefreshVisualizer?> changed) where T : Avalonia.Controls.RefreshContainer 
    => control._setEx(Avalonia.Controls.RefreshContainer.VisualizerProperty!, obs, changed);
 
 

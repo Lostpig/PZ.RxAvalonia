@@ -16,52 +16,52 @@ public static partial class CombinedGeometry_MarkupExtensions
  // Geometry1
 
 /*ValueSetterGenerator*/
-public static T Geometry1<T>(this T control, Avalonia.Media.Geometry value) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry1<T>(this T control, Avalonia.Media.Geometry? value) where T : Avalonia.Media.CombinedGeometry 
 {
     control.Geometry1 = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Geometry1<T>(this T control, Func<Avalonia.Media.Geometry> func) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry1<T>(this T control, Func<Avalonia.Media.Geometry?> func) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry> obs) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Geometry1<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry1<T>(this T control, ISubject<Avalonia.Media.Geometry?> subject) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry1Property!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry1<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs, IObserver<Avalonia.Media.Geometry?> changed) where T : Avalonia.Media.CombinedGeometry 
    => control._setEx(Avalonia.Media.CombinedGeometry.Geometry1Property!, obs, changed);
 
 
  // Geometry2
 
 /*ValueSetterGenerator*/
-public static T Geometry2<T>(this T control, Avalonia.Media.Geometry value) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry2<T>(this T control, Avalonia.Media.Geometry? value) where T : Avalonia.Media.CombinedGeometry 
 {
     control.Geometry2 = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Geometry2<T>(this T control, Func<Avalonia.Media.Geometry> func) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry2<T>(this T control, Func<Avalonia.Media.Geometry?> func) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry> obs) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Geometry2<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry2<T>(this T control, ISubject<Avalonia.Media.Geometry?> subject) where T : Avalonia.Media.CombinedGeometry 
    => control._set(Avalonia.Media.CombinedGeometry.Geometry2Property!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Media.CombinedGeometry 
+public static T Geometry2<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs, IObserver<Avalonia.Media.Geometry?> changed) where T : Avalonia.Media.CombinedGeometry 
    => control._setEx(Avalonia.Media.CombinedGeometry.Geometry2Property!, obs, changed);
 
 

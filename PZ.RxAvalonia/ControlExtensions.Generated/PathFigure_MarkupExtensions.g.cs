@@ -68,26 +68,26 @@ public static Avalonia.Media.PathFigure IsFilled(this Avalonia.Media.PathFigure 
  // Segments
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, Avalonia.Media.PathSegments value)  
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, Avalonia.Media.PathSegments? value)  
 {
     control.Segments = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, Func<Avalonia.Media.PathSegments> func)  
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, Func<Avalonia.Media.PathSegments?> func)  
    => control._set(Avalonia.Media.PathFigure.SegmentsProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Media.PathSegments> obs)  
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Media.PathSegments?> obs)  
    => control._set(Avalonia.Media.PathFigure.SegmentsProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, ISubject<Avalonia.Media.PathSegments> subject)  
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, ISubject<Avalonia.Media.PathSegments?> subject)  
    => control._set(Avalonia.Media.PathFigure.SegmentsProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Media.PathSegments> obs, IObserver<Avalonia.Media.PathSegments> changed)  
+public static Avalonia.Media.PathFigure Segments(this Avalonia.Media.PathFigure control, IObservable<Avalonia.Media.PathSegments?> obs, IObserver<Avalonia.Media.PathSegments?> changed)  
    => control._setEx(Avalonia.Media.PathFigure.SegmentsProperty!, obs, changed);
 
 

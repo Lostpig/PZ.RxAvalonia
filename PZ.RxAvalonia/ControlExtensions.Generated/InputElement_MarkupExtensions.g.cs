@@ -68,26 +68,26 @@ public static T IsEnabled<T>(this T control, IObservable<System.Boolean> obs, IO
  // Cursor
 
 /*ValueSetterGenerator*/
-public static T Cursor<T>(this T control, Avalonia.Input.Cursor value) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, Avalonia.Input.Cursor? value) where T : Avalonia.Input.InputElement 
 {
     control.Cursor = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Cursor<T>(this T control, Func<Avalonia.Input.Cursor> func) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, Func<Avalonia.Input.Cursor?> func) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.CursorProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor> obs) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor?> obs) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.CursorProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Cursor<T>(this T control, ISubject<Avalonia.Input.Cursor> subject) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, ISubject<Avalonia.Input.Cursor?> subject) where T : Avalonia.Input.InputElement 
    => control._set(Avalonia.Input.InputElement.CursorProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor> obs, IObserver<Avalonia.Input.Cursor> changed) where T : Avalonia.Input.InputElement 
+public static T Cursor<T>(this T control, IObservable<Avalonia.Input.Cursor?> obs, IObserver<Avalonia.Input.Cursor?> changed) where T : Avalonia.Input.InputElement 
    => control._setEx(Avalonia.Input.InputElement.CursorProperty!, obs, changed);
 
 
@@ -502,7 +502,7 @@ public static Style<T> IsEnabled<T>(this Style<T> style, IBinding binding) where
  // Cursor
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Cursor<T>(this Style<T> style, Avalonia.Input.Cursor value) where T : Avalonia.Input.InputElement 
+public static Style<T> Cursor<T>(this Style<T> style, Avalonia.Input.Cursor? value) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.CursorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

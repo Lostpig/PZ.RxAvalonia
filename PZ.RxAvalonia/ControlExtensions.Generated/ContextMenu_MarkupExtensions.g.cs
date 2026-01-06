@@ -224,52 +224,52 @@ public static T WindowManagerAddShadowHint<T>(this T control, IObservable<System
  // PlacementTarget
 
 /*ValueSetterGenerator*/
-public static T PlacementTarget<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.ContextMenu 
+public static T PlacementTarget<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.ContextMenu 
 {
     control.PlacementTarget = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PlacementTarget<T>(this T control, Func<Avalonia.Controls.Control> func) where T : Avalonia.Controls.ContextMenu 
+public static T PlacementTarget<T>(this T control, Func<Avalonia.Controls.Control?> func) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Controls.ContextMenu 
+public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PlacementTarget<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.ContextMenu 
+public static T PlacementTarget<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.ContextMenu 
+public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Controls.ContextMenu 
    => control._setEx(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, obs, changed);
 
 
  // CustomPopupPlacementCallback
 
 /*ValueSetterGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value) where T : Avalonia.Controls.ContextMenu 
+public static T CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value) where T : Avalonia.Controls.ContextMenu 
 {
     control.CustomPopupPlacementCallback = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> func) where T : Avalonia.Controls.ContextMenu 
+public static T CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> func) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs) where T : Avalonia.Controls.ContextMenu 
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> subject) where T : Avalonia.Controls.ContextMenu 
+public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> subject) where T : Avalonia.Controls.ContextMenu 
    => control._set(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.ContextMenu 
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> changed) where T : Avalonia.Controls.ContextMenu 
    => control._setEx(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 
@@ -390,7 +390,7 @@ public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, IBindi
  // PlacementTarget
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls.Control value) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls.Control? value) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -401,7 +401,7 @@ public static Style<T> PlacementTarget<T>(this Style<T> style, IBinding binding)
  // CustomPopupPlacementCallback
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

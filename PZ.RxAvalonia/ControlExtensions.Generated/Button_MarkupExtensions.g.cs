@@ -42,78 +42,78 @@ public static T ClickMode<T>(this T control, IObservable<Avalonia.Controls.Click
  // Command
 
 /*ValueSetterGenerator*/
-public static T Command<T>(this T control, System.Windows.Input.ICommand value) where T : Avalonia.Controls.Button 
+public static T Command<T>(this T control, System.Windows.Input.ICommand? value) where T : Avalonia.Controls.Button 
 {
     control.Command = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Command<T>(this T control, Func<System.Windows.Input.ICommand> func) where T : Avalonia.Controls.Button 
+public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> func) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs) where T : Avalonia.Controls.Button 
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand?> obs) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.Button 
+public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand?> subject) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.Button 
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand?> obs, IObserver<System.Windows.Input.ICommand?> changed) where T : Avalonia.Controls.Button 
    => control._setEx(Avalonia.Controls.Button.CommandProperty!, obs, changed);
 
 
  // HotKey
 
 /*ValueSetterGenerator*/
-public static T HotKey<T>(this T control, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.Button 
+public static T HotKey<T>(this T control, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.Button 
 {
     control.HotKey = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture> func) where T : Avalonia.Controls.Button 
+public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture?> func) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs) where T : Avalonia.Controls.Button 
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.Button 
+public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture?> subject) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.HotKeyProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.Button 
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs, IObserver<Avalonia.Input.KeyGesture?> changed) where T : Avalonia.Controls.Button 
    => control._setEx(Avalonia.Controls.Button.HotKeyProperty!, obs, changed);
 
 
  // CommandParameter
 
 /*ValueSetterGenerator*/
-public static T CommandParameter<T>(this T control, System.Object value) where T : Avalonia.Controls.Button 
+public static T CommandParameter<T>(this T control, System.Object? value) where T : Avalonia.Controls.Button 
 {
     control.CommandParameter = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T CommandParameter<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.Button 
+public static T CommandParameter<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T CommandParameter<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.Button 
+public static T CommandParameter<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Button 
+public static T CommandParameter<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.CommandParameterProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Button 
+public static T CommandParameter<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.Button 
    => control._setEx(Avalonia.Controls.Button.CommandParameterProperty!, obs, changed);
 
 
@@ -172,26 +172,26 @@ public static T IsCancel<T>(this T control, IObservable<System.Boolean> obs, IOb
  // Flyout
 
 /*ValueSetterGenerator*/
-public static T Flyout<T>(this T control, Avalonia.Controls.Primitives.FlyoutBase value) where T : Avalonia.Controls.Button 
+public static T Flyout<T>(this T control, Avalonia.Controls.Primitives.FlyoutBase? value) where T : Avalonia.Controls.Button 
 {
     control.Flyout = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Flyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase> func) where T : Avalonia.Controls.Button 
+public static T Flyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase?> func) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs) where T : Avalonia.Controls.Button 
+public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase?> obs) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Flyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase> subject) where T : Avalonia.Controls.Button 
+public static T Flyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase?> subject) where T : Avalonia.Controls.Button 
    => control._set(Avalonia.Controls.Button.FlyoutProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase> changed) where T : Avalonia.Controls.Button 
+public static T Flyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase?> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase?> changed) where T : Avalonia.Controls.Button 
    => control._setEx(Avalonia.Controls.Button.FlyoutProperty!, obs, changed);
 
 
@@ -232,7 +232,7 @@ public static Style<T> ClickMode<T>(this Style<T> style, IBinding binding) where
  // Command
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICommand value) where T : Avalonia.Controls.Button 
+public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICommand? value) where T : Avalonia.Controls.Button 
 => style._addSetter(Avalonia.Controls.Button.CommandProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -243,7 +243,7 @@ public static Style<T> Command<T>(this Style<T> style, IBinding binding) where T
  // HotKey
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.Button 
+public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.Button 
 => style._addSetter(Avalonia.Controls.Button.HotKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -254,7 +254,7 @@ public static Style<T> HotKey<T>(this Style<T> style, IBinding binding) where T 
  // CommandParameter
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CommandParameter<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.Button 
+public static Style<T> CommandParameter<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.Button 
 => style._addSetter(Avalonia.Controls.Button.CommandParameterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -287,7 +287,7 @@ public static Style<T> IsCancel<T>(this Style<T> style, IBinding binding) where 
  // Flyout
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Flyout<T>(this Style<T> style, Avalonia.Controls.Primitives.FlyoutBase value) where T : Avalonia.Controls.Button 
+public static Style<T> Flyout<T>(this Style<T> style, Avalonia.Controls.Primitives.FlyoutBase? value) where T : Avalonia.Controls.Button 
 => style._addSetter(Avalonia.Controls.Button.FlyoutProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

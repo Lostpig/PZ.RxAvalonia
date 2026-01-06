@@ -68,52 +68,52 @@ public static T SelectionEnd<T>(this T control, IObservable<System.Int32> obs, I
  // SelectionBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 {
     control.SelectionBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.SelectableTextBlock 
    => control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, obs, changed);
 
 
  // SelectionForegroundBrush
 
 /*ValueSetterGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 {
     control.SelectionForegroundBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.SelectableTextBlock 
    => control._set(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.SelectableTextBlock 
+public static T SelectionForegroundBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.SelectableTextBlock 
    => control._setEx(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, obs, changed);
 
 
@@ -165,7 +165,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) wh
  // SelectionBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -176,7 +176,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) 
  // SelectionForegroundBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

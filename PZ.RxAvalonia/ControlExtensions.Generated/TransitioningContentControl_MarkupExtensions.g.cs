@@ -16,26 +16,26 @@ public static partial class TransitioningContentControl_MarkupExtensions
  // PageTransition
 
 /*ValueSetterGenerator*/
-public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.TransitioningContentControl 
+public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.TransitioningContentControl 
 {
     control.PageTransition = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func) where T : Avalonia.Controls.TransitioningContentControl 
+public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs) where T : Avalonia.Controls.TransitioningContentControl 
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.TransitioningContentControl 
+public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition?> subject) where T : Avalonia.Controls.TransitioningContentControl 
    => control._set(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.TransitioningContentControl 
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs, IObserver<Avalonia.Animation.IPageTransition?> changed) where T : Avalonia.Controls.TransitioningContentControl 
    => control._setEx(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, obs, changed);
 
 
@@ -91,7 +91,7 @@ public static T RxTransitionCompleted<T>(this T control, IObserver<Avalonia.Cont
  // PageTransition
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.TransitioningContentControl 
+public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.TransitioningContentControl 
 => style._addSetter(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

@@ -16,26 +16,26 @@ public static partial class DefinitionBase_MarkupExtensions
  // SharedSizeGroup
 
 /*ValueSetterGenerator*/
-public static T SharedSizeGroup<T>(this T control, System.String value) where T : Avalonia.Controls.DefinitionBase 
+public static T SharedSizeGroup<T>(this T control, System.String? value) where T : Avalonia.Controls.DefinitionBase 
 {
     control.SharedSizeGroup = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SharedSizeGroup<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.DefinitionBase 
+public static T SharedSizeGroup<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SharedSizeGroup<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.DefinitionBase 
+public static T SharedSizeGroup<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SharedSizeGroup<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.DefinitionBase 
+public static T SharedSizeGroup<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.DefinitionBase 
    => control._set(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SharedSizeGroup<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.DefinitionBase 
+public static T SharedSizeGroup<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.DefinitionBase 
    => control._setEx(Avalonia.Controls.DefinitionBase.SharedSizeGroupProperty!, obs, changed);
 
 

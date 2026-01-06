@@ -16,26 +16,26 @@ public static partial class ToolTip_MarkupExtensions
  // Tip
 
 /*AttachedPropertyFuncGenerator*/
-public static T ToolTip_Tip<T>(this T control, Func<System.Object> getter) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, Func<System.Object?> getter) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.TipProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T ToolTip_Tip<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.TipProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T ToolTip_Tip<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.TipProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T ToolTip_Tip<T>(this T control, System.Object value) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, System.Object? value) where T : Avalonia.Controls.Control 
 {
     control.SetValue(Avalonia.Controls.ToolTip.TipProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T ToolTip_Tip<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Control 
+public static T ToolTip_Tip<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.ToolTip.TipProperty!, obs, changed);
 
 
@@ -146,26 +146,26 @@ public static T ToolTip_VerticalOffset<T>(this T control, IObservable<System.Dou
  // CustomPopupPlacementCallback
 
 /*AttachedPropertyFuncGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> getter) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> getter) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> subject) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value) where T : Avalonia.Controls.Control 
 {
     control.SetValue(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.Control 
+public static T ToolTip_CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.ToolTip.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 

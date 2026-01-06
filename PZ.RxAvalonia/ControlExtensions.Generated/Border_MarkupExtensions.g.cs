@@ -16,26 +16,26 @@ public static partial class Border_MarkupExtensions
  // Background
 
 /*ValueSetterGenerator*/
-public static T Background<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Border 
+public static T Background<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Border 
 {
     control.Background = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Background<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Border 
+public static T Background<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Border 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Border 
+public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Border 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Border 
    => control._setEx(Avalonia.Controls.Border.BackgroundProperty!, obs, changed);
 
 
@@ -68,26 +68,26 @@ public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.B
  // BorderBrush
 
 /*ValueSetterGenerator*/
-public static T BorderBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Border 
+public static T BorderBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Border 
 {
     control.BorderBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T BorderBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Border 
+public static T BorderBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BorderBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Border 
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BorderBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Border 
+public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Border 
    => control._set(Avalonia.Controls.Border.BorderBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Border 
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Border 
    => control._setEx(Avalonia.Controls.Border.BorderBrushProperty!, obs, changed);
 
 
@@ -223,7 +223,7 @@ public static T BoxShadow<T>(this T control, IObservable<Avalonia.Media.BoxShado
  // Background
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Border 
+public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -245,7 +245,7 @@ public static Style<T> BackgroundSizing<T>(this Style<T> style, IBinding binding
  // BorderBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Border 
+public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BorderBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

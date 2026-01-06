@@ -42,26 +42,26 @@ public static T WindowManagerAddShadowHint<T>(this T control, IObservable<System
  // Child
 
 /*ValueSetterGenerator*/
-public static T Child<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.Primitives.Popup 
+public static T Child<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Primitives.Popup 
 {
     control.Child = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Child<T>(this T control, Func<Avalonia.Controls.Control> func) where T : Avalonia.Controls.Primitives.Popup 
+public static T Child<T>(this T control, Func<Avalonia.Controls.Control?> func) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Controls.Primitives.Popup 
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Primitives.Popup 
+public static T Child<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.ChildProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Primitives.Popup 
+public static T Child<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Controls.Primitives.Popup 
    => control._setEx(Avalonia.Controls.Primitives.Popup.ChildProperty!, obs, changed);
 
 
@@ -250,52 +250,52 @@ public static T PlacementRect<T>(this T control, IObservable<System.Nullable<Ava
  // PlacementTarget
 
 /*ValueSetterGenerator*/
-public static T PlacementTarget<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.Primitives.Popup 
+public static T PlacementTarget<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Primitives.Popup 
 {
     control.PlacementTarget = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PlacementTarget<T>(this T control, Func<Avalonia.Controls.Control> func) where T : Avalonia.Controls.Primitives.Popup 
+public static T PlacementTarget<T>(this T control, Func<Avalonia.Controls.Control?> func) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Controls.Primitives.Popup 
+public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PlacementTarget<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.Primitives.Popup 
+public static T PlacementTarget<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.Primitives.Popup 
+public static T PlacementTarget<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Controls.Primitives.Popup 
    => control._setEx(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, obs, changed);
 
 
  // CustomPopupPlacementCallback
 
 /*ValueSetterGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value) where T : Avalonia.Controls.Primitives.Popup 
+public static T CustomPopupPlacementCallback<T>(this T control, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value) where T : Avalonia.Controls.Primitives.Popup 
 {
     control.CustomPopupPlacementCallback = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> func) where T : Avalonia.Controls.Primitives.Popup 
+public static T CustomPopupPlacementCallback<T>(this T control, Func<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> func) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs) where T : Avalonia.Controls.Primitives.Popup 
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> subject) where T : Avalonia.Controls.Primitives.Popup 
+public static T CustomPopupPlacementCallback<T>(this T control, ISubject<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> subject) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback> changed) where T : Avalonia.Controls.Primitives.Popup 
+public static T CustomPopupPlacementCallback<T>(this T control, IObservable<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> obs, IObserver<Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback?> changed) where T : Avalonia.Controls.Primitives.Popup 
    => control._setEx(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, obs, changed);
 
 
@@ -328,26 +328,26 @@ public static T OverlayDismissEventPassThrough<T>(this T control, IObservable<Sy
  // OverlayInputPassThroughElement
 
 /*ValueSetterGenerator*/
-public static T OverlayInputPassThroughElement<T>(this T control, Avalonia.Input.IInputElement value) where T : Avalonia.Controls.Primitives.Popup 
+public static T OverlayInputPassThroughElement<T>(this T control, Avalonia.Input.IInputElement? value) where T : Avalonia.Controls.Primitives.Popup 
 {
     control.OverlayInputPassThroughElement = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OverlayInputPassThroughElement<T>(this T control, Func<Avalonia.Input.IInputElement> func) where T : Avalonia.Controls.Primitives.Popup 
+public static T OverlayInputPassThroughElement<T>(this T control, Func<Avalonia.Input.IInputElement?> func) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs) where T : Avalonia.Controls.Primitives.Popup 
+public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Avalonia.Input.IInputElement?> obs) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OverlayInputPassThroughElement<T>(this T control, ISubject<Avalonia.Input.IInputElement> subject) where T : Avalonia.Controls.Primitives.Popup 
+public static T OverlayInputPassThroughElement<T>(this T control, ISubject<Avalonia.Input.IInputElement?> subject) where T : Avalonia.Controls.Primitives.Popup 
    => control._set(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs, IObserver<Avalonia.Input.IInputElement> changed) where T : Avalonia.Controls.Primitives.Popup 
+public static T OverlayInputPassThroughElement<T>(this T control, IObservable<Avalonia.Input.IInputElement?> obs, IObserver<Avalonia.Input.IInputElement?> changed) where T : Avalonia.Controls.Primitives.Popup 
    => control._setEx(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, obs, changed);
 
 
@@ -575,7 +575,7 @@ public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, IBindi
  // Child
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control value) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -663,7 +663,7 @@ public static Style<T> PlacementRect<T>(this Style<T> style, IBinding binding) w
  // PlacementTarget
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls.Control value) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls.Control? value) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -674,7 +674,7 @@ public static Style<T> PlacementTarget<T>(this Style<T> style, IBinding binding)
  // CustomPopupPlacementCallback
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback value) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Avalonia.Controls.Primitives.PopupPositioning.CustomPopupPlacementCallback? value) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -696,7 +696,7 @@ public static Style<T> OverlayDismissEventPassThrough<T>(this Style<T> style, IB
  // OverlayInputPassThroughElement
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OverlayInputPassThroughElement<T>(this Style<T> style, Avalonia.Input.IInputElement value) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> OverlayInputPassThroughElement<T>(this Style<T> style, Avalonia.Input.IInputElement? value) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

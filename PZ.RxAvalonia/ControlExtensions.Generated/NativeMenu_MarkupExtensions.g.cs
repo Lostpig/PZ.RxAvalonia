@@ -16,26 +16,26 @@ public static partial class NativeMenu_MarkupExtensions
  // Menu
 
 /*AttachedPropertyFuncGenerator*/
-public static T NativeMenu_Menu<T>(this T control, Func<Avalonia.Controls.NativeMenu> getter) where T : Avalonia.AvaloniaObject 
+public static T NativeMenu_Menu<T>(this T control, Func<Avalonia.Controls.NativeMenu?> getter) where T : Avalonia.AvaloniaObject 
    => control._set(Avalonia.Controls.NativeMenu.MenuProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu> obs) where T : Avalonia.AvaloniaObject 
+public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu?> obs) where T : Avalonia.AvaloniaObject 
    => control._set(Avalonia.Controls.NativeMenu.MenuProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T NativeMenu_Menu<T>(this T control, ISubject<Avalonia.Controls.NativeMenu> subject) where T : Avalonia.AvaloniaObject 
+public static T NativeMenu_Menu<T>(this T control, ISubject<Avalonia.Controls.NativeMenu?> subject) where T : Avalonia.AvaloniaObject 
    => control._set(Avalonia.Controls.NativeMenu.MenuProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T NativeMenu_Menu<T>(this T control, Avalonia.Controls.NativeMenu value) where T : Avalonia.AvaloniaObject 
+public static T NativeMenu_Menu<T>(this T control, Avalonia.Controls.NativeMenu? value) where T : Avalonia.AvaloniaObject 
 {
     control.SetValue(Avalonia.Controls.NativeMenu.MenuProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu> obs, IObserver<Avalonia.Controls.NativeMenu> changed) where T : Avalonia.AvaloniaObject 
+public static T NativeMenu_Menu<T>(this T control, IObservable<Avalonia.Controls.NativeMenu?> obs, IObserver<Avalonia.Controls.NativeMenu?> changed) where T : Avalonia.AvaloniaObject 
    => control._setEx(Avalonia.Controls.NativeMenu.MenuProperty!, obs, changed);
 
 

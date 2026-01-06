@@ -1,5 +1,8 @@
 ﻿using Avalonia;
 using Avalonia.Controls;
+using System.ComponentModel.DataAnnotations;
+using System.Reactive.Linq;
+using System.Reactive.Subjects;
 using System.Runtime.CompilerServices;
 
 namespace PZ.RxAvalonia.DataValidations;
@@ -7,13 +10,15 @@ namespace PZ.RxAvalonia.DataValidations;
 public class ComponentValidation
 {
     private static readonly ConditionalWeakTable<ComponentBase, ComponentValidation> _refs = [];
-    public static void Register(ComponentBase component)
+    public static ComponentValidation Register(ComponentBase component)
     {
-        if (!_refs.TryGetValue(component, out _))
+        if (!_refs.TryGetValue(component, out var formValidation))
         {
-            var formValidation = new ComponentValidation();
+            formValidation = new ComponentValidation();
             _refs.Add(component, formValidation);
         }
+
+        return formValidation;
     }
     public static ComponentValidation? Get(ComponentBase component)
     {
@@ -46,12 +51,19 @@ public class ComponentValidation
         return null;
     }
 
+    private readonly Subject<bool> _isValidSubject = new();
+    public IObservable<bool> IsValidObservable => _isValidSubject;
+    private IDisposable? _subscription;
     public bool IsValid()
     {
         return _validators.All(v => v.Value.IsValid);
     }
     public void ActivateAll()
     {
+        _subscription = Observable.CombineLatest(_validators.Values.Select(v => v.ObservableValid))
+            .Select(results => results.All(r => r))
+            .Subscribe(_isValidSubject);
+
         foreach (var validator in _validators.Values)
         {
             validator.Activate();
@@ -59,6 +71,7 @@ public class ComponentValidation
     }
     public void DeactivateAll()
     {
+        _subscription?.Dispose();
         foreach (var validator in _validators.Values)
         {
             validator.Deactivate();

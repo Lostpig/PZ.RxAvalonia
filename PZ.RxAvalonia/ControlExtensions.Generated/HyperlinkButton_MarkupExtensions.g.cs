@@ -42,26 +42,26 @@ public static T IsVisited<T>(this T control, IObservable<System.Boolean> obs, IO
  // NavigateUri
 
 /*ValueSetterGenerator*/
-public static T NavigateUri<T>(this T control, System.Uri value) where T : Avalonia.Controls.HyperlinkButton 
+public static T NavigateUri<T>(this T control, System.Uri? value) where T : Avalonia.Controls.HyperlinkButton 
 {
     control.NavigateUri = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T NavigateUri<T>(this T control, Func<System.Uri> func) where T : Avalonia.Controls.HyperlinkButton 
+public static T NavigateUri<T>(this T control, Func<System.Uri?> func) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T NavigateUri<T>(this T control, IObservable<System.Uri> obs) where T : Avalonia.Controls.HyperlinkButton 
+public static T NavigateUri<T>(this T control, IObservable<System.Uri?> obs) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T NavigateUri<T>(this T control, ISubject<System.Uri> subject) where T : Avalonia.Controls.HyperlinkButton 
+public static T NavigateUri<T>(this T control, ISubject<System.Uri?> subject) where T : Avalonia.Controls.HyperlinkButton 
    => control._set(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T NavigateUri<T>(this T control, IObservable<System.Uri> obs, IObserver<System.Uri> changed) where T : Avalonia.Controls.HyperlinkButton 
+public static T NavigateUri<T>(this T control, IObservable<System.Uri?> obs, IObserver<System.Uri?> changed) where T : Avalonia.Controls.HyperlinkButton 
    => control._setEx(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, obs, changed);
 
 
@@ -81,7 +81,7 @@ public static Style<T> IsVisited<T>(this Style<T> style, IBinding binding) where
  // NavigateUri
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> NavigateUri<T>(this Style<T> style, System.Uri value) where T : Avalonia.Controls.HyperlinkButton 
+public static Style<T> NavigateUri<T>(this Style<T> style, System.Uri? value) where T : Avalonia.Controls.HyperlinkButton 
 => style._addSetter(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

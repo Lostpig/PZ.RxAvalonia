@@ -16,26 +16,26 @@ public static partial class DrawingImage_MarkupExtensions
  // Drawing
 
 /*ValueSetterGenerator*/
-public static T Drawing<T>(this T control, Avalonia.Media.Drawing value) where T : Avalonia.Media.DrawingImage 
+public static T Drawing<T>(this T control, Avalonia.Media.Drawing? value) where T : Avalonia.Media.DrawingImage 
 {
     control.Drawing = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Drawing<T>(this T control, Func<Avalonia.Media.Drawing> func) where T : Avalonia.Media.DrawingImage 
+public static T Drawing<T>(this T control, Func<Avalonia.Media.Drawing?> func) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing> obs) where T : Avalonia.Media.DrawingImage 
+public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing?> obs) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Drawing<T>(this T control, ISubject<Avalonia.Media.Drawing> subject) where T : Avalonia.Media.DrawingImage 
+public static T Drawing<T>(this T control, ISubject<Avalonia.Media.Drawing?> subject) where T : Avalonia.Media.DrawingImage 
    => control._set(Avalonia.Media.DrawingImage.DrawingProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing> obs, IObserver<Avalonia.Media.Drawing> changed) where T : Avalonia.Media.DrawingImage 
+public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing?> obs, IObserver<Avalonia.Media.Drawing?> changed) where T : Avalonia.Media.DrawingImage 
    => control._setEx(Avalonia.Media.DrawingImage.DrawingProperty!, obs, changed);
 
 

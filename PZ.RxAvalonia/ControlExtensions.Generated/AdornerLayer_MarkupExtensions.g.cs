@@ -44,26 +44,26 @@ public static T DefaultFocusAdorner<T>(this T control, IObservable<Avalonia.Cont
  // AdornedElement
 
 /*AttachedPropertyFuncGenerator*/
-public static T AdornerLayer_AdornedElement<T>(this T control, Func<Avalonia.Visual> getter) where T : Avalonia.Visual 
+public static T AdornerLayer_AdornedElement<T>(this T control, Func<Avalonia.Visual?> getter) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornedElementProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T AdornerLayer_AdornedElement<T>(this T control, IObservable<Avalonia.Visual> obs) where T : Avalonia.Visual 
+public static T AdornerLayer_AdornedElement<T>(this T control, IObservable<Avalonia.Visual?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornedElementProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T AdornerLayer_AdornedElement<T>(this T control, ISubject<Avalonia.Visual> subject) where T : Avalonia.Visual 
+public static T AdornerLayer_AdornedElement<T>(this T control, ISubject<Avalonia.Visual?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornedElementProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T AdornerLayer_AdornedElement<T>(this T control, Avalonia.Visual value) where T : Avalonia.Visual 
+public static T AdornerLayer_AdornedElement<T>(this T control, Avalonia.Visual? value) where T : Avalonia.Visual 
 {
     control.SetValue(Avalonia.Controls.Primitives.AdornerLayer.AdornedElementProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T AdornerLayer_AdornedElement<T>(this T control, IObservable<Avalonia.Visual> obs, IObserver<Avalonia.Visual> changed) where T : Avalonia.Visual 
+public static T AdornerLayer_AdornedElement<T>(this T control, IObservable<Avalonia.Visual?> obs, IObserver<Avalonia.Visual?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Controls.Primitives.AdornerLayer.AdornedElementProperty!, obs, changed);
 
 
@@ -96,26 +96,26 @@ public static T AdornerLayer_IsClipEnabled<T>(this T control, IObservable<System
  // Adorner
 
 /*AttachedPropertyFuncGenerator*/
-public static T AdornerLayer_Adorner<T>(this T control, Func<Avalonia.Controls.Control> getter) where T : Avalonia.Visual 
+public static T AdornerLayer_Adorner<T>(this T control, Func<Avalonia.Controls.Control?> getter) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornerProperty!, getter);
 
 /*AttachedPropertyObservableGenerator*/
-public static T AdornerLayer_Adorner<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Visual 
+public static T AdornerLayer_Adorner<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornerProperty!, obs);
 
 /*AttachedPropertySubjectGenerator*/
-public static T AdornerLayer_Adorner<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Visual 
+public static T AdornerLayer_Adorner<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Controls.Primitives.AdornerLayer.AdornerProperty!, subject);
 
 /*AttachedPropertyValueGenerator*/
-public static T AdornerLayer_Adorner<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Visual 
+public static T AdornerLayer_Adorner<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Visual 
 {
     control.SetValue(Avalonia.Controls.Primitives.AdornerLayer.AdornerProperty!, value);
     return control;
 }
 
 /*AttachedPropertyTwoWayGenerator*/
-public static T AdornerLayer_Adorner<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Visual 
+public static T AdornerLayer_Adorner<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Controls.Primitives.AdornerLayer.AdornerProperty!, obs, changed);
 
 

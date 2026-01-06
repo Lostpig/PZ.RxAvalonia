@@ -16,26 +16,26 @@ public static partial class Run_MarkupExtensions
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.Documents.Run 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.Documents.Run 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.Documents.Run 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.Documents.Run 
    => control._set(Avalonia.Controls.Documents.Run.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.Documents.Run 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.Documents.Run 
    => control._set(Avalonia.Controls.Documents.Run.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Documents.Run 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.Documents.Run 
    => control._set(Avalonia.Controls.Documents.Run.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Documents.Run 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.Documents.Run 
    => control._setEx(Avalonia.Controls.Documents.Run.TextProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T Text<T>(this T control, IObservable<System.String> obs, IObserve
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.Documents.Run 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.Documents.Run 
 => style._addSetter(Avalonia.Controls.Documents.Run.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

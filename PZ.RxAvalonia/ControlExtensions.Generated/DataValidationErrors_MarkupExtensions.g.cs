@@ -42,26 +42,26 @@ public static T ErrorTemplate<T>(this T control, IObservable<Avalonia.Controls.T
  // Owner
 
 /*ValueSetterGenerator*/
-public static T Owner<T>(this T control, Avalonia.Controls.Control value) where T : Avalonia.Controls.DataValidationErrors 
+public static T Owner<T>(this T control, Avalonia.Controls.Control? value) where T : Avalonia.Controls.DataValidationErrors 
 {
     control.Owner = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Owner<T>(this T control, Func<Avalonia.Controls.Control> func) where T : Avalonia.Controls.DataValidationErrors 
+public static T Owner<T>(this T control, Func<Avalonia.Controls.Control?> func) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control> obs) where T : Avalonia.Controls.DataValidationErrors 
+public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control?> obs) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Owner<T>(this T control, ISubject<Avalonia.Controls.Control> subject) where T : Avalonia.Controls.DataValidationErrors 
+public static T Owner<T>(this T control, ISubject<Avalonia.Controls.Control?> subject) where T : Avalonia.Controls.DataValidationErrors 
    => control._set(Avalonia.Controls.DataValidationErrors.OwnerProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control> obs, IObserver<Avalonia.Controls.Control> changed) where T : Avalonia.Controls.DataValidationErrors 
+public static T Owner<T>(this T control, IObservable<Avalonia.Controls.Control?> obs, IObserver<Avalonia.Controls.Control?> changed) where T : Avalonia.Controls.DataValidationErrors 
    => control._setEx(Avalonia.Controls.DataValidationErrors.OwnerProperty!, obs, changed);
 
 

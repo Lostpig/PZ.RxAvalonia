@@ -16,26 +16,26 @@ public static partial class ItemsControl_MarkupExtensions
  // ItemContainerTheme
 
 /*ValueSetterGenerator*/
-public static T ItemContainerTheme<T>(this T control, Avalonia.Styling.ControlTheme value) where T : Avalonia.Controls.ItemsControl 
+public static T ItemContainerTheme<T>(this T control, Avalonia.Styling.ControlTheme? value) where T : Avalonia.Controls.ItemsControl 
 {
     control.ItemContainerTheme = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ItemContainerTheme<T>(this T control, Func<Avalonia.Styling.ControlTheme> func) where T : Avalonia.Controls.ItemsControl 
+public static T ItemContainerTheme<T>(this T control, Func<Avalonia.Styling.ControlTheme?> func) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs) where T : Avalonia.Controls.ItemsControl 
+public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ItemContainerTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme> subject) where T : Avalonia.Controls.ItemsControl 
+public static T ItemContainerTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme?> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme> obs, IObserver<Avalonia.Styling.ControlTheme> changed) where T : Avalonia.Controls.ItemsControl 
+public static T ItemContainerTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs, IObserver<Avalonia.Styling.ControlTheme?> changed) where T : Avalonia.Controls.ItemsControl 
    => control._setEx(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, obs, changed);
 
 
@@ -68,78 +68,78 @@ public static T ItemsPanel<T>(this T control, IObservable<Avalonia.Controls.ITem
  // ItemsSource
 
 /*ValueSetterGenerator*/
-public static T ItemsSource<T>(this T control, System.Collections.IEnumerable value) where T : Avalonia.Controls.ItemsControl 
+public static T ItemsSource<T>(this T control, System.Collections.IEnumerable? value) where T : Avalonia.Controls.ItemsControl 
 {
     control.ItemsSource = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ItemsSource<T>(this T control, Func<System.Collections.IEnumerable> func) where T : Avalonia.Controls.ItemsControl 
+public static T ItemsSource<T>(this T control, Func<System.Collections.IEnumerable?> func) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable> obs) where T : Avalonia.Controls.ItemsControl 
+public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable?> obs) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ItemsSource<T>(this T control, ISubject<System.Collections.IEnumerable> subject) where T : Avalonia.Controls.ItemsControl 
+public static T ItemsSource<T>(this T control, ISubject<System.Collections.IEnumerable?> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable> obs, IObserver<System.Collections.IEnumerable> changed) where T : Avalonia.Controls.ItemsControl 
+public static T ItemsSource<T>(this T control, IObservable<System.Collections.IEnumerable?> obs, IObserver<System.Collections.IEnumerable?> changed) where T : Avalonia.Controls.ItemsControl 
    => control._setEx(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, obs, changed);
 
 
  // ItemTemplate
 
 /*ValueSetterGenerator*/
-public static T ItemTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ItemsControl 
+public static T ItemTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ItemsControl 
 {
     control.ItemTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.ItemsControl 
+public static T ItemTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.ItemsControl 
+public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.ItemsControl 
+public static T ItemTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.ItemsControl 
+public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.ItemsControl 
    => control._setEx(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, obs, changed);
 
 
  // DisplayMemberBinding
 
 /*ValueSetterGenerator*/
-public static T DisplayMemberBinding<T>(this T control, Avalonia.Data.IBinding value) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.ItemsControl 
 {
     control.DisplayMemberBinding = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T DisplayMemberBinding<T>(this T control, Func<Avalonia.Data.IBinding> func) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, Func<Avalonia.Data.IBinding?> func) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding> obs) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T DisplayMemberBinding<T>(this T control, ISubject<Avalonia.Data.IBinding> subject) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, ISubject<Avalonia.Data.IBinding?> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding> obs, IObserver<Avalonia.Data.IBinding> changed) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs, IObserver<Avalonia.Data.IBinding?> changed) where T : Avalonia.Controls.ItemsControl 
    => control._setEx(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, obs, changed);
 
 
@@ -194,7 +194,7 @@ public static T RxContainerClearing<T>(this T control, IObserver<Avalonia.Contro
  // ItemContainerTheme
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ItemContainerTheme<T>(this Style<T> style, Avalonia.Styling.ControlTheme value) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemContainerTheme<T>(this Style<T> style, Avalonia.Styling.ControlTheme? value) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -216,7 +216,7 @@ public static Style<T> ItemsPanel<T>(this Style<T> style, IBinding binding) wher
  // ItemsSource
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ItemsSource<T>(this Style<T> style, System.Collections.IEnumerable value) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemsSource<T>(this Style<T> style, System.Collections.IEnumerable? value) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -227,7 +227,7 @@ public static Style<T> ItemsSource<T>(this Style<T> style, IBinding binding) whe
  // ItemTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ItemTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -238,7 +238,7 @@ public static Style<T> ItemTemplate<T>(this Style<T> style, IBinding binding) wh
  // DisplayMemberBinding
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> DisplayMemberBinding<T>(this Style<T> style, Avalonia.Data.IBinding value) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> DisplayMemberBinding<T>(this Style<T> style, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

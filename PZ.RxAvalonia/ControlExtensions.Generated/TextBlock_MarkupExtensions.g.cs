@@ -16,26 +16,26 @@ public static partial class TextBlock_MarkupExtensions
  // Background
 
 /*ValueSetterGenerator*/
-public static T Background<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBlock 
+public static T Background<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBlock 
 {
     control.Background = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Background<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TextBlock 
+public static T Background<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.BackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TextBlock 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.BackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBlock 
+public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.BackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBlock 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.BackgroundProperty!, obs, changed);
 
 
@@ -216,26 +216,26 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
  // Foreground
 
 /*ValueSetterGenerator*/
-public static T Foreground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBlock 
+public static T Foreground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBlock 
 {
     control.Foreground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TextBlock 
+public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.ForegroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TextBlock 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.ForegroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TextBlock 
+public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.ForegroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TextBlock 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.ForegroundProperty!, obs, changed);
 
 
@@ -372,26 +372,26 @@ public static T MaxLines<T>(this T control, IObservable<System.Int32> obs, IObse
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.TextBlock 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.TextBlock 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.TextBlock 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.TextBlock 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.TextBlock 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.TextBlock 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.TextProperty!, obs, changed);
 
 
@@ -476,78 +476,78 @@ public static T TextTrimming<T>(this T control, IObservable<Avalonia.Media.TextT
  // TextDecorations
 
 /*ValueSetterGenerator*/
-public static T TextDecorations<T>(this T control, Avalonia.Media.TextDecorationCollection value) where T : Avalonia.Controls.TextBlock 
+public static T TextDecorations<T>(this T control, Avalonia.Media.TextDecorationCollection? value) where T : Avalonia.Controls.TextBlock 
 {
     control.TextDecorations = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T TextDecorations<T>(this T control, Func<Avalonia.Media.TextDecorationCollection> func) where T : Avalonia.Controls.TextBlock 
+public static T TextDecorations<T>(this T control, Func<Avalonia.Media.TextDecorationCollection?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextDecorationsProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection> obs) where T : Avalonia.Controls.TextBlock 
+public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextDecorationsProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T TextDecorations<T>(this T control, ISubject<Avalonia.Media.TextDecorationCollection> subject) where T : Avalonia.Controls.TextBlock 
+public static T TextDecorations<T>(this T control, ISubject<Avalonia.Media.TextDecorationCollection?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.TextDecorationsProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection> obs, IObserver<Avalonia.Media.TextDecorationCollection> changed) where T : Avalonia.Controls.TextBlock 
+public static T TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection?> obs, IObserver<Avalonia.Media.TextDecorationCollection?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.TextDecorationsProperty!, obs, changed);
 
 
  // FontFeatures
 
 /*ValueSetterGenerator*/
-public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.TextBlock 
+public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.TextBlock 
 {
     control.FontFeatures = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection> func) where T : Avalonia.Controls.TextBlock 
+public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontFeaturesProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs) where T : Avalonia.Controls.TextBlock 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontFeaturesProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.TextBlock 
+public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.FontFeaturesProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.TextBlock 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs, IObserver<Avalonia.Media.FontFeatureCollection?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.FontFeaturesProperty!, obs, changed);
 
 
  // Inlines
 
 /*ValueSetterGenerator*/
-public static T Inlines<T>(this T control, Avalonia.Controls.Documents.InlineCollection value) where T : Avalonia.Controls.TextBlock 
+public static T Inlines<T>(this T control, Avalonia.Controls.Documents.InlineCollection? value) where T : Avalonia.Controls.TextBlock 
 {
     control.Inlines = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Inlines<T>(this T control, Func<Avalonia.Controls.Documents.InlineCollection> func) where T : Avalonia.Controls.TextBlock 
+public static T Inlines<T>(this T control, Func<Avalonia.Controls.Documents.InlineCollection?> func) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.InlinesProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection> obs) where T : Avalonia.Controls.TextBlock 
+public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection?> obs) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.InlinesProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Inlines<T>(this T control, ISubject<Avalonia.Controls.Documents.InlineCollection> subject) where T : Avalonia.Controls.TextBlock 
+public static T Inlines<T>(this T control, ISubject<Avalonia.Controls.Documents.InlineCollection?> subject) where T : Avalonia.Controls.TextBlock 
    => control._set(Avalonia.Controls.TextBlock.InlinesProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection> obs, IObserver<Avalonia.Controls.Documents.InlineCollection> changed) where T : Avalonia.Controls.TextBlock 
+public static T Inlines<T>(this T control, IObservable<Avalonia.Controls.Documents.InlineCollection?> obs, IObserver<Avalonia.Controls.Documents.InlineCollection?> changed) where T : Avalonia.Controls.TextBlock 
    => control._setEx(Avalonia.Controls.TextBlock.InlinesProperty!, obs, changed);
 
 
@@ -740,7 +740,7 @@ public static T TextBlock_TextTrimming<T>(this T control, IObservable<Avalonia.M
  // Background
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -823,7 +823,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) whe
  // Foreground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -889,7 +889,7 @@ public static Style<T> MaxLines<T>(this Style<T> style, IBinding binding) where 
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -933,7 +933,7 @@ public static Style<T> TextTrimming<T>(this Style<T> style, IBinding binding) wh
  // TextDecorations
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> TextDecorations<T>(this Style<T> style, Avalonia.Media.TextDecorationCollection value) where T : Avalonia.Controls.TextBlock 
+public static Style<T> TextDecorations<T>(this Style<T> style, Avalonia.Media.TextDecorationCollection? value) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextDecorationsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -944,7 +944,7 @@ public static Style<T> TextDecorations<T>(this Style<T> style, IBinding binding)
  // FontFeatures
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

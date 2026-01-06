@@ -16,26 +16,26 @@ public static partial class Pen_MarkupExtensions
  // Brush
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Avalonia.Media.IBrush value)  
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Avalonia.Media.IBrush? value)  
 {
     control.Brush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Func<Avalonia.Media.IBrush> func)  
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, Func<Avalonia.Media.IBrush?> func)  
    => control._set(Avalonia.Media.Pen.BrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IBrush> obs)  
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IBrush?> obs)  
    => control._set(Avalonia.Media.Pen.BrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IBrush> subject)  
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IBrush?> subject)  
    => control._set(Avalonia.Media.Pen.BrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed)  
+public static Avalonia.Media.Pen Brush(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed)  
    => control._setEx(Avalonia.Media.Pen.BrushProperty!, obs, changed);
 
 
@@ -68,26 +68,26 @@ public static Avalonia.Media.Pen Thickness(this Avalonia.Media.Pen control, IObs
  // DashStyle
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Avalonia.Media.IDashStyle value)  
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Avalonia.Media.IDashStyle? value)  
 {
     control.DashStyle = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Func<Avalonia.Media.IDashStyle> func)  
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, Func<Avalonia.Media.IDashStyle?> func)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IDashStyle> obs)  
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IDashStyle?> obs)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IDashStyle> subject)  
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, ISubject<Avalonia.Media.IDashStyle?> subject)  
    => control._set(Avalonia.Media.Pen.DashStyleProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IDashStyle> obs, IObserver<Avalonia.Media.IDashStyle> changed)  
+public static Avalonia.Media.Pen DashStyle(this Avalonia.Media.Pen control, IObservable<Avalonia.Media.IDashStyle?> obs, IObserver<Avalonia.Media.IDashStyle?> changed)  
    => control._setEx(Avalonia.Media.Pen.DashStyleProperty!, obs, changed);
 
 

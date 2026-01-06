@@ -16,26 +16,26 @@ public static partial class Geometry_MarkupExtensions
  // Transform
 
 /*ValueSetterGenerator*/
-public static T Transform<T>(this T control, Avalonia.Media.Transform value) where T : Avalonia.Media.Geometry 
+public static T Transform<T>(this T control, Avalonia.Media.Transform? value) where T : Avalonia.Media.Geometry 
 {
     control.Transform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Transform<T>(this T control, Func<Avalonia.Media.Transform> func) where T : Avalonia.Media.Geometry 
+public static T Transform<T>(this T control, Func<Avalonia.Media.Transform?> func) where T : Avalonia.Media.Geometry 
    => control._set(Avalonia.Media.Geometry.TransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs) where T : Avalonia.Media.Geometry 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform?> obs) where T : Avalonia.Media.Geometry 
    => control._set(Avalonia.Media.Geometry.TransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform> subject) where T : Avalonia.Media.Geometry 
+public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform?> subject) where T : Avalonia.Media.Geometry 
    => control._set(Avalonia.Media.Geometry.TransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed) where T : Avalonia.Media.Geometry 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform?> obs, IObserver<Avalonia.Media.Transform?> changed) where T : Avalonia.Media.Geometry 
    => control._setEx(Avalonia.Media.Geometry.TransformProperty!, obs, changed);
 
 

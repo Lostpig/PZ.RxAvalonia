@@ -42,26 +42,26 @@ public static T AsciiOnly<T>(this T control, IObservable<System.Boolean> obs, IO
  // Culture
 
 /*ValueSetterGenerator*/
-public static T Culture<T>(this T control, System.Globalization.CultureInfo value) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, System.Globalization.CultureInfo? value) where T : Avalonia.Controls.MaskedTextBox 
 {
     control.Culture = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Culture<T>(this T control, Func<System.Globalization.CultureInfo> func) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, Func<System.Globalization.CultureInfo?> func) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.CultureProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Culture<T>(this T control, IObservable<System.Globalization.CultureInfo> obs) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, IObservable<System.Globalization.CultureInfo?> obs) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.CultureProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Culture<T>(this T control, ISubject<System.Globalization.CultureInfo> subject) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, ISubject<System.Globalization.CultureInfo?> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.CultureProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Culture<T>(this T control, IObservable<System.Globalization.CultureInfo> obs, IObserver<System.Globalization.CultureInfo> changed) where T : Avalonia.Controls.MaskedTextBox 
+public static T Culture<T>(this T control, IObservable<System.Globalization.CultureInfo?> obs, IObserver<System.Globalization.CultureInfo?> changed) where T : Avalonia.Controls.MaskedTextBox 
    => control._setEx(Avalonia.Controls.MaskedTextBox.CultureProperty!, obs, changed);
 
 
@@ -94,26 +94,26 @@ public static T HidePromptOnLeave<T>(this T control, IObservable<System.Boolean>
  // Mask
 
 /*ValueSetterGenerator*/
-public static T Mask<T>(this T control, System.String value) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, System.String? value) where T : Avalonia.Controls.MaskedTextBox 
 {
     control.Mask = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Mask<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.MaskProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Mask<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.MaskProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Mask<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.MaskedTextBox 
    => control._set(Avalonia.Controls.MaskedTextBox.MaskProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Mask<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.MaskedTextBox 
+public static T Mask<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.MaskedTextBox 
    => control._setEx(Avalonia.Controls.MaskedTextBox.MaskProperty!, obs, changed);
 
 
@@ -211,7 +211,7 @@ public static Style<T> AsciiOnly<T>(this Style<T> style, IBinding binding) where
  // Culture
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Culture<T>(this Style<T> style, System.Globalization.CultureInfo value) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Culture<T>(this Style<T> style, System.Globalization.CultureInfo? value) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.CultureProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -233,7 +233,7 @@ public static Style<T> HidePromptOnLeave<T>(this Style<T> style, IBinding bindin
  // Mask
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Mask<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Mask<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.MaskProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

@@ -250,52 +250,52 @@ public static T WindowState<T>(this T control, IObservable<Avalonia.Controls.Win
  // Title
 
 /*ValueSetterGenerator*/
-public static T Title<T>(this T control, System.String value) where T : Avalonia.Controls.Window 
+public static T Title<T>(this T control, System.String? value) where T : Avalonia.Controls.Window 
 {
     control.Title = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Title<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.Window 
+public static T Title<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.TitleProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Title<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.Window 
+public static T Title<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.TitleProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Title<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.Window 
+public static T Title<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.TitleProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Title<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.Window 
+public static T Title<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.Window 
    => control._setEx(Avalonia.Controls.Window.TitleProperty!, obs, changed);
 
 
  // Icon
 
 /*ValueSetterGenerator*/
-public static T Icon<T>(this T control, Avalonia.Controls.WindowIcon value) where T : Avalonia.Controls.Window 
+public static T Icon<T>(this T control, Avalonia.Controls.WindowIcon? value) where T : Avalonia.Controls.Window 
 {
     control.Icon = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Icon<T>(this T control, Func<Avalonia.Controls.WindowIcon> func) where T : Avalonia.Controls.Window 
+public static T Icon<T>(this T control, Func<Avalonia.Controls.WindowIcon?> func) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.IconProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon> obs) where T : Avalonia.Controls.Window 
+public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon?> obs) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.IconProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Icon<T>(this T control, ISubject<Avalonia.Controls.WindowIcon> subject) where T : Avalonia.Controls.Window 
+public static T Icon<T>(this T control, ISubject<Avalonia.Controls.WindowIcon?> subject) where T : Avalonia.Controls.Window 
    => control._set(Avalonia.Controls.Window.IconProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon> obs, IObserver<Avalonia.Controls.WindowIcon> changed) where T : Avalonia.Controls.Window 
+public static T Icon<T>(this T control, IObservable<Avalonia.Controls.WindowIcon?> obs, IObserver<Avalonia.Controls.WindowIcon?> changed) where T : Avalonia.Controls.Window 
    => control._setEx(Avalonia.Controls.Window.IconProperty!, obs, changed);
 
 
@@ -520,7 +520,7 @@ public static Style<T> WindowState<T>(this Style<T> style, IBinding binding) whe
  // Title
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Title<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.Window 
+public static Style<T> Title<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.TitleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -531,7 +531,7 @@ public static Style<T> Title<T>(this Style<T> style, IBinding binding) where T :
  // Icon
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Icon<T>(this Style<T> style, Avalonia.Controls.WindowIcon value) where T : Avalonia.Controls.Window 
+public static Style<T> Icon<T>(this Style<T> style, Avalonia.Controls.WindowIcon? value) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.IconProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

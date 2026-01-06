@@ -16,26 +16,26 @@ public static partial class Expander_MarkupExtensions
  // ContentTransition
 
 /*ValueSetterGenerator*/
-public static T ContentTransition<T>(this T control, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Expander 
 {
     control.ContentTransition = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ContentTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition> func) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ContentTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition> subject) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition?> subject) where T : Avalonia.Controls.Expander 
    => control._set(Avalonia.Controls.Expander.ContentTransitionProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition> obs, IObserver<Avalonia.Animation.IPageTransition> changed) where T : Avalonia.Controls.Expander 
+public static T ContentTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs, IObserver<Avalonia.Animation.IPageTransition?> changed) where T : Avalonia.Controls.Expander 
    => control._setEx(Avalonia.Controls.Expander.ContentTransitionProperty!, obs, changed);
 
 
@@ -174,7 +174,7 @@ public static T RxExpanding<T>(this T control, IObserver<Avalonia.Interactivity.
  // ContentTransition
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContentTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition value) where T : Avalonia.Controls.Expander 
+public static Style<T> ContentTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.Expander 
 => style._addSetter(Avalonia.Controls.Expander.ContentTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

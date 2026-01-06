@@ -6,6 +6,7 @@ namespace PZ.RxAvalonia.Reactive;
 
 public class NullableSubject<T> : ISubject<T?> where T : struct
 {
+    public T? DefaultValue { get; set; } = default;
     private readonly IObservable<T> _observable;
     private readonly IObserver<T> _observer;
     public NullableSubject(ISubject<T> originSubject)
@@ -29,7 +30,8 @@ public class NullableSubject<T> : ISubject<T?> where T : struct
         }
         else
         {
-            _observer.OnNext(default!);
+            var t = DefaultValue ?? default(T);
+            _observer.OnNext(t);
         }
     }
 

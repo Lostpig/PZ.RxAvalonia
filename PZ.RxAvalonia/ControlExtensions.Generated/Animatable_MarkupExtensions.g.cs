@@ -16,26 +16,26 @@ public static partial class Animatable_MarkupExtensions
  // Transitions
 
 /*ValueSetterGenerator*/
-public static T Transitions<T>(this T control, Avalonia.Animation.Transitions value) where T : Avalonia.Animation.Animatable 
+public static T Transitions<T>(this T control, Avalonia.Animation.Transitions? value) where T : Avalonia.Animation.Animatable 
 {
     control.Transitions = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Transitions<T>(this T control, Func<Avalonia.Animation.Transitions> func) where T : Avalonia.Animation.Animatable 
+public static T Transitions<T>(this T control, Func<Avalonia.Animation.Transitions?> func) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Transitions> obs) where T : Avalonia.Animation.Animatable 
+public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Transitions?> obs) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Transitions<T>(this T control, ISubject<Avalonia.Animation.Transitions> subject) where T : Avalonia.Animation.Animatable 
+public static T Transitions<T>(this T control, ISubject<Avalonia.Animation.Transitions?> subject) where T : Avalonia.Animation.Animatable 
    => control._set(Avalonia.Animation.Animatable.TransitionsProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Transitions> obs, IObserver<Avalonia.Animation.Transitions> changed) where T : Avalonia.Animation.Animatable 
+public static T Transitions<T>(this T control, IObservable<Avalonia.Animation.Transitions?> obs, IObserver<Avalonia.Animation.Transitions?> changed) where T : Avalonia.Animation.Animatable 
    => control._setEx(Avalonia.Animation.Animatable.TransitionsProperty!, obs, changed);
 
 

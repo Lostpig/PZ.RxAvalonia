@@ -16,26 +16,26 @@ public static partial class TemplatedControl_MarkupExtensions
  // Background
 
 /*ValueSetterGenerator*/
-public static T Background<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Background<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 {
     control.Background = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Background<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Background<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Background<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Background<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, obs, changed);
 
 
@@ -68,26 +68,26 @@ public static T BackgroundSizing<T>(this T control, IObservable<Avalonia.Media.B
  // BorderBrush
 
 /*ValueSetterGenerator*/
-public static T BorderBrush<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T BorderBrush<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 {
     control.BorderBrush = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T BorderBrush<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T BorderBrush<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T BorderBrush<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T BorderBrush<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, obs, changed);
 
 
@@ -208,26 +208,26 @@ public static T FontFamily<T>(this T control, IObservable<Avalonia.Media.FontFam
  // FontFeatures
 
 /*ValueSetterGenerator*/
-public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T FontFeatures<T>(this T control, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 {
     control.FontFeatures = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T FontFeatures<T>(this T control, Func<Avalonia.Media.FontFeatureCollection?> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T FontFeatures<T>(this T control, ISubject<Avalonia.Media.FontFeatureCollection?> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection> obs, IObserver<Avalonia.Media.FontFeatureCollection> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T FontFeatures<T>(this T control, IObservable<Avalonia.Media.FontFeatureCollection?> obs, IObserver<Avalonia.Media.FontFeatureCollection?> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, obs, changed);
 
 
@@ -338,26 +338,26 @@ public static T FontStretch<T>(this T control, IObservable<Avalonia.Media.FontSt
  // Foreground
 
 /*ValueSetterGenerator*/
-public static T Foreground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Foreground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 {
     control.Foreground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Foreground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Foreground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, obs, changed);
 
 
@@ -408,26 +408,26 @@ public static T Padding<T>(this T control, IObservable<Avalonia.Thickness> obs, 
  // Template
 
 /*ValueSetterGenerator*/
-public static T Template<T>(this T control, Avalonia.Controls.Templates.IControlTemplate value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Template<T>(this T control, Avalonia.Controls.Templates.IControlTemplate? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 {
     control.Template = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Template<T>(this T control, Func<Avalonia.Controls.Templates.IControlTemplate> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Template<T>(this T control, Func<Avalonia.Controls.Templates.IControlTemplate?> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Template<T>(this T control, IObservable<Avalonia.Controls.Templates.IControlTemplate> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Template<T>(this T control, IObservable<Avalonia.Controls.Templates.IControlTemplate?> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Template<T>(this T control, ISubject<Avalonia.Controls.Templates.IControlTemplate> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Template<T>(this T control, ISubject<Avalonia.Controls.Templates.IControlTemplate?> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._set(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Template<T>(this T control, IObservable<Avalonia.Controls.Templates.IControlTemplate> obs, IObserver<Avalonia.Controls.Templates.IControlTemplate> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static T Template<T>(this T control, IObservable<Avalonia.Controls.Templates.IControlTemplate?> obs, IObserver<Avalonia.Controls.Templates.IControlTemplate?> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, obs, changed);
 
 
@@ -485,7 +485,7 @@ public static T RxTemplateApplied<T>(this T control, IObserver<Avalonia.Controls
  // Background
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -507,7 +507,7 @@ public static Style<T> BackgroundSizing<T>(this Style<T> style, IBinding binding
  // BorderBrush
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -563,7 +563,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) wher
  // FontFeatures
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontFeatureCollection? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -618,7 +618,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) whe
  // Foreground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -646,7 +646,7 @@ public static Style<T> Padding<T>(this Style<T> style, System.Double uniformLeng
  // Template
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Template<T>(this Style<T> style, Avalonia.Controls.Templates.IControlTemplate value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Template<T>(this Style<T> style, Avalonia.Controls.Templates.IControlTemplate? value) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

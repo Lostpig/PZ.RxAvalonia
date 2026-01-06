@@ -120,26 +120,26 @@ public static T OpenPaneLength<T>(this T control, IObservable<System.Double> obs
  // PaneBackground
 
 /*ValueSetterGenerator*/
-public static T PaneBackground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SplitView 
 {
     control.PaneBackground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T PaneBackground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneBackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneBackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T PaneBackground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneBackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.SplitView 
+public static T PaneBackground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.SplitView 
    => control._setEx(Avalonia.Controls.SplitView.PaneBackgroundProperty!, obs, changed);
 
 
@@ -172,26 +172,26 @@ public static T PanePlacement<T>(this T control, IObservable<Avalonia.Controls.S
  // Pane
 
 /*ValueSetterGenerator*/
-public static T Pane<T>(this T control, System.Object value) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, System.Object? value) where T : Avalonia.Controls.SplitView 
 {
     control.Pane = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Pane<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Pane<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Pane<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.SplitView 
    => control._set(Avalonia.Controls.SplitView.PaneProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Pane<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.SplitView 
+public static T Pane<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.SplitView 
    => control._setEx(Avalonia.Controls.SplitView.PaneProperty!, obs, changed);
 
 
@@ -374,7 +374,7 @@ public static Style<T> OpenPaneLength<T>(this Style<T> style, IBinding binding) 
  // PaneBackground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> PaneBackground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.SplitView 
+public static Style<T> PaneBackground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -396,7 +396,7 @@ public static Style<T> PanePlacement<T>(this Style<T> style, IBinding binding) w
  // Pane
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Pane<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.SplitView 
+public static Style<T> Pane<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

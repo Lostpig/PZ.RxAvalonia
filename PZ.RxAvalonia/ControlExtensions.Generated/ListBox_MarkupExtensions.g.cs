@@ -16,26 +16,26 @@ public static partial class ListBox_MarkupExtensions
  // SelectedItems
 
 /*ValueSetterGenerator*/
-public static T SelectedItems<T>(this T control, System.Collections.IList value) where T : Avalonia.Controls.ListBox 
+public static T SelectedItems<T>(this T control, System.Collections.IList? value) where T : Avalonia.Controls.ListBox 
 {
     control.SelectedItems = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectedItems<T>(this T control, Func<System.Collections.IList> func) where T : Avalonia.Controls.ListBox 
+public static T SelectedItems<T>(this T control, Func<System.Collections.IList?> func) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList> obs) where T : Avalonia.Controls.ListBox 
+public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList?> obs) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectedItems<T>(this T control, ISubject<System.Collections.IList> subject) where T : Avalonia.Controls.ListBox 
+public static T SelectedItems<T>(this T control, ISubject<System.Collections.IList?> subject) where T : Avalonia.Controls.ListBox 
    => control._set(Avalonia.Controls.ListBox.SelectedItemsProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList> obs, IObserver<System.Collections.IList> changed) where T : Avalonia.Controls.ListBox 
+public static T SelectedItems<T>(this T control, IObservable<System.Collections.IList?> obs, IObserver<System.Collections.IList?> changed) where T : Avalonia.Controls.ListBox 
    => control._setEx(Avalonia.Controls.ListBox.SelectedItemsProperty!, obs, changed);
 
 

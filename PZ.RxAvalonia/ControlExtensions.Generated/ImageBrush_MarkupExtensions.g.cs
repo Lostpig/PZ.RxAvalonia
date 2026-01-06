@@ -16,26 +16,26 @@ public static partial class ImageBrush_MarkupExtensions
  // Source
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, Avalonia.Media.IImageBrushSource value)  
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, Avalonia.Media.IImageBrushSource? value)  
 {
     control.Source = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, Func<Avalonia.Media.IImageBrushSource> func)  
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, Func<Avalonia.Media.IImageBrushSource?> func)  
    => control._set(Avalonia.Media.ImageBrush.SourceProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, IObservable<Avalonia.Media.IImageBrushSource> obs)  
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, IObservable<Avalonia.Media.IImageBrushSource?> obs)  
    => control._set(Avalonia.Media.ImageBrush.SourceProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, ISubject<Avalonia.Media.IImageBrushSource> subject)  
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, ISubject<Avalonia.Media.IImageBrushSource?> subject)  
    => control._set(Avalonia.Media.ImageBrush.SourceProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, IObservable<Avalonia.Media.IImageBrushSource> obs, IObserver<Avalonia.Media.IImageBrushSource> changed)  
+public static Avalonia.Media.ImageBrush Source(this Avalonia.Media.ImageBrush control, IObservable<Avalonia.Media.IImageBrushSource?> obs, IObserver<Avalonia.Media.IImageBrushSource?> changed)  
    => control._setEx(Avalonia.Media.ImageBrush.SourceProperty!, obs, changed);
 
 

@@ -16,26 +16,26 @@ public static partial class OverlayPopupHost_MarkupExtensions
  // Transform
 
 /*ValueSetterGenerator*/
-public static T Transform<T>(this T control, Avalonia.Media.Transform value) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static T Transform<T>(this T control, Avalonia.Media.Transform? value) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
 {
     control.Transform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Transform<T>(this T control, Func<Avalonia.Media.Transform> func) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static T Transform<T>(this T control, Func<Avalonia.Media.Transform?> func) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform?> obs) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform> subject) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static T Transform<T>(this T control, ISubject<Avalonia.Media.Transform?> subject) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._set(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform> obs, IObserver<Avalonia.Media.Transform> changed) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transform?> obs, IObserver<Avalonia.Media.Transform?> changed) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
    => control._setEx(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T Transform<T>(this T control, IObservable<Avalonia.Media.Transfor
  // Transform
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Transform<T>(this Style<T> style, Avalonia.Media.Transform value) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static Style<T> Transform<T>(this Style<T> style, Avalonia.Media.Transform? value) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
 => style._addSetter(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

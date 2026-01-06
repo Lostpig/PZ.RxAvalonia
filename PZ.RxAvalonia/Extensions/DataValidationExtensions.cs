@@ -32,4 +32,13 @@ public static class DataValidationExtensions
         compValid?.GetControlValidator(control, avap).AddValidation(validation);
         return control;
     }
+
+    public static ControlValidator<TControl, TValue>? _getValidator<TControl, TValue>(this TControl control, AvaloniaProperty<TValue> avap)
+        where TControl : Control
+    {
+        var component = ComponentBuildContext.CurrentComponent ?? throw new InvalidOperationException("Current component is not set! ");
+        var compValid = ComponentValidation.Get(component);
+
+        return compValid?.GetControlValidator(control, avap);
+    }
 }

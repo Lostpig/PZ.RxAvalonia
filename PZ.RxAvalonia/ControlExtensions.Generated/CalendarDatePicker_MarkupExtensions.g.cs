@@ -250,52 +250,52 @@ public static T CustomDateFormatString<T>(this T control, IObservable<System.Str
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.CalendarDatePicker 
    => control._setEx(Avalonia.Controls.CalendarDatePicker.TextProperty!, obs, changed);
 
 
  // Watermark
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String value) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
 {
     control.Watermark = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.CalendarDatePicker 
    => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.CalendarDatePicker 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.CalendarDatePicker 
    => control._setEx(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, obs, changed);
 
 
@@ -527,7 +527,7 @@ public static Style<T> CustomDateFormatString<T>(this Style<T> style, IBinding b
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -538,7 +538,7 @@ public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : 
  // Watermark
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

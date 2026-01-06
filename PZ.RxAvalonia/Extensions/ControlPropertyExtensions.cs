@@ -105,7 +105,7 @@ public static class ControlPropertyExtensions
     {
         var component = ComponentBuildContext.CurrentComponent ?? throw new InvalidOperationException("Current component is not set! ");
         var state = new FuncPropertyState<TControl, TValue>(control, getter, setter);
-        component.AddFuncPropertyState(state);
+        component.AddFuncPropertyState(state, control);
 
         return control;
     }
@@ -124,7 +124,7 @@ public static class ControlPropertyExtensions
     {
         var component = ComponentBuildContext.CurrentComponent ?? throw new InvalidOperationException("Current component is not set! ");
         var state = new FuncPropertyState<TControl, TValue>(control, getter, avap);
-        component.AddFuncPropertyState(state);
+        component.AddFuncPropertyState(state, control);
 
         return control;
     }

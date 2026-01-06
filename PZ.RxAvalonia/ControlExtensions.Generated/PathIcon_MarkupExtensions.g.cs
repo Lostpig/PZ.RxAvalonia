@@ -16,26 +16,26 @@ public static partial class PathIcon_MarkupExtensions
  // Data
 
 /*ValueSetterGenerator*/
-public static T Data<T>(this T control, Avalonia.Media.Geometry value) where T : Avalonia.Controls.PathIcon 
+public static T Data<T>(this T control, Avalonia.Media.Geometry? value) where T : Avalonia.Controls.PathIcon 
 {
     control.Data = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Data<T>(this T control, Func<Avalonia.Media.Geometry> func) where T : Avalonia.Controls.PathIcon 
+public static T Data<T>(this T control, Func<Avalonia.Media.Geometry?> func) where T : Avalonia.Controls.PathIcon 
    => control._set(Avalonia.Controls.PathIcon.DataProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry> obs) where T : Avalonia.Controls.PathIcon 
+public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs) where T : Avalonia.Controls.PathIcon 
    => control._set(Avalonia.Controls.PathIcon.DataProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Data<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Controls.PathIcon 
+public static T Data<T>(this T control, ISubject<Avalonia.Media.Geometry?> subject) where T : Avalonia.Controls.PathIcon 
    => control._set(Avalonia.Controls.PathIcon.DataProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Controls.PathIcon 
+public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs, IObserver<Avalonia.Media.Geometry?> changed) where T : Avalonia.Controls.PathIcon 
    => control._setEx(Avalonia.Controls.PathIcon.DataProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T Data<T>(this T control, IObservable<Avalonia.Media.Geometry> obs
  // Data
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Data<T>(this Style<T> style, Avalonia.Media.Geometry value) where T : Avalonia.Controls.PathIcon 
+public static Style<T> Data<T>(this Style<T> style, Avalonia.Media.Geometry? value) where T : Avalonia.Controls.PathIcon 
 => style._addSetter(Avalonia.Controls.PathIcon.DataProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

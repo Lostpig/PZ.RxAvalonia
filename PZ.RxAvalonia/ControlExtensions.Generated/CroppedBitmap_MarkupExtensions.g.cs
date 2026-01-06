@@ -16,26 +16,26 @@ public static partial class CroppedBitmap_MarkupExtensions
  // Source
 
 /*ValueSetterGenerator*/
-public static T Source<T>(this T control, Avalonia.Media.IImage value) where T : Avalonia.Media.Imaging.CroppedBitmap 
+public static T Source<T>(this T control, Avalonia.Media.IImage? value) where T : Avalonia.Media.Imaging.CroppedBitmap 
 {
     control.Source = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Source<T>(this T control, Func<Avalonia.Media.IImage> func) where T : Avalonia.Media.Imaging.CroppedBitmap 
+public static T Source<T>(this T control, Func<Avalonia.Media.IImage?> func) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs) where T : Avalonia.Media.Imaging.CroppedBitmap 
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage?> obs) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage> subject) where T : Avalonia.Media.Imaging.CroppedBitmap 
+public static T Source<T>(this T control, ISubject<Avalonia.Media.IImage?> subject) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._set(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed) where T : Avalonia.Media.Imaging.CroppedBitmap 
+public static T Source<T>(this T control, IObservable<Avalonia.Media.IImage?> obs, IObserver<Avalonia.Media.IImage?> changed) where T : Avalonia.Media.Imaging.CroppedBitmap 
    => control._setEx(Avalonia.Media.Imaging.CroppedBitmap.SourceProperty!, obs, changed);
 
 

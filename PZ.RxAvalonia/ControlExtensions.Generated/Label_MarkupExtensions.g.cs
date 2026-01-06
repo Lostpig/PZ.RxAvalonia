@@ -16,26 +16,26 @@ public static partial class Label_MarkupExtensions
  // Target
 
 /*ValueSetterGenerator*/
-public static T Target<T>(this T control, Avalonia.Input.IInputElement value) where T : Avalonia.Controls.Label 
+public static T Target<T>(this T control, Avalonia.Input.IInputElement? value) where T : Avalonia.Controls.Label 
 {
     control.Target = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Target<T>(this T control, Func<Avalonia.Input.IInputElement> func) where T : Avalonia.Controls.Label 
+public static T Target<T>(this T control, Func<Avalonia.Input.IInputElement?> func) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs) where T : Avalonia.Controls.Label 
+public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputElement?> obs) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Target<T>(this T control, ISubject<Avalonia.Input.IInputElement> subject) where T : Avalonia.Controls.Label 
+public static T Target<T>(this T control, ISubject<Avalonia.Input.IInputElement?> subject) where T : Avalonia.Controls.Label 
    => control._set(Avalonia.Controls.Label.TargetProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputElement> obs, IObserver<Avalonia.Input.IInputElement> changed) where T : Avalonia.Controls.Label 
+public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputElement?> obs, IObserver<Avalonia.Input.IInputElement?> changed) where T : Avalonia.Controls.Label 
    => control._setEx(Avalonia.Controls.Label.TargetProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T Target<T>(this T control, IObservable<Avalonia.Input.IInputEleme
  // Target
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Target<T>(this Style<T> style, Avalonia.Input.IInputElement value) where T : Avalonia.Controls.Label 
+public static Style<T> Target<T>(this Style<T> style, Avalonia.Input.IInputElement? value) where T : Avalonia.Controls.Label 
 => style._addSetter(Avalonia.Controls.Label.TargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

@@ -94,26 +94,26 @@ public static T VerticalContentAlignment<T>(this T control, IObservable<Avalonia
  // ContentTemplate
 
 /*ValueSetterGenerator*/
-public static T ContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.TabControl 
+public static T ContentTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.TabControl 
 {
     control.ContentTemplate = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate> func) where T : Avalonia.Controls.TabControl 
+public static T ContentTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.TabControl 
    => control._set(Avalonia.Controls.TabControl.ContentTemplateProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs) where T : Avalonia.Controls.TabControl 
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.TabControl 
    => control._set(Avalonia.Controls.TabControl.ContentTemplateProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate> subject) where T : Avalonia.Controls.TabControl 
+public static T ContentTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.TabControl 
    => control._set(Avalonia.Controls.TabControl.ContentTemplateProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate> changed) where T : Avalonia.Controls.TabControl 
+public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.TabControl 
    => control._setEx(Avalonia.Controls.TabControl.ContentTemplateProperty!, obs, changed);
 
 
@@ -155,7 +155,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding
  // ContentTemplate
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate value) where T : Avalonia.Controls.TabControl 
+public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.TabControl 
 => style._addSetter(Avalonia.Controls.TabControl.ContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

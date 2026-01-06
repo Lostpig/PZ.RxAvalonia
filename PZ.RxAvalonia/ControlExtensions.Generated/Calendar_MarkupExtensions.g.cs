@@ -68,26 +68,26 @@ public static T IsTodayHighlighted<T>(this T control, IObservable<System.Boolean
  // HeaderBackground
 
 /*ValueSetterGenerator*/
-public static T HeaderBackground<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Calendar 
 {
     control.HeaderBackground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T HeaderBackground<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T HeaderBackground<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.Calendar 
    => control._set(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.Calendar 
+public static T HeaderBackground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.Calendar 
    => control._setEx(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, obs, changed);
 
 
@@ -335,7 +335,7 @@ public static Style<T> IsTodayHighlighted<T>(this Style<T> style, IBinding bindi
  // HeaderBackground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> HeaderBackground<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.Calendar 
+public static Style<T> HeaderBackground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

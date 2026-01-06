@@ -42,26 +42,26 @@ public static T Opacity<T>(this T control, IObservable<System.Double> obs, IObse
  // Transform
 
 /*ValueSetterGenerator*/
-public static T Transform<T>(this T control, Avalonia.Media.ITransform value) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, Avalonia.Media.ITransform? value) where T : Avalonia.Media.Brush 
 {
     control.Transform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Transform<T>(this T control, Func<Avalonia.Media.ITransform> func) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, Func<Avalonia.Media.ITransform?> func) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Transform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, ISubject<Avalonia.Media.ITransform?> subject) where T : Avalonia.Media.Brush 
    => control._set(Avalonia.Media.Brush.TransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Media.Brush 
+public static T Transform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs, IObserver<Avalonia.Media.ITransform?> changed) where T : Avalonia.Media.Brush 
    => control._setEx(Avalonia.Media.Brush.TransformProperty!, obs, changed);
 
 

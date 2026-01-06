@@ -16,130 +16,130 @@ public static partial class MenuItem_MarkupExtensions
  // Command
 
 /*ValueSetterGenerator*/
-public static T Command<T>(this T control, System.Windows.Input.ICommand value) where T : Avalonia.Controls.MenuItem 
+public static T Command<T>(this T control, System.Windows.Input.ICommand? value) where T : Avalonia.Controls.MenuItem 
 {
     control.Command = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Command<T>(this T control, Func<System.Windows.Input.ICommand> func) where T : Avalonia.Controls.MenuItem 
+public static T Command<T>(this T control, Func<System.Windows.Input.ICommand?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs) where T : Avalonia.Controls.MenuItem 
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand> subject) where T : Avalonia.Controls.MenuItem 
+public static T Command<T>(this T control, ISubject<System.Windows.Input.ICommand?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand> obs, IObserver<System.Windows.Input.ICommand> changed) where T : Avalonia.Controls.MenuItem 
+public static T Command<T>(this T control, IObservable<System.Windows.Input.ICommand?> obs, IObserver<System.Windows.Input.ICommand?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.CommandProperty!, obs, changed);
 
 
  // HotKey
 
 /*ValueSetterGenerator*/
-public static T HotKey<T>(this T control, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.MenuItem 
+public static T HotKey<T>(this T control, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.MenuItem 
 {
     control.HotKey = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture> func) where T : Avalonia.Controls.MenuItem 
+public static T HotKey<T>(this T control, Func<Avalonia.Input.KeyGesture?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.HotKeyProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs) where T : Avalonia.Controls.MenuItem 
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.HotKeyProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.MenuItem 
+public static T HotKey<T>(this T control, ISubject<Avalonia.Input.KeyGesture?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.HotKeyProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.MenuItem 
+public static T HotKey<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs, IObserver<Avalonia.Input.KeyGesture?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.HotKeyProperty!, obs, changed);
 
 
  // CommandParameter
 
 /*ValueSetterGenerator*/
-public static T CommandParameter<T>(this T control, System.Object value) where T : Avalonia.Controls.MenuItem 
+public static T CommandParameter<T>(this T control, System.Object? value) where T : Avalonia.Controls.MenuItem 
 {
     control.CommandParameter = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T CommandParameter<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.MenuItem 
+public static T CommandParameter<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandParameterProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T CommandParameter<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.MenuItem 
+public static T CommandParameter<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandParameterProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T CommandParameter<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.MenuItem 
+public static T CommandParameter<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.CommandParameterProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T CommandParameter<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.MenuItem 
+public static T CommandParameter<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.CommandParameterProperty!, obs, changed);
 
 
  // Icon
 
 /*ValueSetterGenerator*/
-public static T Icon<T>(this T control, System.Object value) where T : Avalonia.Controls.MenuItem 
+public static T Icon<T>(this T control, System.Object? value) where T : Avalonia.Controls.MenuItem 
 {
     control.Icon = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Icon<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.MenuItem 
+public static T Icon<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IconProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Icon<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.MenuItem 
+public static T Icon<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IconProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Icon<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.MenuItem 
+public static T Icon<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.IconProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Icon<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.MenuItem 
+public static T Icon<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.IconProperty!, obs, changed);
 
 
  // InputGesture
 
 /*ValueSetterGenerator*/
-public static T InputGesture<T>(this T control, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.MenuItem 
+public static T InputGesture<T>(this T control, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.MenuItem 
 {
     control.InputGesture = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T InputGesture<T>(this T control, Func<Avalonia.Input.KeyGesture> func) where T : Avalonia.Controls.MenuItem 
+public static T InputGesture<T>(this T control, Func<Avalonia.Input.KeyGesture?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.InputGestureProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs) where T : Avalonia.Controls.MenuItem 
+public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.InputGestureProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T InputGesture<T>(this T control, ISubject<Avalonia.Input.KeyGesture> subject) where T : Avalonia.Controls.MenuItem 
+public static T InputGesture<T>(this T control, ISubject<Avalonia.Input.KeyGesture?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.InputGestureProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture> obs, IObserver<Avalonia.Input.KeyGesture> changed) where T : Avalonia.Controls.MenuItem 
+public static T InputGesture<T>(this T control, IObservable<Avalonia.Input.KeyGesture?> obs, IObserver<Avalonia.Input.KeyGesture?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.InputGestureProperty!, obs, changed);
 
 
@@ -250,26 +250,26 @@ public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs, IO
  // GroupName
 
 /*ValueSetterGenerator*/
-public static T GroupName<T>(this T control, System.String value) where T : Avalonia.Controls.MenuItem 
+public static T GroupName<T>(this T control, System.String? value) where T : Avalonia.Controls.MenuItem 
 {
     control.GroupName = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T GroupName<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.MenuItem 
+public static T GroupName<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.GroupNameProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T GroupName<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.MenuItem 
+public static T GroupName<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.GroupNameProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T GroupName<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.MenuItem 
+public static T GroupName<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.MenuItem 
    => control._set(Avalonia.Controls.MenuItem.GroupNameProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T GroupName<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.MenuItem 
+public static T GroupName<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.MenuItem 
    => control._setEx(Avalonia.Controls.MenuItem.GroupNameProperty!, obs, changed);
 
 
@@ -356,7 +356,7 @@ public static T RxSubmenuOpened<T>(this T control, IObserver<Avalonia.Interactiv
  // Command
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICommand value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICommand? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.CommandProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -367,7 +367,7 @@ public static Style<T> Command<T>(this Style<T> style, IBinding binding) where T
  // HotKey
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.HotKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -378,7 +378,7 @@ public static Style<T> HotKey<T>(this Style<T> style, IBinding binding) where T 
  // CommandParameter
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> CommandParameter<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> CommandParameter<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.CommandParameterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -389,7 +389,7 @@ public static Style<T> CommandParameter<T>(this Style<T> style, IBinding binding
  // Icon
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Icon<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> Icon<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.IconProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -400,7 +400,7 @@ public static Style<T> Icon<T>(this Style<T> style, IBinding binding) where T : 
  // InputGesture
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InputGesture<T>(this Style<T> style, Avalonia.Input.KeyGesture value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> InputGesture<T>(this Style<T> style, Avalonia.Input.KeyGesture? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.InputGestureProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -455,7 +455,7 @@ public static Style<T> IsChecked<T>(this Style<T> style, IBinding binding) where
  // GroupName
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> GroupName<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.MenuItem 
+public static Style<T> GroupName<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.GroupNameProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

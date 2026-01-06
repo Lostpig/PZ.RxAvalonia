@@ -42,26 +42,26 @@ public static T ClipToBounds<T>(this T control, IObservable<System.Boolean> obs,
  // Clip
 
 /*ValueSetterGenerator*/
-public static T Clip<T>(this T control, Avalonia.Media.Geometry value) where T : Avalonia.Visual 
+public static T Clip<T>(this T control, Avalonia.Media.Geometry? value) where T : Avalonia.Visual 
 {
     control.Clip = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Clip<T>(this T control, Func<Avalonia.Media.Geometry> func) where T : Avalonia.Visual 
+public static T Clip<T>(this T control, Func<Avalonia.Media.Geometry?> func) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ClipProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry> obs) where T : Avalonia.Visual 
+public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ClipProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Clip<T>(this T control, ISubject<Avalonia.Media.Geometry> subject) where T : Avalonia.Visual 
+public static T Clip<T>(this T control, ISubject<Avalonia.Media.Geometry?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.ClipProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry> obs, IObserver<Avalonia.Media.Geometry> changed) where T : Avalonia.Visual 
+public static T Clip<T>(this T control, IObservable<Avalonia.Media.Geometry?> obs, IObserver<Avalonia.Media.Geometry?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Visual.ClipProperty!, obs, changed);
 
 
@@ -120,78 +120,78 @@ public static T Opacity<T>(this T control, IObservable<System.Double> obs, IObse
  // OpacityMask
 
 /*ValueSetterGenerator*/
-public static T OpacityMask<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Visual 
+public static T OpacityMask<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Visual 
 {
     control.OpacityMask = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T OpacityMask<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Visual 
+public static T OpacityMask<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.OpacityMaskProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Visual 
+public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.OpacityMaskProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T OpacityMask<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Visual 
+public static T OpacityMask<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.OpacityMaskProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Visual 
+public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Visual.OpacityMaskProperty!, obs, changed);
 
 
  // Effect
 
 /*ValueSetterGenerator*/
-public static T Effect<T>(this T control, Avalonia.Media.IEffect value) where T : Avalonia.Visual 
+public static T Effect<T>(this T control, Avalonia.Media.IEffect? value) where T : Avalonia.Visual 
 {
     control.Effect = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Effect<T>(this T control, Func<Avalonia.Media.IEffect> func) where T : Avalonia.Visual 
+public static T Effect<T>(this T control, Func<Avalonia.Media.IEffect?> func) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.EffectProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect> obs) where T : Avalonia.Visual 
+public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.EffectProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Effect<T>(this T control, ISubject<Avalonia.Media.IEffect> subject) where T : Avalonia.Visual 
+public static T Effect<T>(this T control, ISubject<Avalonia.Media.IEffect?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.EffectProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect> obs, IObserver<Avalonia.Media.IEffect> changed) where T : Avalonia.Visual 
+public static T Effect<T>(this T control, IObservable<Avalonia.Media.IEffect?> obs, IObserver<Avalonia.Media.IEffect?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Visual.EffectProperty!, obs, changed);
 
 
  // RenderTransform
 
 /*ValueSetterGenerator*/
-public static T RenderTransform<T>(this T control, Avalonia.Media.ITransform value) where T : Avalonia.Visual 
+public static T RenderTransform<T>(this T control, Avalonia.Media.ITransform? value) where T : Avalonia.Visual 
 {
     control.RenderTransform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T RenderTransform<T>(this T control, Func<Avalonia.Media.ITransform> func) where T : Avalonia.Visual 
+public static T RenderTransform<T>(this T control, Func<Avalonia.Media.ITransform?> func) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.RenderTransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs) where T : Avalonia.Visual 
+public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.RenderTransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T RenderTransform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Visual 
+public static T RenderTransform<T>(this T control, ISubject<Avalonia.Media.ITransform?> subject) where T : Avalonia.Visual 
    => control._set(Avalonia.Visual.RenderTransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Visual 
+public static T RenderTransform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs, IObserver<Avalonia.Media.ITransform?> changed) where T : Avalonia.Visual 
    => control._setEx(Avalonia.Visual.RenderTransformProperty!, obs, changed);
 
 
@@ -354,7 +354,7 @@ public static Style<T> ClipToBounds<T>(this Style<T> style, IBinding binding) wh
  // Clip
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Clip<T>(this Style<T> style, Avalonia.Media.Geometry value) where T : Avalonia.Visual 
+public static Style<T> Clip<T>(this Style<T> style, Avalonia.Media.Geometry? value) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.ClipProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -387,7 +387,7 @@ public static Style<T> Opacity<T>(this Style<T> style, IBinding binding) where T
  // OpacityMask
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> OpacityMask<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Visual 
+public static Style<T> OpacityMask<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.OpacityMaskProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -398,7 +398,7 @@ public static Style<T> OpacityMask<T>(this Style<T> style, IBinding binding) whe
  // Effect
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Effect<T>(this Style<T> style, Avalonia.Media.IEffect value) where T : Avalonia.Visual 
+public static Style<T> Effect<T>(this Style<T> style, Avalonia.Media.IEffect? value) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.EffectProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -409,7 +409,7 @@ public static Style<T> Effect<T>(this Style<T> style, IBinding binding) where T 
  // RenderTransform
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> RenderTransform<T>(this Style<T> style, Avalonia.Media.ITransform value) where T : Avalonia.Visual 
+public static Style<T> RenderTransform<T>(this Style<T> style, Avalonia.Media.ITransform? value) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.RenderTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

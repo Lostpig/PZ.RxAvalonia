@@ -16,26 +16,26 @@ public static partial class TickBar_MarkupExtensions
  // Fill
 
 /*ValueSetterGenerator*/
-public static T Fill<T>(this T control, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TickBar 
+public static T Fill<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TickBar 
 {
     control.Fill = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Fill<T>(this T control, Func<Avalonia.Media.IBrush> func) where T : Avalonia.Controls.TickBar 
+public static T Fill<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.FillProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs) where T : Avalonia.Controls.TickBar 
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.FillProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush> subject) where T : Avalonia.Controls.TickBar 
+public static T Fill<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TickBar 
    => control._set(Avalonia.Controls.TickBar.FillProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush> obs, IObserver<Avalonia.Media.IBrush> changed) where T : Avalonia.Controls.TickBar 
+public static T Fill<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TickBar 
    => control._setEx(Avalonia.Controls.TickBar.FillProperty!, obs, changed);
 
 
@@ -275,7 +275,7 @@ public static T ReservedSpace<T>(this T control, IObservable<Avalonia.Rect> obs,
  // Fill
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Fill<T>(this Style<T> style, Avalonia.Media.IBrush value) where T : Avalonia.Controls.TickBar 
+public static Style<T> Fill<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TickBar 
 => style._addSetter(Avalonia.Controls.TickBar.FillProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

@@ -16,26 +16,26 @@ public static partial class ImageDrawing_MarkupExtensions
  // ImageSource
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, Avalonia.Media.IImage value)  
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, Avalonia.Media.IImage? value)  
 {
     control.ImageSource = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, Func<Avalonia.Media.IImage> func)  
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, Func<Avalonia.Media.IImage?> func)  
    => control._set(Avalonia.Media.ImageDrawing.ImageSourceProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Media.IImage> obs)  
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Media.IImage?> obs)  
    => control._set(Avalonia.Media.ImageDrawing.ImageSourceProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, ISubject<Avalonia.Media.IImage> subject)  
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, ISubject<Avalonia.Media.IImage?> subject)  
    => control._set(Avalonia.Media.ImageDrawing.ImageSourceProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Media.IImage> obs, IObserver<Avalonia.Media.IImage> changed)  
+public static Avalonia.Media.ImageDrawing ImageSource(this Avalonia.Media.ImageDrawing control, IObservable<Avalonia.Media.IImage?> obs, IObserver<Avalonia.Media.IImage?> changed)  
    => control._setEx(Avalonia.Media.ImageDrawing.ImageSourceProperty!, obs, changed);
 
 

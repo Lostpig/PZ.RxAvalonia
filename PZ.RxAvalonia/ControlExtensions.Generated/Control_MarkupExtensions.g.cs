@@ -42,78 +42,78 @@ public static T FocusAdorner<T>(this T control, IObservable<Avalonia.Controls.IT
  // Tag
 
 /*ValueSetterGenerator*/
-public static T Tag<T>(this T control, System.Object value) where T : Avalonia.Controls.Control 
+public static T Tag<T>(this T control, System.Object? value) where T : Avalonia.Controls.Control 
 {
     control.Tag = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Tag<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.Control 
+public static T Tag<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Tag<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.Control 
+public static T Tag<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Tag<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.Control 
+public static T Tag<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.TagProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Tag<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.Control 
+public static T Tag<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.Control.TagProperty!, obs, changed);
 
 
  // ContextMenu
 
 /*ValueSetterGenerator*/
-public static T ContextMenu<T>(this T control, Avalonia.Controls.ContextMenu value) where T : Avalonia.Controls.Control 
+public static T ContextMenu<T>(this T control, Avalonia.Controls.ContextMenu? value) where T : Avalonia.Controls.Control 
 {
     control.ContextMenu = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ContextMenu<T>(this T control, Func<Avalonia.Controls.ContextMenu> func) where T : Avalonia.Controls.Control 
+public static T ContextMenu<T>(this T control, Func<Avalonia.Controls.ContextMenu?> func) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.ContextMenu> obs) where T : Avalonia.Controls.Control 
+public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.ContextMenu?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ContextMenu<T>(this T control, ISubject<Avalonia.Controls.ContextMenu> subject) where T : Avalonia.Controls.Control 
+public static T ContextMenu<T>(this T control, ISubject<Avalonia.Controls.ContextMenu?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextMenuProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.ContextMenu> obs, IObserver<Avalonia.Controls.ContextMenu> changed) where T : Avalonia.Controls.Control 
+public static T ContextMenu<T>(this T control, IObservable<Avalonia.Controls.ContextMenu?> obs, IObserver<Avalonia.Controls.ContextMenu?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.Control.ContextMenuProperty!, obs, changed);
 
 
  // ContextFlyout
 
 /*ValueSetterGenerator*/
-public static T ContextFlyout<T>(this T control, Avalonia.Controls.Primitives.FlyoutBase value) where T : Avalonia.Controls.Control 
+public static T ContextFlyout<T>(this T control, Avalonia.Controls.Primitives.FlyoutBase? value) where T : Avalonia.Controls.Control 
 {
     control.ContextFlyout = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ContextFlyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase> func) where T : Avalonia.Controls.Control 
+public static T ContextFlyout<T>(this T control, Func<Avalonia.Controls.Primitives.FlyoutBase?> func) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs) where T : Avalonia.Controls.Control 
+public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase?> obs) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ContextFlyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase> subject) where T : Avalonia.Controls.Control 
+public static T ContextFlyout<T>(this T control, ISubject<Avalonia.Controls.Primitives.FlyoutBase?> subject) where T : Avalonia.Controls.Control 
    => control._set(Avalonia.Controls.Control.ContextFlyoutProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase> changed) where T : Avalonia.Controls.Control 
+public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.Primitives.FlyoutBase?> obs, IObserver<Avalonia.Controls.Primitives.FlyoutBase?> changed) where T : Avalonia.Controls.Control 
    => control._setEx(Avalonia.Controls.Control.ContextFlyoutProperty!, obs, changed);
 
 
@@ -211,7 +211,7 @@ public static Style<T> FocusAdorner<T>(this Style<T> style, IBinding binding) wh
  // Tag
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Tag<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.Control 
+public static Style<T> Tag<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.TagProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -222,7 +222,7 @@ public static Style<T> Tag<T>(this Style<T> style, IBinding binding) where T : A
  // ContextMenu
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContextMenu<T>(this Style<T> style, Avalonia.Controls.ContextMenu value) where T : Avalonia.Controls.Control 
+public static Style<T> ContextMenu<T>(this Style<T> style, Avalonia.Controls.ContextMenu? value) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.ContextMenuProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -233,7 +233,7 @@ public static Style<T> ContextMenu<T>(this Style<T> style, IBinding binding) whe
  // ContextFlyout
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> ContextFlyout<T>(this Style<T> style, Avalonia.Controls.Primitives.FlyoutBase value) where T : Avalonia.Controls.Control 
+public static Style<T> ContextFlyout<T>(this Style<T> style, Avalonia.Controls.Primitives.FlyoutBase? value) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.ContextFlyoutProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

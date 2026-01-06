@@ -16,26 +16,26 @@ public static partial class DrawingBrush_MarkupExtensions
  // Drawing
 
 /*ValueSetterGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Avalonia.Media.Drawing value)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Avalonia.Media.Drawing? value)  
 {
     control.Drawing = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Func<Avalonia.Media.Drawing> func)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, Func<Avalonia.Media.Drawing?> func)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IObservable<Avalonia.Media.Drawing> obs)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IObservable<Avalonia.Media.Drawing?> obs)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, ISubject<Avalonia.Media.Drawing> subject)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, ISubject<Avalonia.Media.Drawing?> subject)  
    => control._set(Avalonia.Media.DrawingBrush.DrawingProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IObservable<Avalonia.Media.Drawing> obs, IObserver<Avalonia.Media.Drawing> changed)  
+public static Avalonia.Media.DrawingBrush Drawing(this Avalonia.Media.DrawingBrush control, IObservable<Avalonia.Media.Drawing?> obs, IObserver<Avalonia.Media.Drawing?> changed)  
    => control._setEx(Avalonia.Media.DrawingBrush.DrawingProperty!, obs, changed);
 
 

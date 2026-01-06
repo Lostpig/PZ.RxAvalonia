@@ -120,26 +120,26 @@ public static T ClipValueToMinMax<T>(this T control, IObservable<System.Boolean>
  // NumberFormat
 
 /*ValueSetterGenerator*/
-public static T NumberFormat<T>(this T control, System.Globalization.NumberFormatInfo value) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, System.Globalization.NumberFormatInfo? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.NumberFormat = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T NumberFormat<T>(this T control, Func<System.Globalization.NumberFormatInfo> func) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, Func<System.Globalization.NumberFormatInfo?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T NumberFormat<T>(this T control, IObservable<System.Globalization.NumberFormatInfo> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, IObservable<System.Globalization.NumberFormatInfo?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T NumberFormat<T>(this T control, ISubject<System.Globalization.NumberFormatInfo> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, ISubject<System.Globalization.NumberFormatInfo?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T NumberFormat<T>(this T control, IObservable<System.Globalization.NumberFormatInfo> obs, IObserver<System.Globalization.NumberFormatInfo> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T NumberFormat<T>(this T control, IObservable<System.Globalization.NumberFormatInfo?> obs, IObserver<System.Globalization.NumberFormatInfo?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, obs, changed);
 
 
@@ -302,52 +302,52 @@ public static T ParsingNumberStyle<T>(this T control, IObservable<System.Globali
  // Text
 
 /*ValueSetterGenerator*/
-public static T Text<T>(this T control, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.Text = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Text<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Text<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Text<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T Text<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.TextProperty!, obs, changed);
 
 
  // TextConverter
 
 /*ValueSetterGenerator*/
-public static T TextConverter<T>(this T control, Avalonia.Data.Converters.IValueConverter value) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, Avalonia.Data.Converters.IValueConverter? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.TextConverter = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T TextConverter<T>(this T control, Func<Avalonia.Data.Converters.IValueConverter> func) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, Func<Avalonia.Data.Converters.IValueConverter?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextConverterProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Converters.IValueConverter> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Converters.IValueConverter?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextConverterProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T TextConverter<T>(this T control, ISubject<Avalonia.Data.Converters.IValueConverter> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, ISubject<Avalonia.Data.Converters.IValueConverter?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.TextConverterProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Converters.IValueConverter> obs, IObserver<Avalonia.Data.Converters.IValueConverter> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T TextConverter<T>(this T control, IObservable<Avalonia.Data.Converters.IValueConverter?> obs, IObserver<Avalonia.Data.Converters.IValueConverter?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.TextConverterProperty!, obs, changed);
 
 
@@ -380,26 +380,26 @@ public static T Value<T>(this T control, IObservable<System.Nullable<System.Deci
  // Watermark
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.Watermark = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty!, obs, changed);
 
 
@@ -484,52 +484,52 @@ public static T TextAlignment<T>(this T control, IObservable<Avalonia.Media.Text
  // InnerLeftContent
 
 /*ValueSetterGenerator*/
-public static T InnerLeftContent<T>(this T control, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.InnerLeftContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T InnerLeftContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T InnerLeftContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T InnerLeftContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerLeftContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, obs, changed);
 
 
  // InnerRightContent
 
 /*ValueSetterGenerator*/
-public static T InnerRightContent<T>(this T control, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 {
     control.InnerRightContent = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T InnerRightContent<T>(this T control, Func<System.Object> func) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, Func<System.Object?> func) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, IObservable<System.Object?> obs) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T InnerRightContent<T>(this T control, ISubject<System.Object> subject) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, ISubject<System.Object?> subject) where T : Avalonia.Controls.NumericUpDown 
    => control._set(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T InnerRightContent<T>(this T control, IObservable<System.Object> obs, IObserver<System.Object> changed) where T : Avalonia.Controls.NumericUpDown 
+public static T InnerRightContent<T>(this T control, IObservable<System.Object?> obs, IObserver<System.Object?> changed) where T : Avalonia.Controls.NumericUpDown 
    => control._setEx(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, obs, changed);
 
 
@@ -614,7 +614,7 @@ public static Style<T> ClipValueToMinMax<T>(this Style<T> style, IBinding bindin
  // NumberFormat
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> NumberFormat<T>(this Style<T> style, System.Globalization.NumberFormatInfo value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> NumberFormat<T>(this Style<T> style, System.Globalization.NumberFormatInfo? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -691,7 +691,7 @@ public static Style<T> ParsingNumberStyle<T>(this Style<T> style, IBinding bindi
  // Text
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Text<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -702,7 +702,7 @@ public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : 
  // TextConverter
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> TextConverter<T>(this Style<T> style, Avalonia.Data.Converters.IValueConverter value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> TextConverter<T>(this Style<T> style, Avalonia.Data.Converters.IValueConverter? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextConverterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -724,7 +724,7 @@ public static Style<T> Value<T>(this Style<T> style, IBinding binding) where T :
  // Watermark
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.WatermarkProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -768,7 +768,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) w
  // InnerLeftContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -779,7 +779,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding
  // InnerRightContent
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object value) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? value) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

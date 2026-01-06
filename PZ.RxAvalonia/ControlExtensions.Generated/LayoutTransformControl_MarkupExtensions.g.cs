@@ -16,26 +16,26 @@ public static partial class LayoutTransformControl_MarkupExtensions
  // LayoutTransform
 
 /*ValueSetterGenerator*/
-public static T LayoutTransform<T>(this T control, Avalonia.Media.ITransform value) where T : Avalonia.Controls.LayoutTransformControl 
+public static T LayoutTransform<T>(this T control, Avalonia.Media.ITransform? value) where T : Avalonia.Controls.LayoutTransformControl 
 {
     control.LayoutTransform = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T LayoutTransform<T>(this T control, Func<Avalonia.Media.ITransform> func) where T : Avalonia.Controls.LayoutTransformControl 
+public static T LayoutTransform<T>(this T control, Func<Avalonia.Media.ITransform?> func) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs) where T : Avalonia.Controls.LayoutTransformControl 
+public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T LayoutTransform<T>(this T control, ISubject<Avalonia.Media.ITransform> subject) where T : Avalonia.Controls.LayoutTransformControl 
+public static T LayoutTransform<T>(this T control, ISubject<Avalonia.Media.ITransform?> subject) where T : Avalonia.Controls.LayoutTransformControl 
    => control._set(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.ITransform> obs, IObserver<Avalonia.Media.ITransform> changed) where T : Avalonia.Controls.LayoutTransformControl 
+public static T LayoutTransform<T>(this T control, IObservable<Avalonia.Media.ITransform?> obs, IObserver<Avalonia.Media.ITransform?> changed) where T : Avalonia.Controls.LayoutTransformControl 
    => control._setEx(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, obs, changed);
 
 
@@ -70,7 +70,7 @@ public static T UseRenderTransform<T>(this T control, IObservable<System.Boolean
  // LayoutTransform
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> LayoutTransform<T>(this Style<T> style, Avalonia.Media.ITransform value) where T : Avalonia.Controls.LayoutTransformControl 
+public static Style<T> LayoutTransform<T>(this Style<T> style, Avalonia.Media.ITransform? value) where T : Avalonia.Controls.LayoutTransformControl 
 => style._addSetter(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

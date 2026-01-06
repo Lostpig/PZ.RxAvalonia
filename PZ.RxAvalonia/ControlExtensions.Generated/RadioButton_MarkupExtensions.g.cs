@@ -16,26 +16,26 @@ public static partial class RadioButton_MarkupExtensions
  // GroupName
 
 /*ValueSetterGenerator*/
-public static T GroupName<T>(this T control, System.String value) where T : Avalonia.Controls.RadioButton 
+public static T GroupName<T>(this T control, System.String? value) where T : Avalonia.Controls.RadioButton 
 {
     control.GroupName = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T GroupName<T>(this T control, Func<System.String> func) where T : Avalonia.Controls.RadioButton 
+public static T GroupName<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.RadioButton 
    => control._set(Avalonia.Controls.RadioButton.GroupNameProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T GroupName<T>(this T control, IObservable<System.String> obs) where T : Avalonia.Controls.RadioButton 
+public static T GroupName<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.RadioButton 
    => control._set(Avalonia.Controls.RadioButton.GroupNameProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T GroupName<T>(this T control, ISubject<System.String> subject) where T : Avalonia.Controls.RadioButton 
+public static T GroupName<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.RadioButton 
    => control._set(Avalonia.Controls.RadioButton.GroupNameProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T GroupName<T>(this T control, IObservable<System.String> obs, IObserver<System.String> changed) where T : Avalonia.Controls.RadioButton 
+public static T GroupName<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.RadioButton 
    => control._setEx(Avalonia.Controls.RadioButton.GroupNameProperty!, obs, changed);
 
 
@@ -44,7 +44,7 @@ public static T GroupName<T>(this T control, IObservable<System.String> obs, IOb
  // GroupName
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> GroupName<T>(this Style<T> style, System.String value) where T : Avalonia.Controls.RadioButton 
+public static Style<T> GroupName<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.RadioButton 
 => style._addSetter(Avalonia.Controls.RadioButton.GroupNameProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
