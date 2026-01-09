@@ -6,9 +6,9 @@ namespace PZ.RxAvalonia.Reactive;
 
 public enum ChangedType
 {
-    Add, Remove, Insert
+    Add, Remove, Insert, ReplaceAll, Order
 }
-public record ChangedArgs<T>(ChangedType Type, int Index, IEnumerable<T> Item);
+public record ChangedArgs<T>(ChangedType Type, int Index, int Count);
 public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
 {
     private readonly List<T> _items;
@@ -40,22 +40,22 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
     public void Add(T item)
     {
         _items.Add(item);
-        _subject.OnNext(new(ChangedType.Add, 0, [item]));
+        _subject.OnNext(new(ChangedType.Add, 0, 1));
     }
     public void AddRange(IEnumerable<T> collection)
     {
         _items.AddRange(collection);
-        _subject.OnNext(new(ChangedType.Add, 0, [.. collection]));
+        _subject.OnNext(new(ChangedType.Add, 0, collection.Count()));
     }
     public void Insert(int index, T item)
     {
         _items.Insert(index, item);
-        _subject.OnNext(new(ChangedType.Insert, index, [item]));
+        _subject.OnNext(new(ChangedType.Insert, index, 1));
     }
     public void InsertRange(int index, IEnumerable<T> collection)
     {
         _items.InsertRange(index, collection);
-        _subject.OnNext(new(ChangedType.Insert, index, [.. collection]));
+        _subject.OnNext(new(ChangedType.Insert, index, collection.Count()));
     }
 
     public bool Remove(T item)
@@ -63,7 +63,7 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
         bool removed = _items.Remove(item);
         if (removed)
         {
-            _subject.OnNext(new(ChangedType.Remove, 0, [item]));
+            _subject.OnNext(new(ChangedType.Remove, 0, 1));
         }
         return removed;
     }
@@ -71,13 +71,12 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
     {
         var item = _items[index];
         _items.RemoveAt(index);
-        _subject.OnNext(new(ChangedType.Remove, 0, [item]));
+        _subject.OnNext(new(ChangedType.Remove, 0, 1));
     }
     public int RemoveAll(Predicate<T> match)
     {
-        var removed = _items.Where(i => match(i));
         var count = _items.RemoveAll(match);
-        _subject.OnNext(new(ChangedType.Remove, 0, [.. removed]));
+        _subject.OnNext(new(ChangedType.Remove, -1, count));
 
         return count;
     }
@@ -86,11 +85,22 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
         var removed = _items[index..(index + count)];
         _items.RemoveRange(index, count);
 
-        _subject.OnNext(new(ChangedType.Remove, 0, [.. removed]));
+        _subject.OnNext(new(ChangedType.Remove, index, count));
     }
     public void Clear()
     {
         RemoveRange(0, _items.Count);
+    }
+    public void ReplaceAll(IEnumerable<T> collection)
+    {
+        _items.Clear();
+        _items.AddRange(collection);
+        _subject.OnNext(new(ChangedType.ReplaceAll, 0, collection.Count()));
+    }
+    public void Sort(Comparison<T> comparison)
+    {
+        _items.Sort(comparison);
+        _subject.OnNext(new(ChangedType.ReplaceAll, 0, _items.Count));
     }
 
     public bool Contains(T item) => _items.Contains(item);
