@@ -11,6 +11,7 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
+using System.Threading;
 
 namespace PZ.RxAvalonia;
 
@@ -56,11 +57,11 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     }
     protected ComponentBase() : this(ViewInitializationStrategy.Immediate) { }
 
-    private bool TryFindResourceFromContext(object key, out object? resource)
+    private bool TryFindResourceFromContext(object key, ThemeVariant? theme, out object? resource)
     {
         foreach(var context in ComponentBuildContext.ComponentStack)
         {
-            if (context.Component.TryFindResource(key, out resource))
+            if (context.Component.TryFindResource(key, theme, out resource))
             {
                 return true;
             }
@@ -72,8 +73,11 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
     protected T StaticResource<T>(object key, Func<object?, T> converter, IResourceHost? anchor = null)
     {
         anchor ??= this;
+        var theme = Application.Current!.ActualThemeVariant;
         object? resource;
-        if (anchor.TryFindResource(key, out resource))
+
+
+        if (anchor.TryFindResource(key, theme, out resource))
         {
             if (resource is T t) return t;
             return converter(resource);
@@ -83,13 +87,13 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
         {
             // when building component not attach to visual tree yet
             // try to find resource in parent component context
-            if (TryFindResourceFromContext(key, out resource))
+            if (TryFindResourceFromContext(key, theme, out resource))
             {
                 if (resource is T t) return t;
                 return converter(resource);
             }
         }
-        if (Application.Current!.TryFindResource(key, out resource) && resource != null)
+        if (Application.Current!.TryFindResource(key, theme, out resource) && resource != null)
         {
             if (resource is T t) return t;
             return converter(resource);
