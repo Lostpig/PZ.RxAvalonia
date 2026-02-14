@@ -36,6 +36,10 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
     }
     public int Count => _items.Count;
     public bool IsReadOnly => false;
+    public void ForceNext(ChangedType type, int index, int count)
+    {
+        _subject.OnNext(new(type, index, count));
+    }
 
     public void Add(T item)
     {

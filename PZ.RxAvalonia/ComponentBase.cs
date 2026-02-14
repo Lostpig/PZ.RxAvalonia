@@ -11,7 +11,6 @@ using System.Collections.Immutable;
 using System.Diagnostics;
 using System.Diagnostics.CodeAnalysis;
 using System.Reflection;
-using System.Threading;
 
 namespace PZ.RxAvalonia;
 
