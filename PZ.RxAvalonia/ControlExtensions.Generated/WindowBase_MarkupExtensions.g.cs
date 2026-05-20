@@ -94,7 +94,7 @@ public static Style<T> Topmost<T>(this Style<T> style, System.Boolean value) whe
 => style._addSetter(Avalonia.Controls.WindowBase.TopmostProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Topmost<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WindowBase 
+public static Style<T> Topmost<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WindowBase 
 => style._addSetter(Avalonia.Controls.WindowBase.TopmostProperty, binding);
 
 

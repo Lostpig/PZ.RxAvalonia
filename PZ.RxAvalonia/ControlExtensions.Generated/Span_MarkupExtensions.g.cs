@@ -48,7 +48,7 @@ public static Style<T> Inlines<T>(this Style<T> style, Avalonia.Controls.Documen
 => style._addSetter(Avalonia.Controls.Documents.Span.InlinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Inlines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.Span 
+public static Style<T> Inlines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.Span 
 => style._addSetter(Avalonia.Controls.Documents.Span.InlinesProperty, binding);
 
 

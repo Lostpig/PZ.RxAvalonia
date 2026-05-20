@@ -6,12 +6,12 @@ public class BindingStyleSetterGenerator : ExtensionGeneratorBase<PropertyExtens
 {
     protected override string? GetExtension(PropertyExtensionInfo info)
     {
-        if (info.ValueType.Name == "IBinding")
+        if (info.ValueType.Name == "BindingBase")
             return $"//Skipped {info.ExtensionName} because already exist in value setters";
 
         //direct type access
         var extensionText =
-            $"public static Style<{info.ReturnType}> {info.ExtensionName}{info.GenericArg}(this Style<{info.ReturnType}> style, IBinding binding) {info.GenericConstraint} {Environment.NewLine}"
+            $"public static Style<{info.ReturnType}> {info.ExtensionName}{info.GenericArg}(this Style<{info.ReturnType}> style, BindingBase binding) {info.GenericConstraint} {Environment.NewLine}"
             + $"=> style._addSetter({info.ControlTypeName}.{info.MemberName}Property, binding);";
 
         return extensionText;

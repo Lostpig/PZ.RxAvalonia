@@ -48,7 +48,7 @@ public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control v
 => style._addSetter(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.InlineUIContainer 
+public static Style<T> Child<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.InlineUIContainer 
 => style._addSetter(Avalonia.Controls.Documents.InlineUIContainer.ChildProperty, binding);
 
 

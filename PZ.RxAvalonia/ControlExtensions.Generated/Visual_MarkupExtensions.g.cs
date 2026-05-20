@@ -143,6 +143,32 @@ public static T OpacityMask<T>(this T control, IObservable<Avalonia.Media.IBrush
    => control._setEx(Avalonia.Visual.OpacityMaskProperty!, obs, changed);
 
 
+ // CacheMode
+
+/*ValueSetterGenerator*/
+public static T CacheMode<T>(this T control, Avalonia.Media.CacheMode? value) where T : Avalonia.Visual 
+{
+    control.CacheMode = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T CacheMode<T>(this T control, Func<Avalonia.Media.CacheMode?> func) where T : Avalonia.Visual 
+   => control._set(Avalonia.Visual.CacheModeProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T CacheMode<T>(this T control, IObservable<Avalonia.Media.CacheMode?> obs) where T : Avalonia.Visual 
+   => control._set(Avalonia.Visual.CacheModeProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T CacheMode<T>(this T control, ISubject<Avalonia.Media.CacheMode?> subject) where T : Avalonia.Visual 
+   => control._set(Avalonia.Visual.CacheModeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T CacheMode<T>(this T control, IObservable<Avalonia.Media.CacheMode?> obs, IObserver<Avalonia.Media.CacheMode?> changed) where T : Avalonia.Visual 
+   => control._setEx(Avalonia.Visual.CacheModeProperty!, obs, changed);
+
+
  // Effect
 
 /*ValueSetterGenerator*/
@@ -347,7 +373,7 @@ public static Style<T> ClipToBounds<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Visual.ClipToBoundsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClipToBounds<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> ClipToBounds<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.ClipToBoundsProperty, binding);
 
 
@@ -358,7 +384,7 @@ public static Style<T> Clip<T>(this Style<T> style, Avalonia.Media.Geometry? val
 => style._addSetter(Avalonia.Visual.ClipProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Clip<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> Clip<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.ClipProperty, binding);
 
 
@@ -369,7 +395,7 @@ public static Style<T> IsVisible<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Visual.IsVisibleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsVisible<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> IsVisible<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.IsVisibleProperty, binding);
 
 
@@ -380,7 +406,7 @@ public static Style<T> Opacity<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Visual.OpacityProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Opacity<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> Opacity<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.OpacityProperty, binding);
 
 
@@ -391,8 +417,19 @@ public static Style<T> OpacityMask<T>(this Style<T> style, Avalonia.Media.IBrush
 => style._addSetter(Avalonia.Visual.OpacityMaskProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OpacityMask<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> OpacityMask<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.OpacityMaskProperty, binding);
+
+
+ // CacheMode
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> CacheMode<T>(this Style<T> style, Avalonia.Media.CacheMode? value) where T : Avalonia.Visual 
+=> style._addSetter(Avalonia.Visual.CacheModeProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> CacheMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
+=> style._addSetter(Avalonia.Visual.CacheModeProperty, binding);
 
 
  // Effect
@@ -402,7 +439,7 @@ public static Style<T> Effect<T>(this Style<T> style, Avalonia.Media.IEffect? va
 => style._addSetter(Avalonia.Visual.EffectProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Effect<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> Effect<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.EffectProperty, binding);
 
 
@@ -413,7 +450,7 @@ public static Style<T> RenderTransform<T>(this Style<T> style, Avalonia.Media.IT
 => style._addSetter(Avalonia.Visual.RenderTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RenderTransform<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> RenderTransform<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.RenderTransformProperty, binding);
 
 
@@ -424,7 +461,7 @@ public static Style<T> RenderTransformOrigin<T>(this Style<T> style, Avalonia.Re
 => style._addSetter(Avalonia.Visual.RenderTransformOriginProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RenderTransformOrigin<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> RenderTransformOrigin<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.RenderTransformOriginProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -440,7 +477,7 @@ public static Style<T> FlowDirection<T>(this Style<T> style, Avalonia.Media.Flow
 => style._addSetter(Avalonia.Visual.FlowDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FlowDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> FlowDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.FlowDirectionProperty, binding);
 
 
@@ -451,7 +488,7 @@ public static Style<T> ZIndex<T>(this Style<T> style, System.Int32 value) where 
 => style._addSetter(Avalonia.Visual.ZIndexProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ZIndex<T>(this Style<T> style, IBinding binding) where T : Avalonia.Visual 
+public static Style<T> ZIndex<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Visual 
 => style._addSetter(Avalonia.Visual.ZIndexProperty, binding);
 
 

@@ -67,63 +67,6 @@ public static T IsThreeState<T>(this T control, IObservable<System.Boolean> obs,
 
 
 //================= Events ======================//
- // Checked
-
-/*ActionToEventGenerator*/
-[Obsolete]public static T OnChecked<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.CheckedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.CheckedEvent.RoutingStrategies);
-  return control;
-}
-
-
-/*ReactiveEventGenerator*/
-[Obsolete]public static T RxChecked<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.CheckedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.CheckedEvent.RoutingStrategies);
-  return control;
-}
-
-
-
- // Unchecked
-
-/*ActionToEventGenerator*/
-[Obsolete]public static T OnUnchecked<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent.RoutingStrategies);
-  return control;
-}
-
-
-/*ReactiveEventGenerator*/
-[Obsolete]public static T RxUnchecked<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.UncheckedEvent.RoutingStrategies);
-  return control;
-}
-
-
-
- // Indeterminate
-
-/*ActionToEventGenerator*/
-[Obsolete]public static T OnIndeterminate<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent.RoutingStrategies);
-  return control;
-}
-
-
-/*ReactiveEventGenerator*/
-[Obsolete]public static T RxIndeterminate<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Primitives.ToggleButton 
-{
-  control.AddHandler(Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Primitives.ToggleButton.IndeterminateEvent.RoutingStrategies);
-  return control;
-}
-
-
-
  // IsCheckedChanged
 
 /*ActionToEventGenerator*/
@@ -152,7 +95,7 @@ public static Style<T> IsChecked<T>(this Style<T> style, System.Nullable<System.
 => style._addSetter(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsChecked<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ToggleButton 
+public static Style<T> IsChecked<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ToggleButton 
 => style._addSetter(Avalonia.Controls.Primitives.ToggleButton.IsCheckedProperty, binding);
 
 
@@ -163,7 +106,7 @@ public static Style<T> IsThreeState<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsThreeState<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ToggleButton 
+public static Style<T> IsThreeState<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ToggleButton 
 => style._addSetter(Avalonia.Controls.Primitives.ToggleButton.IsThreeStateProperty, binding);
 
 

@@ -69,7 +69,7 @@ public static Style<T> IsChecked<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.ToggleSplitButton.IsCheckedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsChecked<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSplitButton 
+public static Style<T> IsChecked<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSplitButton 
 => style._addSetter(Avalonia.Controls.ToggleSplitButton.IsCheckedProperty, binding);
 
 

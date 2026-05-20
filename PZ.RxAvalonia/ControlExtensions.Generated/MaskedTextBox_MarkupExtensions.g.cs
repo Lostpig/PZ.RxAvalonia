@@ -204,7 +204,7 @@ public static Style<T> AsciiOnly<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AsciiOnly<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> AsciiOnly<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.AsciiOnlyProperty, binding);
 
 
@@ -215,7 +215,7 @@ public static Style<T> Culture<T>(this Style<T> style, System.Globalization.Cult
 => style._addSetter(Avalonia.Controls.MaskedTextBox.CultureProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Culture<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Culture<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.CultureProperty, binding);
 
 
@@ -226,7 +226,7 @@ public static Style<T> HidePromptOnLeave<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HidePromptOnLeave<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> HidePromptOnLeave<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.HidePromptOnLeaveProperty, binding);
 
 
@@ -237,7 +237,7 @@ public static Style<T> Mask<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.MaskProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Mask<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> Mask<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.MaskProperty, binding);
 
 
@@ -248,7 +248,7 @@ public static Style<T> PromptChar<T>(this Style<T> style, System.Char value) whe
 => style._addSetter(Avalonia.Controls.MaskedTextBox.PromptCharProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PromptChar<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> PromptChar<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.PromptCharProperty, binding);
 
 
@@ -259,7 +259,7 @@ public static Style<T> ResetOnPrompt<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ResetOnPrompt<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> ResetOnPrompt<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.ResetOnPromptProperty, binding);
 
 
@@ -270,7 +270,7 @@ public static Style<T> ResetOnSpace<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ResetOnSpace<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MaskedTextBox 
+public static Style<T> ResetOnSpace<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MaskedTextBox 
 => style._addSetter(Avalonia.Controls.MaskedTextBox.ResetOnSpaceProperty, binding);
 
 

@@ -361,6 +361,32 @@ public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?
    => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, obs, changed);
 
 
+ // LetterSpacing
+
+/*ValueSetterGenerator*/
+public static T LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+{
+    control.LetterSpacing = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T LetterSpacing<T>(this T control, Func<System.Double> func) where T : Avalonia.Controls.Primitives.TemplatedControl 
+   => control._set(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Primitives.TemplatedControl 
+   => control._set(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Primitives.TemplatedControl 
+   => control._set(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Primitives.TemplatedControl 
+   => control._setEx(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty!, obs, changed);
+
+
  // Padding
 
 /*ValueSetterGenerator*/
@@ -489,7 +515,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BackgroundProperty, binding);
 
 
@@ -500,7 +526,7 @@ public static Style<T> BackgroundSizing<T>(this Style<T> style, Avalonia.Media.B
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BackgroundSizing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> BackgroundSizing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BackgroundSizingProperty, binding);
 
 
@@ -511,7 +537,7 @@ public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> BorderBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BorderBrushProperty, binding);
 
 
@@ -522,7 +548,7 @@ public static Style<T> BorderThickness<T>(this Style<T> style, Avalonia.Thicknes
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BorderThicknessProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderThickness<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> BorderThickness<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.BorderThicknessProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -539,7 +565,7 @@ public static Style<T> CornerRadius<T>(this Style<T> style, Avalonia.CornerRadiu
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.CornerRadiusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CornerRadius<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> CornerRadius<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.CornerRadiusProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -556,7 +582,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, Avalonia.Media.FontFam
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontFamilyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontFamily<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontFamilyProperty, binding);
 
 
@@ -567,7 +593,7 @@ public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontF
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontFeatures<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontFeaturesProperty, binding);
 
 
@@ -578,7 +604,7 @@ public static Style<T> FontSize<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontSizeProperty, binding);
 
 
@@ -589,7 +615,7 @@ public static Style<T> FontStyle<T>(this Style<T> style, Avalonia.Media.FontStyl
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontStyleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStyle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontStyle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontStyleProperty, binding);
 
 
@@ -600,7 +626,7 @@ public static Style<T> FontWeight<T>(this Style<T> style, Avalonia.Media.FontWei
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontWeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontWeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontWeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontWeightProperty, binding);
 
 
@@ -611,7 +637,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, Avalonia.Media.FontSt
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontStretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> FontStretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.FontStretchProperty, binding);
 
 
@@ -622,8 +648,19 @@ public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Foreground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.ForegroundProperty, binding);
+
+
+ // LetterSpacing
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value) where T : Avalonia.Controls.Primitives.TemplatedControl 
+=> style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+=> style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.LetterSpacingProperty, binding);
 
 
  // Padding
@@ -633,7 +670,7 @@ public static Style<T> Padding<T>(this Style<T> style, Avalonia.Thickness value)
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.PaddingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Padding<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Padding<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.PaddingProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -650,7 +687,7 @@ public static Style<T> Template<T>(this Style<T> style, Avalonia.Controls.Templa
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Template<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
+public static Style<T> Template<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.TemplatedControl 
 => style._addSetter(Avalonia.Controls.Primitives.TemplatedControl.TemplateProperty, binding);
 
 

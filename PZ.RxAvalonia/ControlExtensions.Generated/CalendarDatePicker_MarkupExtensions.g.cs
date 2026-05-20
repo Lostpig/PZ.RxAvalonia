@@ -273,56 +273,82 @@ public static T Text<T>(this T control, IObservable<System.String?> obs, IObserv
    => control._setEx(Avalonia.Controls.CalendarDatePicker.TextProperty!, obs, changed);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
+public static T PlaceholderText<T>(this T control, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
 {
-    control.Watermark = value!;
+    control.PlaceholderText = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, func);
+public static T PlaceholderText<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, obs);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, subject);
+public static T PlaceholderText<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._setEx(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, obs, changed);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty!, obs, changed);
 
 
- // UseFloatingWatermark
+ // UseFloatingPlaceholder
 
 /*ValueSetterGenerator*/
-public static T UseFloatingWatermark<T>(this T control, System.Boolean value) where T : Avalonia.Controls.CalendarDatePicker 
+public static T UseFloatingPlaceholder<T>(this T control, System.Boolean value) where T : Avalonia.Controls.CalendarDatePicker 
 {
-    control.UseFloatingWatermark = value!;
+    control.UseFloatingPlaceholder = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T UseFloatingWatermark<T>(this T control, Func<System.Boolean> func) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, func);
+public static T UseFloatingPlaceholder<T>(this T control, Func<System.Boolean> func) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, obs);
+public static T UseFloatingPlaceholder<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T UseFloatingWatermark<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, subject);
+public static T UseFloatingPlaceholder<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.CalendarDatePicker 
-   => control._setEx(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, obs, changed);
+public static T UseFloatingPlaceholder<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty!, obs, changed);
+
+
+ // PlaceholderForeground
+
+/*ValueSetterGenerator*/
+public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.CalendarDatePicker 
+{
+    control.PlaceholderForeground = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._set(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.CalendarDatePicker 
+   => control._setEx(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -432,7 +458,7 @@ public static Style<T> DisplayDate<T>(this Style<T> style, System.DateTime value
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> DisplayDate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateProperty, binding);
 
 
@@ -443,7 +469,7 @@ public static Style<T> DisplayDateStart<T>(this Style<T> style, System.Nullable<
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDateStart<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> DisplayDateStart<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateStartProperty, binding);
 
 
@@ -454,7 +480,7 @@ public static Style<T> DisplayDateEnd<T>(this Style<T> style, System.Nullable<Sy
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDateEnd<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> DisplayDateEnd<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.DisplayDateEndProperty, binding);
 
 
@@ -465,7 +491,7 @@ public static Style<T> FirstDayOfWeek<T>(this Style<T> style, System.DayOfWeek v
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FirstDayOfWeek<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> FirstDayOfWeek<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.FirstDayOfWeekProperty, binding);
 
 
@@ -476,7 +502,7 @@ public static Style<T> IsDropDownOpen<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsDropDownOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> IsDropDownOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.IsDropDownOpenProperty, binding);
 
 
@@ -487,7 +513,7 @@ public static Style<T> IsTodayHighlighted<T>(this Style<T> style, System.Boolean
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTodayHighlighted<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> IsTodayHighlighted<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.IsTodayHighlightedProperty, binding);
 
 
@@ -498,7 +524,7 @@ public static Style<T> SelectedDate<T>(this Style<T> style, System.Nullable<Syst
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedDate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> SelectedDate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.SelectedDateProperty, binding);
 
 
@@ -509,7 +535,7 @@ public static Style<T> SelectedDateFormat<T>(this Style<T> style, Avalonia.Contr
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedDateFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> SelectedDateFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.SelectedDateFormatProperty, binding);
 
 
@@ -520,7 +546,7 @@ public static Style<T> CustomDateFormatString<T>(this Style<T> style, System.Str
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CustomDateFormatString<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> CustomDateFormatString<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.CustomDateFormatStringProperty, binding);
 
 
@@ -531,30 +557,41 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.TextProperty, binding);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
-=> style._addSetter(Avalonia.Controls.CalendarDatePicker.WatermarkProperty!, value!);
+public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
-=> style._addSetter(Avalonia.Controls.CalendarDatePicker.WatermarkProperty, binding);
+public static Style<T> PlaceholderText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.PlaceholderTextProperty, binding);
 
 
- // UseFloatingWatermark
+ // UseFloatingPlaceholder
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> UseFloatingWatermark<T>(this Style<T> style, System.Boolean value) where T : Avalonia.Controls.CalendarDatePicker 
-=> style._addSetter(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty!, value!);
+public static Style<T> UseFloatingPlaceholder<T>(this Style<T> style, System.Boolean value) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseFloatingWatermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
-=> style._addSetter(Avalonia.Controls.CalendarDatePicker.UseFloatingWatermarkProperty, binding);
+public static Style<T> UseFloatingPlaceholder<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.UseFloatingPlaceholderProperty, binding);
+
+
+ // PlaceholderForeground
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
+=> style._addSetter(Avalonia.Controls.CalendarDatePicker.PlaceholderForegroundProperty, binding);
 
 
  // HorizontalContentAlignment
@@ -564,7 +601,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.HorizontalContentAlignmentProperty, binding);
 
 
@@ -575,7 +612,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.CalendarDatePicker 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.CalendarDatePicker 
 => style._addSetter(Avalonia.Controls.CalendarDatePicker.VerticalContentAlignmentProperty, binding);
 
 

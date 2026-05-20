@@ -478,6 +478,32 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IO
    => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.LineHeightProperty!, obs, changed);
 
 
+ // LetterSpacing
+
+/*ValueSetterGenerator*/
+public static T LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Presenters.ContentPresenter 
+{
+    control.LetterSpacing = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T LetterSpacing<T>(this T control, Func<System.Double> func) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._set(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._set(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._set(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Presenters.ContentPresenter 
+   => control._setEx(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty!, obs, changed);
+
+
  // MaxLines
 
 /*ValueSetterGenerator*/
@@ -687,7 +713,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BackgroundProperty, binding);
 
 
@@ -698,7 +724,7 @@ public static Style<T> BackgroundSizing<T>(this Style<T> style, Avalonia.Media.B
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BackgroundSizing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> BackgroundSizing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BackgroundSizingProperty, binding);
 
 
@@ -709,7 +735,7 @@ public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BorderBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> BorderBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BorderBrushProperty, binding);
 
 
@@ -720,7 +746,7 @@ public static Style<T> BorderThickness<T>(this Style<T> style, Avalonia.Thicknes
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BorderThicknessProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderThickness<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> BorderThickness<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BorderThicknessProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -737,7 +763,7 @@ public static Style<T> CornerRadius<T>(this Style<T> style, Avalonia.CornerRadiu
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.CornerRadiusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CornerRadius<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> CornerRadius<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.CornerRadiusProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -754,7 +780,7 @@ public static Style<T> BoxShadow<T>(this Style<T> style, Avalonia.Media.BoxShado
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BoxShadowProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BoxShadow<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> BoxShadow<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.BoxShadowProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -770,7 +796,7 @@ public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> Foreground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ForegroundProperty, binding);
 
 
@@ -781,7 +807,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, Avalonia.Media.FontFam
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontFamilyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> FontFamily<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontFamilyProperty, binding);
 
 
@@ -792,7 +818,7 @@ public static Style<T> FontSize<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> FontSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontSizeProperty, binding);
 
 
@@ -803,7 +829,7 @@ public static Style<T> FontStyle<T>(this Style<T> style, Avalonia.Media.FontStyl
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontStyleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStyle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> FontStyle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontStyleProperty, binding);
 
 
@@ -814,7 +840,7 @@ public static Style<T> FontWeight<T>(this Style<T> style, Avalonia.Media.FontWei
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontWeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontWeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> FontWeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontWeightProperty, binding);
 
 
@@ -825,7 +851,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, Avalonia.Media.FontSt
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontStretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> FontStretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.FontStretchProperty, binding);
 
 
@@ -836,7 +862,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, Avalonia.Media.Text
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> TextAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextAlignmentProperty, binding);
 
 
@@ -847,7 +873,7 @@ public static Style<T> TextWrapping<T>(this Style<T> style, Avalonia.Media.TextW
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextWrappingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextWrapping<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> TextWrapping<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextWrappingProperty, binding);
 
 
@@ -858,7 +884,7 @@ public static Style<T> TextTrimming<T>(this Style<T> style, Avalonia.Media.TextT
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextTrimmingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextTrimming<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> TextTrimming<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.TextTrimmingProperty, binding);
 
 
@@ -869,8 +895,19 @@ public static Style<T> LineHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.LineHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> LineHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.LineHeightProperty, binding);
+
+
+ // LetterSpacing
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value) where T : Avalonia.Controls.Presenters.ContentPresenter 
+=> style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+=> style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.LetterSpacingProperty, binding);
 
 
  // MaxLines
@@ -880,7 +917,7 @@ public static Style<T> MaxLines<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.MaxLinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxLines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> MaxLines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.MaxLinesProperty, binding);
 
 
@@ -891,7 +928,7 @@ public static Style<T> Content<T>(this Style<T> style, System.Object? value) whe
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Content<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> Content<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ContentProperty, binding);
 
 
@@ -902,7 +939,7 @@ public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContentTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> ContentTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.ContentTemplateProperty, binding);
 
 
@@ -913,7 +950,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.HorizontalContentAlignmentProperty, binding);
 
 
@@ -924,7 +961,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.VerticalContentAlignmentProperty, binding);
 
 
@@ -935,7 +972,7 @@ public static Style<T> Padding<T>(this Style<T> style, Avalonia.Thickness value)
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.PaddingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Padding<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> Padding<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.PaddingProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -952,7 +989,7 @@ public static Style<T> RecognizesAccessKey<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.RecognizesAccessKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RecognizesAccessKey<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
+public static Style<T> RecognizesAccessKey<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ContentPresenter.RecognizesAccessKeyProperty, binding);
 
 

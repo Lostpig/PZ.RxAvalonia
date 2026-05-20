@@ -147,7 +147,7 @@ public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICom
 => style._addSetter(Avalonia.Controls.SplitButton.CommandProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Command<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitButton 
+public static Style<T> Command<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitButton 
 => style._addSetter(Avalonia.Controls.SplitButton.CommandProperty, binding);
 
 
@@ -158,7 +158,7 @@ public static Style<T> CommandParameter<T>(this Style<T> style, System.Object? v
 => style._addSetter(Avalonia.Controls.SplitButton.CommandParameterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CommandParameter<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitButton 
+public static Style<T> CommandParameter<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitButton 
 => style._addSetter(Avalonia.Controls.SplitButton.CommandParameterProperty, binding);
 
 
@@ -169,7 +169,7 @@ public static Style<T> Flyout<T>(this Style<T> style, Avalonia.Controls.Primitiv
 => style._addSetter(Avalonia.Controls.SplitButton.FlyoutProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Flyout<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitButton 
+public static Style<T> Flyout<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitButton 
 => style._addSetter(Avalonia.Controls.SplitButton.FlyoutProperty, binding);
 
 
@@ -180,7 +180,7 @@ public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture?
 => style._addSetter(Avalonia.Controls.SplitButton.HotKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HotKey<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitButton 
+public static Style<T> HotKey<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitButton 
 => style._addSetter(Avalonia.Controls.SplitButton.HotKeyProperty, binding);
 
 

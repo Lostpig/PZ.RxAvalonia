@@ -117,6 +117,58 @@ public static T ContentTemplate<T>(this T control, IObservable<Avalonia.Controls
    => control._setEx(Avalonia.Controls.TabControl.ContentTemplateProperty!, obs, changed);
 
 
+ // PageTransition
+
+/*ValueSetterGenerator*/
+public static T PageTransition<T>(this T control, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.TabControl 
+{
+    control.PageTransition = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T PageTransition<T>(this T control, Func<Avalonia.Animation.IPageTransition?> func) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.PageTransitionProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.PageTransitionProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T PageTransition<T>(this T control, ISubject<Avalonia.Animation.IPageTransition?> subject) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.PageTransitionProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PageTransition<T>(this T control, IObservable<Avalonia.Animation.IPageTransition?> obs, IObserver<Avalonia.Animation.IPageTransition?> changed) where T : Avalonia.Controls.TabControl 
+   => control._setEx(Avalonia.Controls.TabControl.PageTransitionProperty!, obs, changed);
+
+
+ // IndicatorTemplate
+
+/*ValueSetterGenerator*/
+public static T IndicatorTemplate<T>(this T control, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.TabControl 
+{
+    control.IndicatorTemplate = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T IndicatorTemplate<T>(this T control, Func<Avalonia.Controls.Templates.IDataTemplate?> func) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.IndicatorTemplateProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T IndicatorTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.IndicatorTemplateProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T IndicatorTemplate<T>(this T control, ISubject<Avalonia.Controls.Templates.IDataTemplate?> subject) where T : Avalonia.Controls.TabControl 
+   => control._set(Avalonia.Controls.TabControl.IndicatorTemplateProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IndicatorTemplate<T>(this T control, IObservable<Avalonia.Controls.Templates.IDataTemplate?> obs, IObserver<Avalonia.Controls.Templates.IDataTemplate?> changed) where T : Avalonia.Controls.TabControl 
+   => control._setEx(Avalonia.Controls.TabControl.IndicatorTemplateProperty!, obs, changed);
+
+
 
 //================= Styles ======================//
  // TabStripPlacement
@@ -126,7 +178,7 @@ public static Style<T> TabStripPlacement<T>(this Style<T> style, Avalonia.Contro
 => style._addSetter(Avalonia.Controls.TabControl.TabStripPlacementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TabStripPlacement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TabControl 
+public static Style<T> TabStripPlacement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
 => style._addSetter(Avalonia.Controls.TabControl.TabStripPlacementProperty, binding);
 
 
@@ -137,7 +189,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.TabControl.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TabControl 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
 => style._addSetter(Avalonia.Controls.TabControl.HorizontalContentAlignmentProperty, binding);
 
 
@@ -148,7 +200,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.TabControl.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TabControl 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
 => style._addSetter(Avalonia.Controls.TabControl.VerticalContentAlignmentProperty, binding);
 
 
@@ -159,8 +211,30 @@ public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.TabControl.ContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContentTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TabControl 
+public static Style<T> ContentTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
 => style._addSetter(Avalonia.Controls.TabControl.ContentTemplateProperty, binding);
+
+
+ // PageTransition
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation.IPageTransition? value) where T : Avalonia.Controls.TabControl 
+=> style._addSetter(Avalonia.Controls.TabControl.PageTransitionProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> PageTransition<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
+=> style._addSetter(Avalonia.Controls.TabControl.PageTransitionProperty, binding);
+
+
+ // IndicatorTemplate
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> IndicatorTemplate<T>(this Style<T> style, Avalonia.Controls.Templates.IDataTemplate? value) where T : Avalonia.Controls.TabControl 
+=> style._addSetter(Avalonia.Controls.TabControl.IndicatorTemplateProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> IndicatorTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TabControl 
+=> style._addSetter(Avalonia.Controls.TabControl.IndicatorTemplateProperty, binding);
 
 
 

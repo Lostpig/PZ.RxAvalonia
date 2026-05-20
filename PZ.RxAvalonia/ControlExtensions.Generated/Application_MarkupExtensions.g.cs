@@ -104,17 +104,6 @@ public static T RxResourcesChanged<T>(this T control, IObserver<Avalonia.Control
  control._setEvent((System.EventHandler<Avalonia.Controls.ResourcesChangedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.ResourcesChanged += h);
 
 
- // UrlsOpened
-
-/*ActionToEventGenerator*/
-[Obsolete]public static T OnUrlsOpened<T>(this T control, Action<Avalonia.UrlOpenedEventArgs> action) where T : Avalonia.Application  => 
- control._setEvent((System.EventHandler<Avalonia.UrlOpenedEventArgs>) ((arg0, arg1) => action(arg1)), h => control.UrlsOpened += h);
-
-/*ReactiveEventGenerator*/
-[Obsolete]public static T RxUrlsOpened<T>(this T control, IObserver<Avalonia.UrlOpenedEventArgs> observer) where T : Avalonia.Application  => 
- control._setEvent((System.EventHandler<Avalonia.UrlOpenedEventArgs>) ((arg0, arg1) => observer.OnNext((arg1))), h => control.UrlsOpened += h);
-
-
  // ActualThemeVariantChanged
 
 /*ActionToEventGenerator*/

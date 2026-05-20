@@ -360,7 +360,7 @@ public static Style<T> Command<T>(this Style<T> style, System.Windows.Input.ICom
 => style._addSetter(Avalonia.Controls.MenuItem.CommandProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Command<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> Command<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.CommandProperty, binding);
 
 
@@ -371,7 +371,7 @@ public static Style<T> HotKey<T>(this Style<T> style, Avalonia.Input.KeyGesture?
 => style._addSetter(Avalonia.Controls.MenuItem.HotKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HotKey<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> HotKey<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.HotKeyProperty, binding);
 
 
@@ -382,7 +382,7 @@ public static Style<T> CommandParameter<T>(this Style<T> style, System.Object? v
 => style._addSetter(Avalonia.Controls.MenuItem.CommandParameterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CommandParameter<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> CommandParameter<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.CommandParameterProperty, binding);
 
 
@@ -393,7 +393,7 @@ public static Style<T> Icon<T>(this Style<T> style, System.Object? value) where 
 => style._addSetter(Avalonia.Controls.MenuItem.IconProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Icon<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> Icon<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.IconProperty, binding);
 
 
@@ -404,7 +404,7 @@ public static Style<T> InputGesture<T>(this Style<T> style, Avalonia.Input.KeyGe
 => style._addSetter(Avalonia.Controls.MenuItem.InputGestureProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InputGesture<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> InputGesture<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.InputGestureProperty, binding);
 
 
@@ -415,7 +415,7 @@ public static Style<T> IsSubMenuOpen<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.MenuItem.IsSubMenuOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsSubMenuOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> IsSubMenuOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.IsSubMenuOpenProperty, binding);
 
 
@@ -426,7 +426,7 @@ public static Style<T> StaysOpenOnClick<T>(this Style<T> style, System.Boolean v
 => style._addSetter(Avalonia.Controls.MenuItem.StaysOpenOnClickProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StaysOpenOnClick<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> StaysOpenOnClick<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.StaysOpenOnClickProperty, binding);
 
 
@@ -437,7 +437,7 @@ public static Style<T> ToggleType<T>(this Style<T> style, Avalonia.Controls.Menu
 => style._addSetter(Avalonia.Controls.MenuItem.ToggleTypeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ToggleType<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> ToggleType<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.ToggleTypeProperty, binding);
 
 
@@ -448,7 +448,7 @@ public static Style<T> IsChecked<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.MenuItem.IsCheckedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsChecked<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> IsChecked<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.IsCheckedProperty, binding);
 
 
@@ -459,7 +459,7 @@ public static Style<T> GroupName<T>(this Style<T> style, System.String? value) w
 => style._addSetter(Avalonia.Controls.MenuItem.GroupNameProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> GroupName<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.MenuItem 
+public static Style<T> GroupName<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.MenuItem 
 => style._addSetter(Avalonia.Controls.MenuItem.GroupNameProperty, binding);
 
 

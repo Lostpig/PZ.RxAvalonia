@@ -48,7 +48,7 @@ public static Style<T> ReverseOrder<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ReverseOrder<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ReversibleStackPanel 
+public static Style<T> ReverseOrder<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ReversibleStackPanel 
 => style._addSetter(Avalonia.Controls.ReversibleStackPanel.ReverseOrderProperty, binding);
 
 

@@ -120,26 +120,26 @@ public static T SelectedValue<T>(this T control, IObservable<System.Object?> obs
  // SelectedValueBinding
 
 /*ValueSetterGenerator*/
-public static T SelectedValueBinding<T>(this T control, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static T SelectedValueBinding<T>(this T control, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 {
     control.SelectedValueBinding = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SelectedValueBinding<T>(this T control, Func<Avalonia.Data.IBinding?> func) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static T SelectedValueBinding<T>(this T control, Func<Avalonia.Data.BindingBase?> func) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SelectedValueBinding<T>(this T control, ISubject<Avalonia.Data.IBinding?> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static T SelectedValueBinding<T>(this T control, ISubject<Avalonia.Data.BindingBase?> subject) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._set(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs, IObserver<Avalonia.Data.IBinding?> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static T SelectedValueBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs, IObserver<Avalonia.Data.BindingBase?> changed) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
    => control._setEx(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, obs, changed);
 
 
@@ -225,7 +225,7 @@ public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, System.B
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.AutoScrollToSelectedItemProperty, binding);
 
 
@@ -236,14 +236,14 @@ public static Style<T> SelectedValue<T>(this Style<T> style, System.Object? valu
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedValue<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static Style<T> SelectedValue<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueProperty, binding);
 
 
  // SelectedValueBinding
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SelectedValueBinding<T>(this Style<T> style, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static Style<T> SelectedValueBinding<T>(this Style<T> style, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.SelectedValueBindingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
@@ -257,7 +257,7 @@ public static Style<T> IsTextSearchEnabled<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTextSearchEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static Style<T> IsTextSearchEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.IsTextSearchEnabledProperty, binding);
 
 
@@ -268,7 +268,7 @@ public static Style<T> WrapSelection<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> WrapSelection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
+public static Style<T> WrapSelection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.SelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.SelectingItemsControl.WrapSelectionProperty, binding);
 
 

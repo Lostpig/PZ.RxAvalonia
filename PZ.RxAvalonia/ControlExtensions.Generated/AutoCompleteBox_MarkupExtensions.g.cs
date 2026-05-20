@@ -39,30 +39,56 @@ public static T CaretIndex<T>(this T control, IObservable<System.Int32> obs, IOb
    => control._setEx(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, obs, changed);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.AutoCompleteBox 
+public static T PlaceholderText<T>(this T control, System.String? value) where T : Avalonia.Controls.AutoCompleteBox 
 {
-    control.Watermark = value!;
+    control.PlaceholderText = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.AutoCompleteBox 
-   => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, func);
+public static T PlaceholderText<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.AutoCompleteBox 
-   => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, obs);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.AutoCompleteBox 
-   => control._set(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, subject);
+public static T PlaceholderText<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.AutoCompleteBox 
-   => control._setEx(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, obs, changed);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty!, obs, changed);
+
+
+ // PlaceholderForeground
+
+/*ValueSetterGenerator*/
+public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.AutoCompleteBox 
+{
+    control.PlaceholderForeground = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty!, obs, changed);
 
 
  // MinimumPrefixLength
@@ -559,6 +585,32 @@ public static T InnerRightContent<T>(this T control, IObservable<System.Object?>
    => control._setEx(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, obs, changed);
 
 
+ // ValueMemberBinding
+
+/*ValueSetterGenerator*/
+public static T ValueMemberBinding<T>(this T control, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.AutoCompleteBox 
+{
+    control.ValueMemberBinding = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T ValueMemberBinding<T>(this T control, Func<Avalonia.Data.BindingBase?> func) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ValueMemberBindingProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T ValueMemberBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ValueMemberBindingProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T ValueMemberBinding<T>(this T control, ISubject<Avalonia.Data.BindingBase?> subject) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._set(Avalonia.Controls.AutoCompleteBox.ValueMemberBindingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T ValueMemberBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs, IObserver<Avalonia.Data.BindingBase?> changed) where T : Avalonia.Controls.AutoCompleteBox 
+   => control._setEx(Avalonia.Controls.AutoCompleteBox.ValueMemberBindingProperty!, obs, changed);
+
+
 
 //================= Events ======================//
  // TextChanged
@@ -674,19 +726,30 @@ public static Style<T> CaretIndex<T>(this Style<T> style, System.Int32 value) wh
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretIndex<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> CaretIndex<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.CaretIndexProperty, binding);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.AutoCompleteBox 
-=> style._addSetter(Avalonia.Controls.AutoCompleteBox.WatermarkProperty!, value!);
+public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.AutoCompleteBox 
+=> style._addSetter(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
-=> style._addSetter(Avalonia.Controls.AutoCompleteBox.WatermarkProperty, binding);
+public static Style<T> PlaceholderText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
+=> style._addSetter(Avalonia.Controls.AutoCompleteBox.PlaceholderTextProperty, binding);
+
+
+ // PlaceholderForeground
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.AutoCompleteBox 
+=> style._addSetter(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
+=> style._addSetter(Avalonia.Controls.AutoCompleteBox.PlaceholderForegroundProperty, binding);
 
 
  // MinimumPrefixLength
@@ -696,7 +759,7 @@ public static Style<T> MinimumPrefixLength<T>(this Style<T> style, System.Int32 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinimumPrefixLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> MinimumPrefixLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MinimumPrefixLengthProperty, binding);
 
 
@@ -707,7 +770,7 @@ public static Style<T> MinimumPopulateDelay<T>(this Style<T> style, System.TimeS
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinimumPopulateDelay<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> MinimumPopulateDelay<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MinimumPopulateDelayProperty, binding);
 
 
@@ -718,7 +781,7 @@ public static Style<T> MaxDropDownHeight<T>(this Style<T> style, System.Double v
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxDropDownHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> MaxDropDownHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MaxDropDownHeightProperty, binding);
 
 
@@ -729,7 +792,7 @@ public static Style<T> IsTextCompletionEnabled<T>(this Style<T> style, System.Bo
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTextCompletionEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> IsTextCompletionEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.IsTextCompletionEnabledProperty, binding);
 
 
@@ -740,7 +803,7 @@ public static Style<T> ItemTemplate<T>(this Style<T> style, Avalonia.Controls.Te
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> ItemTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemTemplateProperty, binding);
 
 
@@ -751,7 +814,7 @@ public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, System.
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ClearSelectionOnLostFocusProperty, binding);
 
 
@@ -762,7 +825,7 @@ public static Style<T> IsDropDownOpen<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsDropDownOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> IsDropDownOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.IsDropDownOpenProperty, binding);
 
 
@@ -773,7 +836,7 @@ public static Style<T> SelectedItem<T>(this Style<T> style, System.Object? value
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedItem<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> SelectedItem<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.SelectedItemProperty, binding);
 
 
@@ -784,7 +847,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextProperty, binding);
 
 
@@ -795,7 +858,7 @@ public static Style<T> FilterMode<T>(this Style<T> style, Avalonia.Controls.Auto
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.FilterModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FilterMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> FilterMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.FilterModeProperty, binding);
 
 
@@ -806,7 +869,7 @@ public static Style<T> ItemFilter<T>(this Style<T> style, Avalonia.Controls.Auto
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemFilter<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> ItemFilter<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemFilterProperty, binding);
 
 
@@ -817,7 +880,7 @@ public static Style<T> TextFilter<T>(this Style<T> style, Avalonia.Controls.Auto
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextFilterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextFilter<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> TextFilter<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextFilterProperty, binding);
 
 
@@ -828,7 +891,7 @@ public static Style<T> ItemSelector<T>(this Style<T> style, Avalonia.Controls.Au
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemSelector<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> ItemSelector<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemSelectorProperty, binding);
 
 
@@ -839,7 +902,7 @@ public static Style<T> TextSelector<T>(this Style<T> style, Avalonia.Controls.Au
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextSelector<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> TextSelector<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.TextSelectorProperty, binding);
 
 
@@ -850,7 +913,7 @@ public static Style<T> ItemsSource<T>(this Style<T> style, System.Collections.IE
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemsSource<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> ItemsSource<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.ItemsSourceProperty, binding);
 
 
@@ -861,7 +924,7 @@ public static Style<T> AsyncPopulator<T>(this Style<T> style, System.Func<System
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AsyncPopulator<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> AsyncPopulator<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.AsyncPopulatorProperty, binding);
 
 
@@ -872,7 +935,7 @@ public static Style<T> MaxLength<T>(this Style<T> style, System.Int32 value) whe
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> MaxLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.MaxLengthProperty, binding);
 
 
@@ -883,7 +946,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? v
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.InnerLeftContentProperty, binding);
 
 
@@ -894,8 +957,18 @@ public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.AutoCompleteBox 
+public static Style<T> InnerRightContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.AutoCompleteBox 
 => style._addSetter(Avalonia.Controls.AutoCompleteBox.InnerRightContentProperty, binding);
+
+
+ // ValueMemberBinding
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> ValueMemberBinding<T>(this Style<T> style, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.AutoCompleteBox 
+=> style._addSetter(Avalonia.Controls.AutoCompleteBox.ValueMemberBindingProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+//Skipped ValueMemberBinding because already exist in value setters
 
 
 

@@ -230,7 +230,7 @@ public static Style<T> CanHorizontallyScroll<T>(this Style<T> style, System.Bool
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScrollProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CanHorizontallyScroll<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> CanHorizontallyScroll<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.CanHorizontallyScrollProperty, binding);
 
 
@@ -241,7 +241,7 @@ public static Style<T> CanVerticallyScroll<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScrollProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CanVerticallyScroll<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> CanVerticallyScroll<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.CanVerticallyScrollProperty, binding);
 
 
@@ -252,7 +252,7 @@ public static Style<T> Offset<T>(this Style<T> style, Avalonia.Vector value) whe
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.OffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Offset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> Offset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.OffsetProperty, binding);
 
 
@@ -263,7 +263,7 @@ public static Style<T> HorizontalSnapPointsType<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsTypeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalSnapPointsType<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> HorizontalSnapPointsType<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsTypeProperty, binding);
 
 
@@ -274,7 +274,7 @@ public static Style<T> VerticalSnapPointsType<T>(this Style<T> style, Avalonia.C
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsTypeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalSnapPointsType<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> VerticalSnapPointsType<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsTypeProperty, binding);
 
 
@@ -285,7 +285,7 @@ public static Style<T> HorizontalSnapPointsAlignment<T>(this Style<T> style, Ava
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalSnapPointsAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> HorizontalSnapPointsAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.HorizontalSnapPointsAlignmentProperty, binding);
 
 
@@ -296,7 +296,7 @@ public static Style<T> VerticalSnapPointsAlignment<T>(this Style<T> style, Avalo
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalSnapPointsAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> VerticalSnapPointsAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.VerticalSnapPointsAlignmentProperty, binding);
 
 
@@ -307,7 +307,7 @@ public static Style<T> IsScrollChainingEnabled<T>(this Style<T> style, System.Bo
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsScrollChainingEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
+public static Style<T> IsScrollChainingEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ScrollContentPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ScrollContentPresenter.IsScrollChainingEnabledProperty, binding);
 
 

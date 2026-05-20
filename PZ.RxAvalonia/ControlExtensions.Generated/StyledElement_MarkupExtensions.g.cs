@@ -168,7 +168,7 @@ public static Style<T> DataContext<T>(this Style<T> style, System.Object? value)
 => style._addSetter(Avalonia.StyledElement.DataContextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DataContext<T>(this Style<T> style, IBinding binding) where T : Avalonia.StyledElement 
+public static Style<T> DataContext<T>(this Style<T> style, BindingBase binding) where T : Avalonia.StyledElement 
 => style._addSetter(Avalonia.StyledElement.DataContextProperty, binding);
 
 
@@ -179,7 +179,7 @@ public static Style<T> Theme<T>(this Style<T> style, Avalonia.Styling.ControlThe
 => style._addSetter(Avalonia.StyledElement.ThemeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Theme<T>(this Style<T> style, IBinding binding) where T : Avalonia.StyledElement 
+public static Style<T> Theme<T>(this Style<T> style, BindingBase binding) where T : Avalonia.StyledElement 
 => style._addSetter(Avalonia.StyledElement.ThemeProperty, binding);
 
 

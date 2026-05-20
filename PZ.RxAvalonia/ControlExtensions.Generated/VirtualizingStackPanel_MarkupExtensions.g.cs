@@ -166,7 +166,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.VirtualizingStackPanel 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.VirtualizingStackPanel 
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.OrientationProperty, binding);
 
 
@@ -177,7 +177,7 @@ public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, Sy
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.VirtualizingStackPanel 
+public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.VirtualizingStackPanel 
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.AreHorizontalSnapPointsRegularProperty, binding);
 
 
@@ -188,7 +188,7 @@ public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, Syst
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.VirtualizingStackPanel 
+public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.VirtualizingStackPanel 
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.AreVerticalSnapPointsRegularProperty, binding);
 
 
@@ -199,7 +199,7 @@ public static Style<T> CacheLength<T>(this Style<T> style, System.Double value) 
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.CacheLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CacheLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.VirtualizingStackPanel 
+public static Style<T> CacheLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.VirtualizingStackPanel 
 => style._addSetter(Avalonia.Controls.VirtualizingStackPanel.CacheLengthProperty, binding);
 
 

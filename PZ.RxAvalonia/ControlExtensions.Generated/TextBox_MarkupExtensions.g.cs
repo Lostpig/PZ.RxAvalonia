@@ -585,82 +585,82 @@ public static T LineHeight<T>(this T control, IObservable<System.Double> obs, IO
    => control._setEx(Avalonia.Controls.TextBox.LineHeightProperty!, obs, changed);
 
 
- // LetterSpacing
+ // PlaceholderText
 
 /*ValueSetterGenerator*/
-public static T LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.TextBox 
+public static T PlaceholderText<T>(this T control, System.String? value) where T : Avalonia.Controls.TextBox 
 {
-    control.LetterSpacing = value!;
+    control.PlaceholderText = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T LetterSpacing<T>(this T control, Func<System.Double> func) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.LetterSpacingProperty!, func);
+public static T PlaceholderText<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderTextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.LetterSpacingProperty!, obs);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderTextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.LetterSpacingProperty!, subject);
+public static T PlaceholderText<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderTextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.TextBox 
-   => control._setEx(Avalonia.Controls.TextBox.LetterSpacingProperty!, obs, changed);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.PlaceholderTextProperty!, obs, changed);
 
 
- // Watermark
+ // UseFloatingPlaceholder
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.TextBox 
+public static T UseFloatingPlaceholder<T>(this T control, System.Boolean value) where T : Avalonia.Controls.TextBox 
 {
-    control.Watermark = value!;
+    control.UseFloatingPlaceholder = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, func);
+public static T UseFloatingPlaceholder<T>(this T control, Func<System.Boolean> func) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, obs);
+public static T UseFloatingPlaceholder<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.WatermarkProperty!, subject);
+public static T UseFloatingPlaceholder<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.TextBox 
-   => control._setEx(Avalonia.Controls.TextBox.WatermarkProperty!, obs, changed);
+public static T UseFloatingPlaceholder<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty!, obs, changed);
 
 
- // UseFloatingWatermark
+ // PlaceholderForeground
 
 /*ValueSetterGenerator*/
-public static T UseFloatingWatermark<T>(this T control, System.Boolean value) where T : Avalonia.Controls.TextBox 
+public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
 {
-    control.UseFloatingWatermark = value!;
+    control.PlaceholderForeground = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T UseFloatingWatermark<T>(this T control, Func<System.Boolean> func) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, func);
+public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderForegroundProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, obs);
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderForegroundProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T UseFloatingWatermark<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.TextBox 
-   => control._set(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, subject);
+public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.TextBox 
+   => control._set(Avalonia.Controls.TextBox.PlaceholderForegroundProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T UseFloatingWatermark<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.TextBox 
-   => control._setEx(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, obs, changed);
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.TextBox 
+   => control._setEx(Avalonia.Controls.TextBox.PlaceholderForegroundProperty!, obs, changed);
 
 
  // NewLine
@@ -925,7 +925,7 @@ public static Style<T> IsInactiveSelectionHighlightEnabled<T>(this Style<T> styl
 => style._addSetter(Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsInactiveSelectionHighlightEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> IsInactiveSelectionHighlightEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.IsInactiveSelectionHighlightEnabledProperty, binding);
 
 
@@ -936,7 +936,7 @@ public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, System.
 => style._addSetter(Avalonia.Controls.TextBox.ClearSelectionOnLostFocusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> ClearSelectionOnLostFocus<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.ClearSelectionOnLostFocusProperty, binding);
 
 
@@ -947,7 +947,7 @@ public static Style<T> AcceptsReturn<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.TextBox.AcceptsReturnProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AcceptsReturn<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> AcceptsReturn<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.AcceptsReturnProperty, binding);
 
 
@@ -958,7 +958,7 @@ public static Style<T> AcceptsTab<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.TextBox.AcceptsTabProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AcceptsTab<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> AcceptsTab<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.AcceptsTabProperty, binding);
 
 
@@ -969,7 +969,7 @@ public static Style<T> CaretIndex<T>(this Style<T> style, System.Int32 value) wh
 => style._addSetter(Avalonia.Controls.TextBox.CaretIndexProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretIndex<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> CaretIndex<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.CaretIndexProperty, binding);
 
 
@@ -980,7 +980,7 @@ public static Style<T> IsReadOnly<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.TextBox.IsReadOnlyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsReadOnly<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> IsReadOnly<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.IsReadOnlyProperty, binding);
 
 
@@ -991,7 +991,7 @@ public static Style<T> PasswordChar<T>(this Style<T> style, System.Char value) w
 => style._addSetter(Avalonia.Controls.TextBox.PasswordCharProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PasswordChar<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> PasswordChar<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.PasswordCharProperty, binding);
 
 
@@ -1002,7 +1002,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBr
 => style._addSetter(Avalonia.Controls.TextBox.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionBrushProperty, binding);
 
 
@@ -1013,7 +1013,7 @@ public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionForegroundBrushProperty, binding);
 
 
@@ -1024,7 +1024,7 @@ public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.TextBox.CaretBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> CaretBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.CaretBrushProperty, binding);
 
 
@@ -1035,7 +1035,7 @@ public static Style<T> CaretBlinkInterval<T>(this Style<T> style, System.TimeSpa
 => style._addSetter(Avalonia.Controls.TextBox.CaretBlinkIntervalProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretBlinkInterval<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> CaretBlinkInterval<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.CaretBlinkIntervalProperty, binding);
 
 
@@ -1046,7 +1046,7 @@ public static Style<T> SelectionStart<T>(this Style<T> style, System.Int32 value
 => style._addSetter(Avalonia.Controls.TextBox.SelectionStartProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionStart<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionStart<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionStartProperty, binding);
 
 
@@ -1057,7 +1057,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, System.Int32 value) 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionEndProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> SelectionEnd<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.SelectionEndProperty, binding);
 
 
@@ -1068,7 +1068,7 @@ public static Style<T> MaxLength<T>(this Style<T> style, System.Int32 value) whe
 => style._addSetter(Avalonia.Controls.TextBox.MaxLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> MaxLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.MaxLengthProperty, binding);
 
 
@@ -1079,7 +1079,7 @@ public static Style<T> MaxLines<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Controls.TextBox.MaxLinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxLines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> MaxLines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.MaxLinesProperty, binding);
 
 
@@ -1090,7 +1090,7 @@ public static Style<T> MinLines<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Controls.TextBox.MinLinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinLines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> MinLines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.MinLinesProperty, binding);
 
 
@@ -1101,7 +1101,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.TextBox.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.TextProperty, binding);
 
 
@@ -1112,7 +1112,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, Avalonia.Media.Text
 => style._addSetter(Avalonia.Controls.TextBox.TextAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> TextAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.TextAlignmentProperty, binding);
 
 
@@ -1123,7 +1123,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.TextBox.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.HorizontalContentAlignmentProperty, binding);
 
 
@@ -1134,7 +1134,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.TextBox.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.VerticalContentAlignmentProperty, binding);
 
 
@@ -1145,7 +1145,7 @@ public static Style<T> TextWrapping<T>(this Style<T> style, Avalonia.Media.TextW
 => style._addSetter(Avalonia.Controls.TextBox.TextWrappingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextWrapping<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> TextWrapping<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.TextWrappingProperty, binding);
 
 
@@ -1156,41 +1156,41 @@ public static Style<T> LineHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.TextBox.LineHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> LineHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.LineHeightProperty, binding);
 
 
- // LetterSpacing
+ // PlaceholderText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.LetterSpacingProperty!, value!);
+public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LetterSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.LetterSpacingProperty, binding);
+public static Style<T> PlaceholderText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.PlaceholderTextProperty, binding);
 
 
- // Watermark
+ // UseFloatingPlaceholder
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.WatermarkProperty!, value!);
+public static Style<T> UseFloatingPlaceholder<T>(this Style<T> style, System.Boolean value) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.WatermarkProperty, binding);
+public static Style<T> UseFloatingPlaceholder<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.UseFloatingPlaceholderProperty, binding);
 
 
- // UseFloatingWatermark
+ // PlaceholderForeground
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> UseFloatingWatermark<T>(this Style<T> style, System.Boolean value) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty!, value!);
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.PlaceholderForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseFloatingWatermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
-=> style._addSetter(Avalonia.Controls.TextBox.UseFloatingWatermarkProperty, binding);
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
+=> style._addSetter(Avalonia.Controls.TextBox.PlaceholderForegroundProperty, binding);
 
 
  // NewLine
@@ -1200,7 +1200,7 @@ public static Style<T> NewLine<T>(this Style<T> style, System.String value) wher
 => style._addSetter(Avalonia.Controls.TextBox.NewLineProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> NewLine<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> NewLine<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.NewLineProperty, binding);
 
 
@@ -1211,7 +1211,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? v
 => style._addSetter(Avalonia.Controls.TextBox.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.InnerLeftContentProperty, binding);
 
 
@@ -1222,7 +1222,7 @@ public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? 
 => style._addSetter(Avalonia.Controls.TextBox.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> InnerRightContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.InnerRightContentProperty, binding);
 
 
@@ -1233,7 +1233,7 @@ public static Style<T> RevealPassword<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.TextBox.RevealPasswordProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RevealPassword<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> RevealPassword<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.RevealPasswordProperty, binding);
 
 
@@ -1244,7 +1244,7 @@ public static Style<T> IsUndoEnabled<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.TextBox.IsUndoEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsUndoEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> IsUndoEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.IsUndoEnabledProperty, binding);
 
 
@@ -1255,7 +1255,7 @@ public static Style<T> UndoLimit<T>(this Style<T> style, System.Int32 value) whe
 => style._addSetter(Avalonia.Controls.TextBox.UndoLimitProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UndoLimit<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBox 
+public static Style<T> UndoLimit<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBox 
 => style._addSetter(Avalonia.Controls.TextBox.UndoLimitProperty, binding);
 
 

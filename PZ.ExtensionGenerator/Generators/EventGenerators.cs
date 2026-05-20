@@ -6,6 +6,15 @@ public class ActionToEventGenerator : ExtensionGeneratorBase<EventExtensionInfo>
 {
     protected override string? GetExtension(EventExtensionInfo @event)
     {
+        if (@event.IsFuncHandler)
+        {
+            return $"{(@event.IsObsolete ? "[Obsolete]" : "")}public static {@event.ReturnType} On{@event.EventName}{@event.GenericArg}(this {@event.ReturnType} control, {@event.EventHandler} handler) {@event.GenericConstraint}\n" +
+               $"{{\n" +
+               $"    control.{@event.EventName} += handler;\n" +
+               $"    return control;\n" +
+               $"}}\n";
+        }
+
         var eventHandler = @event.EventHandler;
         var eventParameterTypes = @event.EventParameterTypes;
         var argsString = $"Action<{string.Join(", ", eventParameterTypes)}> action";
@@ -99,6 +108,12 @@ public class ReactiveEventGenerator : ExtensionGeneratorBase<EventExtensionInfo>
 
     protected override string? GetExtension(EventExtensionInfo @event)
     {
+        if (@event.IsFuncHandler)
+        {
+            // skip
+            return "";
+        }
+
         var eventHandler = @event.EventHandler;
         var eventParameterTypes = @event.EventParameterTypes;
         var argsString = $"IObserver<{CreateParametersTypes(eventParameterTypes)}> observer";

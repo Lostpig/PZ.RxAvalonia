@@ -74,7 +74,7 @@ public static Style<T> RadiusX<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RadiusX<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Rectangle 
+public static Style<T> RadiusX<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Rectangle 
 => style._addSetter(Avalonia.Controls.Shapes.Rectangle.RadiusXProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> RadiusY<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RadiusY<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Rectangle 
+public static Style<T> RadiusY<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Rectangle 
 => style._addSetter(Avalonia.Controls.Shapes.Rectangle.RadiusYProperty, binding);
 
 

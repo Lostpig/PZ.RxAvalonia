@@ -66,6 +66,34 @@ public static T BaselineAlignment<T>(this T control, IObservable<Avalonia.Media.
 
 
 
+//================= Attached Properties ======================//
+ // TextDecorations
+
+/*AttachedPropertyFuncGenerator*/
+public static T Inline_TextDecorations<T>(this T control, Func<Avalonia.Media.TextDecorationCollection?> getter) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, getter);
+
+/*AttachedPropertyObservableGenerator*/
+public static T Inline_TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection?> obs) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, obs);
+
+/*AttachedPropertySubjectGenerator*/
+public static T Inline_TextDecorations<T>(this T control, ISubject<Avalonia.Media.TextDecorationCollection?> subject) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, subject);
+
+/*AttachedPropertyValueGenerator*/
+public static T Inline_TextDecorations<T>(this T control, Avalonia.Media.TextDecorationCollection? value) where T : Avalonia.Controls.Control 
+{
+    control.SetValue(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, value);
+    return control;
+}
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T Inline_TextDecorations<T>(this T control, IObservable<Avalonia.Media.TextDecorationCollection?> obs, IObserver<Avalonia.Media.TextDecorationCollection?> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, obs, changed);
+
+
+
 //================= Styles ======================//
  // TextDecorations
 
@@ -74,7 +102,7 @@ public static Style<T> TextDecorations<T>(this Style<T> style, Avalonia.Media.Te
 => style._addSetter(Avalonia.Controls.Documents.Inline.TextDecorationsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextDecorations<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.Inline 
+public static Style<T> TextDecorations<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.Inline 
 => style._addSetter(Avalonia.Controls.Documents.Inline.TextDecorationsProperty, binding);
 
 
@@ -85,7 +113,7 @@ public static Style<T> BaselineAlignment<T>(this Style<T> style, Avalonia.Media.
 => style._addSetter(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BaselineAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.Inline 
+public static Style<T> BaselineAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.Inline 
 => style._addSetter(Avalonia.Controls.Documents.Inline.BaselineAlignmentProperty, binding);
 
 

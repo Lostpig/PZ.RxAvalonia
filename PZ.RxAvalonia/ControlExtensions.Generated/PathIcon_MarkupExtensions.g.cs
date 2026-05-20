@@ -48,7 +48,7 @@ public static Style<T> Data<T>(this Style<T> style, Avalonia.Media.Geometry? val
 => style._addSetter(Avalonia.Controls.PathIcon.DataProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Data<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.PathIcon 
+public static Style<T> Data<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.PathIcon 
 => style._addSetter(Avalonia.Controls.PathIcon.DataProperty, binding);
 
 

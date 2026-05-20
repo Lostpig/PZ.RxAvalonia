@@ -308,7 +308,7 @@ public static Style<T> Minimum<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Controls.Primitives.Track.MinimumProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Minimum<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Minimum<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.MinimumProperty, binding);
 
 
@@ -319,7 +319,7 @@ public static Style<T> Maximum<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Controls.Primitives.Track.MaximumProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Maximum<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Maximum<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.MaximumProperty, binding);
 
 
@@ -330,7 +330,7 @@ public static Style<T> Value<T>(this Style<T> style, System.Double value) where 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ValueProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Value<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Value<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ValueProperty, binding);
 
 
@@ -341,7 +341,7 @@ public static Style<T> ViewportSize<T>(this Style<T> style, System.Double value)
 => style._addSetter(Avalonia.Controls.Primitives.Track.ViewportSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ViewportSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> ViewportSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ViewportSizeProperty, binding);
 
 
@@ -352,7 +352,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.Primitives.Track.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.OrientationProperty, binding);
 
 
@@ -363,7 +363,7 @@ public static Style<T> Thumb<T>(this Style<T> style, Avalonia.Controls.Primitive
 => style._addSetter(Avalonia.Controls.Primitives.Track.ThumbProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Thumb<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> Thumb<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.ThumbProperty, binding);
 
 
@@ -374,7 +374,7 @@ public static Style<T> IncreaseButton<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IncreaseButton<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> IncreaseButton<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.IncreaseButtonProperty, binding);
 
 
@@ -385,7 +385,7 @@ public static Style<T> DecreaseButton<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DecreaseButton<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> DecreaseButton<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.DecreaseButtonProperty, binding);
 
 
@@ -396,7 +396,7 @@ public static Style<T> IsDirectionReversed<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsDirectionReversed<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> IsDirectionReversed<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.IsDirectionReversedProperty, binding);
 
 
@@ -407,7 +407,7 @@ public static Style<T> IgnoreThumbDrag<T>(this Style<T> style, System.Boolean va
 => style._addSetter(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IgnoreThumbDrag<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> IgnoreThumbDrag<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.IgnoreThumbDragProperty, binding);
 
 
@@ -418,7 +418,7 @@ public static Style<T> DeferThumbDrag<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DeferThumbDrag<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Track 
+public static Style<T> DeferThumbDrag<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Track 
 => style._addSetter(Avalonia.Controls.Primitives.Track.DeferThumbDragProperty, binding);
 
 

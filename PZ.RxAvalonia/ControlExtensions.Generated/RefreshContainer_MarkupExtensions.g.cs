@@ -95,7 +95,7 @@ public static Style<T> PullDirection<T>(this Style<T> style, Avalonia.Input.Pull
 => style._addSetter(Avalonia.Controls.RefreshContainer.PullDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PullDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.RefreshContainer 
+public static Style<T> PullDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.RefreshContainer 
 => style._addSetter(Avalonia.Controls.RefreshContainer.PullDirectionProperty, binding);
 
 

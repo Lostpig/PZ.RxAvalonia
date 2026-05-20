@@ -387,7 +387,7 @@ public static class ControlPropertyExtensions
         TValue value)
         where TElement : Control
     {
-        if (value is IBinding binding)
+        if (value is BindingBase binding)
         {
             control[!property] = binding;
         }
@@ -403,7 +403,7 @@ public static class ControlPropertyExtensions
         where TElement : Control
     {
         var prop = Avalonia.Controls.ToolTip.TipProperty;
-        if (value is IBinding binding)
+        if (value is BindingBase binding)
         {
             control[!prop] = binding;
         }

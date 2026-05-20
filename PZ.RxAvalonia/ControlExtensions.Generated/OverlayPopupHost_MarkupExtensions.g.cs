@@ -48,7 +48,7 @@ public static Style<T> Transform<T>(this Style<T> style, Avalonia.Media.Transfor
 => style._addSetter(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Transform<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
+public static Style<T> Transform<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.OverlayPopupHost 
 => style._addSetter(Avalonia.Controls.Primitives.OverlayPopupHost.TransformProperty, binding);
 
 

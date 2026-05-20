@@ -324,7 +324,7 @@ public static Style<T> Width<T>(this Style<T> style, System.Double value) where 
 => style._addSetter(Avalonia.Layout.Layoutable.WidthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Width<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> Width<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.WidthProperty, binding);
 
 
@@ -335,7 +335,7 @@ public static Style<T> Height<T>(this Style<T> style, System.Double value) where
 => style._addSetter(Avalonia.Layout.Layoutable.HeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Height<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> Height<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.HeightProperty, binding);
 
 
@@ -346,7 +346,7 @@ public static Style<T> MinWidth<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Layout.Layoutable.MinWidthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinWidth<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> MinWidth<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.MinWidthProperty, binding);
 
 
@@ -357,7 +357,7 @@ public static Style<T> MaxWidth<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Layout.Layoutable.MaxWidthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxWidth<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> MaxWidth<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.MaxWidthProperty, binding);
 
 
@@ -368,7 +368,7 @@ public static Style<T> MinHeight<T>(this Style<T> style, System.Double value) wh
 => style._addSetter(Avalonia.Layout.Layoutable.MinHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> MinHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.MinHeightProperty, binding);
 
 
@@ -379,7 +379,7 @@ public static Style<T> MaxHeight<T>(this Style<T> style, System.Double value) wh
 => style._addSetter(Avalonia.Layout.Layoutable.MaxHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> MaxHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.MaxHeightProperty, binding);
 
 
@@ -390,7 +390,7 @@ public static Style<T> Margin<T>(this Style<T> style, Avalonia.Thickness value) 
 => style._addSetter(Avalonia.Layout.Layoutable.MarginProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Margin<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> Margin<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.MarginProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -407,7 +407,7 @@ public static Style<T> HorizontalAlignment<T>(this Style<T> style, Avalonia.Layo
 => style._addSetter(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> HorizontalAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.HorizontalAlignmentProperty, binding);
 
 
@@ -418,7 +418,7 @@ public static Style<T> VerticalAlignment<T>(this Style<T> style, Avalonia.Layout
 => style._addSetter(Avalonia.Layout.Layoutable.VerticalAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> VerticalAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.VerticalAlignmentProperty, binding);
 
 
@@ -429,7 +429,7 @@ public static Style<T> UseLayoutRounding<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseLayoutRounding<T>(this Style<T> style, IBinding binding) where T : Avalonia.Layout.Layoutable 
+public static Style<T> UseLayoutRounding<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Layout.Layoutable 
 => style._addSetter(Avalonia.Layout.Layoutable.UseLayoutRoundingProperty, binding);
 
 

@@ -605,32 +605,6 @@ public static T TextBlock_LineHeight<T>(this T control, IObservable<System.Doubl
    => control._setEx(Avalonia.Controls.TextBlock.LineHeightProperty!, obs, changed);
 
 
- // LetterSpacing
-
-/*AttachedPropertyFuncGenerator*/
-public static T TextBlock_LetterSpacing<T>(this T control, Func<System.Double> getter) where T : Avalonia.Controls.Control 
-   => control._set(Avalonia.Controls.TextBlock.LetterSpacingProperty!, getter);
-
-/*AttachedPropertyObservableGenerator*/
-public static T TextBlock_LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Control 
-   => control._set(Avalonia.Controls.TextBlock.LetterSpacingProperty!, obs);
-
-/*AttachedPropertySubjectGenerator*/
-public static T TextBlock_LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Control 
-   => control._set(Avalonia.Controls.TextBlock.LetterSpacingProperty!, subject);
-
-/*AttachedPropertyValueGenerator*/
-public static T TextBlock_LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Control 
-{
-    control.SetValue(Avalonia.Controls.TextBlock.LetterSpacingProperty!, value);
-    return control;
-}
-
-/*AttachedPropertyTwoWayGenerator*/
-public static T TextBlock_LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
-   => control._setEx(Avalonia.Controls.TextBlock.LetterSpacingProperty!, obs, changed);
-
-
  // MaxLines
 
 /*AttachedPropertyFuncGenerator*/
@@ -744,7 +718,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.TextBlock.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.BackgroundProperty, binding);
 
 
@@ -755,7 +729,7 @@ public static Style<T> Padding<T>(this Style<T> style, Avalonia.Thickness value)
 => style._addSetter(Avalonia.Controls.TextBlock.PaddingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Padding<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Padding<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.PaddingProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -772,7 +746,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, Avalonia.Media.FontFam
 => style._addSetter(Avalonia.Controls.TextBlock.FontFamilyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontFamily<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontFamilyProperty, binding);
 
 
@@ -783,7 +757,7 @@ public static Style<T> FontSize<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Controls.TextBlock.FontSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontSizeProperty, binding);
 
 
@@ -794,7 +768,7 @@ public static Style<T> FontStyle<T>(this Style<T> style, Avalonia.Media.FontStyl
 => style._addSetter(Avalonia.Controls.TextBlock.FontStyleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStyle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontStyle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontStyleProperty, binding);
 
 
@@ -805,7 +779,7 @@ public static Style<T> FontWeight<T>(this Style<T> style, Avalonia.Media.FontWei
 => style._addSetter(Avalonia.Controls.TextBlock.FontWeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontWeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontWeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontWeightProperty, binding);
 
 
@@ -816,7 +790,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, Avalonia.Media.FontSt
 => style._addSetter(Avalonia.Controls.TextBlock.FontStretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontStretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontStretchProperty, binding);
 
 
@@ -827,7 +801,7 @@ public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.TextBlock.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Foreground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.ForegroundProperty, binding);
 
 
@@ -838,7 +812,7 @@ public static Style<T> BaselineOffset<T>(this Style<T> style, System.Double valu
 => style._addSetter(Avalonia.Controls.TextBlock.BaselineOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BaselineOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> BaselineOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.BaselineOffsetProperty, binding);
 
 
@@ -849,7 +823,7 @@ public static Style<T> LineHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.TextBlock.LineHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> LineHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.LineHeightProperty, binding);
 
 
@@ -860,7 +834,7 @@ public static Style<T> LineSpacing<T>(this Style<T> style, System.Double value) 
 => style._addSetter(Avalonia.Controls.TextBlock.LineSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> LineSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.LineSpacingProperty, binding);
 
 
@@ -871,7 +845,7 @@ public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.TextBlock.LetterSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LetterSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> LetterSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.LetterSpacingProperty, binding);
 
 
@@ -882,7 +856,7 @@ public static Style<T> MaxLines<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Controls.TextBlock.MaxLinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxLines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> MaxLines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.MaxLinesProperty, binding);
 
 
@@ -893,7 +867,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.TextBlock.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextProperty, binding);
 
 
@@ -904,7 +878,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, Avalonia.Media.Text
 => style._addSetter(Avalonia.Controls.TextBlock.TextAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> TextAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextAlignmentProperty, binding);
 
 
@@ -915,7 +889,7 @@ public static Style<T> TextWrapping<T>(this Style<T> style, Avalonia.Media.TextW
 => style._addSetter(Avalonia.Controls.TextBlock.TextWrappingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextWrapping<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> TextWrapping<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextWrappingProperty, binding);
 
 
@@ -926,7 +900,7 @@ public static Style<T> TextTrimming<T>(this Style<T> style, Avalonia.Media.TextT
 => style._addSetter(Avalonia.Controls.TextBlock.TextTrimmingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextTrimming<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> TextTrimming<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextTrimmingProperty, binding);
 
 
@@ -937,7 +911,7 @@ public static Style<T> TextDecorations<T>(this Style<T> style, Avalonia.Media.Te
 => style._addSetter(Avalonia.Controls.TextBlock.TextDecorationsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextDecorations<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> TextDecorations<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.TextDecorationsProperty, binding);
 
 
@@ -948,7 +922,7 @@ public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontF
 => style._addSetter(Avalonia.Controls.TextBlock.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TextBlock 
+public static Style<T> FontFeatures<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TextBlock 
 => style._addSetter(Avalonia.Controls.TextBlock.FontFeaturesProperty, binding);
 
 

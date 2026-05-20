@@ -74,7 +74,7 @@ public static Style<T> StartAngle<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Shapes.Arc.StartAngleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StartAngle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Arc 
+public static Style<T> StartAngle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Arc 
 => style._addSetter(Avalonia.Controls.Shapes.Arc.StartAngleProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> SweepAngle<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Shapes.Arc.SweepAngleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SweepAngle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Arc 
+public static Style<T> SweepAngle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Arc 
 => style._addSetter(Avalonia.Controls.Shapes.Arc.SweepAngleProperty, binding);
 
 

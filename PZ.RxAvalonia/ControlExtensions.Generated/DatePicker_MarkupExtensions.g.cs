@@ -269,7 +269,7 @@ public static Style<T> DayFormat<T>(this Style<T> style, System.String value) wh
 => style._addSetter(Avalonia.Controls.DatePicker.DayFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DayFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> DayFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.DayFormatProperty, binding);
 
 
@@ -280,7 +280,7 @@ public static Style<T> DayVisible<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.DatePicker.DayVisibleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DayVisible<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> DayVisible<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.DayVisibleProperty, binding);
 
 
@@ -291,7 +291,7 @@ public static Style<T> MaxYear<T>(this Style<T> style, System.DateTimeOffset val
 => style._addSetter(Avalonia.Controls.DatePicker.MaxYearProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxYear<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> MaxYear<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.MaxYearProperty, binding);
 
 
@@ -302,7 +302,7 @@ public static Style<T> MinYear<T>(this Style<T> style, System.DateTimeOffset val
 => style._addSetter(Avalonia.Controls.DatePicker.MinYearProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinYear<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> MinYear<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.MinYearProperty, binding);
 
 
@@ -313,7 +313,7 @@ public static Style<T> MonthFormat<T>(this Style<T> style, System.String value) 
 => style._addSetter(Avalonia.Controls.DatePicker.MonthFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MonthFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> MonthFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.MonthFormatProperty, binding);
 
 
@@ -324,7 +324,7 @@ public static Style<T> MonthVisible<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Controls.DatePicker.MonthVisibleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MonthVisible<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> MonthVisible<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.MonthVisibleProperty, binding);
 
 
@@ -335,7 +335,7 @@ public static Style<T> YearFormat<T>(this Style<T> style, System.String value) w
 => style._addSetter(Avalonia.Controls.DatePicker.YearFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> YearFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> YearFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.YearFormatProperty, binding);
 
 
@@ -346,7 +346,7 @@ public static Style<T> YearVisible<T>(this Style<T> style, System.Boolean value)
 => style._addSetter(Avalonia.Controls.DatePicker.YearVisibleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> YearVisible<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> YearVisible<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.YearVisibleProperty, binding);
 
 
@@ -357,7 +357,7 @@ public static Style<T> SelectedDate<T>(this Style<T> style, System.Nullable<Syst
 => style._addSetter(Avalonia.Controls.DatePicker.SelectedDateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedDate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DatePicker 
+public static Style<T> SelectedDate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DatePicker 
 => style._addSetter(Avalonia.Controls.DatePicker.SelectedDateProperty, binding);
 
 

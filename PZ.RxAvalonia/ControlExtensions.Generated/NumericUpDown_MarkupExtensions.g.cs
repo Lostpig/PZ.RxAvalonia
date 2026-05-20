@@ -377,30 +377,56 @@ public static T Value<T>(this T control, IObservable<System.Nullable<System.Deci
    => control._setEx(Avalonia.Controls.NumericUpDown.ValueProperty!, obs, changed);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueSetterGenerator*/
-public static T Watermark<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
+public static T PlaceholderText<T>(this T control, System.String? value) where T : Avalonia.Controls.NumericUpDown 
 {
-    control.Watermark = value!;
+    control.PlaceholderText = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Watermark<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.NumericUpDown 
-   => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, func);
+public static T PlaceholderText<T>(this T control, Func<System.String?> func) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.NumericUpDown 
-   => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, obs);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Watermark<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.NumericUpDown 
-   => control._set(Avalonia.Controls.NumericUpDown.WatermarkProperty!, subject);
+public static T PlaceholderText<T>(this T control, ISubject<System.String?> subject) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Watermark<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.NumericUpDown 
-   => control._setEx(Avalonia.Controls.NumericUpDown.WatermarkProperty!, obs, changed);
+public static T PlaceholderText<T>(this T control, IObservable<System.String?> obs, IObserver<System.String?> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty!, obs, changed);
+
+
+ // PlaceholderForeground
+
+/*ValueSetterGenerator*/
+public static T PlaceholderForeground<T>(this T control, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.NumericUpDown 
+{
+    control.PlaceholderForeground = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T PlaceholderForeground<T>(this T control, Func<Avalonia.Media.IBrush?> func) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T PlaceholderForeground<T>(this T control, ISubject<Avalonia.Media.IBrush?> subject) where T : Avalonia.Controls.NumericUpDown 
+   => control._set(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T PlaceholderForeground<T>(this T control, IObservable<Avalonia.Media.IBrush?> obs, IObserver<Avalonia.Media.IBrush?> changed) where T : Avalonia.Controls.NumericUpDown 
+   => control._setEx(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty!, obs, changed);
 
 
  // HorizontalContentAlignment
@@ -574,7 +600,7 @@ public static Style<T> AllowSpin<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.NumericUpDown.AllowSpinProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AllowSpin<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> AllowSpin<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.AllowSpinProperty, binding);
 
 
@@ -585,7 +611,7 @@ public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, Avalonia.Co
 => style._addSetter(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ButtonSpinnerLocationProperty, binding);
 
 
@@ -596,7 +622,7 @@ public static Style<T> ShowButtonSpinner<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowButtonSpinner<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> ShowButtonSpinner<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ShowButtonSpinnerProperty, binding);
 
 
@@ -607,7 +633,7 @@ public static Style<T> ClipValueToMinMax<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClipValueToMinMax<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> ClipValueToMinMax<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ClipValueToMinMaxProperty, binding);
 
 
@@ -618,7 +644,7 @@ public static Style<T> NumberFormat<T>(this Style<T> style, System.Globalization
 => style._addSetter(Avalonia.Controls.NumericUpDown.NumberFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> NumberFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> NumberFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.NumberFormatProperty, binding);
 
 
@@ -629,7 +655,7 @@ public static Style<T> FormatString<T>(this Style<T> style, System.String value)
 => style._addSetter(Avalonia.Controls.NumericUpDown.FormatStringProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FormatString<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> FormatString<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.FormatStringProperty, binding);
 
 
@@ -640,7 +666,7 @@ public static Style<T> Increment<T>(this Style<T> style, System.Decimal value) w
 => style._addSetter(Avalonia.Controls.NumericUpDown.IncrementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Increment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Increment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.IncrementProperty, binding);
 
 
@@ -651,7 +677,7 @@ public static Style<T> IsReadOnly<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsReadOnly<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> IsReadOnly<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.IsReadOnlyProperty, binding);
 
 
@@ -662,7 +688,7 @@ public static Style<T> Maximum<T>(this Style<T> style, System.Decimal value) whe
 => style._addSetter(Avalonia.Controls.NumericUpDown.MaximumProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Maximum<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Maximum<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.MaximumProperty, binding);
 
 
@@ -673,7 +699,7 @@ public static Style<T> Minimum<T>(this Style<T> style, System.Decimal value) whe
 => style._addSetter(Avalonia.Controls.NumericUpDown.MinimumProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Minimum<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Minimum<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.MinimumProperty, binding);
 
 
@@ -684,7 +710,7 @@ public static Style<T> ParsingNumberStyle<T>(this Style<T> style, System.Globali
 => style._addSetter(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ParsingNumberStyle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> ParsingNumberStyle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ParsingNumberStyleProperty, binding);
 
 
@@ -695,7 +721,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextProperty, binding);
 
 
@@ -706,7 +732,7 @@ public static Style<T> TextConverter<T>(this Style<T> style, Avalonia.Data.Conve
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextConverterProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextConverter<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> TextConverter<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextConverterProperty, binding);
 
 
@@ -717,19 +743,30 @@ public static Style<T> Value<T>(this Style<T> style, System.Nullable<System.Deci
 => style._addSetter(Avalonia.Controls.NumericUpDown.ValueProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Value<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> Value<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.ValueProperty, binding);
 
 
- // Watermark
+ // PlaceholderText
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
-=> style._addSetter(Avalonia.Controls.NumericUpDown.WatermarkProperty!, value!);
+public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? value) where T : Avalonia.Controls.NumericUpDown 
+=> style._addSetter(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Watermark<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
-=> style._addSetter(Avalonia.Controls.NumericUpDown.WatermarkProperty, binding);
+public static Style<T> PlaceholderText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
+=> style._addSetter(Avalonia.Controls.NumericUpDown.PlaceholderTextProperty, binding);
+
+
+ // PlaceholderForeground
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Media.IBrush? value) where T : Avalonia.Controls.NumericUpDown 
+=> style._addSetter(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
+=> style._addSetter(Avalonia.Controls.NumericUpDown.PlaceholderForegroundProperty, binding);
 
 
  // HorizontalContentAlignment
@@ -739,7 +776,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.HorizontalContentAlignmentProperty, binding);
 
 
@@ -750,7 +787,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.VerticalContentAlignmentProperty, binding);
 
 
@@ -761,7 +798,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, Avalonia.Media.Text
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> TextAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.TextAlignmentProperty, binding);
 
 
@@ -772,7 +809,7 @@ public static Style<T> InnerLeftContent<T>(this Style<T> style, System.Object? v
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerLeftContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerLeftContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerLeftContentProperty, binding);
 
 
@@ -783,7 +820,7 @@ public static Style<T> InnerRightContent<T>(this Style<T> style, System.Object? 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerRightContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InnerRightContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.NumericUpDown 
+public static Style<T> InnerRightContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.NumericUpDown 
 => style._addSetter(Avalonia.Controls.NumericUpDown.InnerRightContentProperty, binding);
 
 

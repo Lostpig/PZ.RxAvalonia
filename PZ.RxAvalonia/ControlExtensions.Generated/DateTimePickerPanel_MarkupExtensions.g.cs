@@ -150,7 +150,7 @@ public static Style<T> ItemHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+public static Style<T> ItemHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemHeightProperty, binding);
 
 
@@ -161,7 +161,7 @@ public static Style<T> PanelType<T>(this Style<T> style, Avalonia.Controls.Primi
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PanelType<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+public static Style<T> PanelType<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.PanelTypeProperty, binding);
 
 
@@ -172,7 +172,7 @@ public static Style<T> ItemFormat<T>(this Style<T> style, System.String value) w
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemFormat<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+public static Style<T> ItemFormat<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ItemFormatProperty, binding);
 
 
@@ -183,7 +183,7 @@ public static Style<T> ShouldLoop<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShouldLoop<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
+public static Style<T> ShouldLoop<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.DateTimePickerPanel 
 => style._addSetter(Avalonia.Controls.Primitives.DateTimePickerPanel.ShouldLoopProperty, binding);
 
 

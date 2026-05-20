@@ -119,25 +119,6 @@ public static T ContextFlyout<T>(this T control, IObservable<Avalonia.Controls.P
 
 
 //================= Events ======================//
- // ContextRequested
-
-/*ActionToEventGenerator*/
-public static T OnContextRequested<T>(this T control, Action<Avalonia.Controls.ContextRequestedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
-{
-  control.AddHandler(Avalonia.Controls.Control.ContextRequestedEvent, (_, args) => action(args), routes ?? Avalonia.Controls.Control.ContextRequestedEvent.RoutingStrategies);
-  return control;
-}
-
-
-/*ReactiveEventGenerator*/
-public static T RxContextRequested<T>(this T control, IObserver<Avalonia.Controls.ContextRequestedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Controls.Control 
-{
-  control.AddHandler(Avalonia.Controls.Control.ContextRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Controls.Control.ContextRequestedEvent.RoutingStrategies);
-  return control;
-}
-
-
-
  // Loaded
 
 /*ActionToEventGenerator*/
@@ -204,7 +185,7 @@ public static Style<T> FocusAdorner<T>(this Style<T> style, Avalonia.Controls.IT
 => style._addSetter(Avalonia.Controls.Control.FocusAdornerProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FocusAdorner<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Control 
+public static Style<T> FocusAdorner<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.FocusAdornerProperty, binding);
 
 
@@ -215,7 +196,7 @@ public static Style<T> Tag<T>(this Style<T> style, System.Object? value) where T
 => style._addSetter(Avalonia.Controls.Control.TagProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Tag<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Control 
+public static Style<T> Tag<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.TagProperty, binding);
 
 
@@ -226,7 +207,7 @@ public static Style<T> ContextMenu<T>(this Style<T> style, Avalonia.Controls.Con
 => style._addSetter(Avalonia.Controls.Control.ContextMenuProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContextMenu<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Control 
+public static Style<T> ContextMenu<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.ContextMenuProperty, binding);
 
 
@@ -237,7 +218,7 @@ public static Style<T> ContextFlyout<T>(this Style<T> style, Avalonia.Controls.P
 => style._addSetter(Avalonia.Controls.Control.ContextFlyoutProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContextFlyout<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Control 
+public static Style<T> ContextFlyout<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Control 
 => style._addSetter(Avalonia.Controls.Control.ContextFlyoutProperty, binding);
 
 

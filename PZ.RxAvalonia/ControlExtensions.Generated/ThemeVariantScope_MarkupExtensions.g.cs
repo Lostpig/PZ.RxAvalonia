@@ -48,7 +48,7 @@ public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.St
 => style._addSetter(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RequestedThemeVariant<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ThemeVariantScope 
+public static Style<T> RequestedThemeVariant<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ThemeVariantScope 
 => style._addSetter(Avalonia.Controls.ThemeVariantScope.RequestedThemeVariantProperty, binding);
 
 

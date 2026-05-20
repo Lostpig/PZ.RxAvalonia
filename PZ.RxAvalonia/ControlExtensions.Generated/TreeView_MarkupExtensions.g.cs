@@ -139,7 +139,7 @@ public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, System.B
 => style._addSetter(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TreeView 
+public static Style<T> AutoScrollToSelectedItem<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TreeView 
 => style._addSetter(Avalonia.Controls.TreeView.AutoScrollToSelectedItemProperty, binding);
 
 
@@ -150,7 +150,7 @@ public static Style<T> SelectionMode<T>(this Style<T> style, Avalonia.Controls.S
 => style._addSetter(Avalonia.Controls.TreeView.SelectionModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TreeView 
+public static Style<T> SelectionMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TreeView 
 => style._addSetter(Avalonia.Controls.TreeView.SelectionModeProperty, binding);
 
 

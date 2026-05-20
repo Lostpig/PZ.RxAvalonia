@@ -152,7 +152,7 @@ public static Style<T> Rows<T>(this Style<T> style, System.Int32 value) where T 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.RowsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Rows<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
+public static Style<T> Rows<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.UniformGrid 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.RowsProperty, binding);
 
 
@@ -163,7 +163,7 @@ public static Style<T> Columns<T>(this Style<T> style, System.Int32 value) where
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Columns<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
+public static Style<T> Columns<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.UniformGrid 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.ColumnsProperty, binding);
 
 
@@ -174,7 +174,7 @@ public static Style<T> FirstColumn<T>(this Style<T> style, System.Int32 value) w
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FirstColumn<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
+public static Style<T> FirstColumn<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.UniformGrid 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.FirstColumnProperty, binding);
 
 
@@ -185,7 +185,7 @@ public static Style<T> RowSpacing<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RowSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
+public static Style<T> RowSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.UniformGrid 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.RowSpacingProperty, binding);
 
 
@@ -196,7 +196,7 @@ public static Style<T> ColumnSpacing<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ColumnSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.UniformGrid 
+public static Style<T> ColumnSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.UniformGrid 
 => style._addSetter(Avalonia.Controls.Primitives.UniformGrid.ColumnSpacingProperty, binding);
 
 

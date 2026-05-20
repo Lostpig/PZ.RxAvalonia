@@ -95,7 +95,7 @@ public static Style<T> PageTransition<T>(this Style<T> style, Avalonia.Animation
 => style._addSetter(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PageTransition<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TransitioningContentControl 
+public static Style<T> PageTransition<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TransitioningContentControl 
 => style._addSetter(Avalonia.Controls.TransitioningContentControl.PageTransitionProperty, binding);
 
 
@@ -106,7 +106,7 @@ public static Style<T> IsTransitionReversed<T>(this Style<T> style, System.Boole
 => style._addSetter(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTransitionReversed<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TransitioningContentControl 
+public static Style<T> IsTransitionReversed<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TransitioningContentControl 
 => style._addSetter(Avalonia.Controls.TransitioningContentControl.IsTransitionReversedProperty, binding);
 
 

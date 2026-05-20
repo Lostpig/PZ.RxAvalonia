@@ -166,7 +166,7 @@ public static Style<T> Spacing<T>(this Style<T> style, System.Double value) wher
 => style._addSetter(Avalonia.Controls.StackPanel.SpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Spacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.StackPanel 
+public static Style<T> Spacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.StackPanel 
 => style._addSetter(Avalonia.Controls.StackPanel.SpacingProperty, binding);
 
 
@@ -177,7 +177,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.StackPanel.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.StackPanel 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.StackPanel 
 => style._addSetter(Avalonia.Controls.StackPanel.OrientationProperty, binding);
 
 
@@ -188,7 +188,7 @@ public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, Sy
 => style._addSetter(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.StackPanel 
+public static Style<T> AreHorizontalSnapPointsRegular<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.StackPanel 
 => style._addSetter(Avalonia.Controls.StackPanel.AreHorizontalSnapPointsRegularProperty, binding);
 
 
@@ -199,7 +199,7 @@ public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, Syst
 => style._addSetter(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.StackPanel 
+public static Style<T> AreVerticalSnapPointsRegular<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.StackPanel 
 => style._addSetter(Avalonia.Controls.StackPanel.AreVerticalSnapPointsRegularProperty, binding);
 
 

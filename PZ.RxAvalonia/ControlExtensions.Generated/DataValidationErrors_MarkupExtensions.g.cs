@@ -128,7 +128,7 @@ public static Style<T> ErrorTemplate<T>(this Style<T> style, Avalonia.Controls.T
 => style._addSetter(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ErrorTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DataValidationErrors 
+public static Style<T> ErrorTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DataValidationErrors 
 => style._addSetter(Avalonia.Controls.DataValidationErrors.ErrorTemplateProperty, binding);
 
 

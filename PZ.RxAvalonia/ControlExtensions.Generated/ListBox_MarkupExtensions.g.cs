@@ -100,7 +100,7 @@ public static Style<T> SelectionMode<T>(this Style<T> style, Avalonia.Controls.S
 => style._addSetter(Avalonia.Controls.ListBox.SelectionModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ListBox 
+public static Style<T> SelectionMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ListBox 
 => style._addSetter(Avalonia.Controls.ListBox.SelectionModeProperty, binding);
 
 

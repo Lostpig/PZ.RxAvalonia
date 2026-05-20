@@ -568,7 +568,7 @@ public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, System
 => style._addSetter(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.WindowManagerAddShadowHintProperty, binding);
 
 
@@ -579,7 +579,7 @@ public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> Child<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.ChildProperty, binding);
 
 
@@ -590,7 +590,7 @@ public static Style<T> InheritsTransform<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> InheritsTransform<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> InheritsTransform<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.InheritsTransformProperty, binding);
 
 
@@ -601,7 +601,7 @@ public static Style<T> IsOpen<T>(this Style<T> style, System.Boolean value) wher
 => style._addSetter(Avalonia.Controls.Primitives.Popup.IsOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> IsOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.IsOpenProperty, binding);
 
 
@@ -612,7 +612,7 @@ public static Style<T> PlacementAnchor<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementAnchor<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementAnchor<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementAnchorProperty, binding);
 
 
@@ -623,7 +623,7 @@ public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, Ava
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementConstraintAdjustmentProperty, binding);
 
 
@@ -634,7 +634,7 @@ public static Style<T> PlacementGravity<T>(this Style<T> style, Avalonia.Control
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementGravity<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementGravity<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementGravityProperty, binding);
 
 
@@ -645,7 +645,7 @@ public static Style<T> Placement<T>(this Style<T> style, Avalonia.Controls.Place
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Placement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> Placement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementProperty, binding);
 
 
@@ -656,7 +656,7 @@ public static Style<T> PlacementRect<T>(this Style<T> style, System.Nullable<Ava
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementRectProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementRect<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementRect<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementRectProperty, binding);
 
 
@@ -667,7 +667,7 @@ public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementTarget<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> PlacementTarget<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.PlacementTargetProperty, binding);
 
 
@@ -678,7 +678,7 @@ public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Aval
 => style._addSetter(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.CustomPopupPlacementCallbackProperty, binding);
 
 
@@ -689,7 +689,7 @@ public static Style<T> OverlayDismissEventPassThrough<T>(this Style<T> style, Sy
 => style._addSetter(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OverlayDismissEventPassThrough<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> OverlayDismissEventPassThrough<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.OverlayDismissEventPassThroughProperty, binding);
 
 
@@ -700,7 +700,7 @@ public static Style<T> OverlayInputPassThroughElement<T>(this Style<T> style, Av
 => style._addSetter(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OverlayInputPassThroughElement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> OverlayInputPassThroughElement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.OverlayInputPassThroughElementProperty, binding);
 
 
@@ -711,7 +711,7 @@ public static Style<T> HorizontalOffset<T>(this Style<T> style, System.Double va
 => style._addSetter(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> HorizontalOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.HorizontalOffsetProperty, binding);
 
 
@@ -722,7 +722,7 @@ public static Style<T> IsLightDismissEnabled<T>(this Style<T> style, System.Bool
 => style._addSetter(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsLightDismissEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> IsLightDismissEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.IsLightDismissEnabledProperty, binding);
 
 
@@ -733,7 +733,7 @@ public static Style<T> VerticalOffset<T>(this Style<T> style, System.Double valu
 => style._addSetter(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> VerticalOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.VerticalOffsetProperty, binding);
 
 
@@ -744,7 +744,7 @@ public static Style<T> Topmost<T>(this Style<T> style, System.Boolean value) whe
 => style._addSetter(Avalonia.Controls.Primitives.Popup.TopmostProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Topmost<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> Topmost<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.TopmostProperty, binding);
 
 
@@ -755,7 +755,7 @@ public static Style<T> TakesFocusFromNativeControl<T>(this Style<T> style, Syste
 => style._addSetter(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TakesFocusFromNativeControl<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> TakesFocusFromNativeControl<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.TakesFocusFromNativeControlProperty, binding);
 
 
@@ -766,7 +766,7 @@ public static Style<T> ShouldUseOverlayLayer<T>(this Style<T> style, System.Bool
 => style._addSetter(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShouldUseOverlayLayer<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.Popup 
+public static Style<T> ShouldUseOverlayLayer<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.Popup 
 => style._addSetter(Avalonia.Controls.Primitives.Popup.ShouldUseOverlayLayerProperty, binding);
 
 

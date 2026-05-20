@@ -74,7 +74,7 @@ public static Style<T> Header<T>(this Style<T> style, System.Object? value) wher
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedContentControl.HeaderProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Header<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.HeaderedContentControl 
+public static Style<T> Header<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.HeaderedContentControl 
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedContentControl.HeaderProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> HeaderTemplate<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedContentControl.HeaderTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HeaderTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.HeaderedContentControl 
+public static Style<T> HeaderTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.HeaderedContentControl 
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedContentControl.HeaderTemplateProperty, binding);
 
 

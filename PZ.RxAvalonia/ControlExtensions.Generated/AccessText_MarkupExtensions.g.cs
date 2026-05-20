@@ -48,7 +48,7 @@ public static Style<T> ShowAccessKey<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Primitives.AccessText.ShowAccessKeyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowAccessKey<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.AccessText 
+public static Style<T> ShowAccessKey<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.AccessText 
 => style._addSetter(Avalonia.Controls.Primitives.AccessText.ShowAccessKeyProperty, binding);
 
 

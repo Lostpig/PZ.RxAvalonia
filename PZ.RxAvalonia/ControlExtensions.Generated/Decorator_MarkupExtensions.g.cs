@@ -92,7 +92,7 @@ public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? 
 => style._addSetter(Avalonia.Controls.Decorator.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Decorator 
+public static Style<T> Child<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Decorator 
 => style._addSetter(Avalonia.Controls.Decorator.ChildProperty, binding);
 
 
@@ -103,7 +103,7 @@ public static Style<T> Padding<T>(this Style<T> style, Avalonia.Thickness value)
 => style._addSetter(Avalonia.Controls.Decorator.PaddingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Padding<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Decorator 
+public static Style<T> Padding<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Decorator 
 => style._addSetter(Avalonia.Controls.Decorator.PaddingProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/

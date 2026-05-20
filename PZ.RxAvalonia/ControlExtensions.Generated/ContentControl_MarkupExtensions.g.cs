@@ -126,7 +126,7 @@ public static Style<T> Content<T>(this Style<T> style, System.Object? value) whe
 => style._addSetter(Avalonia.Controls.ContentControl.ContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Content<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContentControl 
+public static Style<T> Content<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.ContentProperty, binding);
 
 
@@ -137,7 +137,7 @@ public static Style<T> ContentTemplate<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.ContentControl.ContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContentTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContentControl 
+public static Style<T> ContentTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.ContentTemplateProperty, binding);
 
 
@@ -148,7 +148,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContentControl 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.HorizontalContentAlignmentProperty, binding);
 
 
@@ -159,7 +159,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContentControl 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContentControl 
 => style._addSetter(Avalonia.Controls.ContentControl.VerticalContentAlignmentProperty, binding);
 
 

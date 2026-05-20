@@ -74,7 +74,7 @@ public static Style<T> Header<T>(this Style<T> style, System.Object? value) wher
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.HeaderProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Header<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.HeaderedSelectingItemsControl 
+public static Style<T> Header<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.HeaderedSelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.HeaderProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> HeaderTemplate<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.HeaderTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HeaderTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.HeaderedSelectingItemsControl 
+public static Style<T> HeaderTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.HeaderedSelectingItemsControl 
 => style._addSetter(Avalonia.Controls.Primitives.HeaderedSelectingItemsControl.HeaderTemplateProperty, binding);
 
 

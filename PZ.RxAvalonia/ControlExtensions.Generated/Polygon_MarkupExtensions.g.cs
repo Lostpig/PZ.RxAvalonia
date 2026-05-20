@@ -39,6 +39,32 @@ public static T Points<T>(this T control, IObservable<System.Collections.Generic
    => control._setEx(Avalonia.Controls.Shapes.Polygon.PointsProperty!, obs, changed);
 
 
+ // FillRule
+
+/*ValueSetterGenerator*/
+public static T FillRule<T>(this T control, Avalonia.Media.FillRule value) where T : Avalonia.Controls.Shapes.Polygon 
+{
+    control.FillRule = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T FillRule<T>(this T control, Func<Avalonia.Media.FillRule> func) where T : Avalonia.Controls.Shapes.Polygon 
+   => control._set(Avalonia.Controls.Shapes.Polygon.FillRuleProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule> obs) where T : Avalonia.Controls.Shapes.Polygon 
+   => control._set(Avalonia.Controls.Shapes.Polygon.FillRuleProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T FillRule<T>(this T control, ISubject<Avalonia.Media.FillRule> subject) where T : Avalonia.Controls.Shapes.Polygon 
+   => control._set(Avalonia.Controls.Shapes.Polygon.FillRuleProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T FillRule<T>(this T control, IObservable<Avalonia.Media.FillRule> obs, IObserver<Avalonia.Media.FillRule> changed) where T : Avalonia.Controls.Shapes.Polygon 
+   => control._setEx(Avalonia.Controls.Shapes.Polygon.FillRuleProperty!, obs, changed);
+
+
 
 //================= Styles ======================//
  // Points
@@ -48,8 +74,19 @@ public static Style<T> Points<T>(this Style<T> style, System.Collections.Generic
 => style._addSetter(Avalonia.Controls.Shapes.Polygon.PointsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Points<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Polygon 
+public static Style<T> Points<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Polygon 
 => style._addSetter(Avalonia.Controls.Shapes.Polygon.PointsProperty, binding);
+
+
+ // FillRule
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> FillRule<T>(this Style<T> style, Avalonia.Media.FillRule value) where T : Avalonia.Controls.Shapes.Polygon 
+=> style._addSetter(Avalonia.Controls.Shapes.Polygon.FillRuleProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> FillRule<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Polygon 
+=> style._addSetter(Avalonia.Controls.Shapes.Polygon.FillRuleProperty, binding);
 
 
 

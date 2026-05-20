@@ -69,7 +69,7 @@ public static Style<T> ValidSpinDirection<T>(this Style<T> style, Avalonia.Contr
 => style._addSetter(Avalonia.Controls.Spinner.ValidSpinDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ValidSpinDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Spinner 
+public static Style<T> ValidSpinDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Spinner 
 => style._addSetter(Avalonia.Controls.Spinner.ValidSpinDirectionProperty, binding);
 
 

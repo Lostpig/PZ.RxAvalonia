@@ -178,7 +178,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.Slider.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.OrientationProperty, binding);
 
 
@@ -189,7 +189,7 @@ public static Style<T> IsDirectionReversed<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Slider.IsDirectionReversedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsDirectionReversed<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> IsDirectionReversed<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.IsDirectionReversedProperty, binding);
 
 
@@ -200,7 +200,7 @@ public static Style<T> IsSnapToTickEnabled<T>(this Style<T> style, System.Boolea
 => style._addSetter(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsSnapToTickEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> IsSnapToTickEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.IsSnapToTickEnabledProperty, binding);
 
 
@@ -211,7 +211,7 @@ public static Style<T> TickFrequency<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.Slider.TickFrequencyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TickFrequency<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> TickFrequency<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.TickFrequencyProperty, binding);
 
 
@@ -222,7 +222,7 @@ public static Style<T> TickPlacement<T>(this Style<T> style, Avalonia.Controls.T
 => style._addSetter(Avalonia.Controls.Slider.TickPlacementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TickPlacement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> TickPlacement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.TickPlacementProperty, binding);
 
 
@@ -233,7 +233,7 @@ public static Style<T> Ticks<T>(this Style<T> style, Avalonia.Collections.Avalon
 => style._addSetter(Avalonia.Controls.Slider.TicksProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Ticks<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Slider 
+public static Style<T> Ticks<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Slider 
 => style._addSetter(Avalonia.Controls.Slider.TicksProperty, binding);
 
 

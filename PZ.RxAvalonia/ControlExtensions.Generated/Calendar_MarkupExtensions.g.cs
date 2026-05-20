@@ -317,7 +317,7 @@ public static Style<T> FirstDayOfWeek<T>(this Style<T> style, System.DayOfWeek v
 => style._addSetter(Avalonia.Controls.Calendar.FirstDayOfWeekProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FirstDayOfWeek<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> FirstDayOfWeek<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.FirstDayOfWeekProperty, binding);
 
 
@@ -328,7 +328,7 @@ public static Style<T> IsTodayHighlighted<T>(this Style<T> style, System.Boolean
 => style._addSetter(Avalonia.Controls.Calendar.IsTodayHighlightedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTodayHighlighted<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> IsTodayHighlighted<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.IsTodayHighlightedProperty, binding);
 
 
@@ -339,7 +339,7 @@ public static Style<T> HeaderBackground<T>(this Style<T> style, Avalonia.Media.I
 => style._addSetter(Avalonia.Controls.Calendar.HeaderBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HeaderBackground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> HeaderBackground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.HeaderBackgroundProperty, binding);
 
 
@@ -350,7 +350,7 @@ public static Style<T> DisplayMode<T>(this Style<T> style, Avalonia.Controls.Cal
 => style._addSetter(Avalonia.Controls.Calendar.DisplayModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> DisplayMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.DisplayModeProperty, binding);
 
 
@@ -361,7 +361,7 @@ public static Style<T> SelectionMode<T>(this Style<T> style, Avalonia.Controls.C
 => style._addSetter(Avalonia.Controls.Calendar.SelectionModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> SelectionMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.SelectionModeProperty, binding);
 
 
@@ -372,7 +372,7 @@ public static Style<T> AllowTapRangeSelection<T>(this Style<T> style, System.Boo
 => style._addSetter(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AllowTapRangeSelection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> AllowTapRangeSelection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.AllowTapRangeSelectionProperty, binding);
 
 
@@ -383,7 +383,7 @@ public static Style<T> SelectedDate<T>(this Style<T> style, System.Nullable<Syst
 => style._addSetter(Avalonia.Controls.Calendar.SelectedDateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedDate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> SelectedDate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.SelectedDateProperty, binding);
 
 
@@ -394,7 +394,7 @@ public static Style<T> DisplayDate<T>(this Style<T> style, System.DateTime value
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> DisplayDate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateProperty, binding);
 
 
@@ -405,7 +405,7 @@ public static Style<T> DisplayDateStart<T>(this Style<T> style, System.Nullable<
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateStartProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDateStart<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> DisplayDateStart<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateStartProperty, binding);
 
 
@@ -416,7 +416,7 @@ public static Style<T> DisplayDateEnd<T>(this Style<T> style, System.Nullable<Sy
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateEndProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayDateEnd<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Calendar 
+public static Style<T> DisplayDateEnd<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Calendar 
 => style._addSetter(Avalonia.Controls.Calendar.DisplayDateEndProperty, binding);
 
 

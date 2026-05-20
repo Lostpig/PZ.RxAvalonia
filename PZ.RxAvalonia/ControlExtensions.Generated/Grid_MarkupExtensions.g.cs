@@ -232,7 +232,7 @@ public static Style<T> ShowGridLines<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Grid.ShowGridLinesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowGridLines<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Grid 
+public static Style<T> ShowGridLines<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Grid 
 => style._addSetter(Avalonia.Controls.Grid.ShowGridLinesProperty, binding);
 
 
@@ -243,7 +243,7 @@ public static Style<T> RowSpacing<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Grid.RowSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RowSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Grid 
+public static Style<T> RowSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Grid 
 => style._addSetter(Avalonia.Controls.Grid.RowSpacingProperty, binding);
 
 
@@ -254,7 +254,7 @@ public static Style<T> ColumnSpacing<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.Grid.ColumnSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ColumnSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Grid 
+public static Style<T> ColumnSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Grid 
 => style._addSetter(Avalonia.Controls.Grid.ColumnSpacingProperty, binding);
 
 

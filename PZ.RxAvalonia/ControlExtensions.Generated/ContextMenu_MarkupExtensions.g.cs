@@ -306,7 +306,7 @@ public static Style<T> HorizontalOffset<T>(this Style<T> style, System.Double va
 => style._addSetter(Avalonia.Controls.ContextMenu.HorizontalOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> HorizontalOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.HorizontalOffsetProperty, binding);
 
 
@@ -317,7 +317,7 @@ public static Style<T> VerticalOffset<T>(this Style<T> style, System.Double valu
 => style._addSetter(Avalonia.Controls.ContextMenu.VerticalOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> VerticalOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.VerticalOffsetProperty, binding);
 
 
@@ -328,7 +328,7 @@ public static Style<T> PlacementAnchor<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementAnchorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementAnchor<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementAnchor<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementAnchorProperty, binding);
 
 
@@ -339,7 +339,7 @@ public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, Ava
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementConstraintAdjustmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementConstraintAdjustment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementConstraintAdjustmentProperty, binding);
 
 
@@ -350,7 +350,7 @@ public static Style<T> PlacementGravity<T>(this Style<T> style, Avalonia.Control
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementGravityProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementGravity<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementGravity<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementGravityProperty, binding);
 
 
@@ -361,7 +361,7 @@ public static Style<T> Placement<T>(this Style<T> style, Avalonia.Controls.Place
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Placement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> Placement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementProperty, binding);
 
 
@@ -372,7 +372,7 @@ public static Style<T> PlacementRect<T>(this Style<T> style, System.Nullable<Ava
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementRectProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementRect<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementRect<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementRectProperty, binding);
 
 
@@ -383,7 +383,7 @@ public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, System
 => style._addSetter(Avalonia.Controls.ContextMenu.WindowManagerAddShadowHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> WindowManagerAddShadowHint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.WindowManagerAddShadowHintProperty, binding);
 
 
@@ -394,7 +394,7 @@ public static Style<T> PlacementTarget<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementTargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlacementTarget<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> PlacementTarget<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.PlacementTargetProperty, binding);
 
 
@@ -405,7 +405,7 @@ public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, Aval
 => style._addSetter(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ContextMenu 
+public static Style<T> CustomPopupPlacementCallback<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ContextMenu 
 => style._addSetter(Avalonia.Controls.ContextMenu.CustomPopupPlacementCallbackProperty, binding);
 
 

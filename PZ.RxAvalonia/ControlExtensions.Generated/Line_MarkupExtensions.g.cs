@@ -74,7 +74,7 @@ public static Style<T> StartPoint<T>(this Style<T> style, Avalonia.Point value) 
 => style._addSetter(Avalonia.Controls.Shapes.Line.StartPointProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StartPoint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Line 
+public static Style<T> StartPoint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Line 
 => style._addSetter(Avalonia.Controls.Shapes.Line.StartPointProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> EndPoint<T>(this Style<T> style, Avalonia.Point value) wh
 => style._addSetter(Avalonia.Controls.Shapes.Line.EndPointProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> EndPoint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Line 
+public static Style<T> EndPoint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Line 
 => style._addSetter(Avalonia.Controls.Shapes.Line.EndPointProperty, binding);
 
 

@@ -165,7 +165,7 @@ public static Style<T> MinuteIncrement<T>(this Style<T> style, System.Int32 valu
 => style._addSetter(Avalonia.Controls.TimePicker.MinuteIncrementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MinuteIncrement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TimePicker 
+public static Style<T> MinuteIncrement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TimePicker 
 => style._addSetter(Avalonia.Controls.TimePicker.MinuteIncrementProperty, binding);
 
 
@@ -176,7 +176,7 @@ public static Style<T> SecondIncrement<T>(this Style<T> style, System.Int32 valu
 => style._addSetter(Avalonia.Controls.TimePicker.SecondIncrementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SecondIncrement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TimePicker 
+public static Style<T> SecondIncrement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TimePicker 
 => style._addSetter(Avalonia.Controls.TimePicker.SecondIncrementProperty, binding);
 
 
@@ -187,7 +187,7 @@ public static Style<T> ClockIdentifier<T>(this Style<T> style, System.String val
 => style._addSetter(Avalonia.Controls.TimePicker.ClockIdentifierProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClockIdentifier<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TimePicker 
+public static Style<T> ClockIdentifier<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TimePicker 
 => style._addSetter(Avalonia.Controls.TimePicker.ClockIdentifierProperty, binding);
 
 
@@ -198,7 +198,7 @@ public static Style<T> UseSeconds<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.TimePicker.UseSecondsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseSeconds<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TimePicker 
+public static Style<T> UseSeconds<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TimePicker 
 => style._addSetter(Avalonia.Controls.TimePicker.UseSecondsProperty, binding);
 
 
@@ -209,7 +209,7 @@ public static Style<T> SelectedTime<T>(this Style<T> style, System.Nullable<Syst
 => style._addSetter(Avalonia.Controls.TimePicker.SelectedTimeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectedTime<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TimePicker 
+public static Style<T> SelectedTime<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TimePicker 
 => style._addSetter(Avalonia.Controls.TimePicker.SelectedTimeProperty, binding);
 
 

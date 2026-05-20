@@ -48,7 +48,7 @@ public static Style<T> GroupName<T>(this Style<T> style, System.String? value) w
 => style._addSetter(Avalonia.Controls.RadioButton.GroupNameProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> GroupName<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.RadioButton 
+public static Style<T> GroupName<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.RadioButton 
 => style._addSetter(Avalonia.Controls.RadioButton.GroupNameProperty, binding);
 
 

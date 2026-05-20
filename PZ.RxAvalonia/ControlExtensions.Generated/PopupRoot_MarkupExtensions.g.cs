@@ -74,7 +74,7 @@ public static Style<Avalonia.Controls.Primitives.PopupRoot> Transform(this Style
 => style._addSetter(Avalonia.Controls.Primitives.PopupRoot.TransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.PopupRoot> Transform(this Style<Avalonia.Controls.Primitives.PopupRoot> style, IBinding binding)  
+public static Style<Avalonia.Controls.Primitives.PopupRoot> Transform(this Style<Avalonia.Controls.Primitives.PopupRoot> style, BindingBase binding)  
 => style._addSetter(Avalonia.Controls.Primitives.PopupRoot.TransformProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<Avalonia.Controls.Primitives.PopupRoot> WindowManagerAddShad
 => style._addSetter(Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.PopupRoot> WindowManagerAddShadowHint(this Style<Avalonia.Controls.Primitives.PopupRoot> style, IBinding binding)  
+public static Style<Avalonia.Controls.Primitives.PopupRoot> WindowManagerAddShadowHint(this Style<Avalonia.Controls.Primitives.PopupRoot> style, BindingBase binding)  
 => style._addSetter(Avalonia.Controls.Primitives.PopupRoot.WindowManagerAddShadowHintProperty, binding);
 
 

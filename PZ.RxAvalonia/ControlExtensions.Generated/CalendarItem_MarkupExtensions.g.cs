@@ -74,7 +74,7 @@ public static Style<Avalonia.Controls.Primitives.CalendarItem> HeaderBackground(
 => style._addSetter(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.CalendarItem> HeaderBackground(this Style<Avalonia.Controls.Primitives.CalendarItem> style, IBinding binding)  
+public static Style<Avalonia.Controls.Primitives.CalendarItem> HeaderBackground(this Style<Avalonia.Controls.Primitives.CalendarItem> style, BindingBase binding)  
 => style._addSetter(Avalonia.Controls.Primitives.CalendarItem.HeaderBackgroundProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<Avalonia.Controls.Primitives.CalendarItem> DayTitleTemplate(
 => style._addSetter(Avalonia.Controls.Primitives.CalendarItem.DayTitleTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<Avalonia.Controls.Primitives.CalendarItem> DayTitleTemplate(this Style<Avalonia.Controls.Primitives.CalendarItem> style, IBinding binding)  
+public static Style<Avalonia.Controls.Primitives.CalendarItem> DayTitleTemplate(this Style<Avalonia.Controls.Primitives.CalendarItem> style, BindingBase binding)  
 => style._addSetter(Avalonia.Controls.Primitives.CalendarItem.DayTitleTemplateProperty, binding);
 
 

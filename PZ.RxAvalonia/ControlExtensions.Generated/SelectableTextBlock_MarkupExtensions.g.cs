@@ -147,7 +147,7 @@ public static Style<T> SelectionStart<T>(this Style<T> style, System.Int32 value
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionStart<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionStart<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionStartProperty, binding);
 
 
@@ -158,7 +158,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, System.Int32 value) 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionEnd<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionEndProperty, binding);
 
 
@@ -169,7 +169,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBr
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionBrushProperty, binding);
 
 
@@ -180,7 +180,7 @@ public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SelectableTextBlock 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SelectableTextBlock 
 => style._addSetter(Avalonia.Controls.SelectableTextBlock.SelectionForegroundBrushProperty, binding);
 
 

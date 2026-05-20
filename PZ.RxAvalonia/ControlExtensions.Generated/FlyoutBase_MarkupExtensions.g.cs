@@ -12,6 +12,34 @@ namespace PZ.RxAvalonia;
 [global::System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverage]
 public static partial class FlyoutBase_MarkupExtensions
 {
+//================= Properties ======================//
+ // IsOpen
+
+/*ValueSetterGenerator*/
+public static T IsOpen<T>(this T control, System.Boolean value) where T : Avalonia.Controls.Primitives.FlyoutBase 
+{
+    control.IsOpen = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T IsOpen<T>(this T control, Func<System.Boolean> func) where T : Avalonia.Controls.Primitives.FlyoutBase 
+   => control._set(Avalonia.Controls.Primitives.FlyoutBase.IsOpenProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T IsOpen<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.Controls.Primitives.FlyoutBase 
+   => control._set(Avalonia.Controls.Primitives.FlyoutBase.IsOpenProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T IsOpen<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.Controls.Primitives.FlyoutBase 
+   => control._set(Avalonia.Controls.Primitives.FlyoutBase.IsOpenProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T IsOpen<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.Controls.Primitives.FlyoutBase 
+   => control._setEx(Avalonia.Controls.Primitives.FlyoutBase.IsOpenProperty!, obs, changed);
+
+
+
 //================= Attached Properties ======================//
  // AttachedFlyout
 

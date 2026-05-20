@@ -172,26 +172,26 @@ public static T IsChecked<T>(this T control, IObservable<System.Boolean> obs, IO
  // ToggleType
 
 /*ValueSetterGenerator*/
-public static T ToggleType<T>(this T control, Avalonia.Controls.NativeMenuItemToggleType value) where T : Avalonia.Controls.NativeMenuItem 
+public static T ToggleType<T>(this T control, Avalonia.Controls.MenuItemToggleType value) where T : Avalonia.Controls.NativeMenuItem 
 {
     control.ToggleType = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T ToggleType<T>(this T control, Func<Avalonia.Controls.NativeMenuItemToggleType> func) where T : Avalonia.Controls.NativeMenuItem 
+public static T ToggleType<T>(this T control, Func<Avalonia.Controls.MenuItemToggleType> func) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.NativeMenuItemToggleType> obs) where T : Avalonia.Controls.NativeMenuItem 
+public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.MenuItemToggleType> obs) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T ToggleType<T>(this T control, ISubject<Avalonia.Controls.NativeMenuItemToggleType> subject) where T : Avalonia.Controls.NativeMenuItem 
+public static T ToggleType<T>(this T control, ISubject<Avalonia.Controls.MenuItemToggleType> subject) where T : Avalonia.Controls.NativeMenuItem 
    => control._set(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.NativeMenuItemToggleType> obs, IObserver<Avalonia.Controls.NativeMenuItemToggleType> changed) where T : Avalonia.Controls.NativeMenuItem 
+public static T ToggleType<T>(this T control, IObservable<Avalonia.Controls.MenuItemToggleType> obs, IObserver<Avalonia.Controls.MenuItemToggleType> changed) where T : Avalonia.Controls.NativeMenuItem 
    => control._setEx(Avalonia.Controls.NativeMenuItem.ToggleTypeProperty!, obs, changed);
 
 

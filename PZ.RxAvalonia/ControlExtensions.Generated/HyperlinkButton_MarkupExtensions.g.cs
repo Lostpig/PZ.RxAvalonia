@@ -74,7 +74,7 @@ public static Style<T> IsVisited<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.HyperlinkButton.IsVisitedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsVisited<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.HyperlinkButton 
+public static Style<T> IsVisited<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.HyperlinkButton 
 => style._addSetter(Avalonia.Controls.HyperlinkButton.IsVisitedProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> NavigateUri<T>(this Style<T> style, System.Uri? value) wh
 => style._addSetter(Avalonia.Controls.HyperlinkButton.NavigateUriProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> NavigateUri<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.HyperlinkButton 
+public static Style<T> NavigateUri<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.HyperlinkButton 
 => style._addSetter(Avalonia.Controls.HyperlinkButton.NavigateUriProperty, binding);
 
 

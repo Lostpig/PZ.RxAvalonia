@@ -208,7 +208,7 @@ public static Style<T> TransparencyLevelHint<T>(this Style<T> style, System.Coll
 => style._addSetter(Avalonia.Controls.TopLevel.TransparencyLevelHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TransparencyLevelHint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TopLevel 
+public static Style<T> TransparencyLevelHint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TopLevel 
 => style._addSetter(Avalonia.Controls.TopLevel.TransparencyLevelHintProperty, binding);
 
 
@@ -219,7 +219,7 @@ public static Style<T> TransparencyBackgroundFallback<T>(this Style<T> style, Av
 => style._addSetter(Avalonia.Controls.TopLevel.TransparencyBackgroundFallbackProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TransparencyBackgroundFallback<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TopLevel 
+public static Style<T> TransparencyBackgroundFallback<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TopLevel 
 => style._addSetter(Avalonia.Controls.TopLevel.TransparencyBackgroundFallbackProperty, binding);
 
 
@@ -230,7 +230,7 @@ public static Style<T> RequestedThemeVariant<T>(this Style<T> style, Avalonia.St
 => style._addSetter(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RequestedThemeVariant<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TopLevel 
+public static Style<T> RequestedThemeVariant<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TopLevel 
 => style._addSetter(Avalonia.Controls.TopLevel.RequestedThemeVariantProperty, binding);
 
 

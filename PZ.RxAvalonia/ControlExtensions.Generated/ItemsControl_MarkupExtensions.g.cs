@@ -120,26 +120,26 @@ public static T ItemTemplate<T>(this T control, IObservable<Avalonia.Controls.Te
  // DisplayMemberBinding
 
 /*ValueSetterGenerator*/
-public static T DisplayMemberBinding<T>(this T control, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.ItemsControl 
 {
     control.DisplayMemberBinding = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T DisplayMemberBinding<T>(this T control, Func<Avalonia.Data.IBinding?> func) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, Func<Avalonia.Data.BindingBase?> func) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T DisplayMemberBinding<T>(this T control, ISubject<Avalonia.Data.IBinding?> subject) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, ISubject<Avalonia.Data.BindingBase?> subject) where T : Avalonia.Controls.ItemsControl 
    => control._set(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.IBinding?> obs, IObserver<Avalonia.Data.IBinding?> changed) where T : Avalonia.Controls.ItemsControl 
+public static T DisplayMemberBinding<T>(this T control, IObservable<Avalonia.Data.BindingBase?> obs, IObserver<Avalonia.Data.BindingBase?> changed) where T : Avalonia.Controls.ItemsControl 
    => control._setEx(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, obs, changed);
 
 
@@ -198,7 +198,7 @@ public static Style<T> ItemContainerTheme<T>(this Style<T> style, Avalonia.Styli
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemContainerTheme<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemContainerTheme<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemContainerThemeProperty, binding);
 
 
@@ -209,7 +209,7 @@ public static Style<T> ItemsPanel<T>(this Style<T> style, Avalonia.Controls.ITem
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemsPanelProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemsPanel<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemsPanel<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemsPanelProperty, binding);
 
 
@@ -220,7 +220,7 @@ public static Style<T> ItemsSource<T>(this Style<T> style, System.Collections.IE
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemsSourceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemsSource<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemsSource<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemsSourceProperty, binding);
 
 
@@ -231,14 +231,14 @@ public static Style<T> ItemTemplate<T>(this Style<T> style, Avalonia.Controls.Te
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> ItemTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.ItemTemplateProperty, binding);
 
 
  // DisplayMemberBinding
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> DisplayMemberBinding<T>(this Style<T> style, Avalonia.Data.IBinding? value) where T : Avalonia.Controls.ItemsControl 
+public static Style<T> DisplayMemberBinding<T>(this Style<T> style, Avalonia.Data.BindingBase? value) where T : Avalonia.Controls.ItemsControl 
 => style._addSetter(Avalonia.Controls.ItemsControl.DisplayMemberBindingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/

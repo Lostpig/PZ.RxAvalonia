@@ -104,6 +104,32 @@ public static Avalonia.Animation.Animation PlaybackDirection(this Avalonia.Anima
    => control._setEx(Avalonia.Animation.Animation.PlaybackDirectionProperty!, obs, changed);
 
 
+ // PlaybackBehavior
+
+/*ValueSetterGenerator*/
+public static Avalonia.Animation.Animation PlaybackBehavior(this Avalonia.Animation.Animation control, Avalonia.Animation.PlaybackBehavior value)  
+{
+    control.PlaybackBehavior = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static Avalonia.Animation.Animation PlaybackBehavior(this Avalonia.Animation.Animation control, Func<Avalonia.Animation.PlaybackBehavior> func)  
+   => control._set(Avalonia.Animation.Animation.PlaybackBehaviorProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static Avalonia.Animation.Animation PlaybackBehavior(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.PlaybackBehavior> obs)  
+   => control._set(Avalonia.Animation.Animation.PlaybackBehaviorProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static Avalonia.Animation.Animation PlaybackBehavior(this Avalonia.Animation.Animation control, ISubject<Avalonia.Animation.PlaybackBehavior> subject)  
+   => control._set(Avalonia.Animation.Animation.PlaybackBehaviorProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static Avalonia.Animation.Animation PlaybackBehavior(this Avalonia.Animation.Animation control, IObservable<Avalonia.Animation.PlaybackBehavior> obs, IObserver<Avalonia.Animation.PlaybackBehavior> changed)  
+   => control._setEx(Avalonia.Animation.Animation.PlaybackBehaviorProperty!, obs, changed);
+
+
  // FillMode
 
 /*ValueSetterGenerator*/

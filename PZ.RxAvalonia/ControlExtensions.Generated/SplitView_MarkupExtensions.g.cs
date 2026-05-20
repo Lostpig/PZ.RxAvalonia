@@ -334,7 +334,7 @@ public static Style<T> CompactPaneLength<T>(this Style<T> style, System.Double v
 => style._addSetter(Avalonia.Controls.SplitView.CompactPaneLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CompactPaneLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> CompactPaneLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.CompactPaneLengthProperty, binding);
 
 
@@ -345,7 +345,7 @@ public static Style<T> DisplayMode<T>(this Style<T> style, Avalonia.Controls.Spl
 => style._addSetter(Avalonia.Controls.SplitView.DisplayModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DisplayMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> DisplayMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.DisplayModeProperty, binding);
 
 
@@ -356,7 +356,7 @@ public static Style<T> IsPaneOpen<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.SplitView.IsPaneOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsPaneOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> IsPaneOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.IsPaneOpenProperty, binding);
 
 
@@ -367,7 +367,7 @@ public static Style<T> OpenPaneLength<T>(this Style<T> style, System.Double valu
 => style._addSetter(Avalonia.Controls.SplitView.OpenPaneLengthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OpenPaneLength<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> OpenPaneLength<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.OpenPaneLengthProperty, binding);
 
 
@@ -378,7 +378,7 @@ public static Style<T> PaneBackground<T>(this Style<T> style, Avalonia.Media.IBr
 => style._addSetter(Avalonia.Controls.SplitView.PaneBackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PaneBackground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> PaneBackground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneBackgroundProperty, binding);
 
 
@@ -389,7 +389,7 @@ public static Style<T> PanePlacement<T>(this Style<T> style, Avalonia.Controls.S
 => style._addSetter(Avalonia.Controls.SplitView.PanePlacementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PanePlacement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> PanePlacement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PanePlacementProperty, binding);
 
 
@@ -400,7 +400,7 @@ public static Style<T> Pane<T>(this Style<T> style, System.Object? value) where 
 => style._addSetter(Avalonia.Controls.SplitView.PaneProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Pane<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> Pane<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneProperty, binding);
 
 
@@ -411,7 +411,7 @@ public static Style<T> PaneTemplate<T>(this Style<T> style, Avalonia.Controls.Te
 => style._addSetter(Avalonia.Controls.SplitView.PaneTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PaneTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> PaneTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.PaneTemplateProperty, binding);
 
 
@@ -422,7 +422,7 @@ public static Style<T> UseLightDismissOverlayMode<T>(this Style<T> style, System
 => style._addSetter(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseLightDismissOverlayMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.SplitView 
+public static Style<T> UseLightDismissOverlayMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.SplitView 
 => style._addSetter(Avalonia.Controls.SplitView.UseLightDismissOverlayModeProperty, binding);
 
 

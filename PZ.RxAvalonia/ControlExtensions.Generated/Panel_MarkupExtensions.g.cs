@@ -48,7 +48,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Panel.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Panel 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Panel 
 => style._addSetter(Avalonia.Controls.Panel.BackgroundProperty, binding);
 
 

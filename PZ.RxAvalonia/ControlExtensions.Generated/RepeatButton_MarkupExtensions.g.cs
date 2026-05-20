@@ -74,7 +74,7 @@ public static Style<T> Interval<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Controls.RepeatButton.IntervalProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Interval<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.RepeatButton 
+public static Style<T> Interval<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.RepeatButton 
 => style._addSetter(Avalonia.Controls.RepeatButton.IntervalProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> Delay<T>(this Style<T> style, System.Int32 value) where T
 => style._addSetter(Avalonia.Controls.RepeatButton.DelayProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Delay<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.RepeatButton 
+public static Style<T> Delay<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.RepeatButton 
 => style._addSetter(Avalonia.Controls.RepeatButton.DelayProperty, binding);
 
 

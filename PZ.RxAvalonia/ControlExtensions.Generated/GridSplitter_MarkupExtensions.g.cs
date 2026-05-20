@@ -178,7 +178,7 @@ public static Style<T> ResizeDirection<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.GridSplitter.ResizeDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ResizeDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> ResizeDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.ResizeDirectionProperty, binding);
 
 
@@ -189,7 +189,7 @@ public static Style<T> ResizeBehavior<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.GridSplitter.ResizeBehaviorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ResizeBehavior<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> ResizeBehavior<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.ResizeBehaviorProperty, binding);
 
 
@@ -200,7 +200,7 @@ public static Style<T> ShowsPreview<T>(this Style<T> style, System.Boolean value
 => style._addSetter(Avalonia.Controls.GridSplitter.ShowsPreviewProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowsPreview<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> ShowsPreview<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.ShowsPreviewProperty, binding);
 
 
@@ -211,7 +211,7 @@ public static Style<T> KeyboardIncrement<T>(this Style<T> style, System.Double v
 => style._addSetter(Avalonia.Controls.GridSplitter.KeyboardIncrementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> KeyboardIncrement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> KeyboardIncrement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.KeyboardIncrementProperty, binding);
 
 
@@ -222,7 +222,7 @@ public static Style<T> DragIncrement<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.GridSplitter.DragIncrementProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DragIncrement<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> DragIncrement<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.DragIncrementProperty, binding);
 
 
@@ -233,7 +233,7 @@ public static Style<T> PreviewContent<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.GridSplitter.PreviewContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PreviewContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.GridSplitter 
+public static Style<T> PreviewContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.GridSplitter 
 => style._addSetter(Avalonia.Controls.GridSplitter.PreviewContentProperty, binding);
 
 

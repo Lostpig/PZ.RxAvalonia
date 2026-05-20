@@ -128,7 +128,7 @@ public static Style<T> LastChildFill<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.DockPanel.LastChildFillProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LastChildFill<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DockPanel 
+public static Style<T> LastChildFill<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DockPanel 
 => style._addSetter(Avalonia.Controls.DockPanel.LastChildFillProperty, binding);
 
 
@@ -139,7 +139,7 @@ public static Style<T> HorizontalSpacing<T>(this Style<T> style, System.Double v
 => style._addSetter(Avalonia.Controls.DockPanel.HorizontalSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DockPanel 
+public static Style<T> HorizontalSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DockPanel 
 => style._addSetter(Avalonia.Controls.DockPanel.HorizontalSpacingProperty, binding);
 
 
@@ -150,7 +150,7 @@ public static Style<T> VerticalSpacing<T>(this Style<T> style, System.Double val
 => style._addSetter(Avalonia.Controls.DockPanel.VerticalSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.DockPanel 
+public static Style<T> VerticalSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.DockPanel 
 => style._addSetter(Avalonia.Controls.DockPanel.VerticalSpacingProperty, binding);
 
 

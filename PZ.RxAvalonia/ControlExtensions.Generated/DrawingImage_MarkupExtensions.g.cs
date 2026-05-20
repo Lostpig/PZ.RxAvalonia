@@ -39,6 +39,32 @@ public static T Drawing<T>(this T control, IObservable<Avalonia.Media.Drawing?> 
    => control._setEx(Avalonia.Media.DrawingImage.DrawingProperty!, obs, changed);
 
 
+ // Viewbox
+
+/*ValueSetterGenerator*/
+public static T Viewbox<T>(this T control, System.Nullable<Avalonia.Rect> value) where T : Avalonia.Media.DrawingImage 
+{
+    control.Viewbox = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T Viewbox<T>(this T control, Func<System.Nullable<Avalonia.Rect>> func) where T : Avalonia.Media.DrawingImage 
+   => control._set(Avalonia.Media.DrawingImage.ViewboxProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T Viewbox<T>(this T control, IObservable<System.Nullable<Avalonia.Rect>> obs) where T : Avalonia.Media.DrawingImage 
+   => control._set(Avalonia.Media.DrawingImage.ViewboxProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T Viewbox<T>(this T control, ISubject<System.Nullable<Avalonia.Rect>> subject) where T : Avalonia.Media.DrawingImage 
+   => control._set(Avalonia.Media.DrawingImage.ViewboxProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T Viewbox<T>(this T control, IObservable<System.Nullable<Avalonia.Rect>> obs, IObserver<System.Nullable<Avalonia.Rect>> changed) where T : Avalonia.Media.DrawingImage 
+   => control._setEx(Avalonia.Media.DrawingImage.ViewboxProperty!, obs, changed);
+
+
 
 //================= Events ======================//
  // Invalidated

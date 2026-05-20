@@ -54,7 +54,7 @@ public abstract class ComponentBase: Decorator, IReloadable, IDeclarativeCompone
             Initialize();
         }
     }
-    protected ComponentBase() : this(ViewInitializationStrategy.Immediate) { }
+    protected ComponentBase() : this(AppBuilderExtensions.DefaultViewInitializationStrategy) { }
 
     private bool TryFindResourceFromContext(object key, ThemeVariant? theme, out object? resource)
     {

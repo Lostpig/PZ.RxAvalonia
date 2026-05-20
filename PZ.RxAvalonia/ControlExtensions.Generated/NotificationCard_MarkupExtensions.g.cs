@@ -123,7 +123,7 @@ public static Style<T> IsClosed<T>(this Style<T> style, System.Boolean value) wh
 => style._addSetter(Avalonia.Controls.Notifications.NotificationCard.IsClosedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsClosed<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Notifications.NotificationCard 
+public static Style<T> IsClosed<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Notifications.NotificationCard 
 => style._addSetter(Avalonia.Controls.Notifications.NotificationCard.IsClosedProperty, binding);
 
 
@@ -134,7 +134,7 @@ public static Style<T> NotificationType<T>(this Style<T> style, Avalonia.Control
 => style._addSetter(Avalonia.Controls.Notifications.NotificationCard.NotificationTypeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> NotificationType<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Notifications.NotificationCard 
+public static Style<T> NotificationType<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Notifications.NotificationCard 
 => style._addSetter(Avalonia.Controls.Notifications.NotificationCard.NotificationTypeProperty, binding);
 
 

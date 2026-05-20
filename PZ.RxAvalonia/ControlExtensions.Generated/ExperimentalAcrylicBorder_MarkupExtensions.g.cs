@@ -60,26 +60,26 @@ public static T CornerRadius<T>(this T control, IObservable<Avalonia.CornerRadiu
  // Material
 
 /*ValueSetterGenerator*/
-public static T Material<T>(this T control, Avalonia.Media.ExperimentalAcrylicMaterial value) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static T Material<T>(this T control, Avalonia.Media.ExperimentalAcrylicMaterial? value) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
 {
     control.Material = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T Material<T>(this T control, Func<Avalonia.Media.ExperimentalAcrylicMaterial> func) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static T Material<T>(this T control, Func<Avalonia.Media.ExperimentalAcrylicMaterial?> func) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T Material<T>(this T control, IObservable<Avalonia.Media.ExperimentalAcrylicMaterial> obs) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static T Material<T>(this T control, IObservable<Avalonia.Media.ExperimentalAcrylicMaterial?> obs) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T Material<T>(this T control, ISubject<Avalonia.Media.ExperimentalAcrylicMaterial> subject) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static T Material<T>(this T control, ISubject<Avalonia.Media.ExperimentalAcrylicMaterial?> subject) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._set(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T Material<T>(this T control, IObservable<Avalonia.Media.ExperimentalAcrylicMaterial> obs, IObserver<Avalonia.Media.ExperimentalAcrylicMaterial> changed) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static T Material<T>(this T control, IObservable<Avalonia.Media.ExperimentalAcrylicMaterial?> obs, IObserver<Avalonia.Media.ExperimentalAcrylicMaterial?> changed) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
    => control._setEx(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, obs, changed);
 
 
@@ -92,7 +92,7 @@ public static Style<T> CornerRadius<T>(this Style<T> style, Avalonia.CornerRadiu
 => style._addSetter(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CornerRadius<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static Style<T> CornerRadius<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
 => style._addSetter(Avalonia.Controls.ExperimentalAcrylicBorder.CornerRadiusProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -105,11 +105,11 @@ public static Style<T> CornerRadius<T>(this Style<T> style, System.Double unifor
  // Material
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> Material<T>(this Style<T> style, Avalonia.Media.ExperimentalAcrylicMaterial value) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static Style<T> Material<T>(this Style<T> style, Avalonia.Media.ExperimentalAcrylicMaterial? value) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
 => style._addSetter(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Material<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
+public static Style<T> Material<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ExperimentalAcrylicBorder 
 => style._addSetter(Avalonia.Controls.ExperimentalAcrylicBorder.MaterialProperty, binding);
 
 

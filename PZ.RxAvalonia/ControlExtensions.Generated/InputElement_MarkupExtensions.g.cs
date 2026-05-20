@@ -170,11 +170,65 @@ public static T TabIndex<T>(this T control, IObservable<System.Int32> obs, IObse
 
 
 
+//================= Attached Properties ======================//
+ // IsHoldingEnabled
+
+/*AttachedPropertyFuncGenerator*/
+public static T InputElement_IsHoldingEnabled<T>(this T control, Func<System.Boolean> getter) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldingEnabledProperty!, getter);
+
+/*AttachedPropertyObservableGenerator*/
+public static T InputElement_IsHoldingEnabled<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldingEnabledProperty!, obs);
+
+/*AttachedPropertySubjectGenerator*/
+public static T InputElement_IsHoldingEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldingEnabledProperty!, subject);
+
+/*AttachedPropertyValueGenerator*/
+public static T InputElement_IsHoldingEnabled<T>(this T control, System.Boolean value) where T : Avalonia.StyledElement 
+{
+    control.SetValue(Avalonia.Input.InputElement.IsHoldingEnabledProperty!, value);
+    return control;
+}
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T InputElement_IsHoldingEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.StyledElement 
+   => control._setEx(Avalonia.Input.InputElement.IsHoldingEnabledProperty!, obs, changed);
+
+
+ // IsHoldWithMouseEnabled
+
+/*AttachedPropertyFuncGenerator*/
+public static T InputElement_IsHoldWithMouseEnabled<T>(this T control, Func<System.Boolean> getter) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldWithMouseEnabledProperty!, getter);
+
+/*AttachedPropertyObservableGenerator*/
+public static T InputElement_IsHoldWithMouseEnabled<T>(this T control, IObservable<System.Boolean> obs) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldWithMouseEnabledProperty!, obs);
+
+/*AttachedPropertySubjectGenerator*/
+public static T InputElement_IsHoldWithMouseEnabled<T>(this T control, ISubject<System.Boolean> subject) where T : Avalonia.StyledElement 
+   => control._set(Avalonia.Input.InputElement.IsHoldWithMouseEnabledProperty!, subject);
+
+/*AttachedPropertyValueGenerator*/
+public static T InputElement_IsHoldWithMouseEnabled<T>(this T control, System.Boolean value) where T : Avalonia.StyledElement 
+{
+    control.SetValue(Avalonia.Input.InputElement.IsHoldWithMouseEnabledProperty!, value);
+    return control;
+}
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T InputElement_IsHoldWithMouseEnabled<T>(this T control, IObservable<System.Boolean> obs, IObserver<System.Boolean> changed) where T : Avalonia.StyledElement 
+   => control._setEx(Avalonia.Input.InputElement.IsHoldWithMouseEnabledProperty!, obs, changed);
+
+
+
 //================= Events ======================//
  // GotFocus
 
 /*ActionToEventGenerator*/
-public static T OnGotFocus<T>(this T control, Action<Avalonia.Input.GotFocusEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+public static T OnGotFocus<T>(this T control, Action<Avalonia.Input.FocusChangedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.GotFocusEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.GotFocusEvent.RoutingStrategies);
   return control;
@@ -182,9 +236,28 @@ public static T OnGotFocus<T>(this T control, Action<Avalonia.Input.GotFocusEven
 
 
 /*ReactiveEventGenerator*/
-public static T RxGotFocus<T>(this T control, IObserver<Avalonia.Input.GotFocusEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+public static T RxGotFocus<T>(this T control, IObserver<Avalonia.Input.FocusChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.GotFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.GotFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // GettingFocus
+
+/*ActionToEventGenerator*/
+public static T OnGettingFocus<T>(this T control, Action<Avalonia.Input.FocusChangingEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.GettingFocusEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.GettingFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxGettingFocus<T>(this T control, IObserver<Avalonia.Input.FocusChangingEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.GettingFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.GettingFocusEvent.RoutingStrategies);
   return control;
 }
 
@@ -193,7 +266,7 @@ public static T RxGotFocus<T>(this T control, IObserver<Avalonia.Input.GotFocusE
  // LostFocus
 
 /*ActionToEventGenerator*/
-public static T OnLostFocus<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+public static T OnLostFocus<T>(this T control, Action<Avalonia.Input.FocusChangedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.LostFocusEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.LostFocusEvent.RoutingStrategies);
   return control;
@@ -201,9 +274,28 @@ public static T OnLostFocus<T>(this T control, Action<Avalonia.Interactivity.Rou
 
 
 /*ReactiveEventGenerator*/
-public static T RxLostFocus<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+public static T RxLostFocus<T>(this T control, IObserver<Avalonia.Input.FocusChangedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.LostFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.LostFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // LosingFocus
+
+/*ActionToEventGenerator*/
+public static T OnLosingFocus<T>(this T control, Action<Avalonia.Input.FocusChangingEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.LosingFocusEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.LosingFocusEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxLosingFocus<T>(this T control, IObserver<Avalonia.Input.FocusChangingEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.LosingFocusEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.LosingFocusEvent.RoutingStrategies);
   return control;
 }
 
@@ -418,6 +510,272 @@ public static T RxPointerWheelChanged<T>(this T control, IObserver<Avalonia.Inpu
 
 
 
+ // ContextRequested
+
+/*ActionToEventGenerator*/
+public static T OnContextRequested<T>(this T control, Action<Avalonia.Input.ContextRequestedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ContextRequestedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.ContextRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxContextRequested<T>(this T control, IObserver<Avalonia.Input.ContextRequestedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ContextRequestedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.ContextRequestedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // ContextCanceled
+
+/*ActionToEventGenerator*/
+public static T OnContextCanceled<T>(this T control, Action<Avalonia.Interactivity.RoutedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ContextCanceledEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.ContextCanceledEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxContextCanceled<T>(this T control, IObserver<Avalonia.Interactivity.RoutedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ContextCanceledEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.ContextCanceledEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // Pinch
+
+/*ActionToEventGenerator*/
+public static T OnPinch<T>(this T control, Action<Avalonia.Input.PinchEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PinchEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PinchEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPinch<T>(this T control, IObserver<Avalonia.Input.PinchEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PinchEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PinchEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PinchEnded
+
+/*ActionToEventGenerator*/
+public static T OnPinchEnded<T>(this T control, Action<Avalonia.Input.PinchEndedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PinchEndedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PinchEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPinchEnded<T>(this T control, IObserver<Avalonia.Input.PinchEndedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PinchEndedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PinchEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PullGesture
+
+/*ActionToEventGenerator*/
+public static T OnPullGesture<T>(this T control, Action<Avalonia.Input.PullGestureEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PullGestureEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PullGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPullGesture<T>(this T control, IObserver<Avalonia.Input.PullGestureEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PullGestureEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PullGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PullGestureEnded
+
+/*ActionToEventGenerator*/
+public static T OnPullGestureEnded<T>(this T control, Action<Avalonia.Input.PullGestureEndedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PullGestureEndedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PullGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPullGestureEnded<T>(this T control, IObserver<Avalonia.Input.PullGestureEndedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PullGestureEndedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PullGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // ScrollGesture
+
+/*ActionToEventGenerator*/
+public static T OnScrollGesture<T>(this T control, Action<Avalonia.Input.ScrollGestureEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.ScrollGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxScrollGesture<T>(this T control, IObserver<Avalonia.Input.ScrollGestureEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.ScrollGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // ScrollGestureInertiaStarting
+
+/*ActionToEventGenerator*/
+public static T OnScrollGestureInertiaStarting<T>(this T control, Action<Avalonia.Input.ScrollGestureInertiaStartingEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureInertiaStartingEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.ScrollGestureInertiaStartingEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxScrollGestureInertiaStarting<T>(this T control, IObserver<Avalonia.Input.ScrollGestureInertiaStartingEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureInertiaStartingEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.ScrollGestureInertiaStartingEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // ScrollGestureEnded
+
+/*ActionToEventGenerator*/
+public static T OnScrollGestureEnded<T>(this T control, Action<Avalonia.Input.ScrollGestureEndedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureEndedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.ScrollGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxScrollGestureEnded<T>(this T control, IObserver<Avalonia.Input.ScrollGestureEndedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.ScrollGestureEndedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.ScrollGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PointerTouchPadGestureMagnify
+
+/*ActionToEventGenerator*/
+public static T OnPointerTouchPadGestureMagnify<T>(this T control, Action<Avalonia.Input.PointerDeltaEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureMagnifyEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureMagnifyEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerTouchPadGestureMagnify<T>(this T control, IObserver<Avalonia.Input.PointerDeltaEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureMagnifyEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureMagnifyEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PointerTouchPadGestureRotate
+
+/*ActionToEventGenerator*/
+public static T OnPointerTouchPadGestureRotate<T>(this T control, Action<Avalonia.Input.PointerDeltaEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureRotateEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureRotateEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerTouchPadGestureRotate<T>(this T control, IObserver<Avalonia.Input.PointerDeltaEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureRotateEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureRotateEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // SwipeGesture
+
+/*ActionToEventGenerator*/
+public static T OnSwipeGesture<T>(this T control, Action<Avalonia.Input.SwipeGestureEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.SwipeGestureEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.SwipeGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxSwipeGesture<T>(this T control, IObserver<Avalonia.Input.SwipeGestureEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.SwipeGestureEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.SwipeGestureEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // SwipeGestureEnded
+
+/*ActionToEventGenerator*/
+public static T OnSwipeGestureEnded<T>(this T control, Action<Avalonia.Input.SwipeGestureEndedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.SwipeGestureEndedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.SwipeGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxSwipeGestureEnded<T>(this T control, IObserver<Avalonia.Input.SwipeGestureEndedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.SwipeGestureEndedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.SwipeGestureEndedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // PointerTouchPadGestureSwipe
+
+/*ActionToEventGenerator*/
+public static T OnPointerTouchPadGestureSwipe<T>(this T control, Action<Avalonia.Input.PointerDeltaEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureSwipeEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureSwipeEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxPointerTouchPadGestureSwipe<T>(this T control, IObserver<Avalonia.Input.PointerDeltaEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.PointerTouchPadGestureSwipeEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.PointerTouchPadGestureSwipeEvent.RoutingStrategies);
+  return control;
+}
+
+
+
  // Tapped
 
 /*ActionToEventGenerator*/
@@ -432,6 +790,25 @@ public static T OnTapped<T>(this T control, Action<Avalonia.Input.TappedEventArg
 public static T RxTapped<T>(this T control, IObserver<Avalonia.Input.TappedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
 {
   control.AddHandler(Avalonia.Input.InputElement.TappedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.TappedEvent.RoutingStrategies);
+  return control;
+}
+
+
+
+ // RightTapped
+
+/*ActionToEventGenerator*/
+public static T OnRightTapped<T>(this T control, Action<Avalonia.Input.TappedEventArgs> action, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.RightTappedEvent, (_, args) => action(args), routes ?? Avalonia.Input.InputElement.RightTappedEvent.RoutingStrategies);
+  return control;
+}
+
+
+/*ReactiveEventGenerator*/
+public static T RxRightTapped<T>(this T control, IObserver<Avalonia.Input.TappedEventArgs> observer, Avalonia.Interactivity.RoutingStrategies? routes = null) where T : Avalonia.Input.InputElement 
+{
+  control.AddHandler(Avalonia.Input.InputElement.RightTappedEvent, (_, args) => observer.OnNext(args), routes ?? Avalonia.Input.InputElement.RightTappedEvent.RoutingStrategies);
   return control;
 }
 
@@ -484,7 +861,7 @@ public static Style<T> Focusable<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Input.InputElement.FocusableProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Focusable<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> Focusable<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.FocusableProperty, binding);
 
 
@@ -495,7 +872,7 @@ public static Style<T> IsEnabled<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Input.InputElement.IsEnabledProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsEnabled<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> IsEnabled<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.IsEnabledProperty, binding);
 
 
@@ -506,7 +883,7 @@ public static Style<T> Cursor<T>(this Style<T> style, Avalonia.Input.Cursor? val
 => style._addSetter(Avalonia.Input.InputElement.CursorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Cursor<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> Cursor<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.CursorProperty, binding);
 
 
@@ -517,7 +894,7 @@ public static Style<T> IsHitTestVisible<T>(this Style<T> style, System.Boolean v
 => style._addSetter(Avalonia.Input.InputElement.IsHitTestVisibleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsHitTestVisible<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> IsHitTestVisible<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.IsHitTestVisibleProperty, binding);
 
 
@@ -528,7 +905,7 @@ public static Style<T> IsTabStop<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Input.InputElement.IsTabStopProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsTabStop<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> IsTabStop<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.IsTabStopProperty, binding);
 
 
@@ -539,7 +916,7 @@ public static Style<T> TabIndex<T>(this Style<T> style, System.Int32 value) wher
 => style._addSetter(Avalonia.Input.InputElement.TabIndexProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TabIndex<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.InputElement 
+public static Style<T> TabIndex<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.InputElement 
 => style._addSetter(Avalonia.Input.InputElement.TabIndexProperty, binding);
 
 

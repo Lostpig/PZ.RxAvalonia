@@ -48,7 +48,7 @@ public static Style<T> IsSelected<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.ListBoxItem.IsSelectedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsSelected<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ListBoxItem 
+public static Style<T> IsSelected<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ListBoxItem 
 => style._addSetter(Avalonia.Controls.ListBoxItem.IsSelectedProperty, binding);
 
 

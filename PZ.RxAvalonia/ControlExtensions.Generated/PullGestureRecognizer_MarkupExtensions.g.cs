@@ -48,7 +48,7 @@ public static Style<T> PullDirection<T>(this Style<T> style, Avalonia.Input.Pull
 => style._addSetter(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PullDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Input.PullGestureRecognizer 
+public static Style<T> PullDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Input.PullGestureRecognizer 
 => style._addSetter(Avalonia.Input.PullGestureRecognizer.PullDirectionProperty, binding);
 
 

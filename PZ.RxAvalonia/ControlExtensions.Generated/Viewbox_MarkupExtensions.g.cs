@@ -100,7 +100,7 @@ public static Style<T> Stretch<T>(this Style<T> style, Avalonia.Media.Stretch va
 => style._addSetter(Avalonia.Controls.Viewbox.StretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Stretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Viewbox 
+public static Style<T> Stretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Viewbox 
 => style._addSetter(Avalonia.Controls.Viewbox.StretchProperty, binding);
 
 
@@ -111,7 +111,7 @@ public static Style<T> StretchDirection<T>(this Style<T> style, Avalonia.Media.S
 => style._addSetter(Avalonia.Controls.Viewbox.StretchDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StretchDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Viewbox 
+public static Style<T> StretchDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Viewbox 
 => style._addSetter(Avalonia.Controls.Viewbox.StretchDirectionProperty, binding);
 
 
@@ -122,7 +122,7 @@ public static Style<T> Child<T>(this Style<T> style, Avalonia.Controls.Control? 
 => style._addSetter(Avalonia.Controls.Viewbox.ChildProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Child<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Viewbox 
+public static Style<T> Child<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Viewbox 
 => style._addSetter(Avalonia.Controls.Viewbox.ChildProperty, binding);
 
 

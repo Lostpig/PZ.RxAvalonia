@@ -191,7 +191,7 @@ public static Style<T> ViewportSize<T>(this Style<T> style, System.Double value)
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.ViewportSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ViewportSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> ViewportSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.ViewportSizeProperty, binding);
 
 
@@ -202,7 +202,7 @@ public static Style<T> Visibility<T>(this Style<T> style, Avalonia.Controls.Prim
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.VisibilityProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Visibility<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> Visibility<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.VisibilityProperty, binding);
 
 
@@ -213,7 +213,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.OrientationProperty, binding);
 
 
@@ -224,7 +224,7 @@ public static Style<T> AllowAutoHide<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.AllowAutoHideProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AllowAutoHide<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> AllowAutoHide<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.AllowAutoHideProperty, binding);
 
 
@@ -235,7 +235,7 @@ public static Style<T> HideDelay<T>(this Style<T> style, System.TimeSpan value) 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.HideDelayProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HideDelay<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> HideDelay<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.HideDelayProperty, binding);
 
 
@@ -246,7 +246,7 @@ public static Style<T> ShowDelay<T>(this Style<T> style, System.TimeSpan value) 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.ShowDelayProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowDelay<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.ScrollBar 
+public static Style<T> ShowDelay<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.ScrollBar 
 => style._addSetter(Avalonia.Controls.Primitives.ScrollBar.ShowDelayProperty, binding);
 
 

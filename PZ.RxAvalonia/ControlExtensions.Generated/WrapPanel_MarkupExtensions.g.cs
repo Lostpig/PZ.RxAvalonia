@@ -178,7 +178,7 @@ public static Style<T> ItemSpacing<T>(this Style<T> style, System.Double value) 
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> ItemSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemSpacingProperty, binding);
 
 
@@ -189,7 +189,7 @@ public static Style<T> LineSpacing<T>(this Style<T> style, System.Double value) 
 => style._addSetter(Avalonia.Controls.WrapPanel.LineSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> LineSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.LineSpacingProperty, binding);
 
 
@@ -200,7 +200,7 @@ public static Style<T> Orientation<T>(this Style<T> style, Avalonia.Layout.Orien
 => style._addSetter(Avalonia.Controls.WrapPanel.OrientationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Orientation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> Orientation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.OrientationProperty, binding);
 
 
@@ -211,7 +211,7 @@ public static Style<T> ItemsAlignment<T>(this Style<T> style, Avalonia.Controls.
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemsAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemsAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> ItemsAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemsAlignmentProperty, binding);
 
 
@@ -222,7 +222,7 @@ public static Style<T> ItemWidth<T>(this Style<T> style, System.Double value) wh
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemWidthProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemWidth<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> ItemWidth<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemWidthProperty, binding);
 
 
@@ -233,7 +233,7 @@ public static Style<T> ItemHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.WrapPanel 
+public static Style<T> ItemHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.WrapPanel 
 => style._addSetter(Avalonia.Controls.WrapPanel.ItemHeightProperty, binding);
 
 

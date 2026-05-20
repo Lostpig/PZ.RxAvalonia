@@ -25,6 +25,23 @@ public static class AppBuilderExtensions
         return appBuilder;
     }
 
+    private static ViewInitializationStrategy _defaultViewInitializationStrategy = ViewInitializationStrategy.Lazy;
+    /// <summary>
+    /// Gets the default <see cref="ViewInitializationStrategy"/> used by views when not explicitly specified.
+    /// </summary>
+    internal static ViewInitializationStrategy DefaultViewInitializationStrategy => _defaultViewInitializationStrategy;
+    /// <summary>
+    /// Configures the default initialization strategy for views.
+    /// </summary>
+    /// <param name="appBuilder">The <see cref="AppBuilder"/> to configure.</param>
+    /// <param name="strategy">The <see cref="ViewInitializationStrategy"/> to use as default for all views.</param>
+    /// <returns>The configured <see cref="AppBuilder"/>.</returns>
+    public static AppBuilder UseViewInitializationStrategy(this AppBuilder appBuilder, ViewInitializationStrategy strategy)
+    {
+        _defaultViewInitializationStrategy = strategy;
+        return appBuilder;
+    }
+
     /// <summary>
     /// Enables or disables hot reload functionality for the application.
     /// </summary>

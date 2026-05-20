@@ -100,7 +100,7 @@ public static Style<T> AllowSpin<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.ButtonSpinner.AllowSpinProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> AllowSpin<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
+public static Style<T> AllowSpin<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ButtonSpinner 
 => style._addSetter(Avalonia.Controls.ButtonSpinner.AllowSpinProperty, binding);
 
 
@@ -111,7 +111,7 @@ public static Style<T> ShowButtonSpinner<T>(this Style<T> style, System.Boolean 
 => style._addSetter(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowButtonSpinner<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
+public static Style<T> ShowButtonSpinner<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ButtonSpinner 
 => style._addSetter(Avalonia.Controls.ButtonSpinner.ShowButtonSpinnerProperty, binding);
 
 
@@ -122,7 +122,7 @@ public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, Avalonia.Co
 => style._addSetter(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ButtonSpinner 
+public static Style<T> ButtonSpinnerLocation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ButtonSpinner 
 => style._addSetter(Avalonia.Controls.ButtonSpinner.ButtonSpinnerLocationProperty, binding);
 
 

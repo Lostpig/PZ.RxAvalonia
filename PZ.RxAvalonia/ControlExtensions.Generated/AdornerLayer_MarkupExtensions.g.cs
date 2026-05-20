@@ -128,7 +128,7 @@ public static Style<T> DefaultFocusAdorner<T>(this Style<T> style, Avalonia.Cont
 => style._addSetter(Avalonia.Controls.Primitives.AdornerLayer.DefaultFocusAdornerProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> DefaultFocusAdorner<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Primitives.AdornerLayer 
+public static Style<T> DefaultFocusAdorner<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Primitives.AdornerLayer 
 => style._addSetter(Avalonia.Controls.Primitives.AdornerLayer.DefaultFocusAdornerProperty, binding);
 
 

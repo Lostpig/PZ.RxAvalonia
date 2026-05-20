@@ -280,7 +280,7 @@ public static Style<T> IsDropDownOpen<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.ComboBox.IsDropDownOpenProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsDropDownOpen<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> IsDropDownOpen<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.IsDropDownOpenProperty, binding);
 
 
@@ -291,7 +291,7 @@ public static Style<T> IsEditable<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.ComboBox.IsEditableProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsEditable<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> IsEditable<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.IsEditableProperty, binding);
 
 
@@ -302,7 +302,7 @@ public static Style<T> MaxDropDownHeight<T>(this Style<T> style, System.Double v
 => style._addSetter(Avalonia.Controls.ComboBox.MaxDropDownHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> MaxDropDownHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> MaxDropDownHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.MaxDropDownHeightProperty, binding);
 
 
@@ -313,7 +313,7 @@ public static Style<T> PlaceholderText<T>(this Style<T> style, System.String? va
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlaceholderText<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> PlaceholderText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderTextProperty, binding);
 
 
@@ -324,7 +324,7 @@ public static Style<T> PlaceholderForeground<T>(this Style<T> style, Avalonia.Me
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PlaceholderForeground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> PlaceholderForeground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.PlaceholderForegroundProperty, binding);
 
 
@@ -335,7 +335,7 @@ public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, Avalon
 => style._addSetter(Avalonia.Controls.ComboBox.HorizontalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> HorizontalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.HorizontalContentAlignmentProperty, binding);
 
 
@@ -346,7 +346,7 @@ public static Style<T> VerticalContentAlignment<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.ComboBox.VerticalContentAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> VerticalContentAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> VerticalContentAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.VerticalContentAlignmentProperty, binding);
 
 
@@ -357,7 +357,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.ComboBox.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.TextProperty, binding);
 
 
@@ -368,7 +368,7 @@ public static Style<T> SelectionBoxItemTemplate<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionBoxItemTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ComboBox 
+public static Style<T> SelectionBoxItemTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ComboBox 
 => style._addSetter(Avalonia.Controls.ComboBox.SelectionBoxItemTemplateProperty, binding);
 
 

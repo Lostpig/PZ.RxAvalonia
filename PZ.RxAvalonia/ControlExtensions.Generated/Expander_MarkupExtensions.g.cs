@@ -178,7 +178,7 @@ public static Style<T> ContentTransition<T>(this Style<T> style, Avalonia.Animat
 => style._addSetter(Avalonia.Controls.Expander.ContentTransitionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ContentTransition<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Expander 
+public static Style<T> ContentTransition<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Expander 
 => style._addSetter(Avalonia.Controls.Expander.ContentTransitionProperty, binding);
 
 
@@ -189,7 +189,7 @@ public static Style<T> ExpandDirection<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.Expander.ExpandDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ExpandDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Expander 
+public static Style<T> ExpandDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Expander 
 => style._addSetter(Avalonia.Controls.Expander.ExpandDirectionProperty, binding);
 
 
@@ -200,7 +200,7 @@ public static Style<T> IsExpanded<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.Expander.IsExpandedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsExpanded<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Expander 
+public static Style<T> IsExpanded<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Expander 
 => style._addSetter(Avalonia.Controls.Expander.IsExpandedProperty, binding);
 
 

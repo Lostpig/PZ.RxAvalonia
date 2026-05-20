@@ -114,7 +114,7 @@ public static Style<T> IsExpanded<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.TreeViewItem.IsExpandedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsExpanded<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TreeViewItem 
+public static Style<T> IsExpanded<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TreeViewItem 
 => style._addSetter(Avalonia.Controls.TreeViewItem.IsExpandedProperty, binding);
 
 
@@ -125,7 +125,7 @@ public static Style<T> IsSelected<T>(this Style<T> style, System.Boolean value) 
 => style._addSetter(Avalonia.Controls.TreeViewItem.IsSelectedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> IsSelected<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.TreeViewItem 
+public static Style<T> IsSelected<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.TreeViewItem 
 => style._addSetter(Avalonia.Controls.TreeViewItem.IsSelectedProperty, binding);
 
 

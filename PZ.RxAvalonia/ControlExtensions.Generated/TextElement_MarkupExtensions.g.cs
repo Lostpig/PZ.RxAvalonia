@@ -221,6 +221,32 @@ public static T Foreground<T>(this T control, IObservable<Avalonia.Media.IBrush?
    => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
+ // LetterSpacing
+
+/*ValueSetterGenerator*/
+public static T LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Documents.TextElement 
+{
+    control.LetterSpacing = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T LetterSpacing<T>(this T control, Func<System.Double> func) where T : Avalonia.Controls.Documents.TextElement 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Documents.TextElement 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Documents.TextElement 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Documents.TextElement 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, obs, changed);
+
+
 
 //================= Attached Properties ======================//
  // FontFamily
@@ -405,6 +431,32 @@ public static T TextElement_Foreground<T>(this T control, IObservable<Avalonia.M
    => control._setEx(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, obs, changed);
 
 
+ // LetterSpacing
+
+/*AttachedPropertyFuncGenerator*/
+public static T TextElement_LetterSpacing<T>(this T control, Func<System.Double> getter) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, getter);
+
+/*AttachedPropertyObservableGenerator*/
+public static T TextElement_LetterSpacing<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, obs);
+
+/*AttachedPropertySubjectGenerator*/
+public static T TextElement_LetterSpacing<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Control 
+   => control._set(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, subject);
+
+/*AttachedPropertyValueGenerator*/
+public static T TextElement_LetterSpacing<T>(this T control, System.Double value) where T : Avalonia.Controls.Control 
+{
+    control.SetValue(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, value);
+    return control;
+}
+
+/*AttachedPropertyTwoWayGenerator*/
+public static T TextElement_LetterSpacing<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Control 
+   => control._setEx(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, obs, changed);
+
+
 
 //================= Styles ======================//
  // Background
@@ -414,7 +466,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Documents.TextElement.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.BackgroundProperty, binding);
 
 
@@ -425,7 +477,7 @@ public static Style<T> FontFamily<T>(this Style<T> style, Avalonia.Media.FontFam
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontFamilyProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFamily<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontFamily<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontFamilyProperty, binding);
 
 
@@ -436,7 +488,7 @@ public static Style<T> FontFeatures<T>(this Style<T> style, Avalonia.Media.FontF
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontFeatures<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontFeatures<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontFeaturesProperty, binding);
 
 
@@ -447,7 +499,7 @@ public static Style<T> FontSize<T>(this Style<T> style, System.Double value) whe
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontSizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontSize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontSize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontSizeProperty, binding);
 
 
@@ -458,7 +510,7 @@ public static Style<T> FontStyle<T>(this Style<T> style, Avalonia.Media.FontStyl
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontStyleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStyle<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontStyle<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontStyleProperty, binding);
 
 
@@ -469,7 +521,7 @@ public static Style<T> FontWeight<T>(this Style<T> style, Avalonia.Media.FontWei
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontWeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontWeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontWeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontWeightProperty, binding);
 
 
@@ -480,7 +532,7 @@ public static Style<T> FontStretch<T>(this Style<T> style, Avalonia.Media.FontSt
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontStretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> FontStretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> FontStretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.FontStretchProperty, binding);
 
 
@@ -491,8 +543,19 @@ public static Style<T> Foreground<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Documents.TextElement.ForegroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Foreground<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Documents.TextElement 
+public static Style<T> Foreground<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
 => style._addSetter(Avalonia.Controls.Documents.TextElement.ForegroundProperty, binding);
+
+
+ // LetterSpacing
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value) where T : Avalonia.Controls.Documents.TextElement 
+=> style._addSetter(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> LetterSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Documents.TextElement 
+=> style._addSetter(Avalonia.Controls.Documents.TextElement.LetterSpacingProperty, binding);
 
 
 

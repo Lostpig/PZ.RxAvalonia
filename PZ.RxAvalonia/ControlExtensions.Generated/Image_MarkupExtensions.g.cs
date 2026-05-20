@@ -126,7 +126,7 @@ public static Style<T> Source<T>(this Style<T> style, Avalonia.Media.IImage? val
 => style._addSetter(Avalonia.Controls.Image.SourceProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Source<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Image 
+public static Style<T> Source<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Image 
 => style._addSetter(Avalonia.Controls.Image.SourceProperty, binding);
 
 
@@ -137,7 +137,7 @@ public static Style<T> BlendMode<T>(this Style<T> style, Avalonia.Media.Imaging.
 => style._addSetter(Avalonia.Controls.Image.BlendModeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BlendMode<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Image 
+public static Style<T> BlendMode<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Image 
 => style._addSetter(Avalonia.Controls.Image.BlendModeProperty, binding);
 
 
@@ -148,7 +148,7 @@ public static Style<T> Stretch<T>(this Style<T> style, Avalonia.Media.Stretch va
 => style._addSetter(Avalonia.Controls.Image.StretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Stretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Image 
+public static Style<T> Stretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Image 
 => style._addSetter(Avalonia.Controls.Image.StretchProperty, binding);
 
 
@@ -159,7 +159,7 @@ public static Style<T> StretchDirection<T>(this Style<T> style, Avalonia.Media.S
 => style._addSetter(Avalonia.Controls.Image.StretchDirectionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StretchDirection<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Image 
+public static Style<T> StretchDirection<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Image 
 => style._addSetter(Avalonia.Controls.Image.StretchDirectionProperty, binding);
 
 

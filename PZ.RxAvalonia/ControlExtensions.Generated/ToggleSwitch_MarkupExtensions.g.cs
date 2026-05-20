@@ -152,7 +152,7 @@ public static Style<T> OffContent<T>(this Style<T> style, System.Object? value) 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OffContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OffContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentProperty, binding);
 
 
@@ -163,7 +163,7 @@ public static Style<T> OffContentTemplate<T>(this Style<T> style, Avalonia.Contr
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OffContentTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OffContentTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OffContentTemplateProperty, binding);
 
 
@@ -174,7 +174,7 @@ public static Style<T> OnContent<T>(this Style<T> style, System.Object? value) w
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OnContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OnContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentProperty, binding);
 
 
@@ -185,7 +185,7 @@ public static Style<T> OnContentTemplate<T>(this Style<T> style, Avalonia.Contro
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> OnContentTemplate<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> OnContentTemplate<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.OnContentTemplateProperty, binding);
 
 
@@ -196,7 +196,7 @@ public static Style<T> KnobTransitions<T>(this Style<T> style, Avalonia.Animatio
 => style._addSetter(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> KnobTransitions<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.ToggleSwitch 
+public static Style<T> KnobTransitions<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.ToggleSwitch 
 => style._addSetter(Avalonia.Controls.ToggleSwitch.KnobTransitionsProperty, binding);
 
 

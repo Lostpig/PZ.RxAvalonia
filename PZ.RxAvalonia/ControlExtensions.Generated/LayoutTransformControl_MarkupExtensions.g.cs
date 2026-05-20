@@ -74,7 +74,7 @@ public static Style<T> LayoutTransform<T>(this Style<T> style, Avalonia.Media.IT
 => style._addSetter(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LayoutTransform<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.LayoutTransformControl 
+public static Style<T> LayoutTransform<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.LayoutTransformControl 
 => style._addSetter(Avalonia.Controls.LayoutTransformControl.LayoutTransformProperty, binding);
 
 
@@ -85,7 +85,7 @@ public static Style<T> UseRenderTransform<T>(this Style<T> style, System.Boolean
 => style._addSetter(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> UseRenderTransform<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.LayoutTransformControl 
+public static Style<T> UseRenderTransform<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.LayoutTransformControl 
 => style._addSetter(Avalonia.Controls.LayoutTransformControl.UseRenderTransformProperty, binding);
 
 

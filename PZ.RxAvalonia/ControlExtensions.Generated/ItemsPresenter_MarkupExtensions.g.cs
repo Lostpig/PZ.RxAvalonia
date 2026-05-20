@@ -48,7 +48,7 @@ public static Style<T> ItemsPanel<T>(this Style<T> style, Avalonia.Controls.ITem
 => style._addSetter(Avalonia.Controls.Presenters.ItemsPresenter.ItemsPanelProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ItemsPanel<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.ItemsPresenter 
+public static Style<T> ItemsPanel<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.ItemsPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.ItemsPresenter.ItemsPanelProperty, binding);
 
 

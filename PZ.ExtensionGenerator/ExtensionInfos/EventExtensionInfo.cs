@@ -18,6 +18,7 @@ public class EventExtensionInfo : IMemberExtensionInfo
     public string ReturnType { get; set; }
     public string GenericConstraint { get; set; } = "";
     public string GenericArg { get; set; } = "";
+    public bool IsFuncHandler => EventHandler.StartsWith("Func<") || EventHandler.StartsWith("System.Func<");
 
     public bool IsRoutedEvent { get; set; }
     public bool IsObsolete { get; set; }
@@ -70,7 +71,6 @@ public class EventExtensionInfo : IMemberExtensionInfo
             GenericConstraint = $"where T : {ControlTypeName}";
             GenericArg = "<T>";
         }
-
     }
 
     private static bool HasRoutedEventArgs(ParameterInfo[] parameters)

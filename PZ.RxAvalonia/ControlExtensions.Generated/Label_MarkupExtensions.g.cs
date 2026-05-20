@@ -48,7 +48,7 @@ public static Style<T> Target<T>(this Style<T> style, Avalonia.Input.IInputEleme
 => style._addSetter(Avalonia.Controls.Label.TargetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Target<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Label 
+public static Style<T> Target<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Label 
 => style._addSetter(Avalonia.Controls.Label.TargetProperty, binding);
 
 

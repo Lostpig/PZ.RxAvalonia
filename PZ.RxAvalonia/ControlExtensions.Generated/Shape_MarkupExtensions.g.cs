@@ -221,6 +221,32 @@ public static T StrokeJoin<T>(this T control, IObservable<Avalonia.Media.PenLine
    => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeJoinProperty!, obs, changed);
 
 
+ // StrokeMiterLimit
+
+/*ValueSetterGenerator*/
+public static T StrokeMiterLimit<T>(this T control, System.Double value) where T : Avalonia.Controls.Shapes.Shape 
+{
+    control.StrokeMiterLimit = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T StrokeMiterLimit<T>(this T control, Func<System.Double> func) where T : Avalonia.Controls.Shapes.Shape 
+   => control._set(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T StrokeMiterLimit<T>(this T control, IObservable<System.Double> obs) where T : Avalonia.Controls.Shapes.Shape 
+   => control._set(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T StrokeMiterLimit<T>(this T control, ISubject<System.Double> subject) where T : Avalonia.Controls.Shapes.Shape 
+   => control._set(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T StrokeMiterLimit<T>(this T control, IObservable<System.Double> obs, IObserver<System.Double> changed) where T : Avalonia.Controls.Shapes.Shape 
+   => control._setEx(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty!, obs, changed);
+
+
 
 //================= Styles ======================//
  // Fill
@@ -230,7 +256,7 @@ public static Style<T> Fill<T>(this Style<T> style, Avalonia.Media.IBrush? value
 => style._addSetter(Avalonia.Controls.Shapes.Shape.FillProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Fill<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> Fill<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.FillProperty, binding);
 
 
@@ -241,7 +267,7 @@ public static Style<T> Stretch<T>(this Style<T> style, Avalonia.Media.Stretch va
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StretchProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Stretch<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> Stretch<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StretchProperty, binding);
 
 
@@ -252,7 +278,7 @@ public static Style<T> Stroke<T>(this Style<T> style, Avalonia.Media.IBrush? val
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Stroke<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> Stroke<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeProperty, binding);
 
 
@@ -263,7 +289,7 @@ public static Style<T> StrokeDashArray<T>(this Style<T> style, Avalonia.Collecti
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeDashArrayProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StrokeDashArray<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> StrokeDashArray<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeDashArrayProperty, binding);
 
 
@@ -274,7 +300,7 @@ public static Style<T> StrokeDashOffset<T>(this Style<T> style, System.Double va
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeDashOffsetProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StrokeDashOffset<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> StrokeDashOffset<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeDashOffsetProperty, binding);
 
 
@@ -285,7 +311,7 @@ public static Style<T> StrokeThickness<T>(this Style<T> style, System.Double val
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeThicknessProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StrokeThickness<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> StrokeThickness<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeThicknessProperty, binding);
 
 
@@ -296,7 +322,7 @@ public static Style<T> StrokeLineCap<T>(this Style<T> style, Avalonia.Media.PenL
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeLineCapProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StrokeLineCap<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> StrokeLineCap<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeLineCapProperty, binding);
 
 
@@ -307,8 +333,19 @@ public static Style<T> StrokeJoin<T>(this Style<T> style, Avalonia.Media.PenLine
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeJoinProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> StrokeJoin<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Shapes.Shape 
+public static Style<T> StrokeJoin<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
 => style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeJoinProperty, binding);
+
+
+ // StrokeMiterLimit
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> StrokeMiterLimit<T>(this Style<T> style, System.Double value) where T : Avalonia.Controls.Shapes.Shape 
+=> style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> StrokeMiterLimit<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Shapes.Shape 
+=> style._addSetter(Avalonia.Controls.Shapes.Shape.StrokeMiterLimitProperty, binding);
 
 
 

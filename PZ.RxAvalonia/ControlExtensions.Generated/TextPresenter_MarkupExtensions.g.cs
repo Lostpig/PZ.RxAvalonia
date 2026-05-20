@@ -503,7 +503,7 @@ public static Style<T> ShowSelectionHighlight<T>(this Style<T> style, System.Boo
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowSelectionHighlight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> ShowSelectionHighlight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.ShowSelectionHighlightProperty, binding);
 
 
@@ -514,7 +514,7 @@ public static Style<T> CaretIndex<T>(this Style<T> style, System.Int32 value) wh
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretIndex<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> CaretIndex<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretIndexProperty, binding);
 
 
@@ -525,7 +525,7 @@ public static Style<T> RevealPassword<T>(this Style<T> style, System.Boolean val
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> RevealPassword<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> RevealPassword<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.RevealPasswordProperty, binding);
 
 
@@ -536,7 +536,7 @@ public static Style<T> PasswordChar<T>(this Style<T> style, System.Char value) w
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PasswordChar<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> PasswordChar<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PasswordCharProperty, binding);
 
 
@@ -547,7 +547,7 @@ public static Style<T> SelectionBrush<T>(this Style<T> style, Avalonia.Media.IBr
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionBrushProperty, binding);
 
 
@@ -558,7 +558,7 @@ public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, Avalonia
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionForegroundBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionForegroundBrushProperty, binding);
 
 
@@ -569,7 +569,7 @@ public static Style<T> CaretBrush<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> CaretBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretBrushProperty, binding);
 
 
@@ -580,7 +580,7 @@ public static Style<T> CaretBlinkInterval<T>(this Style<T> style, System.TimeSpa
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CaretBlinkInterval<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> CaretBlinkInterval<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.CaretBlinkIntervalProperty, binding);
 
 
@@ -591,7 +591,7 @@ public static Style<T> SelectionStart<T>(this Style<T> style, System.Int32 value
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionStart<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionStart<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionStartProperty, binding);
 
 
@@ -602,7 +602,7 @@ public static Style<T> SelectionEnd<T>(this Style<T> style, System.Int32 value) 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SelectionEnd<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> SelectionEnd<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.SelectionEndProperty, binding);
 
 
@@ -613,7 +613,7 @@ public static Style<T> Text<T>(this Style<T> style, System.String? value) where 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Text<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> Text<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextProperty, binding);
 
 
@@ -624,7 +624,7 @@ public static Style<T> PreeditText<T>(this Style<T> style, System.String? value)
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PreeditText<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> PreeditText<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PreeditTextProperty, binding);
 
 
@@ -635,7 +635,7 @@ public static Style<T> PreeditTextCursorPosition<T>(this Style<T> style, System.
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> PreeditTextCursorPosition<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> PreeditTextCursorPosition<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.PreeditTextCursorPositionProperty, binding);
 
 
@@ -646,7 +646,7 @@ public static Style<T> TextAlignment<T>(this Style<T> style, Avalonia.Media.Text
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextAlignment<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> TextAlignment<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextAlignmentProperty, binding);
 
 
@@ -657,7 +657,7 @@ public static Style<T> TextWrapping<T>(this Style<T> style, Avalonia.Media.TextW
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> TextWrapping<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> TextWrapping<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.TextWrappingProperty, binding);
 
 
@@ -668,7 +668,7 @@ public static Style<T> LineHeight<T>(this Style<T> style, System.Double value) w
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LineHeight<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> LineHeight<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.LineHeightProperty, binding);
 
 
@@ -679,7 +679,7 @@ public static Style<T> LetterSpacing<T>(this Style<T> style, System.Double value
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> LetterSpacing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> LetterSpacing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.LetterSpacingProperty, binding);
 
 
@@ -690,7 +690,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Presenters.TextPresenter 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Presenters.TextPresenter 
 => style._addSetter(Avalonia.Controls.Presenters.TextPresenter.BackgroundProperty, binding);
 
 

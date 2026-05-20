@@ -65,32 +65,6 @@ public static T ExtendClientAreaToDecorationsHint<T>(this T control, IObservable
    => control._setEx(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, obs, changed);
 
 
- // ExtendClientAreaChromeHints
-
-/*ValueSetterGenerator*/
-public static T ExtendClientAreaChromeHints<T>(this T control, Avalonia.Platform.ExtendClientAreaChromeHints value) where T : Avalonia.Controls.Window 
-{
-    control.ExtendClientAreaChromeHints = value!;
-    return control;
-}
-
-/*SetterFromFuncGenerator*/
-public static T ExtendClientAreaChromeHints<T>(this T control, Func<Avalonia.Platform.ExtendClientAreaChromeHints> func) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, func);
-
-/*SetterFromObservableGenerator*/
-public static T ExtendClientAreaChromeHints<T>(this T control, IObservable<Avalonia.Platform.ExtendClientAreaChromeHints> obs) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, obs);
-
-/*SetterFromSubjectGenerator*/
-public static T ExtendClientAreaChromeHints<T>(this T control, ISubject<Avalonia.Platform.ExtendClientAreaChromeHints> subject) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, subject);
-
-/*SetterFromTwoWayGenerator*/
-public static T ExtendClientAreaChromeHints<T>(this T control, IObservable<Avalonia.Platform.ExtendClientAreaChromeHints> obs, IObserver<Avalonia.Platform.ExtendClientAreaChromeHints> changed) where T : Avalonia.Controls.Window 
-   => control._setEx(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, obs, changed);
-
-
  // ExtendClientAreaTitleBarHeightHint
 
 /*ValueSetterGenerator*/
@@ -117,30 +91,56 @@ public static T ExtendClientAreaTitleBarHeightHint<T>(this T control, IObservabl
    => control._setEx(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, obs, changed);
 
 
- // SystemDecorations
+ // WindowDecorations
 
 /*ValueSetterGenerator*/
-public static T SystemDecorations<T>(this T control, Avalonia.Controls.SystemDecorations value) where T : Avalonia.Controls.Window 
+public static T WindowDecorations<T>(this T control, Avalonia.Controls.WindowDecorations value) where T : Avalonia.Controls.Window 
 {
-    control.SystemDecorations = value!;
+    control.WindowDecorations = value!;
     return control;
 }
 
 /*SetterFromFuncGenerator*/
-public static T SystemDecorations<T>(this T control, Func<Avalonia.Controls.SystemDecorations> func) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, func);
+public static T WindowDecorations<T>(this T control, Func<Avalonia.Controls.WindowDecorations> func) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsProperty!, func);
 
 /*SetterFromObservableGenerator*/
-public static T SystemDecorations<T>(this T control, IObservable<Avalonia.Controls.SystemDecorations> obs) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, obs);
+public static T WindowDecorations<T>(this T control, IObservable<Avalonia.Controls.WindowDecorations> obs) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsProperty!, obs);
 
 /*SetterFromSubjectGenerator*/
-public static T SystemDecorations<T>(this T control, ISubject<Avalonia.Controls.SystemDecorations> subject) where T : Avalonia.Controls.Window 
-   => control._set(Avalonia.Controls.Window.SystemDecorationsProperty!, subject);
+public static T WindowDecorations<T>(this T control, ISubject<Avalonia.Controls.WindowDecorations> subject) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsProperty!, subject);
 
 /*SetterFromTwoWayGenerator*/
-public static T SystemDecorations<T>(this T control, IObservable<Avalonia.Controls.SystemDecorations> obs, IObserver<Avalonia.Controls.SystemDecorations> changed) where T : Avalonia.Controls.Window 
-   => control._setEx(Avalonia.Controls.Window.SystemDecorationsProperty!, obs, changed);
+public static T WindowDecorations<T>(this T control, IObservable<Avalonia.Controls.WindowDecorations> obs, IObserver<Avalonia.Controls.WindowDecorations> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.WindowDecorationsProperty!, obs, changed);
+
+
+ // WindowDecorationsTheme
+
+/*ValueSetterGenerator*/
+public static T WindowDecorationsTheme<T>(this T control, Avalonia.Styling.ControlTheme? value) where T : Avalonia.Controls.Window 
+{
+    control.WindowDecorationsTheme = value!;
+    return control;
+}
+
+/*SetterFromFuncGenerator*/
+public static T WindowDecorationsTheme<T>(this T control, Func<Avalonia.Styling.ControlTheme?> func) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsThemeProperty!, func);
+
+/*SetterFromObservableGenerator*/
+public static T WindowDecorationsTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsThemeProperty!, obs);
+
+/*SetterFromSubjectGenerator*/
+public static T WindowDecorationsTheme<T>(this T control, ISubject<Avalonia.Styling.ControlTheme?> subject) where T : Avalonia.Controls.Window 
+   => control._set(Avalonia.Controls.Window.WindowDecorationsThemeProperty!, subject);
+
+/*SetterFromTwoWayGenerator*/
+public static T WindowDecorationsTheme<T>(this T control, IObservable<Avalonia.Styling.ControlTheme?> obs, IObserver<Avalonia.Styling.ControlTheme?> changed) where T : Avalonia.Controls.Window 
+   => control._setEx(Avalonia.Controls.Window.WindowDecorationsThemeProperty!, obs, changed);
 
 
  // ShowActivated
@@ -425,7 +425,7 @@ public static Style<T> SizeToContent<T>(this Style<T> style, Avalonia.Controls.S
 => style._addSetter(Avalonia.Controls.Window.SizeToContentProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SizeToContent<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> SizeToContent<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.SizeToContentProperty, binding);
 
 
@@ -436,19 +436,8 @@ public static Style<T> ExtendClientAreaToDecorationsHint<T>(this Style<T> style,
 => style._addSetter(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ExtendClientAreaToDecorationsHint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> ExtendClientAreaToDecorationsHint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.ExtendClientAreaToDecorationsHintProperty, binding);
-
-
- // ExtendClientAreaChromeHints
-
-/*ValueStyleSetterGenerator*/
-public static Style<T> ExtendClientAreaChromeHints<T>(this Style<T> style, Avalonia.Platform.ExtendClientAreaChromeHints value) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty!, value!);
-
-/*BindingStyleSetterGenerator*/
-public static Style<T> ExtendClientAreaChromeHints<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.ExtendClientAreaChromeHintsProperty, binding);
 
 
  // ExtendClientAreaTitleBarHeightHint
@@ -458,19 +447,30 @@ public static Style<T> ExtendClientAreaTitleBarHeightHint<T>(this Style<T> style
 => style._addSetter(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ExtendClientAreaTitleBarHeightHint<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> ExtendClientAreaTitleBarHeightHint<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.ExtendClientAreaTitleBarHeightHintProperty, binding);
 
 
- // SystemDecorations
+ // WindowDecorations
 
 /*ValueStyleSetterGenerator*/
-public static Style<T> SystemDecorations<T>(this Style<T> style, Avalonia.Controls.SystemDecorations value) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.SystemDecorationsProperty!, value!);
+public static Style<T> WindowDecorations<T>(this Style<T> style, Avalonia.Controls.WindowDecorations value) where T : Avalonia.Controls.Window 
+=> style._addSetter(Avalonia.Controls.Window.WindowDecorationsProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> SystemDecorations<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.SystemDecorationsProperty, binding);
+public static Style<T> WindowDecorations<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
+=> style._addSetter(Avalonia.Controls.Window.WindowDecorationsProperty, binding);
+
+
+ // WindowDecorationsTheme
+
+/*ValueStyleSetterGenerator*/
+public static Style<T> WindowDecorationsTheme<T>(this Style<T> style, Avalonia.Styling.ControlTheme? value) where T : Avalonia.Controls.Window 
+=> style._addSetter(Avalonia.Controls.Window.WindowDecorationsThemeProperty!, value!);
+
+/*BindingStyleSetterGenerator*/
+public static Style<T> WindowDecorationsTheme<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
+=> style._addSetter(Avalonia.Controls.Window.WindowDecorationsThemeProperty, binding);
 
 
  // ShowActivated
@@ -480,7 +480,7 @@ public static Style<T> ShowActivated<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Window.ShowActivatedProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowActivated<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> ShowActivated<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.ShowActivatedProperty, binding);
 
 
@@ -491,7 +491,7 @@ public static Style<T> ShowInTaskbar<T>(this Style<T> style, System.Boolean valu
 => style._addSetter(Avalonia.Controls.Window.ShowInTaskbarProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ShowInTaskbar<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> ShowInTaskbar<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.ShowInTaskbarProperty, binding);
 
 
@@ -502,19 +502,8 @@ public static Style<T> ClosingBehavior<T>(this Style<T> style, Avalonia.Controls
 => style._addSetter(Avalonia.Controls.Window.ClosingBehaviorProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> ClosingBehavior<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> ClosingBehavior<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.ClosingBehaviorProperty, binding);
-
-
- // WindowState
-
-/*ValueStyleSetterGenerator*/
-public static Style<T> WindowState<T>(this Style<T> style, Avalonia.Controls.WindowState value) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.WindowStateProperty!, value!);
-
-/*BindingStyleSetterGenerator*/
-public static Style<T> WindowState<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
-=> style._addSetter(Avalonia.Controls.Window.WindowStateProperty, binding);
 
 
  // Title
@@ -524,7 +513,7 @@ public static Style<T> Title<T>(this Style<T> style, System.String? value) where
 => style._addSetter(Avalonia.Controls.Window.TitleProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Title<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> Title<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.TitleProperty, binding);
 
 
@@ -535,7 +524,7 @@ public static Style<T> Icon<T>(this Style<T> style, Avalonia.Controls.WindowIcon
 => style._addSetter(Avalonia.Controls.Window.IconProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Icon<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> Icon<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.IconProperty, binding);
 
 
@@ -546,7 +535,7 @@ public static Style<T> WindowStartupLocation<T>(this Style<T> style, Avalonia.Co
 => style._addSetter(Avalonia.Controls.Window.WindowStartupLocationProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> WindowStartupLocation<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> WindowStartupLocation<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.WindowStartupLocationProperty, binding);
 
 
@@ -557,7 +546,7 @@ public static Style<T> CanResize<T>(this Style<T> style, System.Boolean value) w
 => style._addSetter(Avalonia.Controls.Window.CanResizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CanResize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> CanResize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.CanResizeProperty, binding);
 
 
@@ -568,7 +557,7 @@ public static Style<T> CanMinimize<T>(this Style<T> style, System.Boolean value)
 => style._addSetter(Avalonia.Controls.Window.CanMinimizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CanMinimize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> CanMinimize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.CanMinimizeProperty, binding);
 
 
@@ -579,7 +568,7 @@ public static Style<T> CanMaximize<T>(this Style<T> style, System.Boolean value)
 => style._addSetter(Avalonia.Controls.Window.CanMaximizeProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CanMaximize<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Window 
+public static Style<T> CanMaximize<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Window 
 => style._addSetter(Avalonia.Controls.Window.CanMaximizeProperty, binding);
 
 

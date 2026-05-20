@@ -227,7 +227,7 @@ public static Style<T> Background<T>(this Style<T> style, Avalonia.Media.IBrush?
 => style._addSetter(Avalonia.Controls.Border.BackgroundProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> Background<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> Background<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BackgroundProperty, binding);
 
 
@@ -238,7 +238,7 @@ public static Style<T> BackgroundSizing<T>(this Style<T> style, Avalonia.Media.B
 => style._addSetter(Avalonia.Controls.Border.BackgroundSizingProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BackgroundSizing<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> BackgroundSizing<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BackgroundSizingProperty, binding);
 
 
@@ -249,7 +249,7 @@ public static Style<T> BorderBrush<T>(this Style<T> style, Avalonia.Media.IBrush
 => style._addSetter(Avalonia.Controls.Border.BorderBrushProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderBrush<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> BorderBrush<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BorderBrushProperty, binding);
 
 
@@ -260,7 +260,7 @@ public static Style<T> BorderThickness<T>(this Style<T> style, Avalonia.Thicknes
 => style._addSetter(Avalonia.Controls.Border.BorderThicknessProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BorderThickness<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> BorderThickness<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BorderThicknessProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -277,7 +277,7 @@ public static Style<T> CornerRadius<T>(this Style<T> style, Avalonia.CornerRadiu
 => style._addSetter(Avalonia.Controls.Border.CornerRadiusProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> CornerRadius<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> CornerRadius<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.CornerRadiusProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
@@ -294,7 +294,7 @@ public static Style<T> BoxShadow<T>(this Style<T> style, Avalonia.Media.BoxShado
 => style._addSetter(Avalonia.Controls.Border.BoxShadowProperty!, value!);
 
 /*BindingStyleSetterGenerator*/
-public static Style<T> BoxShadow<T>(this Style<T> style, IBinding binding) where T : Avalonia.Controls.Border 
+public static Style<T> BoxShadow<T>(this Style<T> style, BindingBase binding) where T : Avalonia.Controls.Border 
 => style._addSetter(Avalonia.Controls.Border.BoxShadowProperty, binding);
 
 /*ValueOverloadsStyleSetterGenerator*/
