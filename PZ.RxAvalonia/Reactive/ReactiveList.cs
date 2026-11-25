@@ -6,7 +6,7 @@ namespace PZ.RxAvalonia.Reactive;
 
 public enum ChangedType
 {
-    Add, Remove, Insert, ReplaceAll, Order
+    Add, Remove, Insert, ReplaceAll, Replace, Order
 }
 public record ChangedArgs<T>(ChangedType Type, int Index, int Count);
 public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
@@ -94,6 +94,11 @@ public class ReactiveList<T> : IList<T>, IObservable<ChangedArgs<T>>
     public void Clear()
     {
         RemoveRange(0, _items.Count);
+    }
+    public void Replace(int index, T item)
+    {
+        _items[index] = item;
+        _subject.OnNext(new(ChangedType.Replace, index, 1));
     }
     public void ReplaceAll(IEnumerable<T> collection)
     {

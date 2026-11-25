@@ -41,7 +41,7 @@ try
 
     foreach (var lang in langJson.Languages)
     {
-        GeneratorItem(lang, langJson.Fields);
+        GeneratorLanguage(lang, langJson.Namespaces);
 
         Console.WriteLine($"Language {lang.Name} generated.");
     }
@@ -60,32 +60,35 @@ Console.WriteLine("Press any key to exit...");
 Console.ReadKey();
 
 
-void GeneratorItem(LanguageItem item, List<string> fields)
+void GeneratorLanguage(LanguageItem item, List<LocalizationNameSpace> nss)
 {
     var path = Path.Join(dirPath, $"{item.Value}.json");
 
-    Dictionary<string, string>? oldDict = null;
+    FieldsJson? oldJson = null;
     if (File.Exists(path))
     {
         string langJson = File.ReadAllText(path, Encoding.UTF8);
-        oldDict = JsonSerializer.Deserialize<Dictionary<string, string>>(langJson);
+        oldJson = JsonSerializer.Deserialize<FieldsJson>(langJson);
     }
 
-    oldDict ??= [];
-
-    Dictionary<string, string> dest = [];
-    foreach (var field in fields)
+    FieldsJson fjson = new();
+    foreach (var ns in nss)
     {
-        if (!oldDict.TryGetValue(field, out string? value))
+        var fns = new FieldsJsonNameSpace
         {
-            dest.Add(field, $"_MISSING_{field}");
-        }
-        else
+            NameSpace = ns.NameSpace
+        };
+        var oldDict = oldJson?.Namespaces.FirstOrDefault(n => n.NameSpace == ns.NameSpace)?.Fields;
+        foreach (var k in ns.Fields)
         {
-            dest.Add(field, value);
+            string? v = null;
+            oldDict?.TryGetValue(k, out v);
+            fns.Fields.Add(k, v ?? $"_MISS_{k}");
         }
+
+        fjson.Namespaces.Add(fns);
     }
 
-    string json = JsonSerializer.Serialize(dest, options);
+    string json = JsonSerializer.Serialize(fjson, options);
     File.WriteAllText(path, json, Encoding.UTF8);
 }

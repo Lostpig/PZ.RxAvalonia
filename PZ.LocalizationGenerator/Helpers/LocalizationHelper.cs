@@ -1,32 +1,42 @@
-﻿using Newtonsoft.Json;
+﻿using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace PZPKRecorderGenerator.Helpers;
+namespace PZ.LocalizationGenerator.Helpers;
 
 internal class LocalizationHelper
 {
-    public static LanguageJson DeserializeLanguage(string languagesText)
+    public static LanguageJson? DeserializeLanguage(string languagesText)
     {
-        return JsonConvert.DeserializeObject<LanguageJson>(languagesText);
+        return JsonSerializer.Deserialize<LanguageJson>(languagesText);
     }
 }
 
 internal record LanguageItem(string Name, string Value)
 {
-    [JsonProperty("name")]
+    [JsonPropertyName("name")]
     public string Name { get; set; } = Name;
 
-    [JsonProperty("value")]
+    [JsonPropertyName("value")]
     public string Value { get; set; } = Value;
+}
+
+internal record LocalizationNameSpace
+{
+    [JsonPropertyName("namespace")]
+    public string NameSpace { get; set; } = string.Empty;
+
+    [JsonPropertyName("fields")]
+    public List<string> Fields { get; set; } = new();
 }
 
 internal class LanguageJson
 {
-    [JsonProperty("languages")]
-    public List<LanguageItem> Languages { get; set; } = new ();
+    [JsonPropertyName("languages")]
+    public List<LanguageItem> Languages { get; set; } = new();
 
-    [JsonProperty("fields")]
-    public List<string> Fields { get; set; } = new();
+    [JsonPropertyName("namespaces")]
+    public List<LocalizationNameSpace> NSList { get; set; } = new();
 
-    [JsonProperty("default")]
+    [JsonPropertyName("default")]
     public string DefaultLanguage { get; set; } = string.Empty;
 }

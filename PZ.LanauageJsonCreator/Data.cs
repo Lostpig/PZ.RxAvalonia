@@ -10,15 +10,36 @@ namespace LanguageGenerator
         [JsonPropertyName("value")]
         public string Value { get; set; } = Value;
     }
-    internal class LanguageJson
+    internal record LocalizationNameSpace
     {
-        [JsonPropertyName("languages")]
-        public List<LanguageItem> Languages { get; set; } = new();
+        [JsonPropertyName("namespace")]
+        public string NameSpace { get; set; } = string.Empty;
 
         [JsonPropertyName("fields")]
-        public List<string> Fields { get; set; } = new();
+        public List<string> Fields { get; set; } = [];
+    }
+    internal record LanguageJson
+    {
+        [JsonPropertyName("languages")]
+        public List<LanguageItem> Languages { get; set; } = [];
+
+        [JsonPropertyName("namespaces")]
+        public List<LocalizationNameSpace> Namespaces { get; set; } = [];
 
         [JsonPropertyName("default")]
         public string DefaultLanguage { get; set; } = string.Empty;
+    }
+
+    public record FieldsJson
+    {
+        [JsonPropertyName("namespaces")]
+        public List<FieldsJsonNameSpace> Namespaces { get; set; } = [];
+    }
+    public record FieldsJsonNameSpace
+    {
+        [JsonPropertyName("namespace")]
+        public string NameSpace { get; set; } = string.Empty;
+        [JsonPropertyName("fields")]
+        public Dictionary<string, string> Fields { get; set; } = [];
     }
 }
